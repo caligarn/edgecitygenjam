@@ -1,0 +1,59 @@
+import type { ISourceOptions } from "@tsparticles/engine";
+
+const options: ISourceOptions = {
+  key: "repulseSmoothstep",
+  name: "Repulse Smoothstep",
+  particles: {
+    number: {
+      value: 200,
+      density: {
+        enable: true,
+      },
+    },
+    paint: {
+      fill: {
+        color: {
+          value: "#ffffff",
+        },
+        enable: true,
+      },
+    },
+    shape: {
+      type: "circle",
+    },
+    opacity: {
+      value: 0.5,
+    },
+    size: {
+      value: {
+        min: 1,
+        max: 3,
+      },
+    },
+    move: {
+      enable: true,
+      speed: 0,
+    },
+  },
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "repulse",
+      },
+    },
+    modes: {
+      repulse: {
+        distance: 200,
+        factor: 1,
+        speed: 5,
+        easing: "ease-out-smoothstep",
+      },
+    },
+  },
+  background: {
+    color: "#000000",
+  },
+};
+
+export default options;

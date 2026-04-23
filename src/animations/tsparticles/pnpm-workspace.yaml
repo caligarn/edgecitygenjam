@@ -1,0 +1,36 @@
+packages:
+  - bundles/*
+  - demo/*
+  - effects/*
+  - engine
+  - interactions/*
+  - interactions/*/*
+  - wrappers/*
+  - templates/*
+  - palettes/*/*
+  - paths/*
+  - plugins/*
+  - plugins/colors/*
+  - plugins/easings/*
+  - plugins/emittersShapes/*
+  - plugins/exports/*
+  - presets/*
+  - shapes/*
+  - updaters/*
+  - utils/*
+linkWorkspacePackages: deep
+
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - "@swc/core"
+  - "@tsparticles/engine"
+  - canvas
+  - core-js
+  - core-js-pure
+  - electron
+  - esbuild
+  - fsevents
+  - nuxt
+  - nx
+  - sharp
+  - unrs-resolver

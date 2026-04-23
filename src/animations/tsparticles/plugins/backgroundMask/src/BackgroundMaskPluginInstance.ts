@@ -1,0 +1,113 @@
+import {
+  type CanvasContextType,
+  type IContainerPlugin,
+  type PluginManager,
+  getStyleFromRgb,
+  rangeColorToRgb,
+  safeDocument,
+} from "@tsparticles/engine";
+import type { BackgroundMaskContainer } from "./types.js";
+
+export class BackgroundMaskPluginInstance implements IContainerPlugin {
+  private readonly _container;
+  private _coverColorStyle?: string;
+  private _coverImage?: { image: HTMLImageElement; opacity: number };
+  private _defaultCompositeValue?: GlobalCompositeOperation;
+  private readonly _pluginManager;
+
+  constructor(pluginManager: PluginManager, container: BackgroundMaskContainer) {
+    this._pluginManager = pluginManager;
+    this._container = container;
+  }
+
+  canvasClear(): boolean {
+    const backgroundMask = this._container.actualOptions.backgroundMask;
+
+    if (!backgroundMask?.enable) {
+      return false;
+    }
+
+    return this.canvasPaint();
+  }
+
+  canvasPaint(): boolean {
+    if (!this._container.actualOptions.backgroundMask?.enable) {
+      return false;
+    }
+
+    const canvas = this._container.canvas;
+
+    canvas.render.canvasClear();
+
+    if (this._coverImage) {
+      canvas.render.paintImage(this._coverImage.image, this._coverImage.opacity);
+    } else {
+      canvas.render.paintBase(this._coverColorStyle);
+    }
+
+    return true;
+  }
+
+  drawSettingsCleanup(context: CanvasContextType): void {
+    if (!this._defaultCompositeValue) {
+      return;
+    }
+
+    context.globalCompositeOperation = this._defaultCompositeValue;
+  }
+
+  drawSettingsSetup(context: CanvasContextType): void {
+    const previousComposite = context.globalCompositeOperation,
+      backgroundMask = this._container.actualOptions.backgroundMask;
+
+    this._defaultCompositeValue = previousComposite;
+
+    context.globalCompositeOperation = backgroundMask?.enable ? backgroundMask.composite : previousComposite;
+  }
+
+  async init(): Promise<void> {
+    await this._initCover();
+  }
+
+  private readonly _initCover = async (): Promise<void> => {
+    const options = this._container.actualOptions,
+      cover = options.backgroundMask?.cover,
+      color = cover?.color;
+
+    if (color) {
+      const coverRgb = rangeColorToRgb(this._pluginManager, color);
+
+      if (coverRgb) {
+        const coverColor = {
+          ...coverRgb,
+          a: cover.opacity,
+        };
+
+        this._coverColorStyle = getStyleFromRgb(coverColor, this._container.hdr, coverColor.a);
+      }
+    } else {
+      await new Promise<void>((resolve, reject) => {
+        if (!cover?.image) {
+          return;
+        }
+
+        const img = safeDocument().createElement("img");
+
+        img.addEventListener("load", () => {
+          this._coverImage = {
+            image: img,
+            opacity: cover.opacity,
+          };
+
+          resolve();
+        });
+
+        img.addEventListener("error", () => {
+          reject(new Error("Error loading image"));
+        });
+
+        img.src = cover.image;
+      });
+    }
+  };
+}

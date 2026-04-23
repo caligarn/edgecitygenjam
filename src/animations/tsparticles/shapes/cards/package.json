@@ -1,0 +1,164 @@
+{
+  "name": "@tsparticles/shape-cards",
+  "version": "4.0.0-beta.12",
+  "description": "tsParticles cards shape",
+  "homepage": "https://particles.js.org",
+  "scripts": {
+    "build": "tsparticles-cli build",
+    "version": "tsparticles-cli build -d && git add package.dist.json && tsparticles-cli build -p -l && git add .",
+    "prepack": "pnpm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsparticles/tsparticles.git",
+    "directory": "shapes/cards"
+  },
+  "keywords": [
+    "front-end",
+    "frontend",
+    "tsparticles",
+    "particles.js",
+    "particlesjs",
+    "particles",
+    "particle",
+    "canvas",
+    "jsparticles",
+    "xparticles",
+    "particles-js",
+    "particles-bg",
+    "particles-bg-vue",
+    "particles-ts",
+    "particles.ts",
+    "react-particles-js",
+    "react-particles.js",
+    "react-particles",
+    "react",
+    "reactjs",
+    "vue-particles",
+    "ngx-particles",
+    "angular-particles",
+    "particleground",
+    "vue",
+    "vuejs",
+    "preact",
+    "preactjs",
+    "jquery",
+    "angularjs",
+    "angular",
+    "typescript",
+    "javascript",
+    "animation",
+    "web",
+    "html5",
+    "web-design",
+    "webdesign",
+    "css",
+    "html",
+    "css3",
+    "animated",
+    "background",
+    "confetti",
+    "canvas",
+    "fireworks",
+    "fireworks-js",
+    "confetti-js",
+    "confettijs",
+    "fireworksjs",
+    "canvas-confetti",
+    "tsparticles-shape"
+  ],
+  "author": "Matteo Bruni <matteo.bruni@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsparticles/tsparticles/issues"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/matteobruni"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/tsparticles"
+    },
+    {
+      "type": "buymeacoffee",
+      "url": "https://www.buymeacoffee.com/matteobruni"
+    }
+  ],
+  "prettier": "@tsparticles/prettier-config",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "browser": "dist/browser/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "browser": "./dist/browser/index.js",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    },
+    "./cards": {
+      "types": "./dist/types/cards/index.d.ts",
+      "browser": "./dist/browser/cards/index.js",
+      "import": "./dist/esm/cards/index.js",
+      "require": "./dist/cjs/cards/index.js",
+      "default": "./dist/esm/cards/index.js"
+    },
+    "./clubs": {
+      "types": "./dist/types/clubs/index.d.ts",
+      "browser": "./dist/browser/clubs/index.js",
+      "import": "./dist/esm/clubs/index.js",
+      "require": "./dist/cjs/clubs/index.js",
+      "default": "./dist/esm/clubs/index.js"
+    },
+    "./diamons": {
+      "types": "./dist/types/diamons/index.d.ts",
+      "browser": "./dist/browser/diamons/index.js",
+      "import": "./dist/esm/diamons/index.js",
+      "require": "./dist/cjs/diamons/index.js",
+      "default": "./dist/esm/diamons/index.js"
+    },
+    "./hearts": {
+      "types": "./dist/types/hearts/index.d.ts",
+      "browser": "./dist/browser/hearts/index.js",
+      "import": "./dist/esm/hearts/index.js",
+      "require": "./dist/cjs/hearts/index.js",
+      "default": "./dist/esm/hearts/index.js"
+    },
+    "./spades": {
+      "types": "./dist/types/spades/index.d.ts",
+      "browser": "./dist/browser/spades/index.js",
+      "import": "./dist/esm/spades/index.js",
+      "require": "./dist/cjs/spades/index.js",
+      "default": "./dist/esm/spades/index.js"
+    },
+    "./suits": {
+      "types": "./dist/types/suits.d.ts",
+      "browser": "./dist/browser/suits.js",
+      "import": "./dist/esm/suits.js",
+      "require": "./dist/cjs/suits.js",
+      "default": "./dist/esm/suits.js"
+    },
+    "./package.json": "./dist/package.json"
+  },
+  "peerDependencies": {
+    "@tsparticles/engine": "workspace:*",
+    "@tsparticles/path-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@tsparticles/engine": "workspace:*",
+    "@tsparticles/path-utils": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "linkDirectory": true
+  },
+  "type": "module"
+}

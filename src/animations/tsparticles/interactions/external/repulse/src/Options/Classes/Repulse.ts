@@ -1,0 +1,32 @@
+import {
+  type IOptionLoader,
+  type RecursivePartial,
+  type SingleOrMultiple,
+  executeOnSingleOrMultiple,
+  isNull,
+} from "@tsparticles/engine";
+import type { IRepulse } from "../Interfaces/IRepulse.js";
+import { RepulseBase } from "./RepulseBase.js";
+import { RepulseDiv } from "./RepulseDiv.js";
+
+/**
+ */
+export class Repulse extends RepulseBase implements IRepulse, IOptionLoader<IRepulse> {
+  divs?: SingleOrMultiple<RepulseDiv>;
+
+  override load(data?: RecursivePartial<IRepulse>): void {
+    super.load(data);
+
+    if (isNull(data)) {
+      return;
+    }
+
+    this.divs = executeOnSingleOrMultiple(data.divs, div => {
+      const tmp = new RepulseDiv();
+
+      tmp.load(div);
+
+      return tmp;
+    });
+  }
+}

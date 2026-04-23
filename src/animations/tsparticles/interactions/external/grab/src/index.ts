@@ -1,0 +1,28 @@
+import { type Engine } from "@tsparticles/engine";
+import type { InteractivityEngine } from "@tsparticles/plugin-interactivity";
+
+declare const __VERSION__: string;
+
+/**
+ * @param engine - The engine to load the interaction for.
+ */
+export async function loadExternalGrabInteraction(engine: Engine): Promise<void> {
+  engine.checkVersion(__VERSION__);
+
+  await engine.pluginManager.register(async (e: InteractivityEngine) => {
+    const { ensureInteractivityPluginLoaded } = await import("@tsparticles/plugin-interactivity");
+
+    ensureInteractivityPluginLoaded(e);
+
+    e.pluginManager.addInteractor?.("externalGrab", async container => {
+      const { Grabber } = await import("./Grabber.js");
+
+      return new Grabber(e.pluginManager, container);
+    });
+  });
+}
+
+export * from "./Options/Classes/Grab.js";
+export * from "./Options/Classes/GrabLinks.js";
+export type * from "./Options/Interfaces/IGrab.js";
+export type * from "./Options/Interfaces/IGrabLinks.js";

@@ -1,0 +1,35 @@
+{
+  "name": "@tsparticles/tests",
+  "private": true,
+  "version": "4.0.0-beta.12",
+  "scripts": {
+    "prettify:ci": "prettier --check ./src",
+    "prettify": "prettier --write ./src",
+    "lint:ci": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix src",
+    "build": "pnpm run lint && pnpm run prettify && pnpm test",
+    "build:ui": "pnpm run lint && pnpm run prettify && pnpm test:ui",
+    "build:ci": "pnpm run lint:ci && pnpm run prettify:ci && pnpm run test:ci",
+    "test": "vitest run",
+    "test:particle": "vitest run src/tests/Particle.ts",
+    "test:ui": "vitest watch --ui",
+    "test:ci": "NODE_ENV=test vitest run --maxConcurrency=2"
+  },
+  "dependencies": {
+    "@tsparticles/engine": "workspace:*",
+    "@tsparticles/plugin-hex-color": "workspace:*",
+    "@tsparticles/plugin-hsl-color": "workspace:*",
+    "@tsparticles/plugin-hsv-color": "workspace:*",
+    "@tsparticles/plugin-rgb-color": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^28.0.1",
+    "@vitest/coverage-v8": "^4.1.4",
+    "@vitest/ui": "^4.1.4",
+    "canvas": "^3.2.3",
+    "jsdom": "^29.0.2",
+    "jsdom-global": "^3.0.2",
+    "vitest": "^4.1.4"
+  },
+  "type": "module"
+}

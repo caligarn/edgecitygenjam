@@ -1,0 +1,119 @@
+import type { ConnectContainer, ConnectMode, IConnectMode } from "./Types.js";
+import {
+  ExternalInteractorBase,
+  type IInteractivityData,
+  type IModes,
+  type InteractivityParticle,
+  type Modes,
+} from "@tsparticles/plugin-interactivity";
+import { type RecursivePartial, isInArray } from "@tsparticles/engine";
+import { Connect } from "./Options/Classes/Connect.js";
+import { drawConnection } from "./Utils.js";
+
+const connectMode = "connect",
+  minDistance = 0;
+
+/**
+ * Particle connection manager
+ */
+export class Connector extends ExternalInteractorBase<ConnectContainer> {
+  private _maxDistance;
+
+  constructor(container: ConnectContainer) {
+    super(container);
+
+    this._maxDistance = 0;
+  }
+
+  get maxDistance(): number {
+    return this._maxDistance;
+  }
+
+  clear(): void {
+    // do nothing
+  }
+
+  init(): void {
+    const container = this.container,
+      connect = container.actualOptions.interactivity?.modes.connect;
+
+    if (!connect) {
+      return;
+    }
+
+    this._maxDistance = connect.distance;
+
+    container.retina.connectModeDistance = connect.distance * container.retina.pixelRatio;
+    container.retina.connectModeRadius = connect.radius * container.retina.pixelRatio;
+  }
+
+  /**
+   * Connecting particles on hover interactivity
+   * @param interactivityData -
+   */
+  interact(interactivityData: IInteractivityData): void {
+    const container = this.container,
+      options = container.actualOptions;
+
+    if (options.interactivity?.events.onHover.enable && interactivityData.status === "pointermove") {
+      const mousePos = interactivityData.mouse.position,
+        { connectModeDistance, connectModeRadius } = container.retina;
+
+      if (
+        !connectModeDistance ||
+        connectModeDistance < minDistance ||
+        !connectModeRadius ||
+        connectModeRadius < minDistance ||
+        !mousePos
+      ) {
+        return;
+      }
+
+      const distance = Math.abs(connectModeRadius),
+        query = container.particles.grid.queryCircle(mousePos, distance, p => this.isEnabled(interactivityData, p));
+
+      query.forEach((p1, i) => {
+        const pos1 = p1.getPosition(),
+          indexOffset = 1;
+
+        for (const p2 of query.slice(i + indexOffset)) {
+          const pos2 = p2.getPosition(),
+            distMax = Math.abs(connectModeDistance),
+            xDiff = Math.abs(pos1.x - pos2.x),
+            yDiff = Math.abs(pos1.y - pos2.y);
+
+          if (xDiff < distMax && yDiff < distMax) {
+            drawConnection(container, p1, p2);
+          }
+        }
+      });
+    }
+  }
+
+  isEnabled(interactivityData: IInteractivityData, particle?: InteractivityParticle): boolean {
+    const container = this.container,
+      mouse = interactivityData.mouse,
+      events = (particle?.interactivity ?? container.actualOptions.interactivity)?.events;
+
+    if (!(events?.onHover.enable && mouse.position)) {
+      return false;
+    }
+
+    return isInArray(connectMode, events.onHover.mode);
+  }
+
+  loadModeOptions(
+    options: Modes & ConnectMode,
+    ...sources: RecursivePartial<(IModes & IConnectMode) | undefined>[]
+  ): void {
+    options.connect ??= new Connect();
+
+    for (const source of sources) {
+      options.connect.load(source?.connect);
+    }
+  }
+
+  reset(): void {
+    // do nothing
+  }
+}

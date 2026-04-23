@@ -1,0 +1,13 @@
+{
+    "projectDocuments": ["../markdown/**/*.md"],
+    "entryPoints": ["./src/"],
+    "entryPointStrategy": "expand",
+    "name": "tsParticles Attract Particle Interaction",
+    "includeVersion": true,
+    "hideGenerator": true,
+    "out": "./docs",
+    "validation": {
+        "invalidLink": true,
+        "notDocumented": true
+    }
+}

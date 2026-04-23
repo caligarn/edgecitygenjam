@@ -1,0 +1,36 @@
+{
+  "name": "@tsparticles/demo-new",
+  "private": true,
+  "version": "4.0.0-beta.12",
+  "description": "tsParticles Demo Website",
+  "main": "index.html",
+  "scripts": {
+    "clear:cache": "rimraf ./node_modules/.cache",
+    "build:js": "minify ./js/404.js > ./js/404.min.js && pnpm run copy:browser-assets",
+    "copy:browser-assets": "node ./scripts/copy-browser-assets.mjs",
+    "build:css": "sass ./css/main.scss ./css/main.css && minify ./css/main.css > ./css/main.min.css && sass ./css/404.scss ./css/404.css && minify ./css/404.css > ./css/404.min.css",
+    "build": " pnpm run clear:cache && pnpm run build:css && pnpm run build:js",
+    "build:ci": " pnpm run clear:cache && pnpm run build:css && pnpm run build:js",
+    "deploy": "pnpm run build && node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsparticles/tsparticles.git"
+  },
+  "author": "Matteo Bruni <matteo.bruni@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsparticles/tsparticles/issues"
+  },
+  "homepage": "https://particles.js.org",
+  "devDependencies": {
+    "@swc/core": "^1.15.24",
+    "minify": "^15.2.0",
+    "sass": "^1.99.0"
+  },
+  "dependencies": {
+    "@tsparticles/all": "workspace:*",
+    "@tsparticles/configs": "workspace:*"
+  },
+  "type": "module"
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "@tsparticles/tsconfig/dist/tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src"
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "./tests/",
+    "./node_modules/**/*",
+    "../../node_modules/**/*",
+    "./dist/",
+    "./typedoc/",
+    "./docs/"
+  ]
+}

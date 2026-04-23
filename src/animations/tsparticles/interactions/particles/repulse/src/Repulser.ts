@@ -1,0 +1,118 @@
+import type { IRepulseParticlesOptions, RepulseParticlesOptions } from "./Types.js";
+import { type InteractivityContainer, ParticlesInteractorBase } from "@tsparticles/plugin-interactivity";
+import { type Particle, type RecursivePartial, Vector, clamp, getDistances, getRangeValue } from "@tsparticles/engine";
+import { ParticlesRepulse } from "./Options/Classes/ParticlesRepulse.js";
+
+const minDistance = 0,
+  identity = 1,
+  squareExp = 2,
+  minVelocity = 0;
+
+type RepulseParticle = Particle & {
+  options: RepulseParticlesOptions;
+  repulse?: {
+    distance: number;
+    factor: number;
+    speed: number;
+  };
+};
+
+export class Repulser extends ParticlesInteractorBase {
+  private _maxDistance;
+  private readonly _normVec: Vector;
+  private readonly _velocityVec: Vector;
+
+  constructor(container: InteractivityContainer) {
+    super(container);
+
+    this._maxDistance = 0;
+    this._normVec = Vector.origin;
+    this._velocityVec = Vector.origin;
+  }
+
+  get maxDistance(): number {
+    return this._maxDistance;
+  }
+
+  clear(): void {
+    // do nothing
+  }
+
+  init(): void {
+    // do nothing
+  }
+
+  interact(p1: RepulseParticle): void {
+    const container = this.container;
+
+    if (!p1.repulse) {
+      const repulseOpt1 = p1.options.repulse;
+
+      if (!repulseOpt1) {
+        return;
+      }
+
+      const repulseDistance = getRangeValue(repulseOpt1.distance);
+
+      if (repulseDistance > this.maxDistance) {
+        this._maxDistance = repulseDistance;
+      }
+
+      p1.repulse = {
+        distance: repulseDistance * container.retina.pixelRatio,
+        speed: getRangeValue(repulseOpt1.speed),
+        factor: getRangeValue(repulseOpt1.factor),
+      };
+    }
+
+    const pos1 = p1.getPosition(),
+      query = container.particles.grid.queryCircle(pos1, p1.repulse.distance),
+      p1DistanceFactor = identity / p1.repulse.distance;
+
+    for (const p2 of query) {
+      if (p1 === p2 || p2.destroyed) {
+        continue;
+      }
+
+      const pos2 = p2.getPosition(),
+        { dx, dy, distance } = getDistances(pos2, pos1),
+        distanceFactor = identity / distance,
+        velocity = p1.repulse.speed * p1.repulse.factor;
+
+      if (distance > minDistance) {
+        const repulseFactor =
+          clamp((identity - Math.pow(distance * p1DistanceFactor, squareExp)) * velocity, minVelocity, velocity) *
+          distanceFactor;
+
+        this._normVec.x = dx * repulseFactor;
+        this._normVec.y = dy * repulseFactor;
+
+        p2.position.addTo(this._normVec);
+      } else {
+        this._velocityVec.x = velocity;
+        this._velocityVec.y = velocity;
+
+        p2.position.addTo(this._velocityVec);
+      }
+    }
+  }
+
+  isEnabled(particle: RepulseParticle): boolean {
+    return particle.options.repulse?.enabled ?? false;
+  }
+
+  loadParticlesOptions?(
+    options: RepulseParticlesOptions,
+    ...sources: (RecursivePartial<IRepulseParticlesOptions> | undefined)[]
+  ): void {
+    options.repulse ??= new ParticlesRepulse();
+
+    for (const source of sources) {
+      options.repulse.load(source?.repulse);
+    }
+  }
+
+  reset(): void {
+    // do nothing
+  }
+}

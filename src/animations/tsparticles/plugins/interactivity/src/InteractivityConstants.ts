@@ -1,0 +1,9 @@
+export const clickEvent = "click",
+  mouseDownEvent = "pointerdown",
+  mouseUpEvent = "pointerup",
+  mouseLeaveEvent = "pointerleave",
+  mouseMoveEvent = "pointermove",
+  touchStartEvent = "touchstart",
+  touchEndEvent = "touchend",
+  touchMoveEvent = "touchmove",
+  touchCancelEvent = "touchcancel";
