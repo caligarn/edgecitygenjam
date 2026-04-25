@@ -877,38 +877,141 @@
     <p class="body pf-foot">SHOT 1 → IMG → VID · SHOT 2 → IMG → VID · SHOT 3 → IMG → VID · …</p>
   </section>
 
-  <!-- THE PROCESS — fan-out diagram -->
+  <!-- THE PROCESS (EXPANDED) — fan-out diagram -->
   <section class="slide slide--process-fan" data-bg="cream">
     <header class="pfn-hd">
       <span class="kicker">THE METHOD · DETAILED</span>
-      <h2 class="h-xxl">The <span class="accent-pink">Process.</span></h2>
+      <h2 class="h-xxl">The Process <span class="accent-pink">(Expanded).</span></h2>
     </header>
-    <div class="process-fan">
-      <div class="pfn-col pfn-col--start">
-        <div class="pfn-card pfn-card--idea">Idea</div>
-        <span class="pfn-arrow">&rarr;</span>
-        <div class="pfn-card pfn-card--script">Script&nbsp;/&nbsp;Story</div>
-      </div>
-      <span class="pfn-arrow pfn-arrow--fan" aria-hidden="true">&rarr;</span>
-      <div class="pfn-col pfn-col--shots">
-        <div class="pfn-headers">
-          <span class="pfn-header">Shotlist</span>
-          <span class="pfn-header-spacer" aria-hidden="true"></span>
-          <span class="pfn-header">Txt &rarr; Img</span>
-          <span class="pfn-header-spacer" aria-hidden="true"></span>
-          <span class="pfn-header">Img &rarr; Vid</span>
-        </div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 1</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 2</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 3</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 4</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 5</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 6</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-      </div>
-      <span class="pfn-arrow pfn-arrow--converge" aria-hidden="true">&rarr;</span>
-      <div class="pfn-col pfn-col--end">
-        <div class="pfn-card pfn-card--final">Sound&nbsp;&amp;<br/>Edit</div>
-      </div>
+    <div class="pfn-svg-wrap">
+      <svg class="pfn-svg" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" aria-label="Idea to Script to six parallel Shot, Img, Vid tracks converging into Sound and Edit">
+        <defs>
+          <marker id="pfn-arrow-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#141B34"/>
+          </marker>
+        </defs>
+
+        <!-- Column headers -->
+        <text x="555" y="22" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" letter-spacing="2" fill="#141B34" opacity="0.55">SHOTLIST</text>
+        <text x="745" y="22" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" letter-spacing="2" fill="#141B34" opacity="0.55">TXT &#8594; IMG</text>
+        <text x="925" y="22" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" letter-spacing="2" fill="#141B34" opacity="0.55">IMG &#8594; VID</text>
+
+        <!-- Idea card (yellow) with offset shadow -->
+        <rect x="36" y="336" width="140" height="90" rx="12" fill="#141B34"/>
+        <rect x="30" y="330" width="140" height="90" rx="12" fill="#FFD93D" stroke="#141B34" stroke-width="3.5"/>
+        <text x="100" y="384" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="32" fill="#141B34">Idea</text>
+
+        <!-- Idea -> Script arrow -->
+        <line x1="170" y1="375" x2="240" y2="375" stroke="#141B34" stroke-width="3" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Script / Story card (lime) with offset shadow -->
+        <rect x="246" y="336" width="220" height="90" rx="12" fill="#141B34"/>
+        <rect x="240" y="330" width="220" height="90" rx="12" fill="#CCFF33" stroke="#141B34" stroke-width="3.5"/>
+        <text x="350" y="384" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="28" fill="#141B34">Script / Story</text>
+
+        <!-- Six fan-out arrows from Script right edge (460, 375) to each Shot left edge -->
+        <line x1="460" y1="375" x2="500" y2="85"  stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375" x2="500" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375" x2="500" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375" x2="500" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375" x2="500" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375" x2="500" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- ===== Six shot rows ===== row centers y=85,195,305,415,525,635 -->
+        <!-- For each row: Shot card (white), arrow, Img card (white), arrow, Vid card (white) -->
+
+        <!-- Row 1 (y_center=85) -->
+        <rect x="510" y="51" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="46" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565" y="89" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 1</text>
+        <line x1="625" y1="80" x2="690" y2="80" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="700" y="51" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="46" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="745" y="89" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="795" y1="80" x2="870" y2="80" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="880" y="51" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="875" y="46" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="925" y="89" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 2 (y_center=195) -->
+        <rect x="510" y="161" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="156" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565" y="199" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 2</text>
+        <line x1="625" y1="190" x2="690" y2="190" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="700" y="161" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="156" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="745" y="199" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="795" y1="190" x2="870" y2="190" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="880" y="161" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="875" y="156" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="925" y="199" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 3 (y_center=305) -->
+        <rect x="510" y="271" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="266" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565" y="309" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 3</text>
+        <line x1="625" y1="300" x2="690" y2="300" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="700" y="271" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="266" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="745" y="309" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="795" y1="300" x2="870" y2="300" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="880" y="271" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="875" y="266" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="925" y="309" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 4 (y_center=415) -->
+        <rect x="510" y="381" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="376" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565" y="419" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 4</text>
+        <line x1="625" y1="410" x2="690" y2="410" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="700" y="381" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="376" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="745" y="419" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="795" y1="410" x2="870" y2="410" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="880" y="381" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="875" y="376" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="925" y="419" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 5 (y_center=525) -->
+        <rect x="510" y="491" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="486" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565" y="529" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 5</text>
+        <line x1="625" y1="520" x2="690" y2="520" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="700" y="491" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="486" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="745" y="529" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="795" y1="520" x2="870" y2="520" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="880" y="491" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="875" y="486" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="925" y="529" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 6 (y_center=635) -->
+        <rect x="510" y="601" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="596" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565" y="639" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 6</text>
+        <line x1="625" y1="630" x2="690" y2="630" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="700" y="601" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="596" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="745" y="639" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="795" y1="630" x2="870" y2="630" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="880" y="601" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="875" y="596" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="925" y="639" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Six fan-in arrows from each Vid right edge (975) to Sound&Edit left edge (1015, 375) -->
+        <line x1="975" y1="80"  x2="1015" y2="375" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="975" y1="190" x2="1015" y2="375" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="975" y1="300" x2="1015" y2="375" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="975" y1="410" x2="1015" y2="375" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="975" y1="520" x2="1015" y2="375" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="975" y1="630" x2="1015" y2="375" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Sound & Edit card (pink) with offset shadow -->
+        <rect x="1031" y="326" width="160" height="100" rx="12" fill="#141B34"/>
+        <rect x="1025" y="320" width="160" height="100" rx="12" fill="#FF3B5C" stroke="#141B34" stroke-width="3.5"/>
+        <text x="1105" y="364" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="26" fill="#FFFFFF">Sound</text>
+        <text x="1105" y="396" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="26" fill="#FFFFFF">&amp; Edit</text>
+      </svg>
     </div>
   </section>
 
