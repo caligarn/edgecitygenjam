@@ -3632,32 +3632,42 @@ kbd {
 }
 .slide[data-bg="ink"] .slide__bg img { opacity: .18; mix-blend-mode: screen; }
 
-/* ── GenJam logo decoration: small wordmark in a corner of the start /
-   middle / end of the deck. Inverts to white-on-dark on ink/pink
-   slides via the --invert variant. ── */
-.genjam-logo {
-  position: absolute;
-  top: clamp(.8rem, 2vh, 2rem);
-  right: clamp(.8rem, 2vw, 2rem);
-  z-index: 4;
-  width: clamp(110px, 13vw, 180px);
+/* ── slide--logo-hero: GenJam wordmark, big and centered, with a
+   "Learn. Create. Play." caption underneath. Cold-open splash that
+   sits right after the Flik QR redeem slide. ── */
+.slide--logo-hero {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: clamp(1.5rem, 4vh, 3.5rem);
+  padding: 6vh 6vw;
+}
+.logo-hero {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.2rem, 3.5vh, 3rem);
+  max-width: 90vw;
+}
+.logo-hero__mark {
+  width: auto;
+  max-width: min(82vw, 1100px);
+  max-height: 56vh;
   height: auto;
-  pointer-events: none;
+  display: block;
   user-select: none;
-  opacity: 0;
-  transform: translateY(-6px);
-  transition: opacity 700ms ease 250ms, transform 700ms cubic-bezier(.18,.85,.28,1) 250ms;
 }
-.slide.is-active .genjam-logo { opacity: .75; transform: translateY(0); }
-.genjam-logo--invert { filter: invert(1) brightness(2); }
-.genjam-logo--corner { /* default */ }
-.genjam-logo--center {
-  top: 50%; left: 50%; right: auto;
-  transform: translate(-50%, -52%);
-  width: clamp(220px, 36vw, 480px);
-  opacity: 0;
+.logo-hero__caption {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5.5vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -.025em;
+  color: var(--ink);
+  margin: 0;
+  text-transform: none;
 }
-.slide.is-active .genjam-logo--center { opacity: .9; transform: translate(-50%, -50%); }
 
 /* ── slide--bubble-split: image left, big text right (side-by-side). ── */
 .slide--bubble-split {
@@ -3727,26 +3737,20 @@ kbd {
   min-height: 0;
   overflow: hidden;
 }
-.ai-example__frame--video iframe {
+.ai-example__frame--video iframe,
+.ai-example__frame--video video {
   width: 100%;
-  aspect-ratio: 16 / 9;
   height: auto;
   max-height: 65vh;
   border: 0;
   border-radius: 6px;
   display: block;
+  background: var(--ink);
 }
-.ai-example__frame--tweet {
-  background: var(--cream);
-  align-items: stretch;
-  justify-content: center;
-  overflow-y: auto;
-  max-height: 70vh;
-}
-.ai-example__frame--tweet > .twitter-tweet {
-  margin: 0 auto !important;
-  max-width: 540px;
-}
+.ai-example__frame--video iframe { aspect-ratio: 16 / 9; }
+/* The two X-sourced clips are vertical-ish; let the browser size them
+   to their native aspect within the frame instead of cropping. */
+.ai-example__frame--video video { object-fit: contain; max-width: 100%; }
 .ai-example__cap {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 700;
@@ -3773,16 +3777,18 @@ kbd {
 .schedule-list {
   list-style: none;
   padding: 0;
-  margin: 1vh 0 0 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2vw;
+  margin: 1vh auto 0;
+  max-width: clamp(420px, 56vw, 820px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .9vh;
 }
 .schedule-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.1rem 1.25rem;
+  gap: 1.2rem;
+  padding: .9rem 1.4rem;
   border: 3px solid var(--ink);
   border-radius: 10px;
   background: var(--white);
@@ -3800,19 +3806,21 @@ kbd {
 .schedule-item--accent .schedule-num { color: var(--cream); }
 .schedule-num {
   font-weight: 800;
-  font-size: clamp(.85rem, 1.1vw, 1.1rem);
+  font-size: clamp(.9rem, 1.15vw, 1.15rem);
   letter-spacing: .12em;
   opacity: .7;
-  min-width: 1.6em;
+  min-width: 2em;
 }
 .schedule-label {
   font-weight: 900;
-  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  font-size: clamp(1.15rem, 1.7vw, 1.7rem);
   line-height: 1.05;
   letter-spacing: -.01em;
 }
-@media (max-width: 900px) { .schedule-list { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .schedule-list { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .schedule-list { max-width: 92vw; }
+  .schedule-item { padding: .7rem 1rem; gap: .8rem; }
+}
 
 /* ── Page-31 fan-diagram pop-in: each <rect> + <line> + <text> in the
    SVG fades+scales in on slide-active in a left-to-right cascade.
