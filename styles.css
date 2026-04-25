@@ -3186,6 +3186,121 @@ kbd {
   .throwback-list { grid-template-columns: 1fr; }
 }
 
+/* ---- Torn note size variants ---- */
+.torn-note--gallery .torn-text,
+.torn-note--throwback .torn-text {
+  font-size: clamp(1.1rem, 2.2vw, 2.4rem);
+}
+.torn-note--poster .torn-text {
+  font-size: clamp(1rem, 1.8vw, 2rem);
+}
+
+
+/* =========================================================
+   SLIDE 7 RESTYLE — JAM SCENES (fact-card grid, slide 17 style)
+   ========================================================= */
+.slide--jam-scenes {
+  justify-content: center;
+  gap: 1.8vh;
+  padding: 5vh 5vw;
+}
+.jam-hd { display: flex; flex-direction: column; gap: .5vh; }
+.jam-sub { max-width: 60ch; opacity: .85; }
+.jam-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+.jam-card {
+  position: relative;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 7px 7px 0 var(--ink);
+  padding: 1.2rem 1.35rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.jam-card--white  { background: var(--white);  color: var(--ink); }
+.jam-card--lime   { background: var(--lime);   color: var(--ink); }
+.jam-card--yellow { background: var(--yellow); color: var(--ink); }
+.jam-card--pink   { background: var(--pink);   color: var(--white); }
+.jam-card--ink    { background: var(--ink);    color: var(--cream); box-shadow: 5px 5px 0 var(--pink); }
+.jam-card__media {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: clamp(84px, 9.2vw, 122px);
+  height: clamp(84px, 9.2vw, 122px);
+  object-fit: cover;
+  border: 2.5px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--cream);
+  z-index: 2;
+  transform: rotate(-2.5deg);
+  transition: transform 420ms cubic-bezier(.18,.85,.28,1);
+}
+.jam-card:nth-child(even) .jam-card__media { transform: rotate(2.8deg); }
+.slide--jam-scenes.is-active .jam-card:hover .jam-card__media {
+  transform: rotate(0) scale(1.04);
+}
+.jam-card--pink .jam-card__media { border-color: var(--white); box-shadow: 4px 4px 0 var(--white); }
+.jam-card:has(.jam-card__media) .jam-card__h,
+.jam-card:has(.jam-card__media) .jam-card__b { padding-right: clamp(96px, 10.5vw, 138px); }
+.jam-card__tag {
+  align-self: flex-start;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.8rem, 1.05vw, 1.05rem);
+  letter-spacing: .14em;
+  padding: .3rem .55rem;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  background: rgba(255,255,255,.35);
+}
+.jam-card--white .jam-card__tag { background: var(--cream); }
+.jam-card__h {
+  font-weight: 900;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.jam-card__b {
+  font-weight: 600;
+  font-size: clamp(.95rem, 1.2vw, 1.2rem);
+  line-height: 1.35;
+  margin: 0;
+}
+.jam-card__b b { font-weight: 900; }
+@media (max-width: 900px) {
+  .jam-list { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   SLIDE 8 RESTYLE — Q2 2025 THROWBACK (same fact-card style)
+   ========================================================= */
+.slide--throwback-v2 {
+  justify-content: center;
+  gap: 1.8vh;
+  padding: 5vh 5vw;
+}
+.throwback-hd { display: flex; flex-direction: column; gap: .5vh; }
+.throwback-sub { max-width: 60ch; opacity: .85; }
+.throwback-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+@media (max-width: 900px) {
+  .throwback-list { grid-template-columns: 1fr; }
+}
+
 /* =========================================================
    SLIDE 9 RESTYLE — MM-POSTER cream override
    ========================================================= */
