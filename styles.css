@@ -3408,9 +3408,113 @@ kbd {
   .history-list--photos { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
-  .history-list--titles { grid-template-columns: repeat(2, 1fr); }
+  .history-list--titles,
+  .history-list--why { grid-template-columns: repeat(2, 1fr); }
+  .history-list--why .fact--video-wide { grid-column: 1 / -1; }
 }
 @media (max-width: 600px) {
   .history-list--photos,
-  .history-list--titles { grid-template-columns: 1fr; }
+  .history-list--titles,
+  .history-list--why { grid-template-columns: 1fr; }
+  .history-list--why .fact--video-wide { grid-column: auto; }
+}
+
+/* ── Why Learn AI? layout: 5 title cards in a row, then a wide
+   feature card holding the willsmith.mp4 evolution video and date
+   caption. Video is sized to its native ~680x750 aspect so we never
+   crop the frame. ── */
+.history-list--why {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1vw;
+}
+.fact--video-wide {
+  grid-column: 1 / -1;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1.2rem 1.2rem;
+  gap: .55rem;
+}
+.fact__video-feature {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: clamp(220px, 48vh, 460px);
+  aspect-ratio: 680 / 750;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  margin: .2rem auto 0;
+}
+.fact__caption {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(.85rem, 1.1vw, 1.1rem);
+  letter-spacing: .04em;
+  opacity: .7;
+  margin: .25rem 0 0 0;
+}
+
+/* ── slide--bubble: hero image centered under a kicker + title.
+   Used on the "Nature of the bubble" slide. ── */
+.slide--bubble {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3vh;
+}
+.bubble-hd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+.bubble-figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 70vh;
+}
+.bubble-figure img {
+  max-width: 78vw;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 12px 12px 0 var(--pink);
+  background: var(--white);
+}
+
+/* ── BELT-AND-SUSPENDERS: every text element inside .slide must
+   render in Inter sans-serif. Several content classes (.big-list li,
+   .mm-tile span, .mm-tile a, .pf, .story-lines, .discussion li,
+   .gallery-foot, etc.) historically had no explicit font-family and
+   were inheriting from html/body. On some browsers / with the Google
+   Font request blocked, those elements fell back to a system serif
+   instead of system sans-serif. This rule guarantees they never do.
+   Deliberate Space Mono accents are restored in the second block. ── */
+.slide,
+.slide *:not(svg):not(svg *) {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+.slide .mono,
+.slide .mono *,
+.slide .mono-chip,
+.slide .kicker,
+.slide .attribution,
+.slide .submit-card__label,
+.slide .submit-code,
+.slide .compare-watermark,
+.slide .inflect-next,
+.slide .inflect__head,
+.slide .qr-card figcaption,
+.slide .worldmap__pins,
+.slide .worldmap__pins *,
+.slide .mm-sub__h em,
+.slide .help__card,
+.slide .help__card * {
+  font-family: "Space Mono", ui-monospace, monospace;
 }
