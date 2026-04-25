@@ -1,0 +1,1982 @@
+{
+  "meta": {
+    "title": "AI Storytelling Market Map",
+    "version": "Q2 2026",
+    "totalCompanies": 247,
+    "totalSections": 4,
+    "exportedAt": "2026-04-21T04:32:23.400352Z",
+    "source": "machinecinema.ai"
+  },
+  "sections": [
+    {
+      "id": "development",
+      "label": "DEVELOPMENT / PRE-PRODUCTION",
+      "accentColor": "#38BDF8",
+      "headerBg": "#0EA5E9",
+      "subsections": [
+        {
+          "id": "ai-writing",
+          "label": "AI Writing",
+          "companies": [
+            {
+              "name": "ChatGPT",
+              "url": "https://chat.openai.com",
+              "logoKey": "chatgpt_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/ChatGPT Image Gen Logo_b4c522f8.jpg",
+              "description": "Conversational AI for scriptwriting and ideation"
+            },
+            {
+              "name": "Claude",
+              "url": "https://claude.ai",
+              "logoKey": "claude_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Claude Logo_45d1a5b1.jpeg",
+              "description": "Anthropic's AI assistant for long-form writing"
+            },
+            {
+              "name": "Gemini",
+              "url": "https://gemini.google.com",
+              "logoKey": "veo_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Google VEO Logo_7cf606d3.png",
+              "description": "Google's multimodal AI for creative writing"
+            },
+            {
+              "name": "Sudowrite",
+              "url": "https://sudowrite.com",
+              "logoKey": "sudowrite_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Sudowrite Logo_1bd78125.jpeg",
+              "description": "AI writing tool built for fiction and screenwriting"
+            },
+            {
+              "name": "SAGA",
+              "url": "https://writeonsaga.com",
+              "logoKey": "saga_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/saga_ai_ba13516e.png",
+              "description": "AI-powered screenwriting and storyboarding platform"
+            },
+            {
+              "name": "Grammarly",
+              "url": "https://grammarly.com",
+              "logoKey": "grammarly_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Grammarly Logo_384c5355.png",
+              "description": "AI writing assistant for clarity and style"
+            },
+            {
+              "name": "Hemingway",
+              "url": "https://hemingwayapp.com",
+              "logoKey": "hemingway",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/hemingway_4407dbe9.png",
+              "description": "Editing tool for bold, clear writing"
+            },
+            {
+              "name": "Arc Studio",
+              "url": "https://arcstudiopro.com",
+              "logoKey": "arc_studio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/arc_studio_945ac6a0.png",
+              "description": "Modern screenwriting software with AI co-writing features",
+              "isNew": true
+            },
+            {
+              "name": "Highland 2",
+              "url": "https://quoteunquoteapps.com/highland-2",
+              "logoKey": "highland_2",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/highland_2_2e1e3b6b.png",
+              "description": "Clean, distraction-free screenwriting app for Mac"
+            },
+            {
+              "name": "Lex",
+              "url": "https://lex.page",
+              "logoKey": "lex",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/lex_29ff4217.png",
+              "description": "AI-powered word processor for writers \u2014 like Cursor for expressing yourself",
+              "isNew": true
+            },
+            {
+              "name": "WriterDuet",
+              "url": "https://writerduet.com",
+              "logoKey": "writerduet",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/writerduet_946cc11b.ico",
+              "description": "Real-time collaborative screenwriting platform"
+            },
+            {
+              "name": "Novelcrafter",
+              "url": "https://novelcrafter.com",
+              "logoKey": "novelcrafter",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/novelcrafter_22e851cc.png",
+              "description": "AI-powered long-form fiction writing with world-building tools",
+              "isNew": true
+            },
+            {
+              "name": "Plotdot AI",
+              "url": "https://plotdot.ai",
+              "logoKey": "plotdot_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/plotdot_ai_6be86cfd.png",
+              "description": "AI story structure and plot development tool",
+              "isNew": true
+            },
+            {
+              "name": "Filmustage",
+              "url": "https://filmustage.com",
+              "logoKey": "filmustage",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/filmustage_1674e3a9.png",
+              "description": "AI script breakdown, scheduling and pre-production management",
+              "isNew": true
+            },
+            {
+              "name": "ScriptReader.ai",
+              "url": "https://scriptreader.ai",
+              "logoKey": "scriptreader_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/scriptreader_ai_4530bc80.ico",
+              "description": "AI-powered script coverage and analysis in minutes",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "storyboarding",
+          "label": "Storyboarding",
+          "companies": [
+            {
+              "name": "SAGA",
+              "url": "https://writeonsaga.com",
+              "logoKey": "saga_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/saga_ai_ba13516e.png",
+              "description": "AI screenwriting and storyboarding"
+            },
+            {
+              "name": "LTX Studio",
+              "url": "https://ltx.studio",
+              "logoKey": "ltx_studio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/ltx_studio_99c8d43c.png",
+              "description": "Storyboard-to-video AI filmmaking platform"
+            },
+            {
+              "name": "Boords",
+              "url": "https://boords.com",
+              "logoKey": "boords",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/boords_23ac8f6e.ico",
+              "description": "Professional storyboarding with AI assistance"
+            },
+            {
+              "name": "Milanote",
+              "url": "https://milanote.com",
+              "logoKey": "milanote",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/milanote_2131fb55.png",
+              "description": "Visual planning and moodboarding tool"
+            },
+            {
+              "name": "STOIRA",
+              "url": "https://stoira.com",
+              "logoKey": "stoira_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/stoira_ai_91976021.png",
+              "description": "AI creative suite for rapid visual prototyping"
+            },
+            {
+              "name": "Plot Party",
+              "url": "https://plotparty.ai",
+              "logoKey": "plot_party_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/plot_party_ai_bb61f09b.png",
+              "description": "AI storytelling platform for visual stories"
+            },
+            {
+              "name": "Lore Machine",
+              "url": "https://loremachine.world",
+              "logoKey": "lore_machine_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Lore Machine Logo Pink_b4538b50.webp",
+              "description": "AI-powered narrative world-building platform"
+            },
+            {
+              "name": "Waffer AI",
+              "url": "https://waffer.ai",
+              "logoKey": "waffer_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/waffer_ai_74ac554d.png",
+              "description": "Animated video creation with human-in-the-loop"
+            },
+            {
+              "name": "StudioBinder",
+              "url": "https://studiobinder.com",
+              "logoKey": "studiobinder",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/studiobinder_524620b2.png",
+              "description": "Production management with AI storyboard and shot list tools"
+            },
+            {
+              "name": "Boords AI",
+              "url": "https://boords.com",
+              "logoKey": "boords_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/boords_ai_70561010.png",
+              "description": "AI-assisted storyboarding and animatic creation"
+            },
+            {
+              "name": "Storyboarder.ai",
+              "url": "https://storyboarder.ai",
+              "logoKey": "storyboarder_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/storyboarder_ai_efbb03c6.png",
+              "description": "$50/mo script-to-animation storyboard tool \u2014 featured at MIP London 2025",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "agentic-ai",
+          "label": "Agentic AI Tools",
+          "note": "Also bleeds into Production",
+          "companies": [
+            {
+              "name": "Luma Agents",
+              "url": "https://lumalabs.ai",
+              "logoKey": "luma_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/luma_ai_48f89236.png",
+              "description": "Autonomous AI agents for video generation workflows"
+            },
+            {
+              "name": "Fauna Agent",
+              "url": "https://fauna.ai",
+              "logoKey": "fauna_agent",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/fauna_agent_e628702c.png",
+              "description": "Agentic AI for creative production pipelines"
+            },
+            {
+              "name": "oiioii",
+              "url": "https://oiioii.com",
+              "description": "AI agent for automated creative workflows"
+            },
+            {
+              "name": "POPCORN",
+              "url": "https://popcorn.co",
+              "logoKey": "popcorn",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/popcorn_ab5bd125.png",
+              "description": "AI co-producer with agentic filmmaking"
+            },
+            {
+              "name": "Flikai",
+              "url": "https://flikai.com",
+              "logoKey": "flikai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/flikai_f584a428.png",
+              "description": "Agentic AI platform for automated creative and video production workflows",
+              "isNew": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "production",
+      "label": "PRODUCTION",
+      "accentColor": "#FB923C",
+      "headerBg": "#F97316",
+      "subsections": [
+        {
+          "id": "image-models",
+          "label": "Image Models",
+          "companies": [
+            {
+              "name": "Adobe Firefly",
+              "url": "https://firefly.adobe.com",
+              "logoKey": "adobe_firefly_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Adobe Firefly Logo_2faefb6b.webp",
+              "description": "Enterprise-grade AI image generation"
+            },
+            {
+              "name": "Midjourney",
+              "url": "https://midjourney.com",
+              "logoKey": "midjourney_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Midjourney Custom YouTube Thumbnails_7797f789.jpeg",
+              "description": "High-quality AI art and concept generation"
+            },
+            {
+              "name": "Ideogram",
+              "url": "https://ideogram.ai",
+              "logoKey": "ideogram_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/ideogram_5c63794e.png",
+              "description": "AI image gen with strong text rendering"
+            },
+            {
+              "name": "Reve.art",
+              "url": "https://reve.art",
+              "logoKey": "reve_art_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Reve Art Logo_ccab4bc5.webp",
+              "description": "Next-gen AI image generation platform"
+            },
+            {
+              "name": "Stability AI",
+              "url": "https://stability.ai",
+              "logoKey": "stability_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Stability AI Logo_3155ab6c.jpg",
+              "description": "Open-source image generation models"
+            },
+            {
+              "name": "FLUX.1",
+              "url": "https://blackforestlabs.ai",
+              "logoKey": "flux1_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Flux 1 Logo Aug 5 2024_8158158e.jpeg",
+              "description": "State-of-the-art open image generation model"
+            },
+            {
+              "name": "KREA AI",
+              "url": "https://krea.ai",
+              "logoKey": "krea_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Krea AI Logo_824f3d6e.jpg",
+              "description": "Real-time AI image generation and enhancement"
+            },
+            {
+              "name": "Argil",
+              "url": "https://argil.ai",
+              "logoKey": "argil",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/argil_d56db1b0.png",
+              "description": "AI avatar and image generation for content creators",
+              "isNew": true
+            },
+            {
+              "name": "Grok Aurora",
+              "url": "https://x.ai",
+              "logoKey": "grok_aurora",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/grok_aurora_44040427.ico",
+              "description": "xAI's image generation model built into Grok",
+              "isNew": true
+            },
+            {
+              "name": "Freepik Mystic",
+              "url": "https://freepik.com/mystic",
+              "logoKey": "freepik_mystic",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/freepik_mystic_60d2ed87.png",
+              "description": "Freepik's proprietary image generation model",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "video-models",
+          "label": "Video Models",
+          "companies": [
+            {
+              "name": "Runway",
+              "url": "https://runwayml.com",
+              "logoKey": "runway_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Runway Logo_fb468e0c.png",
+              "description": "Professional AI video generation and editing"
+            },
+            {
+              "name": "Luma AI",
+              "url": "https://lumalabs.ai",
+              "logoKey": "luma_ai_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Luma AI Padded Logo_8eb338c6.avif",
+              "description": "Dream Machine \u2014 fast, high-quality video gen"
+            },
+            {
+              "name": "Kling AI",
+              "url": "https://klingai.com",
+              "logoKey": "kling_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/klingai_4439f0e2.png",
+              "description": "Leading Chinese AI video model, 1080p output"
+            },
+            {
+              "name": "Pika",
+              "url": "https://pika.art",
+              "logoKey": "pika_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/pika_79676ee2.jpeg",
+              "description": "Consumer-friendly AI video with creative effects"
+            },
+            {
+              "name": "Hailuo AI",
+              "url": "https://hailuoai.video",
+              "logoKey": "hailuo_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Hailuo AI Logo_15d54358.webp",
+              "description": "Fast video generation with natural motion"
+            },
+            {
+              "name": "Veo (Google)",
+              "url": "https://deepmind.google/models/veo",
+              "logoKey": "veo_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Google VEO Logo_7cf606d3.png",
+              "description": "Google DeepMind's advanced video generation"
+            },
+            {
+              "name": "Sora (OpenAI)",
+              "url": "https://openai.com/sora",
+              "logoKey": "sora_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/openai sora_7a65a1a2.jpg",
+              "description": "OpenAI's text-to-video model"
+            },
+            {
+              "name": "Wan (Alibaba)",
+              "url": "https://tongyi.aliyun.com/wanxiang",
+              "logoKey": "wan_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Wan AI Video Logo_7a8a5e70.png",
+              "description": "Alibaba's open-source video generation"
+            },
+            {
+              "name": "Seedance",
+              "url": "https://seedance.ai",
+              "logoKey": "seedance_bytedance",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/seedance_bytedance_81d92910.png",
+              "description": "ByteDance's AI video generation platform"
+            },
+            {
+              "name": "Higgsfield",
+              "url": "https://higgsfield.ai",
+              "logoKey": "higgsfield_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Higgsfield Logo_e761b3e8.webp",
+              "description": "Mobile-first AI video creation"
+            },
+            {
+              "name": "Hunyuan Video",
+              "url": "https://github.com/Tencent/HunyuanVideo",
+              "logoKey": "hunyuan_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Hunyuan Logo_78e39ffa.png",
+              "description": "Tencent's open-source 13B video model"
+            },
+            {
+              "name": "PixVerse",
+              "url": "https://pixverse.ai",
+              "logoKey": "pixverse_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/pixverse_ai_abd6a4b2.png",
+              "description": "V3.5 model with strong character consistency"
+            },
+            {
+              "name": "Vidu AI",
+              "url": "https://shengshu.com/en",
+              "logoKey": "vidu_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/vidu_ai_1a5f46c2.png",
+              "description": "Multimodal generative video model"
+            },
+            {
+              "name": "CogVideoX",
+              "url": "https://zhipuai.cn/en",
+              "logoKey": "cogvideox_zhipuai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/cogvideox_zhipuai_af82a5b1.png",
+              "description": "Open-source text-to-video from Tsinghua/ZhipuAI"
+            },
+            {
+              "name": "Moonvalley",
+              "url": "https://moonvalley.ai",
+              "logoKey": "moonvalley_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/moonvalley_ai_649acc7b.png",
+              "description": "Generative storytelling video platform"
+            },
+            {
+              "name": "Genmo",
+              "url": "https://genmo.ai",
+              "logoKey": "genmo_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/genmo_ai_478ba27e.png",
+              "description": "Mochi 1 \u2014 open-source video generation"
+            },
+            {
+              "name": "LTX Studio",
+              "url": "https://ltx.studio",
+              "logoKey": "ltx_studio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/ltx_studio_99c8d43c.png",
+              "description": "Full narrative video creation with LTX video model"
+            },
+            {
+              "name": "Decart AI",
+              "url": "https://decart.ai",
+              "logoKey": "decart_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/decart_ai_baa24696.png",
+              "description": "Real-time generative video with near-zero latency"
+            },
+            {
+              "name": "Step-Video",
+              "url": "https://stepfun.com",
+              "logoKey": "stepfun_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/stepfun_ai_ac5a898c.png",
+              "description": "StepFun's high-quality video generation"
+            },
+            {
+              "name": "Luma Ray3",
+              "url": "https://lumalabs.ai",
+              "logoKey": "luma_ai_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Luma AI Padded Logo_8eb338c6.avif",
+              "description": "Luma's latest video model with real-camera video reimagining",
+              "isNew": true
+            },
+            {
+              "name": "Wan 2.1",
+              "url": "https://wanvideo.ai",
+              "logoKey": "wan_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Wan AI Video Logo_7a8a5e70.png",
+              "description": "Alibaba's latest open-source video model with improved motion",
+              "isNew": true
+            },
+            {
+              "name": "Minimax Video",
+              "url": "https://minimaxi.com",
+              "logoKey": "minimax_video",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/minimax_video_daea5978.ico",
+              "description": "Minimax's high-quality video generation model",
+              "isNew": true
+            },
+            {
+              "name": "WaveSpeed AI",
+              "url": "https://wavespeed.ai",
+              "logoKey": "wavespeed_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/wavespeed_ai_dd028867.ico",
+              "description": "Ultra-fast AI video generation with low latency",
+              "isNew": true
+            },
+            {
+              "name": "Veo 3",
+              "url": "https://deepmind.google/models/veo",
+              "logoKey": "veo_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Google VEO Logo_7cf606d3.png",
+              "description": "Google DeepMind's latest video model with native audio generation",
+              "isNew": true
+            },
+            {
+              "name": "Haiper AI",
+              "url": "https://haiper.ai",
+              "logoKey": "haiper_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/haiper_ai_375a91f8.png",
+              "description": "High-fidelity video generation with strong motion quality",
+              "isNew": true
+            },
+            {
+              "name": "Pyramid Flow",
+              "url": "https://pyramid-flow.github.io",
+              "logoKey": "pyramid_flow",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/pyramid_flow_9aa9860e.png",
+              "description": "Open-source video generation with temporal pyramid flow",
+              "isNew": true
+            },
+            {
+              "name": "Asteria",
+              "url": "https://asteriafilm.com",
+              "logoKey": "asteria",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/asteria_aad980d5.png",
+              "description": "Moonvalley's AI film studio arm \u2014 generative video for professional productions",
+              "isNew": true
+            },
+            {
+              "name": "Happy Horse",
+              "url": "https://tongyi.aliyun.com",
+              "logoKey": "happy_horse",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/happy_horse_a1344778.png",
+              "description": "Alibaba's video generation model \u2014 high-quality motion and scene synthesis",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "multi-shot",
+          "label": "Multi-Shot",
+          "note": "Long-form & scene-chained video generation",
+          "companies": [
+            {
+              "name": "Seedance 2",
+              "url": "https://seedance.ai",
+              "logoKey": "seedance_bytedance",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/seedance_bytedance_81d92910.png",
+              "description": "ByteDance's multi-shot video generation with scene continuity",
+              "isNew": true
+            },
+            {
+              "name": "Kling 0.3",
+              "url": "https://klingai.com",
+              "logoKey": "klingai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/klingai_f9b2520f.png",
+              "description": "Kling's multi-shot model with consistent characters across scenes",
+              "isNew": true
+            },
+            {
+              "name": "Sora 2",
+              "url": "https://openai.com/sora",
+              "logoKey": "sora_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/openai sora_7a65a1a2.jpg",
+              "description": "OpenAI's multi-shot model \u2014 discontinued",
+              "isDiscontinued": true
+            },
+            {
+              "name": "Koyal AI",
+              "url": "https://koyal.ai",
+              "logoKey": "koyal_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/koyal_ai_5d086a6e.png",
+              "description": "Agentic multi-shot filmmaking with scene-level control"
+            },
+            {
+              "name": "Popcorn.co",
+              "url": "https://popcorn.co",
+              "logoKey": "popcorn",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/popcorn_ab5bd125.png",
+              "description": "AI co-producer orchestrating multi-shot narrative sequences"
+            },
+            {
+              "name": "Hypernatural",
+              "url": "https://hypernatural.ai",
+              "logoKey": "hypernatural_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Hypernatural AI Logo_47791693.jpg",
+              "description": "Multi-shot AI video creation with rapid iteration"
+            },
+            {
+              "name": "Martini AI",
+              "url": "https://martini.film",
+              "logoKey": "martini_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/martini_ai_52d27af4.png",
+              "description": "Collaborative AI filmmaking with multi-shot scene control"
+            },
+            {
+              "name": "LongStories.ai",
+              "url": "https://longstories.ai",
+              "logoKey": "longstories_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/longstories_ai_00ce586e.png",
+              "description": "AI video generation up to 15 minutes with scene chaining"
+            },
+            {
+              "name": "NoSpoon Studios",
+              "url": "https://nospoonstudios.com",
+              "description": "AI-native multi-shot production studio"
+            },
+            {
+              "name": "Promise",
+              "url": "https://promisestudios.com",
+              "logoKey": "promise",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/promise_43131543.png",
+              "description": "AI studio using generative AI for VFX, backgrounds and effects in film",
+              "isNew": true
+            },
+            {
+              "name": "Google Flow",
+              "url": "https://labs.google/flow",
+              "logoKey": "google_flow",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/google_flow_4feec10b.svg",
+              "description": "Google's AI filmmaking tool built on Veo 3, Imagen and Gemini \u2014 multi-shot scene orchestration",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "world-models",
+          "label": "World Models",
+          "note": "Generative 3D / Interactive Worlds",
+          "companies": [
+            {
+              "name": "Genie 3 (Google)",
+              "url": "https://deepmind.google",
+              "logoKey": "google_deepmind_genie",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/google_deepmind_genie_2be797ec.png",
+              "description": "Google DeepMind's interactive world generation"
+            },
+            {
+              "name": "World Labs",
+              "url": "https://worldlabs.ai",
+              "logoKey": "world_labs",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/world_labs_2dcd6f02.png",
+              "description": "Fei-Fei Li's spatial intelligence startup"
+            },
+            {
+              "name": "Odyssey ML",
+              "url": "https://odyssey.systems",
+              "logoKey": "odyssey",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/odyssey_4f8e66ba.png",
+              "description": "Hollywood-grade AI world simulation"
+            },
+            {
+              "name": "NVIDIA Cosmos",
+              "url": "https://nvidia.com/cosmos",
+              "logoKey": "nvidia_cosmos",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/nvidia_cosmos_6bbd01b6.png",
+              "description": "Physical AI world foundation model"
+            },
+            {
+              "name": "Meta WorldGen",
+              "url": "https://ai.meta.com",
+              "logoKey": "meta_worldgen",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/meta_worldgen_9afe48b4.png",
+              "description": "Meta's generative world model research"
+            },
+            {
+              "name": "Decart AI",
+              "url": "https://decart.ai",
+              "logoKey": "decart_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/decart_ai_baa24696.png",
+              "description": "Real-time interactive world generation"
+            },
+            {
+              "name": "Spaitial",
+              "url": "https://spaitial.com",
+              "logoKey": "spaitial",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/spaitial_557af8c3.png",
+              "description": "Spatial AI for 3D world creation"
+            },
+            {
+              "name": "Happy Oyster",
+              "url": "https://www.happyoyster.cn",
+              "logoKey": "happy_oyster",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/happy_oyster_1c1b4428.png",
+              "description": "Chinese AI world model for generative interactive environments",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "3d-production",
+          "label": "3D Production",
+          "companies": [
+            {
+              "name": "Meshy",
+              "url": "https://meshy.ai",
+              "logoKey": "meshy",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/meshy_1b418bdc.png",
+              "description": "Text/image to 3D model generation \u2014 game-ready assets",
+              "isNew": true
+            },
+            {
+              "name": "Tripo AI",
+              "url": "https://tripo3d.ai",
+              "logoKey": "tripo_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/tripo_ai_506e2b12.png",
+              "description": "Fast text-to-3D and image-to-3D model generation",
+              "isNew": true
+            },
+            {
+              "name": "Hyper3D Rodin",
+              "url": "https://hyper3d.ai",
+              "logoKey": "hyper3d_rodin",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/hyper3d_rodin_69ca718f.ico",
+              "description": "High-quality 3D model generation with clean geometry"
+            },
+            {
+              "name": "Spline",
+              "url": "https://spline.design",
+              "logoKey": "spline",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/spline_5de16a98.png",
+              "description": "Collaborative 3D design tool with AI generation"
+            },
+            {
+              "name": "Luma Genie",
+              "url": "https://lumalabs.ai/genie",
+              "logoKey": "luma_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/luma_ai_48f89236.png",
+              "description": "Luma Labs' free text-to-3D model generator"
+            },
+            {
+              "name": "Hunyuan 3D",
+              "url": "https://3d.hunyuan.tencent.com",
+              "logoKey": "hunyuan_3d",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/hunyuan_3d_72d26b82.png",
+              "description": "Tencent's open-source 3D generation model"
+            },
+            {
+              "name": "Kaedim",
+              "url": "https://kaedim3d.com",
+              "logoKey": "kaedim",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/kaedim_08789b00.png",
+              "description": "AI-powered 3D asset creation from 2D images"
+            },
+            {
+              "name": "Promethean AI",
+              "url": "https://promethean.ai",
+              "logoKey": "promethean_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/promethean_ai_2062d635.png",
+              "description": "AI world-building for 3D environments"
+            },
+            {
+              "name": "Mixer AI",
+              "url": "https://mixar.app",
+              "logoKey": "mixer_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/mixer_ai_bb379248.png",
+              "description": "AI-native 3D editor"
+            },
+            {
+              "name": "Inworld AI",
+              "url": "https://inworld.ai",
+              "logoKey": "inworld_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/inworld_ai_b24e7734.png",
+              "description": "AI characters and NPCs for 3D worlds"
+            },
+            {
+              "name": "CSM AI",
+              "url": "https://csm.ai",
+              "description": "Common Sense Machines \u2014 world-to-3D model generation",
+              "isNew": true
+            },
+            {
+              "name": "Masterpiece Studio",
+              "url": "https://masterpiecestudio.com",
+              "logoKey": "masterpiece_studio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/masterpiece_studio_554131ec.png",
+              "description": "AI 3D character creation and animation platform"
+            },
+            {
+              "name": "3D AI Studio",
+              "url": "https://3daistudio.com",
+              "logoKey": "3d_ai_studio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/3d_ai_studio_579a16a4.ico",
+              "description": "Text and image to 3D model generation",
+              "isNew": true
+            },
+            {
+              "name": "Sloyd",
+              "url": "https://sloyd.ai",
+              "logoKey": "sloyd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/sloyd_32a461ea.png",
+              "description": "Procedural AI 3D model generation for games",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "gaming",
+          "label": "Gaming",
+          "companies": [
+            {
+              "name": "Rosebud AI",
+              "url": "https://rosebud.ai",
+              "logoKey": "rosebud_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/rosebud_ai_761bc6be.png",
+              "description": "AI-powered game creation and 3D world building"
+            },
+            {
+              "name": "Scenario",
+              "url": "https://scenario.com",
+              "logoKey": "scenario",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/scenario_f6d9c895.png",
+              "description": "AI game asset generation platform"
+            },
+            {
+              "name": "Ludo AI",
+              "url": "https://ludo.ai",
+              "logoKey": "ludo_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/ludo_ai_ec59166e.png",
+              "description": "AI-powered game design and ideation"
+            },
+            {
+              "name": "Layer AI",
+              "url": "https://layer.ai",
+              "logoKey": "layer_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/layer_ai_4f65724e.png",
+              "description": "AI game asset pipeline for studios"
+            }
+          ]
+        },
+        {
+          "id": "ai-voice",
+          "label": "AI Voice",
+          "companies": [
+            {
+              "name": "ElevenLabs",
+              "url": "https://elevenlabs.io",
+              "logoKey": "elevenlabs_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/ElevenLabs Logo_4ef3ba53.png",
+              "description": "Industry-leading AI voice synthesis"
+            },
+            {
+              "name": "Hume AI",
+              "url": "https://hume.ai",
+              "logoKey": "hume_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Hume AI Voice Logo_7affdafd.png",
+              "description": "Emotionally intelligent AI voice"
+            },
+            {
+              "name": "Artlist",
+              "url": "https://artlist.io",
+              "logoKey": "artlist_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Artlist Logo_83f1fc65.png",
+              "description": "AI voice and music licensing platform"
+            },
+            {
+              "name": "Typecast",
+              "url": "https://typecast.ai",
+              "logoKey": "typecast_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Typecast AI Logo_5785075a.jpg",
+              "description": "AI voice actor platform"
+            },
+            {
+              "name": "Kyutai",
+              "url": "https://kyutai.org",
+              "logoKey": "kyutai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/kyutai_d47c8c95.ico",
+              "description": "Open-source real-time voice AI"
+            },
+            {
+              "name": "Sesame",
+              "url": "https://sesame.com",
+              "logoKey": "sesame_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Sesame AI Voice Logo_87254210.jpg",
+              "description": "Conversational AI voice interface"
+            },
+            {
+              "name": "NotebookLM",
+              "url": "https://notebooklm.google.com",
+              "logoKey": "notebooklm",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/notebooklm_207979cd.png",
+              "description": "Google's AI audio overview generator"
+            },
+            {
+              "name": "PlayHT",
+              "url": "https://play.ht",
+              "logoKey": "playht",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/playht_ea3adfaa.png",
+              "description": "Ultra-realistic AI voice cloning and TTS for creators",
+              "isNew": true
+            },
+            {
+              "name": "Murf AI",
+              "url": "https://murf.ai",
+              "logoKey": "murf_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/murf_ai_d1578898.png",
+              "description": "Studio-quality AI voiceover with 120+ voices"
+            },
+            {
+              "name": "Cartesia",
+              "url": "https://cartesia.ai",
+              "logoKey": "cartesia",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/baseten_560e9ee3.ico",
+              "description": "Real-time voice AI with instant cloning from 3 seconds of audio",
+              "isNew": true
+            },
+            {
+              "name": "Lovo AI",
+              "url": "https://lovo.ai",
+              "logoKey": "lovo_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/lovo_ai_5090cade.png",
+              "description": "AI voice actor platform with video creation suite"
+            },
+            {
+              "name": "Resemble AI",
+              "url": "https://resemble.ai",
+              "logoKey": "resemble_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/resemble_ai_27a54643.png",
+              "description": "Voice cloning and real-time AI voice synthesis"
+            },
+            {
+              "name": "Replica Studios",
+              "url": "https://replicastudios.com",
+              "logoKey": "replica_studios",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/replica_studios_1487c602.png",
+              "description": "AI voice actors for games and interactive media"
+            },
+            {
+              "name": "Inworld AI Voice",
+              "url": "https://inworld.ai",
+              "logoKey": "inworld_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/inworld_ai_b24e7734.png",
+              "description": "Realistic AI voice synthesis for interactive characters",
+              "isNew": true
+            },
+            {
+              "name": "Neosapience (Typecast)",
+              "url": "https://typecast.ai",
+              "logoKey": "typecast_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Typecast AI Logo_5785075a.jpg",
+              "description": "Emotionally expressive AI voice synthesis for audio and video content",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "ai-avatars",
+          "label": "AI Avatars",
+          "companies": [
+            {
+              "name": "HeyGen",
+              "url": "https://heygen.com",
+              "logoKey": "heygen_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/heygen_4c766129.svg",
+              "description": "AI avatar video with lip sync"
+            },
+            {
+              "name": "Hedra",
+              "url": "https://hedra.com",
+              "logoKey": "hedra_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Hedra Marketing Report_d90eabdd.webp",
+              "description": "Character animation with lip sync"
+            },
+            {
+              "name": "Sync.so",
+              "url": "https://sync.so",
+              "logoKey": "syncso_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Sync.so Logo_bae99d4e.avif",
+              "description": "Lip sync API for any video \u2014 fast and accurate"
+            },
+            {
+              "name": "Kling AI",
+              "url": "https://klingai.com",
+              "logoKey": "klingai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/klingai_f9b2520f.png",
+              "description": "Lip sync with leading video generation"
+            },
+            {
+              "name": "Synthesia",
+              "url": "https://synthesia.io",
+              "logoKey": "synthesia_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Synthesia Logo 2024_8a97700d.png",
+              "description": "Enterprise AI avatar platform"
+            },
+            {
+              "name": "D-ID",
+              "url": "https://d-id.com",
+              "logoKey": "d_id",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/d_id_9b62e35e.png",
+              "description": "Digital human creation with lip sync"
+            },
+            {
+              "name": "Captions",
+              "url": "https://captions.ai",
+              "logoKey": "captions",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/captions_c6c9e0d7.png",
+              "description": "AI-powered captions and lip sync"
+            },
+            {
+              "name": "VEED.IO",
+              "url": "https://veed.io",
+              "logoKey": "veed_io",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/veed_io_e12eb3ea.png",
+              "description": "Online video editor with AI lip sync"
+            },
+            {
+              "name": "Gaga AI",
+              "url": "https://gaga.art",
+              "logoKey": "gaga_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/gaga_ai_9d77605c.png",
+              "description": "AI avatar creator with precise lip sync"
+            },
+            {
+              "name": "Dreamina",
+              "url": "https://dreamina.capcut.com",
+              "logoKey": "dreamina_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/dreamina_ai_34af695c.png",
+              "description": "All-in-one AI creative with lip sync"
+            },
+            {
+              "name": "Tavus",
+              "url": "https://tavus.io",
+              "logoKey": "tavus",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/tavus_c8baaebf.png",
+              "description": "Personalized AI video at scale \u2014 conversational video AI",
+              "isNew": true
+            },
+            {
+              "name": "Colossyan",
+              "url": "https://colossyan.com",
+              "logoKey": "colossyan",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/colossyan_969f9a1f.png",
+              "description": "AI avatar video platform for enterprise L&D"
+            },
+            {
+              "name": "Hour One",
+              "url": "https://hourone.ai",
+              "description": "AI human presenters for professional video content"
+            },
+            {
+              "name": "DeepBrain AI",
+              "url": "https://deepbrain.io",
+              "logoKey": "deepbrain_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/deepbrain_ai_7e3c1ed9.png",
+              "description": "Hyper-realistic AI human video generation"
+            },
+            {
+              "name": "Argil",
+              "url": "https://argil.ai",
+              "description": "AI avatar video for content creators \u2014 fast and simple",
+              "isNew": true,
+              "logoKey": "argil",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/argil_2ca9575a.png"
+            },
+            {
+              "name": "AvatarOS",
+              "url": "https://avataros.com",
+              "logoKey": "avataros",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/avataros_2e937fee.png",
+              "description": "Lifelike 3D avatars at scale from creators of Miquela \u2014 $7M seed from M13 + a16z",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "music-gen",
+          "label": "Music Gen",
+          "companies": [
+            {
+              "name": "Suno",
+              "url": "https://suno.ai",
+              "logoKey": "suno_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Suno Logo_70d177cf.webp",
+              "description": "AI music generation from text prompts"
+            },
+            {
+              "name": "Udio",
+              "url": "https://udio.com",
+              "logoKey": "udio_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Udio AI Logo_ce1a22b2.png",
+              "description": "High-quality AI music with more control"
+            },
+            {
+              "name": "Sonauto",
+              "url": "https://sonauto.ai",
+              "logoKey": "sonauto",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/sonauto_d212f94f.png",
+              "description": "AI music generation with fine-grained style control",
+              "isNew": true
+            },
+            {
+              "name": "Sushi & French Fries",
+              "url": "https://sushiandfrenchfries.com",
+              "logoKey": "sushi_french_fries",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/sushi_french_fries_97127369.png",
+              "description": "AI-native music for film and creative media",
+              "isNew": true
+            },
+            {
+              "name": "Wavv",
+              "url": "https://wavv.com",
+              "logoKey": "wavv",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/wavv_b483fa3a.png",
+              "description": "AI music creation and licensing platform",
+              "isNew": true
+            },
+            {
+              "name": "Riffusion",
+              "url": "https://riffusion.com",
+              "logoKey": "riffusion_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Riffusion Logo 2023_579424d8.webp",
+              "description": "Real-time AI music generation"
+            },
+            {
+              "name": "Artlist",
+              "url": "https://artlist.io",
+              "logoKey": "artlist_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Artlist Logo_83f1fc65.png",
+              "description": "AI music and SFX licensing"
+            },
+            {
+              "name": "Koyal AI",
+              "url": "https://koyal.ai",
+              "logoKey": "koyal_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/koyal_ai_5d086a6e.png",
+              "description": "AI music for film and content"
+            },
+            {
+              "name": "Soundraw",
+              "url": "https://soundraw.io",
+              "logoKey": "soundraw",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/soundraw_da3afa48.png",
+              "description": "Royalty-free AI music generator with full customization",
+              "isNew": true
+            },
+            {
+              "name": "Loudly",
+              "url": "https://loudly.com",
+              "logoKey": "loudly",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/loudly_732fdcc5.png",
+              "description": "AI music for creators \u2014 discover, create and customize tracks"
+            },
+            {
+              "name": "Beatoven.ai",
+              "url": "https://beatoven.ai",
+              "logoKey": "beatoven_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/beatoven_ai_dbbdb4fc.png",
+              "description": "AI music composer for video and podcast creators"
+            },
+            {
+              "name": "Mubert",
+              "url": "https://mubert.com",
+              "logoKey": "mubert",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/mubert_ea1a3e3a.png",
+              "description": "Generative AI music streaming for creators"
+            },
+            {
+              "name": "Boomy",
+              "url": "https://boomy.com",
+              "logoKey": "boomy",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/boomy_11d8364b.ico",
+              "description": "Create and release AI-generated music in seconds"
+            },
+            {
+              "name": "Stable Audio",
+              "url": "https://stableaudio.com",
+              "logoKey": "stable_audio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/stable_audio_098bc6bd.ico",
+              "description": "Stability AI's high-quality audio generation model",
+              "isNew": true
+            },
+            {
+              "name": "ProducerAI",
+              "url": "https://producer.ai",
+              "logoKey": "producerai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/producerai_27ca1b6d.png",
+              "description": "Generative AI music tool for creating tracks from natural language prompts",
+              "isNew": true
+            },
+            {
+              "name": "Dynascore",
+              "url": "https://wonder.inc/dynascore",
+              "description": "Dynamic AI music engine that composes tracks synchronized to video",
+              "isNew": true,
+              "logoKey": "dynascore",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/dynascore_1a31c939.png"
+            }
+          ]
+        },
+        {
+          "id": "sfx",
+          "label": "SFX",
+          "companies": [
+            {
+              "name": "ElevenLabs",
+              "url": "https://elevenlabs.io",
+              "logoKey": "elevenlabs_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/ElevenLabs Logo_4ef3ba53.png",
+              "description": "AI sound effects generation"
+            },
+            {
+              "name": "MMAudio",
+              "url": "https://hkchengrex.com/MMAudio",
+              "logoKey": "mmaudio_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/MMAudio Logo Thumbnail_9054958c.png",
+              "description": "Open-source multimodal audio generation"
+            },
+            {
+              "name": "Respeecher",
+              "url": "https://respeecher.com",
+              "logoKey": "respeecher",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/respeecher_38cb0bee.png",
+              "description": "Professional voice cloning and SFX"
+            }
+          ]
+        },
+        {
+          "id": "infinite-canvas",
+          "label": "Infinite Canvas",
+          "companies": [
+            {
+              "name": "ComfyUI",
+              "url": "https://comfy.org",
+              "logoKey": "comfyui",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/comfyui_4a9643f4.png",
+              "description": "Node-based AI workflow platform"
+            },
+            {
+              "name": "FLORA AI",
+              "url": "https://flora.ai",
+              "logoKey": "flora_ai_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Flora AI Logo_6dc2eb83.avif",
+              "description": "Multi-model creative canvas"
+            },
+            {
+              "name": "Fuser AI",
+              "url": "https://fuser.studio",
+              "logoKey": "fuser_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Fuser Studio Logo_0b9371f1.png",
+              "description": "AI creative workflow studio"
+            },
+            {
+              "name": "Weavy AI",
+              "url": "https://weavy.ai",
+              "logoKey": "weavy_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Weavy AI _174a66ac.svg",
+              "description": "Visual AI workflow builder"
+            },
+            {
+              "name": "InvokeAI",
+              "url": "https://invoke.ai",
+              "logoKey": "invoke_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/invoke_ai_60d6e23c.png",
+              "description": "Professional AI creative engine"
+            },
+            {
+              "name": "Floyo AI",
+              "url": "https://floyo.ai",
+              "logoKey": "floyo_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/floyo_ai_cf68eae3.png",
+              "description": "Cloud-based ComfyUI platform"
+            }
+          ]
+        },
+        {
+          "id": "aggregator",
+          "label": "Aggregator",
+          "companies": [
+            {
+              "name": "Runway",
+              "url": "https://runwayml.com",
+              "logoKey": "runway_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Runway Logo_fb468e0c.png",
+              "description": "Multi-model creative suite \u2014 also a video model"
+            },
+            {
+              "name": "Vimmerse",
+              "url": "https://vimmerse.net",
+              "logoKey": "vimmerse_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/vimmerse_ai_9b767431.png",
+              "description": "AI video personalization and aggregation platform"
+            },
+            {
+              "name": "Higgsfield",
+              "url": "https://higgsfield.ai",
+              "logoKey": "higgsfield_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Higgsfield Logo_e761b3e8.webp",
+              "description": "Mobile-first AI video \u2014 also has its own model"
+            },
+            {
+              "name": "Freepik",
+              "url": "https://freepik.com",
+              "logoKey": "freepik_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Freepik Logo_4bd1b2a9.jpg",
+              "description": "All-in-one AI creative suite"
+            },
+            {
+              "name": "Morphic Studio",
+              "url": "https://morphic.com",
+              "logoKey": "morphic_studio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/morphic_studio_f78a2e77.png",
+              "description": "Multi-model AI video aggregator"
+            },
+            {
+              "name": "KREA AI",
+              "url": "https://krea.ai",
+              "logoKey": "krea_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Krea AI Logo_824f3d6e.jpg",
+              "description": "Real-time multi-model creative platform"
+            },
+            {
+              "name": "SkyReels",
+              "url": "https://skyreels.ai",
+              "logoKey": "skyreels_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Skyreels Logo_489ad2a1.png",
+              "description": "Multi-model AI video suite"
+            },
+            {
+              "name": "Leonardo.Ai",
+              "url": "https://leonardo.ai",
+              "logoKey": "leonardo_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Leonardo AI Logo_c35a6634.png",
+              "description": "Multi-model creative suite"
+            },
+            {
+              "name": "OpenArt AI",
+              "url": "https://openart.ai",
+              "logoKey": "openart_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/openart_ai_92751ea0.png",
+              "description": "Open multi-model creative platform"
+            },
+            {
+              "name": "Nim AI",
+              "url": "https://nim.video",
+              "logoKey": "nim_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Nim Video Logo_efd4e2b6.webp",
+              "description": "All-in-one AI video creation"
+            },
+            {
+              "name": "BasedLabs",
+              "url": "https://basedlabs.ai",
+              "logoKey": "basedlabs_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/basedlabs_ai_b01abda5.png",
+              "description": "Multi-model AI creative platform"
+            },
+            {
+              "name": "SAGA",
+              "url": "https://writeonsaga.com",
+              "logoKey": "saga_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/saga_ai_ba13516e.png",
+              "description": "AI screenwriting platform with multi-model aggregation"
+            },
+            {
+              "name": "ImagineArt",
+              "url": "https://imagine.art",
+              "logoKey": "imagineart_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/imagineart_ai_24d9f9d9.png",
+              "description": "Multi-model AI art generation aggregator"
+            },
+            {
+              "name": "TapNow",
+              "url": "https://tapnow.ai",
+              "logoKey": "tapnow",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/tapnow_ab9e5350.ico",
+              "description": "AI-native creative canvas \u2014 orchestrates text, image, audio and video models for cinematic content",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "generative-motion",
+          "label": "Generative Motion",
+          "companies": [
+            {
+              "name": "Kaiber AI",
+              "url": "https://kaiber.ai",
+              "logoKey": "kaiber_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/kaiber_ai_62cc58e9.png",
+              "description": "AI motion and animation generation"
+            },
+            {
+              "name": "Autodesk Maya",
+              "url": "https://autodesk.com/maya",
+              "logoKey": "autodesk_maya",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/autodesk_maya_283d49cb.ico",
+              "description": "Industry-standard 3D animation with AI"
+            },
+            {
+              "name": "Krikey AI",
+              "url": "https://krikey.ai",
+              "logoKey": "krikey_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/krikey_ai_1d619314.ico",
+              "description": "AI animation and motion capture"
+            }
+          ]
+        },
+        {
+          "id": "localization",
+          "label": "Localization / Personalization",
+          "companies": [
+            {
+              "name": "Flawless AI",
+              "url": "https://flawlessai.com",
+              "logoKey": "flawless_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/flawless_ai_79d0cf66.ico",
+              "description": "Visual dubbing with TrueSync technology"
+            },
+            {
+              "name": "AKOOL",
+              "url": "https://akool.com",
+              "logoKey": "akool",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/akool_abb3af5c.png",
+              "description": "AI personalization and face swap"
+            },
+            {
+              "name": "Deepdub",
+              "url": "https://deepdub.ai",
+              "logoKey": "deepdub",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/deepdub_f710e350.png",
+              "description": "Hollywood-vetted AI dubbing and localization platform with agentic co-worker",
+              "isNew": true
+            },
+            {
+              "name": "Papercup",
+              "url": "https://papercup.com",
+              "logoKey": "papercup",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/papercup_2ee99b47.png",
+              "description": "AI dubbing orchestration layer for TV, film and digital content \u2014 acquired by RWS",
+              "isNew": true
+            },
+            {
+              "name": "Dubverse",
+              "url": "https://dubverse.ai",
+              "logoKey": "dubverse",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/dubverse_abe7956c.png",
+              "description": "AI dubbing platform with 450+ voices across 30+ languages for content creators",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "distribution",
+          "label": "Distribution",
+          "note": "AI-native film & content distribution platforms",
+          "companies": [
+            {
+              "name": "Fairground",
+              "url": "https://fairground.tv",
+              "logoKey": "fairground",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/fairground_64bd0767.png",
+              "description": "AI-powered film distribution and audience discovery platform",
+              "isNew": true
+            },
+            {
+              "name": "Alchemy",
+              "url": "https://alchemyfilm.com",
+              "description": "AI distribution platform for independent filmmakers",
+              "isNew": true
+            },
+            {
+              "name": "RadTV",
+              "url": "https://rad.tv",
+              "description": "Streaming platform built for AI-generated and indie content",
+              "isNew": true,
+              "logoKey": "radtv",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/radtv_7726e93c.svg"
+            },
+            {
+              "name": "Escape.ai",
+              "url": "https://escape.ai",
+              "logoKey": "escape_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/escape_ai_702fd547.ico",
+              "description": "AI-native content distribution and monetization",
+              "isNew": true
+            },
+            {
+              "name": "Dreamflare",
+              "url": "https://dreamflare.ai",
+              "logoKey": "dreamflare",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/dreamflare_ffedae0e.ico",
+              "description": "AI film distribution and community platform",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "interactive",
+          "label": "Interactive",
+          "companies": [
+            {
+              "name": "Showrunner",
+              "url": "https://theshowrunner.com",
+              "description": "Interactive AI TV \u2014 viewers direct episodes in real time",
+              "isNew": true,
+              "logoKey": "showrunner",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/showrunner_26a9f952.svg"
+            },
+            {
+              "name": "Obsidian Studio",
+              "url": "https://obsidian.studio",
+              "logoKey": "obsidian_studio",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/obsidian_studio_730cf0fe.png",
+              "description": "Artist-led AI+CGI+live action studio in partnership with Imagine Entertainment (Ron Howard)",
+              "isNew": true
+            },
+            {
+              "name": "Wolf Games",
+              "url": "https://wolfgames.ai",
+              "description": "Generative entertainment company \u2014 $9M Series A, partnership with NBCUniversal",
+              "isNew": true,
+              "logoKey": "wolf_games",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/wolf_games_a173695e.png"
+            },
+            {
+              "name": "Pickford",
+              "url": "https://pickford.ai",
+              "logoKey": "pickford",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/pickford_9394d50b.png",
+              "description": "Interactive AI narrative and branching story tools"
+            },
+            {
+              "name": "Inworld AI",
+              "url": "https://inworld.ai",
+              "logoKey": "inworld_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/inworld_ai_b24e7734.png",
+              "description": "AI characters and interactive NPCs for immersive experiences"
+            },
+            {
+              "name": "Charisma AI",
+              "url": "https://charisma.ai",
+              "logoKey": "charisma_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/charisma_ai_5b6a0e28.png",
+              "description": "Interactive storytelling engine with AI characters"
+            },
+            {
+              "name": "Hidden Door",
+              "url": "https://hiddendoor.co",
+              "logoKey": "hidden_door",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/hidden_door_1cd70557.png",
+              "description": "AI-powered collaborative narrative worlds"
+            },
+            {
+              "name": "Latitude AI",
+              "url": "https://latitude.io",
+              "logoKey": "latitude_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/latitude_ai_92846869.png",
+              "description": "AI Dungeon \u2014 open-ended AI text adventure and narrative games"
+            },
+            {
+              "name": "Fable Studio",
+              "url": "https://fable.app",
+              "description": "AI-powered interactive narrative experiences and virtual beings"
+            },
+            {
+              "name": "Lemon Slice",
+              "url": "https://lemonslice.com",
+              "logoKey": "lemon_slice",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/lemon_slice_91ddd696.png",
+              "description": "AI lab building interactive video agents \u2014 turn any photo into a talking character",
+              "isNew": true
+            },
+            {
+              "name": "Wild Capture",
+              "url": "https://wildcapture.io",
+              "logoKey": "wild_capture",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/wild_capture_c3114df7.png",
+              "description": "Volumetric capture + AI for streaming-quality digital humans",
+              "isNew": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-production",
+      "label": "POST-PRODUCTION",
+      "accentColor": "#C084FC",
+      "headerBg": "#A855F7",
+      "subsections": [
+        {
+          "id": "ai-editing",
+          "label": "AI Editing",
+          "companies": [
+            {
+              "name": "CapCut",
+              "url": "https://capcut.com",
+              "logoKey": "capcut_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/CapCut Logo_847b9f4f.svg",
+              "description": "Mobile-first AI video editing"
+            },
+            {
+              "name": "Opus Clip",
+              "url": "https://opus.pro",
+              "logoKey": "opus_clip_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Opus Pro Logo_f30b1cbb.png",
+              "description": "AI clip extraction for social media"
+            },
+            {
+              "name": "Descript",
+              "url": "https://descript.com",
+              "logoKey": "descript_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Descript AI Logo_92b993bb.png",
+              "description": "Text-based AI video editing"
+            },
+            {
+              "name": "Canva",
+              "url": "https://canva.com",
+              "logoKey": "canva",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/canva_220ffd86.ico",
+              "description": "AI-powered design and video editing"
+            },
+            {
+              "name": "VEED.IO",
+              "url": "https://veed.io",
+              "logoKey": "veed_io",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/veed_io_e12eb3ea.png",
+              "description": "Online AI video editor"
+            },
+            {
+              "name": "InVideo AI",
+              "url": "https://invideo.io",
+              "logoKey": "invideo_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/invideo_ai_722c28df.png",
+              "description": "AI-powered video creation platform"
+            },
+            {
+              "name": "Eddie AI",
+              "url": "https://eddie.ai",
+              "logoKey": "eddie_ai_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Eddie AI Editor Logo_f71eb9e1.png",
+              "description": "AI video editing assistant"
+            },
+            {
+              "name": "Electric Sheep",
+              "url": "https://electricsheep.ai",
+              "description": "AI-powered video editing"
+            },
+            {
+              "name": "QuickTure",
+              "url": "https://quickture.com",
+              "logoKey": "quickture_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Quickture Logo_33c8b1ad.png",
+              "description": "Fast AI video editing"
+            },
+            {
+              "name": "DaVinci Resolve",
+              "url": "https://blackmagicdesign.com/products/davinciresolve",
+              "logoKey": "davinci_resolve",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/davinci_resolve_f210f6a4.ico",
+              "description": "Industry-standard editing with AI tools"
+            },
+            {
+              "name": "Kaiber AI",
+              "url": "https://kaiber.ai",
+              "logoKey": "kaiber_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/kaiber_ai_62cc58e9.png",
+              "description": "AI motion and style transfer for editing"
+            },
+            {
+              "name": "FilmPro AI",
+              "url": "https://filmpro.ai",
+              "logoKey": "filmpro_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/filmpro_ai_6bb91f5a.png",
+              "description": "AI-powered production management"
+            },
+            {
+              "name": "Submagic",
+              "url": "https://submagic.co",
+              "logoKey": "submagic",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/submagic_26168d3a.png",
+              "description": "AI captions and short-form video editing for social media",
+              "isNew": true
+            },
+            {
+              "name": "Clippie",
+              "url": "https://clippie.ai",
+              "description": "AI-powered video repurposing and clip extraction",
+              "isNew": true,
+              "logoKey": "clippie",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/clippie_28308bea.png"
+            },
+            {
+              "name": "Vizard",
+              "url": "https://vizard.ai",
+              "logoKey": "vizard",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/vizard_704be5cf.png",
+              "description": "AI video editor for repurposing long-form content to clips",
+              "isNew": true
+            },
+            {
+              "name": "Adobe Premiere AI",
+              "url": "https://adobe.com/premiere",
+              "logoKey": "adobe_premiere",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/adobe_premiere_ai_742da438.ico",
+              "description": "Industry-standard NLE with Firefly AI editing tools",
+              "isNew": true
+            },
+            {
+              "name": "Wondershare Filmora",
+              "url": "https://filmora.wondershare.com",
+              "logoKey": "wondershare_filmora",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/wondershare_filmora_48b53105.ico",
+              "description": "Consumer video editor with strong AI feature suite"
+            },
+            {
+              "name": "Interpositive",
+              "url": "https://interpositive.com",
+              "logoKey": "interpositive",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/interpositive_3c094719.png",
+              "description": "AI-powered post-production tools \u2014 acquired by Netflix",
+              "isNew": true
+            },
+            {
+              "name": "Capsule",
+              "url": "https://capsule.video",
+              "logoKey": "capsule",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/capsule_301d5e1e.png",
+              "description": "AI-powered video editing assistant for marketing and sales teams",
+              "isNew": true
+            },
+            {
+              "name": "Freewillusion",
+              "url": "https://freewillusion.com",
+              "description": "Korean AI film-tech studio with production-ready AFX (AI+VFX) pipeline for Hollywood",
+              "isNew": true
+            },
+            {
+              "name": "Loti AI",
+              "url": "https://lotiai.com",
+              "logoKey": "loti_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/loti_ai_329fa731.png",
+              "description": "AI deepfake detection and takedown service for talent and rights holders",
+              "isNew": true
+            },
+            {
+              "name": "Mirage",
+              "url": "https://mirage.app",
+              "logoKey": "mirage",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/mirage_9de9f005.png",
+              "description": "Multimodal AI research lab (formerly Captions) \u2014 short-form video creation",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "upscaling",
+          "label": "Upscaling",
+          "companies": [
+            {
+              "name": "Topaz Labs",
+              "url": "https://topazlabs.com",
+              "logoKey": "topaz_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Topaz Labs Logo_926e915e.jpg",
+              "description": "Professional AI video upscaling and enhancement"
+            },
+            {
+              "name": "Magnific AI",
+              "url": "https://magnific.ai",
+              "logoKey": "magnific_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Magnific AI Logo_ea294e0e.jpg",
+              "description": "AI image upscaling and enhancement"
+            },
+            {
+              "name": "Pixop",
+              "url": "https://pixop.com",
+              "logoKey": "pixop",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/pixop_194b2714.png",
+              "description": "Cloud-based AI video enhancement"
+            }
+          ]
+        },
+        {
+          "id": "colorizing",
+          "label": "Colorizing / Grading",
+          "companies": [
+            {
+              "name": "Palette.fm",
+              "url": "https://palette.fm",
+              "logoKey": "palette_fm",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/palette_fm_dec92f4f.png",
+              "description": "AI colorization for black-and-white footage"
+            },
+            {
+              "name": "DaVinci Resolve",
+              "url": "https://blackmagicdesign.com/products/davinciresolve",
+              "logoKey": "davinci_resolve",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/davinci_resolve_f210f6a4.ico",
+              "description": "Industry-standard color grading with AI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dev-tools",
+      "label": "DEV TOOLS",
+      "accentColor": "#4ADE80",
+      "headerBg": "#22C55E",
+      "subsections": [
+        {
+          "id": "creative-ai-dev-tools",
+          "label": "Creative AI Dev Tools",
+          "companies": [
+            {
+              "name": "Fal.ai",
+              "url": "https://fal.ai",
+              "logoKey": "fal_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/fal_ai_02400984.png",
+              "description": "Fast inference API for AI models"
+            },
+            {
+              "name": "Replicate",
+              "url": "https://replicate.com",
+              "logoKey": "replicate_gd",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/Replicate AI Logo_3b0a4cf4.avif",
+              "description": "Run AI models via API"
+            },
+            {
+              "name": "ComfyUI",
+              "url": "https://comfy.org",
+              "logoKey": "comfyui",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/comfyui_4a9643f4.png",
+              "description": "Node-based AI workflow platform"
+            },
+            {
+              "name": "Together AI",
+              "url": "https://together.ai",
+              "logoKey": "together_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/together_ai_1741aad3.png",
+              "description": "Fast inference for open-source models"
+            },
+            {
+              "name": "GMI Cloud",
+              "url": "https://gmi.ai",
+              "description": "GPU cloud for AI model deployment",
+              "logoKey": "gmi_cloud",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/gmi_cloud_d84b65db.png"
+            },
+            {
+              "name": "Floyo AI",
+              "url": "https://floyo.ai",
+              "logoKey": "floyo_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/floyo_ai_cf68eae3.png",
+              "description": "Cloud-based ComfyUI for developers"
+            },
+            {
+              "name": "InvokeAI",
+              "url": "https://invoke.ai",
+              "logoKey": "invoke_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/invoke_ai_60d6e23c.png",
+              "description": "Professional AI creative engine API"
+            },
+            {
+              "name": "Daisy AI",
+              "url": "https://daisy.so",
+              "logoKey": "daisy_ai",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/daisy_ai_8b6a13db.png",
+              "description": "Generative media platform for developers"
+            },
+            {
+              "name": "Cloudglue",
+              "url": "https://cloudglue.dev",
+              "description": "Video understanding API \u2014 extract structured data from video",
+              "isNew": true
+            },
+            {
+              "name": "Baseten",
+              "url": "https://baseten.co",
+              "logoKey": "baseten",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/baseten_560e9ee3.ico",
+              "description": "ML model deployment and inference infrastructure",
+              "isNew": true
+            },
+            {
+              "name": "Black Forest Labs",
+              "url": "https://bfl.ai",
+              "logoKey": "black_forest_labs",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/black_forest_labs_b01dc3f5.png",
+              "description": "German AI lab behind FLUX \u2014 $300M raised at $3.25B valuation",
+              "isNew": true
+            },
+            {
+              "name": "Runware",
+              "url": "https://runware.ai",
+              "logoKey": "runware",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/runware_530feab1.png",
+              "description": "One API for all AI \u2014 real-time image/video/audio generation \u2014 $50M Series A",
+              "isNew": true
+            }
+          ]
+        },
+        {
+          "id": "programmatic-video",
+          "label": "Programmatic Video",
+          "note": "Code-driven & API-first video creation for developers",
+          "companies": [
+            {
+              "name": "Remotion",
+              "url": "https://remotion.dev",
+              "logoKey": "remotion",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/remotion_72ca3eb1.png",
+              "description": "Create videos programmatically with React \u2014 frame-accurate rendering",
+              "isNew": true
+            },
+            {
+              "name": "Revideo",
+              "url": "https://re.video",
+              "logoKey": "revideo",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/revideo_3e3c9f76.png",
+              "description": "Open-source programmatic video creation with TypeScript API",
+              "isNew": true
+            },
+            {
+              "name": "Motion Canvas",
+              "url": "https://motioncanvas.io",
+              "logoKey": "motion_canvas",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/motion_canvas_740b7b7d.svg",
+              "description": "Animated video creation via TypeScript code \u2014 open source",
+              "isNew": true
+            },
+            {
+              "name": "Creatomate",
+              "url": "https://creatomate.com",
+              "logoKey": "creatomate",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/creatomate_1655c5ec.png",
+              "description": "API-driven automated video generation \u2014 no-code + code",
+              "isNew": true
+            },
+            {
+              "name": "Shotstack",
+              "url": "https://shotstack.io",
+              "logoKey": "shotstack",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/shotstack_7af749a9.png",
+              "description": "Cloud video editing API \u2014 define edits via JSON",
+              "isNew": true
+            },
+            {
+              "name": "JSON2Video",
+              "url": "https://json2video.com",
+              "logoKey": "json2video",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/json2video_c3a68bd1.png",
+              "description": "Video editing API for automating video creation at scale",
+              "isNew": true
+            },
+            {
+              "name": "Plainly Videos",
+              "url": "https://plainlyvideos.com",
+              "logoKey": "plainly_videos",
+              "logoUrl": "https://d2xsxph8kpxj0f.cloudfront.net/86964462/JYKM3zuoNiYRgxvrB55XCp/plainly_videos_206a79d2.png",
+              "description": "Automated video production from templates via API",
+              "isNew": true
+            },
+            {
+              "name": "Twick",
+              "url": "https://twick.dev",
+              "description": "Programmable video timeline with React \u2014 Remotion alternative",
+              "isNew": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
