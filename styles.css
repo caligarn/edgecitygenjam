@@ -3078,293 +3078,232 @@ kbd {
   opacity: .8;
 }
 
+/* }
+
 
 /* =========================================================
-   SORTING HAT, CRITERIA, SUBMIT, AI TIPS, HUMAN TIPS
+   SLIDE 7 RESTYLE — JAM SCENES (fact-card grid, slide 17 style)
    ========================================================= */
-
-/* ---- chalk-sub: subtitle under torn note ---- */
-.chalk-sub {
-  color: rgba(255,255,255,.7);
-  font-size: clamp(.8rem, 1.4vw, 1.3rem);
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  margin: 0 0 clamp(.6rem, 1.5vh, 1.4rem);
-  line-height: 1.4;
+.slide--jam-scenes {
+  justify-content: center;
+  gap: 1.8vh;
+  padding: 5vh 5vw;
 }
-
-/* ---- chalk-layout full-width variant ---- */
-.chalk-layout--center {
-  grid-template-columns: 1fr;
-}
-
-/* ---- SORTING HAT ---- */
-.sorting-groups {
+.jam-hd { display: flex; flex-direction: column; gap: .5vh; }
+.jam-sub { max-width: 60ch; opacity: .85; }
+.jam-list {
+  list-style: none;
+  padding: 0; margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(.5rem, 1.2vw, 1.2rem);
-  margin-top: clamp(.4rem, 1vh, 1rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2vw;
 }
-.sorting-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .3em;
-  border-radius: 12px;
-  padding: clamp(.5rem, 1.2vh, 1.2rem) clamp(.4rem, 1vw, 1rem);
-  border: 3px solid rgba(255,255,255,.25);
-  background: rgba(255,255,255,.06);
-  transition: transform 200ms, background 200ms;
-  cursor: default;
-}
-.sorting-group:hover {
-  background: rgba(255,255,255,.14);
-  transform: translateY(-3px);
-}
-.sorting-group__num {
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
-  font-size: clamp(2rem, 4vw, 4.5rem);
-  line-height: 1;
-}
-.sorting-group__label {
-  font-family: "Space Mono", monospace;
-  font-size: clamp(.6rem, .9vw, .9rem);
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.6);
-}
-/* Color-code the 6 groups */
-.sorting-group--1 { border-color: #f87171; }
-.sorting-group--1 .sorting-group__num { color: #f87171; }
-.sorting-group--2 { border-color: #fb923c; }
-.sorting-group--2 .sorting-group__num { color: #fb923c; }
-.sorting-group--3 { border-color: #facc15; }
-.sorting-group--3 .sorting-group__num { color: #facc15; }
-.sorting-group--4 { border-color: #4ade80; }
-.sorting-group--4 .sorting-group__num { color: #4ade80; }
-.sorting-group--5 { border-color: #60a5fa; }
-.sorting-group--5 .sorting-group__num { color: #60a5fa; }
-.sorting-group--6 { border-color: #c084fc; }
-.sorting-group--6 .sorting-group__num { color: #c084fc; }
-
-.sorting-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(1rem, 2.5vh, 2.5rem);
-}
-.sorting-hat-icon svg {
-  width: clamp(100px, 18vw, 220px);
-  height: auto;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,.5));
-}
-.sorting-instruction {
-  color: rgba(255,255,255,.65);
-  font-size: clamp(.75rem, 1.2vw, 1.1rem);
-  text-align: center;
-  max-width: 28ch;
-  line-height: 1.4;
-  margin: 0;
-}
-.sorting-rule {
-  border: 2px solid rgba(255,255,255,.3);
-  border-radius: 8px;
-  padding: .4em 1em;
-}
-.sorting-rule__label {
-  font-family: "Space Mono", monospace;
-  font-size: clamp(.65rem, 1vw, 1rem);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.6);
-}
-
-/* ---- CRITERIA ---- */
-.criteria-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(.4rem, 1vh, 1rem);
-}
-.criteria-item {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(.8rem, 1.5vw, 1.5rem);
-  padding: clamp(.4rem, .8vh, .8rem) clamp(.6rem, 1.2vw, 1.2rem);
+.jam-card {
+  position: relative;
+  border: 3px solid var(--ink);
   border-radius: 10px;
-  border: 2px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-  transition: background 200ms;
-}
-.criteria-item:hover { background: rgba(255,255,255,.1); }
-.criteria-item--accent {
-  border-color: #facc15;
-  background: rgba(250,204,21,.07);
-}
-.criteria-item--accent:hover { background: rgba(250,204,21,.14); }
-.criteria-num {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-size: clamp(.7rem, 1.1vw, 1.1rem);
-  color: rgba(255,255,255,.4);
-  flex-shrink: 0;
-  padding-top: .15em;
-  min-width: 2.2em;
-}
-.criteria-item--accent .criteria-num { color: #facc15; }
-.criteria-body {
+  box-shadow: 7px 7px 0 var(--ink);
+  padding: 1.2rem 1.35rem 1.35rem;
   display: flex;
   flex-direction: column;
-  gap: .15em;
+  gap: .5rem;
 }
-.criteria-title {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: clamp(.85rem, 1.5vw, 1.5rem);
-  color: #fff;
-  line-height: 1.1;
-}
-.criteria-item--accent .criteria-title { color: #facc15; }
-.criteria-desc {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: clamp(.7rem, 1.1vw, 1rem);
-  color: rgba(255,255,255,.55);
-  line-height: 1.3;
-}
-
-/* ---- SUBMIT YOUR FILM ---- */
-.submit-example {
-  display: flex;
-  align-items: center;
-  gap: .8em;
-  margin-bottom: clamp(.5rem, 1.2vh, 1.2rem);
-  flex-wrap: wrap;
-}
-.submit-example__label {
-  font-family: "Space Mono", monospace;
-  font-size: clamp(.65rem, 1vw, .95rem);
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: rgba(255,255,255,.5);
-}
-.submit-example__code {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-size: clamp(.75rem, 1.2vw, 1.1rem);
-  background: rgba(255,255,255,.1);
-  border: 2px solid rgba(255,255,255,.25);
+.jam-card--white  { background: var(--white);  color: var(--ink); }
+.jam-card--lime   { background: var(--lime);   color: var(--ink); }
+.jam-card--yellow { background: var(--yellow); color: var(--ink); }
+.jam-card--pink   { background: var(--pink);   color: var(--white); }
+.jam-card--ink    { background: var(--ink);    color: var(--cream); box-shadow: 5px 5px 0 var(--pink); }
+.jam-card__media {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: clamp(84px, 9.2vw, 122px);
+  height: clamp(84px, 9.2vw, 122px);
+  object-fit: cover;
+  border: 2.5px solid var(--ink);
   border-radius: 6px;
-  padding: .2em .6em;
-  color: #facc15;
-  letter-spacing: .03em;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--cream);
+  z-index: 2;
+  transform: rotate(-2.5deg);
+  transition: transform 420ms cubic-bezier(.18,.85,.28,1);
 }
-.submit-checklist {
-  margin-bottom: clamp(.6rem, 1.5vh, 1.4rem);
+.jam-card:nth-child(even) .jam-card__media { transform: rotate(2.8deg); }
+.slide--jam-scenes.is-active .jam-card:hover .jam-card__media {
+  transform: rotate(0) scale(1.04);
 }
-.submit-methods {
-  display: flex;
-  flex-direction: column;
-  gap: .5em;
-}
-.submit-methods__label {
-  font-family: "Space Mono", monospace;
-  font-size: clamp(.65rem, 1vw, .9rem);
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: rgba(255,255,255,.5);
-}
-.submit-method-pills {
-  display: flex;
-  gap: .6em;
-  flex-wrap: wrap;
-}
-.submit-pill {
+.jam-card--pink .jam-card__media { border-color: var(--white); box-shadow: 4px 4px 0 var(--white); }
+.jam-card:has(.jam-card__media) .jam-card__h,
+.jam-card:has(.jam-card__media) .jam-card__b { padding-right: clamp(96px, 10.5vw, 138px); }
+.jam-card__tag {
+  align-self: flex-start;
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  font-size: clamp(.65rem, 1vw, .95rem);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  padding: .3em .8em;
-  border-radius: 6px;
-  border: 2px solid rgba(255,255,255,.3);
-  background: rgba(255,255,255,.07);
-  color: #fff;
+  font-size: clamp(.8rem, 1.05vw, 1.05rem);
+  letter-spacing: .14em;
+  padding: .3rem .55rem;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  background: rgba(255,255,255,.35);
 }
-.submit-pill--drive {
-  border-color: #4ade80;
-  background: rgba(74,222,128,.1);
-  color: #4ade80;
-}
-.submit-airdrop-note {
-  font-family: "Inter", sans-serif;
-  font-size: clamp(.7rem, 1.1vw, 1rem);
-  color: rgba(255,255,255,.55);
+.jam-card--white .jam-card__tag { background: var(--cream); }
+.jam-card__h {
+  font-weight: 900;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   margin: 0;
 }
-.submit-airdrop-note strong { color: rgba(255,255,255,.85); }
-.submit-qr-card {
-  margin: 0;
-  background: #f5f0e0;
-  border: 4px solid rgba(255,255,255,.3);
-  border-radius: 12px;
-  box-shadow: 12px 12px 0 rgba(204,31,31,.6);
-  padding: clamp(.8rem, 1.8vw, 1.8rem);
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-  align-items: center;
-  max-width: clamp(160px, 28vw, 320px);
-  width: 100%;
-}
-.submit-qr-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  image-rendering: pixelated;
-}
-.submit-qr-card figcaption {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  letter-spacing: .18em;
-  font-size: clamp(.6rem, .9vw, .9rem);
-  text-transform: uppercase;
-  color: #111;
-}
-
-/* ---- AI TIPS / HUMAN TIPS ---- */
-.tips-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(.35rem, .9vh, .9rem);
-}
-.tips-item {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(.6rem, 1.2vw, 1.2rem);
-  padding: clamp(.35rem, .7vh, .7rem) clamp(.5rem, 1vw, 1rem);
-  border-radius: 8px;
-  border: 2px solid rgba(255,255,255,.1);
-  background: rgba(255,255,255,.04);
-  font-family: "Inter", sans-serif;
-  font-size: clamp(.78rem, 1.3vw, 1.25rem);
-  color: rgba(255,255,255,.85);
+.jam-card__b {
+  font-weight: 600;
+  font-size: clamp(.95rem, 1.2vw, 1.2rem);
   line-height: 1.35;
-  transition: background 200ms;
+  margin: 0;
 }
-.tips-item:hover { background: rgba(255,255,255,.09); }
-.tips-item strong { color: #fff; font-weight: 800; }
-.tips-icon {
-  flex-shrink: 0;
-  color: #facc15;
-  font-size: clamp(.8rem, 1.3vw, 1.3rem);
-  padding-top: .1em;
+.jam-card__b b { font-weight: 900; }
+@media (max-width: 900px) {
+  .jam-list { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   SLIDE 8 RESTYLE — Q2 2025 THROWBACK (same fact-card style)
+   ========================================================= */
+.slide--throwback-v2 {
+  justify-content: center;
+  gap: 1.8vh;
+  padding: 5vh 5vw;
+}
+.throwback-hd { display: flex; flex-direction: column; gap: .5vh; }
+.throwback-sub { max-width: 60ch; opacity: .85; }
+.throwback-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+@media (max-width: 900px) {
+  .throwback-list { grid-template-columns: 1fr; }
+}
+
+/* ---- Torn note size variants ---- */
+.torn-note--gallery .torn-text,
+.torn-note--throwback .torn-text {
+  font-size: clamp(1.1rem, 2.2vw, 2.4rem);
+}
+.torn-note--poster .torn-text {
+  font-size: clamp(1rem, 1.8vw, 2rem);
+}
+
+
+/* =========================================================
+   SLIDE 7 RESTYLE — JAM SCENES (fact-card grid, slide 17 style)
+   ========================================================= */
+.slide--jam-scenes {
+  justify-content: center;
+  gap: 1.8vh;
+  padding: 5vh 5vw;
+}
+.jam-hd { display: flex; flex-direction: column; gap: .5vh; }
+.jam-sub { max-width: 60ch; opacity: .85; }
+.jam-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+.jam-card {
+  position: relative;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 7px 7px 0 var(--ink);
+  padding: 1.2rem 1.35rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.jam-card--white  { background: var(--white);  color: var(--ink); }
+.jam-card--lime   { background: var(--lime);   color: var(--ink); }
+.jam-card--yellow { background: var(--yellow); color: var(--ink); }
+.jam-card--pink   { background: var(--pink);   color: var(--white); }
+.jam-card--ink    { background: var(--ink);    color: var(--cream); box-shadow: 5px 5px 0 var(--pink); }
+.jam-card__media {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: clamp(84px, 9.2vw, 122px);
+  height: clamp(84px, 9.2vw, 122px);
+  object-fit: cover;
+  border: 2.5px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--cream);
+  z-index: 2;
+  transform: rotate(-2.5deg);
+  transition: transform 420ms cubic-bezier(.18,.85,.28,1);
+}
+.jam-card:nth-child(even) .jam-card__media { transform: rotate(2.8deg); }
+.slide--jam-scenes.is-active .jam-card:hover .jam-card__media {
+  transform: rotate(0) scale(1.04);
+}
+.jam-card--pink .jam-card__media { border-color: var(--white); box-shadow: 4px 4px 0 var(--white); }
+.jam-card:has(.jam-card__media) .jam-card__h,
+.jam-card:has(.jam-card__media) .jam-card__b { padding-right: clamp(96px, 10.5vw, 138px); }
+.jam-card__tag {
+  align-self: flex-start;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.8rem, 1.05vw, 1.05rem);
+  letter-spacing: .14em;
+  padding: .3rem .55rem;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  background: rgba(255,255,255,.35);
+}
+.jam-card--white .jam-card__tag { background: var(--cream); }
+.jam-card__h {
+  font-weight: 900;
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.jam-card__b {
+  font-weight: 600;
+  font-size: clamp(.95rem, 1.2vw, 1.2rem);
+  line-height: 1.35;
+  margin: 0;
+}
+.jam-card__b b { font-weight: 900; }
+@media (max-width: 900px) {
+  .jam-list { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   SLIDE 8 RESTYLE — Q2 2025 THROWBACK (same fact-card style)
+   ========================================================= */
+.slide--throwback-v2 {
+  justify-content: center;
+  gap: 1.8vh;
+  padding: 5vh 5vw;
+}
+.throwback-hd { display: flex; flex-direction: column; gap: .5vh; }
+.throwback-sub { max-width: 60ch; opacity: .85; }
+.throwback-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+@media (max-width: 900px) {
+  .throwback-list { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   SLIDE 9 RESTYLE — MM-POSTER cream override
+   ========================================================= */
+.slide--mm-poster[data-bg="cream"] .mm-poster__title { color: var(--ink); }
+.slide--mm-poster[data-bg="cream"] .mm-legend__item { color: var(--ink); }
+.slide--mm-poster[data-bg="cream"] .mm-poster__foot { color: var(--ink); opacity: .5; }
