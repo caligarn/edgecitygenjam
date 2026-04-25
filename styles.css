@@ -797,7 +797,7 @@ html, body {
 }
 .slide--quote::before { opacity: .15; }
 .quote-mark {
-  font-family: "Inter", serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   color: var(--pink);
   font-size: clamp(6rem, 18vw, 22rem);
