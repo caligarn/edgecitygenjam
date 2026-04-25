@@ -2777,3 +2777,266 @@ kbd {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+
+/* =========================================================
+   CHALK SLIDES — Our Values / Concerns / Why Learn AI?
+   Dark blackboard background, torn-paper title, bullet lists
+   ========================================================= */
+
+/* Override data-bg="ink" to use a near-black for the chalk slides */
+.slide--chalk { background: #111 !important; }
+
+/* Full-slide layout: fills the slide */
+.slide--chalk .chalk-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 5rem);
+  height: 100%;
+  padding: clamp(2rem, 4vh, 4rem) clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  position: relative;
+}
+
+/* ---- Torn paper note (title) ---- */
+.torn-note {
+  position: relative;
+  background: #f0ece0;
+  border: 2px solid #ccc;
+  padding: .6em 1.2em .6em 1.4em;
+  margin-bottom: clamp(.8rem, 2vh, 1.6rem);
+  max-width: 90%;
+  /* Torn edges via clip-path */
+  clip-path: polygon(
+    0% 8%, 3% 0%, 6% 6%, 9% 1%, 12% 5%, 15% 0%, 18% 4%, 21% 0%,
+    24% 5%, 27% 0%, 30% 4%, 33% 0%, 36% 5%, 39% 0%, 42% 4%, 45% 0%,
+    48% 5%, 51% 0%, 54% 4%, 57% 0%, 60% 5%, 63% 0%, 66% 4%, 69% 0%,
+    72% 5%, 75% 0%, 78% 4%, 81% 0%, 84% 5%, 87% 0%, 90% 4%, 93% 0%,
+    96% 5%, 100% 0%,
+    100% 88%, 97% 100%, 94% 93%, 91% 100%, 88% 94%, 85% 100%,
+    82% 93%, 79% 100%, 76% 94%, 73% 100%, 70% 93%, 67% 100%,
+    64% 94%, 61% 100%, 58% 93%, 55% 100%, 52% 94%, 49% 100%,
+    46% 93%, 43% 100%, 40% 94%, 37% 100%, 34% 93%, 31% 100%,
+    28% 94%, 25% 100%, 22% 93%, 19% 100%, 16% 94%, 13% 100%,
+    10% 93%, 7% 100%, 4% 94%, 0% 100%
+  );
+  box-shadow: 4px 4px 0 rgba(0,0,0,.5);
+}
+.torn-pin {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+  background: #cc1f1f;
+  border-radius: 50%;
+  border: 2px solid #8b0000;
+  box-shadow: 0 2px 4px rgba(0,0,0,.6);
+  z-index: 3;
+}
+.torn-pin::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 8px;
+  background: #8b0000;
+  border-radius: 0 0 2px 2px;
+}
+.torn-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.4rem, 3vw, 3.2rem);
+  color: #111;
+  text-transform: none;
+  letter-spacing: -.01em;
+  line-height: 1;
+}
+
+/* ---- Bullet list ---- */
+.chalk-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(.3rem, .8vh, .8rem);
+}
+.chalk-list li {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: clamp(.9rem, 1.8vw, 1.8rem);
+  color: #fff;
+  padding-left: 1.4em;
+  position: relative;
+  line-height: 1.25;
+}
+.chalk-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 1;
+  top: .05em;
+}
+
+/* Boxed variant — purple border (Concerns slide) */
+.chalk-list--boxed {
+  border: 2.5px solid #8b5cf6;
+  border-radius: 10px;
+  padding: clamp(.6rem, 1.5vh, 1.2rem) clamp(.8rem, 1.5vw, 1.4rem);
+  gap: clamp(.25rem, .6vh, .6rem);
+}
+.chalk-list--boxed li {
+  font-size: clamp(.85rem, 1.6vw, 1.6rem);
+}
+
+/* Small variant for longer lists (Why Learn AI?) */
+.chalk-list--sm li {
+  font-size: clamp(.75rem, 1.4vw, 1.4rem);
+  gap: clamp(.2rem, .5vh, .5rem);
+}
+
+/* ---- Robot illustrations ---- */
+.chalk-robot {
+  position: absolute;
+  bottom: 0;
+  width: clamp(60px, 9vw, 120px);
+  opacity: .85;
+}
+.chalk-robot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(1) invert(1) brightness(.85);
+}
+.chalk-robot--left  { left: clamp(1rem, 3vw, 3rem); }
+.chalk-robot--right { right: clamp(1rem, 3vw, 3rem); }
+
+/* ---- Polaroid (Our Values right side) ---- */
+.chalk-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.polaroid {
+  background: #fff;
+  padding: clamp(.5rem, 1.2vw, 1.2rem) clamp(.5rem, 1.2vw, 1.2rem) clamp(2rem, 5vh, 5rem);
+  box-shadow: 6px 6px 0 rgba(0,0,0,.5), 0 0 0 2px rgba(255,255,255,.1);
+  transform: rotate(1.5deg);
+  max-width: clamp(200px, 42vw, 500px);
+  width: 100%;
+  position: relative;
+}
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: clamp(150px, 35vh, 380px);
+}
+.polaroid-label {
+  position: absolute;
+  bottom: clamp(.4rem, 1.2vh, 1.2rem);
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(.9rem, 1.8vw, 1.8rem);
+  color: #fff;
+  background: #cc1f1f;
+  padding: .2em .6em;
+  margin: 0 clamp(.4rem, 1vw, 1rem);
+  border-radius: 3px;
+  letter-spacing: .05em;
+}
+
+/* ---- Concerns: right side text ---- */
+.chalk-right--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1rem, 3vh, 3rem);
+  height: 100%;
+  padding-bottom: clamp(60px, 10vh, 120px);
+}
+.chalk-statement {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(.9rem, 1.8vw, 1.9rem);
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.25;
+  letter-spacing: .03em;
+  margin: 0;
+}
+.chalk-statement--sub {
+  font-size: clamp(.8rem, 1.5vw, 1.6rem);
+  opacity: .85;
+}
+
+/* ---- Why Learn AI?: right side comparison ---- */
+.chalk-right--compare {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(.6rem, 1.5vh, 1.5rem);
+  height: 100%;
+  padding-bottom: clamp(60px, 10vh, 120px);
+}
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(.5rem, 1.5vw, 1.5rem);
+}
+.compare-frame {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.compare-img {
+  background: #222;
+  border: 2px solid rgba(255,255,255,.3);
+  border-radius: 8px;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.compare-img--2023 {
+  background: linear-gradient(135deg, #2a1a1a 0%, #3d1f1f 50%, #1a1a2a 100%);
+}
+.compare-img--2025 {
+  background: linear-gradient(135deg, #1a2a1a 0%, #1f3d2a 50%, #1a1a1a 100%);
+}
+.compare-play {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  color: rgba(255,255,255,.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.compare-watermark {
+  position: absolute;
+  bottom: .4rem;
+  left: .4rem;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(.4rem, .7vw, .7rem);
+  color: rgba(255,255,255,.4);
+  letter-spacing: .05em;
+}
+.compare-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(.7rem, 1.2vw, 1.2rem);
+  color: rgba(255,255,255,.75);
+  text-align: center;
+}
