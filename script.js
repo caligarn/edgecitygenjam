@@ -162,3 +162,20 @@
   index = fromHash();
   render();
 })();
+
+// ---------- Community slide: video play button ----------
+document.querySelectorAll('.community-card--video').forEach(card => {
+  const btn = card.querySelector('.community-play-btn');
+  const video = card.querySelector('video');
+  if (!btn || !video) return;
+  btn.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      card.classList.add('is-playing');
+    } else {
+      video.pause();
+      card.classList.remove('is-playing');
+    }
+  });
+  video.addEventListener('ended', () => card.classList.remove('is-playing'));
+});

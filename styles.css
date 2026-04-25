@@ -2627,3 +2627,153 @@ kbd {
   .slide { page-break-after: always; height: 100vh; }
   .hud, .help { display: none !important; }
 }
+
+/* ============================================================
+   JOIN THE COMMUNITY SLIDE
+   ============================================================ */
+.slide--community {
+  display: flex;
+  flex-direction: column;
+  padding: 3vh 4vw 3vh;
+  gap: 1.8vh;
+  background: var(--ink);
+  color: var(--cream);
+  overflow: hidden;
+}
+.community-header { flex: 0 0 auto; }
+.community-title-note {
+  display: inline-block;
+  position: relative;
+  background: var(--cream);
+  color: var(--ink);
+  padding: .55em 1.4em .55em 2em;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.6vw, 2.6rem);
+  letter-spacing: -.01em;
+  border-radius: 2px 6px 6px 2px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.45);
+  clip-path: polygon(0% 8%,1.5% 0%,3% 6%,4.5% 1%,6% 7%,7.5% 2%,9% 8%,10.5% 1%,12% 6%,13.5% 0%,15% 7%,16.5% 2%,18% 8%,100% 8%,100% 92%,18% 92%,16.5% 98%,15% 93%,13.5% 100%,12% 94%,10.5% 99%,9% 92%,7.5% 98%,6% 93%,4.5% 99%,3% 94%,1.5% 100%,0% 92%);
+}
+.community-title-note::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: .8em;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: var(--yellow);
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
+  z-index: 2;
+}
+.community-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vh;
+}
+.community-row {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+.community-row-label {
+  flex: 0 0 auto;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.85rem, 1.4vw, 1.4rem);
+  color: var(--yellow);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  min-width: 9vw;
+  max-width: 9vw;
+  line-height: 1.2;
+  border-right: 2px solid rgba(255,255,255,.15);
+  padding-right: 1.5vw;
+}
+.community-cards {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1vw;
+}
+.community-card {
+  display: flex;
+  flex-direction: column;
+  gap: .5vh;
+}
+.community-card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius: 6px;
+  background: var(--ink-soft);
+  box-shadow: 3px 3px 0 rgba(0,0,0,.5);
+}
+.community-card-media img,
+.community-card-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.community-card-media--jobs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink-soft);
+}
+.community-jobs-icon {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+.community-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.35);
+  border: none;
+  cursor: pointer;
+  transition: background 250ms ease;
+  color: var(--white);
+}
+.community-play-btn svg {
+  width: clamp(2rem, 4vw, 4rem);
+  height: clamp(2rem, 4vw, 4rem);
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.6));
+}
+.community-play-btn:hover { background: rgba(0,0,0,.15); }
+.community-card--video.is-playing .community-play-btn { opacity: 0; pointer-events: none; }
+.community-card-label {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.7rem, 1.1vw, 1.1rem);
+  color: var(--white);
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  padding: 0 .2em;
+}
+.slide--community.is-active .community-title-note {
+  animation: slide-in-left 700ms cubic-bezier(.18,.85,.28,1) both;
+}
+.slide--community.is-active .community-row:nth-child(1) {
+  animation: community-row-in 600ms cubic-bezier(.18,.85,.28,1) .15s both;
+}
+.slide--community.is-active .community-row:nth-child(2) {
+  animation: community-row-in 600ms cubic-bezier(.18,.85,.28,1) .3s both;
+}
+@keyframes community-row-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
