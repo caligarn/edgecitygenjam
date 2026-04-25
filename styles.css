@@ -3612,3 +3612,234 @@ kbd {
   .slide.is-active .slide__robot { animation: none; }
   .slide__robot img { transition: none; transform: none; }
 }
+
+/* ── slide__bg: full-bleed photo behind a slide at very low opacity.
+   Used on the Roles slide to put a "scenes from the jam" still
+   behind the role cards. Sits below .slide__robot and content. ── */
+.slide__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.slide__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .12;
+  filter: saturate(.85);
+}
+.slide[data-bg="ink"] .slide__bg img { opacity: .18; mix-blend-mode: screen; }
+
+/* ── GenJam logo decoration: small wordmark in a corner of the start /
+   middle / end of the deck. Inverts to white-on-dark on ink/pink
+   slides via the --invert variant. ── */
+.genjam-logo {
+  position: absolute;
+  top: clamp(.8rem, 2vh, 2rem);
+  right: clamp(.8rem, 2vw, 2rem);
+  z-index: 4;
+  width: clamp(110px, 13vw, 180px);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 700ms ease 250ms, transform 700ms cubic-bezier(.18,.85,.28,1) 250ms;
+}
+.slide.is-active .genjam-logo { opacity: .75; transform: translateY(0); }
+.genjam-logo--invert { filter: invert(1) brightness(2); }
+.genjam-logo--corner { /* default */ }
+.genjam-logo--center {
+  top: 50%; left: 50%; right: auto;
+  transform: translate(-50%, -52%);
+  width: clamp(220px, 36vw, 480px);
+  opacity: 0;
+}
+.slide.is-active .genjam-logo--center { opacity: .9; transform: translate(-50%, -50%); }
+
+/* ── slide--bubble-split: image left, big text right (side-by-side). ── */
+.slide--bubble-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: 6vh 6vw;
+  text-align: left;
+}
+.slide--bubble-split .bubble-figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide--bubble-split .bubble-figure img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 12px 12px 0 var(--pink);
+  background: var(--white);
+}
+.slide--bubble-split .bubble-hd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vh;
+}
+@media (max-width: 800px) {
+  .slide--bubble-split { grid-template-columns: 1fr; }
+}
+
+/* ── slide--ai-example: heading + a centered video / tweet frame.
+   Used by the three "Let's watch some AI examples" slides. ── */
+.slide--ai-example {
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2vh;
+}
+.ai-example__hd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5vh;
+  text-align: center;
+}
+.ai-example__frame {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: clamp(560px, 70vw, 1000px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 10px 10px 0 var(--pink);
+  background: var(--white);
+  padding: clamp(.6rem, 1vw, 1rem);
+  min-height: 0;
+  overflow: hidden;
+}
+.ai-example__frame--video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: 65vh;
+  border: 0;
+  border-radius: 6px;
+  display: block;
+}
+.ai-example__frame--tweet {
+  background: var(--cream);
+  align-items: stretch;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+.ai-example__frame--tweet > .twitter-tweet {
+  margin: 0 auto !important;
+  max-width: 540px;
+}
+.ai-example__cap {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(.85rem, 1.1vw, 1.1rem);
+  letter-spacing: .03em;
+  opacity: .65;
+  margin: 0;
+}
+
+/* ── slide--schedule: agenda for the GenJam day. Three-column grid of
+   numbered chips so the whole run-of-show fits on one slide. ── */
+.slide--schedule {
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+}
+.schedule-hd {
+  display: flex;
+  flex-direction: column;
+  gap: .5vh;
+}
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 1vh 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 6px 6px 0 var(--ink);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+.schedule-item:nth-child(3n+1) { background: var(--yellow); }
+.schedule-item:nth-child(3n+2) { background: var(--lime); }
+.schedule-item:nth-child(3n+3) { background: var(--white); }
+.schedule-item--accent {
+  background: var(--pink) !important;
+  color: var(--white);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.schedule-item--accent .schedule-num { color: var(--cream); }
+.schedule-num {
+  font-weight: 800;
+  font-size: clamp(.85rem, 1.1vw, 1.1rem);
+  letter-spacing: .12em;
+  opacity: .7;
+  min-width: 1.6em;
+}
+.schedule-label {
+  font-weight: 900;
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+}
+@media (max-width: 900px) { .schedule-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .schedule-list { grid-template-columns: 1fr; } }
+
+/* ── Page-31 fan-diagram pop-in: each <rect> + <line> + <text> in the
+   SVG fades+scales in on slide-active in a left-to-right cascade.
+   pizzazz.js sets --pfn-i index attribute on every direct child of
+   the .pfn-svg and we use it as the stagger. ── */
+.pfn-svg > rect,
+.pfn-svg > line,
+.pfn-svg > text {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(.7);
+  transition: none;
+}
+.slide--process-fan.is-active .pfn-svg > rect,
+.slide--process-fan.is-active .pfn-svg > line,
+.slide--process-fan.is-active .pfn-svg > text {
+  animation: pfn-pop 520ms cubic-bezier(.2,.8,.2,1) both;
+  animation-delay: calc(180ms + var(--pfn-i, 0) * 22ms);
+}
+@keyframes pfn-pop {
+  0%   { opacity: 0; transform: scale(.7); }
+  60%  { opacity: 1; transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pfn-svg > rect,
+  .pfn-svg > line,
+  .pfn-svg > text { opacity: 1; transform: none; animation: none; }
+}
