@@ -524,6 +524,7 @@ html, body {
 }
 
 .lede {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 600;
   font-size: clamp(1.2rem, 2.2vw, 2.4rem);
   line-height: 1.25;
@@ -532,6 +533,7 @@ html, body {
 }
 
 .body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 600;
   font-size: clamp(1.05rem, 1.6vw, 1.8rem);
   line-height: 1.35;
@@ -3236,4 +3238,51 @@ kbd {
   border: 2px solid var(--ink);
   margin-top: .5rem;
   display: block;
+}
+
+/* ── Sorting Hat: 6-up numbered group cards on cream slide--left ── */
+.sorting-grid {
+  list-style: none;
+  padding: 0;
+  margin: 1vh 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2vw;
+  max-width: 70vw;
+}
+.sorting-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 7px 7px 0 var(--ink);
+}
+.sorting-card--white  { background: var(--white);  color: var(--ink); }
+.sorting-card--lime   { background: var(--lime);   color: var(--ink); }
+.sorting-card--yellow { background: var(--yellow); color: var(--ink); }
+.sorting-card--pink   { background: var(--pink);   color: var(--white); }
+.sorting-card__num {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.2rem, 4.2vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  min-width: 1.4em;
+  text-align: center;
+}
+.sorting-card__label {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  letter-spacing: -0.01em;
+}
+.sorting-foot {
+  margin-top: 1.2vh;
+  opacity: .7;
+  max-width: 56ch;
+}
+@media (max-width: 900px) {
+  .sorting-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
 }
