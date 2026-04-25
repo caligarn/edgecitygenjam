@@ -877,38 +877,163 @@
     <p class="body pf-foot">SHOT 1 → IMG → VID · SHOT 2 → IMG → VID · SHOT 3 → IMG → VID · …</p>
   </section>
 
-  <!-- THE PROCESS — fan-out diagram -->
+  <!-- THE PROCESS (EXPANDED) — fan-out diagram -->
   <section class="slide slide--process-fan" data-bg="cream">
     <header class="pfn-hd">
       <span class="kicker">THE METHOD · DETAILED</span>
-      <h2 class="h-xxl">The <span class="accent-pink">Process.</span></h2>
+      <h2 class="h-xxl">The Process <span class="accent-pink">(Expanded).</span></h2>
     </header>
-    <div class="process-fan">
-      <div class="pfn-col pfn-col--start">
-        <div class="pfn-card pfn-card--idea">Idea</div>
-        <span class="pfn-arrow">&rarr;</span>
-        <div class="pfn-card pfn-card--script">Script&nbsp;/&nbsp;Story</div>
-      </div>
-      <span class="pfn-arrow pfn-arrow--fan" aria-hidden="true">&rarr;</span>
-      <div class="pfn-col pfn-col--shots">
-        <div class="pfn-headers">
-          <span class="pfn-header">Shotlist</span>
-          <span class="pfn-header-spacer" aria-hidden="true"></span>
-          <span class="pfn-header">Txt &rarr; Img</span>
-          <span class="pfn-header-spacer" aria-hidden="true"></span>
-          <span class="pfn-header">Img &rarr; Vid</span>
-        </div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 1</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 2</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 3</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 4</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 5</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-        <div class="pfn-row"><span class="pfn-card pfn-card--shot">Shot 6</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--img">Img</span><span class="pfn-arrow">&rarr;</span><span class="pfn-card pfn-card--vid">Vid</span></div>
-      </div>
-      <span class="pfn-arrow pfn-arrow--converge" aria-hidden="true">&rarr;</span>
-      <div class="pfn-col pfn-col--end">
-        <div class="pfn-card pfn-card--final">Sound&nbsp;&amp;<br/>Edit</div>
-      </div>
+    <div class="pfn-svg-wrap">
+      <svg class="pfn-svg" viewBox="0 0 1410 720" xmlns="http://www.w3.org/2000/svg" aria-label="Idea to Script to six parallel Shot, Prompt, Img, Vid tracks converging into Sound and Edit">
+        <defs>
+          <marker id="pfn-arrow-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#141B34"/>
+          </marker>
+        </defs>
+
+        <!-- Column headers -->
+        <text x="565.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">SHOTLIST</text>
+        <text x="755.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">PROMPT</text>
+        <text x="935.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">TXT → IMG</text>
+        <text x="1105.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">IMG → VID</text>
+
+        <!-- Idea (yellow) -->
+        <rect x="35" y="336" width="140" height="90" rx="12" fill="#141B34"/>
+        <rect x="30" y="330" width="140" height="90" rx="12" fill="#FFD93D" stroke="#141B34" stroke-width="3.5"/>
+        <text x="100.0" y="386.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="32" fill="#141B34">Idea</text>
+
+        <!-- Idea -> Script arrow -->
+        <line x1="170" y1="375.0" x2="234" y2="375.0" stroke="#141B34" stroke-width="3" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Script / Story (lime) -->
+        <rect x="245" y="336" width="220" height="90" rx="12" fill="#141B34"/>
+        <rect x="240" y="330" width="220" height="90" rx="12" fill="#CCFF33" stroke="#141B34" stroke-width="3.5"/>
+        <text x="350.0" y="385.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="28" fill="#141B34">Script / Story</text>
+
+        <!-- Six fan-out arrows from Script right edge to each Shot left edge -->
+        <line x1="460" y1="375.0" x2="499" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Row 1 -->
+        <rect x="509" y="56.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="51.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 1</text>
+        <line x1="625" y1="85" x2="689" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="56.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="51.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="85" x2="879" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="56.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="51.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="85" x2="1049" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="56.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="51.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 2 -->
+        <rect x="509" y="166.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="161.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 2</text>
+        <line x1="625" y1="195" x2="689" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="166.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="161.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="195" x2="879" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="166.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="161.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="195" x2="1049" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="166.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="161.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 3 -->
+        <rect x="509" y="276.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="271.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 3</text>
+        <line x1="625" y1="305" x2="689" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="276.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="271.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="305" x2="879" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="276.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="271.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="305" x2="1049" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="276.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="271.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 4 -->
+        <rect x="509" y="386.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="381.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 4</text>
+        <line x1="625" y1="415" x2="689" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="386.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="381.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="415" x2="879" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="386.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="381.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="415" x2="1049" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="386.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="381.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 5 -->
+        <rect x="509" y="496.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="491.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 5</text>
+        <line x1="625" y1="525" x2="689" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="496.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="491.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="525" x2="879" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="496.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="491.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="525" x2="1049" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="496.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="491.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 6 -->
+        <rect x="509" y="606.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="601.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 6</text>
+        <line x1="625" y1="635" x2="689" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="606.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="601.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="635" x2="879" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="606.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="601.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="635" x2="1049" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="606.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="601.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Six fan-in arrows from each Vid right edge to Sound&Edit left edge -->
+        <line x1="1155" y1="85" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="195" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="305" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="415" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="525" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="635" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Sound & Edit (pink) -->
+        <rect x="1190" y="326" width="170" height="100" rx="12" fill="#141B34"/>
+        <rect x="1185" y="320" width="170" height="100" rx="12" fill="#FF3B5C" stroke="#141B34" stroke-width="3.5"/>
+        <text x="1270.0" y="358" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="26" fill="#FFFFFF">Sound</text>
+        <text x="1270.0" y="390" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="26" fill="#FFFFFF">&amp; Edit</text>
+      </svg>
     </div>
   </section>
 
@@ -946,7 +1071,7 @@
       <li class="pf-arrow">&rarr;</li>
       <li class="pf pf--lime"><span class="pf__n">3</span><span class="pf__t">Animate to video</span></li>
     </ol>
-    <p class="body mono pf-foot">Tools: Midjourney &middot; Flux &middot; Ideogram &middot; Runway &middot; Kling &middot; Hailuo &middot; Luma</p>
+    <p class="body mono pf-foot">Tools: Midjourney &middot; Nanobanana &middot; ChatGPT Image2 &middot; Flux &middot; Ideogram &middot; Reve</p>
   </section>
 
   <!-- AI TOOLS · NODE-BASED WORKFLOWS -->
@@ -959,7 +1084,7 @@
       <li><span class="num">2</span><span>Chain models: image gen &rarr; upscale &rarr; animate &rarr; audio.</span></li>
       <li><span class="num">3</span><span>Save, share, and remix workflows from the community.</span></li>
     </ul>
-    <p class="body mono pf-foot">ComfyUI &middot; InvokeAI &middot; KREA &middot; Floyo &middot; n8n</p>
+    <p class="body mono pf-foot">Tools: ComfyUI &middot; Weavy &middot; Flora &middot; Krea &middot; Freepik</p>
   </section>
 
   <!-- AI TOOLS · LUMA AGENTS -->
@@ -972,7 +1097,7 @@
       <li><span class="num">2</span><span>The agent generates shots, maintains character and style consistency.</span></li>
       <li><span class="num">3</span><span>Outputs a rough cut &mdash; ready to refine.</span></li>
     </ul>
-    <p class="body mono pf-foot">lumalabs.ai &middot; Dream Machine &middot; Ray2</p>
+    <p class="body mono pf-foot">Tools: Luma Agents &middot; Flora Agent &middot; OiiOii &middot; TapNow</p>
   </section>
 
   <!-- AI TOOLS · FLIK -->
@@ -986,6 +1111,7 @@
       <li><span class="num">3</span><span>Export a multi-shot sequence, ready to edit.</span></li>
     </ul>
     <p class="body mono pf-foot">flikai.com &middot; <span class="mono-chip">FLIKMACHINE10</span> for free credits</p>
+    <p class="body mono pf-foot">Tools: Hypernatural &middot; Popcorn &middot; Seedance2</p>
   </section>
 
   <!-- 15. STORY STRUCTURE -->
@@ -1046,37 +1172,37 @@
     </header>
     <ol class="history-list">
       <li class="fact fact--yellow">
-        <img class="fact__media" src="slide-photos/tips-ai-prompts-specific.jpg" alt="Person writing detailed notes" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-ai-prompts-specific.jpg" alt="Specific prompt with shot details" loading="lazy"/>
         <div class="fact__yr">PROMPTS</div>
         <h3 class="fact__h">Be specific.</h3>
-        <p class="fact__b">Describe lighting, style, mood, camera angle, and subject in detail. The more you give the model, the more it gives back.</p>
+        <p class="fact__b">Describe lighting, style, mood, camera angle, and subject in detail. With images, focus on subject, object, landscape, and camera angle. For video, specify one action and one camera movement.</p>
       </li>
       <li class="fact fact--lime">
-        <img class="fact__media" src="slide-photos/tips-ai-volume-iterate.jpg" alt="AI image generation grid of results" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-ai-volume-iterate.jpg" alt="Multiple AI generations to choose from" loading="lazy"/>
         <div class="fact__yr">VOLUME</div>
         <h3 class="fact__h">Iterate fast.</h3>
         <p class="fact__b">Generate many options quickly, then pick and refine the best one. Quantity unlocks quality.</p>
       </li>
       <li class="fact fact--white">
-        <img class="fact__media" src="slide-photos/tips-ai-reference-images.jpg" alt="Mood board with reference photos" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-ai-reference-images.jpg" alt="Reference image guiding an AI generation" loading="lazy"/>
         <div class="fact__yr">REFERENCE</div>
         <h3 class="fact__h">Use images.</h3>
         <p class="fact__b">Upload a style or composition reference to anchor your results. Visual prompts beat words.</p>
       </li>
       <li class="fact fact--pink">
-        <img class="fact__media" src="slide-photos/tips-ai-models-different.jpg" alt="Comparing different AI tools on screen" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-ai-models-different.jpg" alt="Different AI model outputs side by side" loading="lazy"/>
         <div class="fact__yr">MODELS</div>
         <h3 class="fact__h">Try different ones.</h3>
         <p class="fact__b">Each model has its strengths. Switch if one isn&rsquo;t working &mdash; the right tool for the shot.</p>
       </li>
       <li class="fact fact--lime">
-        <img class="fact__media" src="slide-photos/tips-ai-motion-subtle.jpg" alt="Camera dolly on tracks for smooth motion" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-ai-motion-subtle.jpg" alt="Subtle camera move on an AI video clip" loading="lazy"/>
         <div class="fact__yr">MOTION</div>
         <h3 class="fact__h">Keep it subtle.</h3>
         <p class="fact__b">Short, simple camera moves work better than complex ones in image-to-video. Less is more.</p>
       </li>
       <li class="fact fact--yellow">
-        <img class="fact__media" src="slide-photos/tips-ai-vibes-artifacts.jpg" alt="Surreal AI glitch art" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-ai-vibes-artifacts.jpg" alt="Embracing AI generation artifacts as style" loading="lazy"/>
         <div class="fact__yr">VIBES</div>
         <h3 class="fact__h">Embrace artifacts.</h3>
         <p class="fact__b">AI weirdness can be a creative feature, not a bug. Lean into the strange &mdash; it&rsquo;s part of the medium.</p>
@@ -1084,7 +1210,6 @@
     </ol>
   </section>
 
-  <!-- HUMAN TIPS -->
   <!-- HUMAN TIPS -->
   <section class="slide slide--history" data-bg="cream">
     <header class="history-hd">
@@ -1094,37 +1219,37 @@
     </header>
     <ol class="history-list">
       <li class="fact fact--yellow">
-        <img class="fact__media" src="slide-photos/tips-human-roles-designate.jpg" alt="Film crew roles and positions" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-human-roles-designate.jpg" alt="Team designating roles around a table" loading="lazy"/>
         <div class="fact__yr">ROLES</div>
         <h3 class="fact__h">Designate clearly.</h3>
         <p class="fact__b">Assign Writer, Producer, Editor, and Animator before you start. Everyone knows their lane.</p>
       </li>
       <li class="fact fact--lime">
-        <img class="fact__media" src="slide-photos/tips-human-story-agree.jpg" alt="Screenwriter reviewing script" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-human-story-agree.jpg" alt="Team aligning on a story outline" loading="lazy"/>
         <div class="fact__yr">STORY</div>
         <h3 class="fact__h">Agree first.</h3>
         <p class="fact__b">Lock the concept and script before anyone touches the tools. Story leads, tools follow.</p>
       </li>
       <li class="fact fact--white">
-        <img class="fact__media" src="slide-photos/tips-human-parallel-work.jpg" alt="Team working in parallel on different tasks" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-human-parallel-work.jpg" alt="Two people working in parallel on different tools" loading="lazy"/>
         <div class="fact__yr">PARALLEL</div>
         <h3 class="fact__h">Work side by side.</h3>
         <p class="fact__b">While one person prompts images, another builds the edit timeline. Move on every front at once.</p>
       </li>
       <li class="fact fact--pink">
-        <img class="fact__media" src="slide-photos/tips-human-sync-checkin.jpg" alt="Quick team standup check-in meeting" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-human-sync-checkin.jpg" alt="Quick team sync huddle" loading="lazy"/>
         <div class="fact__yr">SYNC</div>
         <h3 class="fact__h">Check in every 20.</h3>
         <p class="fact__b">Short syncs every twenty minutes prevent the team from drifting in different directions.</p>
       </li>
       <li class="fact fact--lime">
-        <img class="fact__media" src="slide-photos/tips-human-ship-done.jpg" alt="Video editor finishing a rough cut timeline" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-human-ship-done.jpg" alt="Finished rough cut on the timeline" loading="lazy"/>
         <div class="fact__yr">SHIP</div>
         <h3 class="fact__h">Done &gt; perfect.</h3>
         <p class="fact__b">A finished rough cut beats an unfinished masterpiece. Get to the end of the timeline first.</p>
       </li>
       <li class="fact fact--yellow">
-        <img class="fact__media" src="slide-photos/tips-human-trust-team.jpg" alt="Team members building trust together" loading="lazy"/>
+        <img class="fact__media" src="slide-photos/tips-human-trust-team.jpg" alt="Team handing off responsibility with trust" loading="lazy"/>
         <div class="fact__yr">TRUST</div>
         <h3 class="fact__h">Default to your team.</h3>
         <p class="fact__b">If a teammate is closer to the work, trust their call. Speed beats consensus on a two-hour clock.</p>
