@@ -52,6 +52,29 @@
     requestAnimationFrame(drift);
   }
 
+  // ---------- Page-31 fan diagram SVG cascade ----------
+  // Index every direct child of .pfn-svg with a CSS variable so the
+  // CSS animation can stagger pop-ins left-to-right. We sort children
+  // by their bbox center-x so the cascade reads as a wave even though
+  // the SVG declares them grouped by row.
+  const pfnSvg = document.querySelector('.pfn-svg');
+  if (pfnSvg) {
+    const kids = Array.from(pfnSvg.children).filter(el => /^(rect|line|text|polyline|path)$/i.test(el.tagName));
+    const xOf = (el) => {
+      const a = (n) => parseFloat(el.getAttribute(n)) || 0;
+      switch (el.tagName.toLowerCase()) {
+        case 'rect': return a('x') + a('width') / 2;
+        case 'line': return (a('x1') + a('x2')) / 2;
+        case 'text': return a('x');
+        default:     return 0;
+      }
+    };
+    kids
+      .map((el) => ({ el, x: xOf(el) }))
+      .sort((a, b) => a.x - b.x)
+      .forEach(({ el }, i) => el.style.setProperty('--pfn-i', i));
+  }
+
   // ---------- Accent pop on slide change ----------
   // Watches for the global slide:change event (dispatched from script.js) and
   // marks the new slide's .accent-pink spans with .accent-pink--pop for one
