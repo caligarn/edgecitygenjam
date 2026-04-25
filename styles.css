@@ -3455,6 +3455,136 @@ kbd {
   margin: .25rem 0 0 0;
 }
 
+/* ── slide--process-fan: detailed Process diagram — Idea → Script
+   fans out into 6 parallel shot tracks (Shot N → Img → Vid) and
+   converges into Sound & Edit. Cream cards with the deck's standard
+   ink border + offset shadow. ── */
+.slide--process-fan {
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+}
+.pfn-hd {
+  display: flex;
+  flex-direction: column;
+  gap: .5vh;
+}
+.process-fan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.6rem, 1.2vw, 1.4rem);
+  margin-top: 1vh;
+  flex: 1;
+  min-height: 0;
+}
+.pfn-col {
+  display: flex;
+  align-items: center;
+  gap: clamp(.4rem, .8vw, .9rem);
+}
+.pfn-col--start {
+  flex-direction: row;
+}
+.pfn-col--shots {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(.3rem, .8vh, .8rem);
+  min-width: 0;
+}
+.pfn-col--end { display: flex; align-items: center; }
+.pfn-headers {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(.3rem, .6vw, .8rem);
+}
+.pfn-header {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.65rem, .9vw, .9rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: .55;
+}
+.pfn-header-spacer { display: block; }
+.pfn-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(.3rem, .6vw, .8rem);
+}
+.pfn-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.85rem, 1.15vw, 1.2rem);
+  line-height: 1.1;
+  letter-spacing: -.005em;
+  padding: clamp(.45rem, .9vh, .9rem) clamp(.6rem, 1vw, 1.1rem);
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--white);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.pfn-card--idea {
+  background: var(--yellow);
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  font-weight: 900;
+  padding: clamp(.6rem, 1.2vh, 1.2rem) clamp(.9rem, 1.5vw, 1.5rem);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.pfn-card--script {
+  background: var(--lime);
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  font-weight: 900;
+  padding: clamp(.6rem, 1.2vh, 1.2rem) clamp(.9rem, 1.5vw, 1.5rem);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.pfn-card--final {
+  background: var(--pink);
+  color: var(--white);
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  font-weight: 900;
+  padding: clamp(1rem, 2vh, 2rem) clamp(1rem, 1.5vw, 1.6rem);
+  box-shadow: 8px 8px 0 var(--ink);
+  white-space: normal;
+  line-height: 1;
+}
+.pfn-arrow {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  color: var(--ink);
+  opacity: .55;
+  user-select: none;
+}
+.pfn-arrow--fan,
+.pfn-arrow--converge {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  opacity: .7;
+}
+
+@media (max-width: 1100px) {
+  .pfn-card { font-size: clamp(.75rem, 1.4vw, 1rem); white-space: nowrap; }
+  .pfn-card--idea, .pfn-card--script, .pfn-card--final {
+    font-size: clamp(.9rem, 1.7vw, 1.2rem);
+  }
+}
+@media (max-width: 800px) {
+  .process-fan { flex-direction: column; align-items: stretch; }
+  .pfn-col--shots { gap: .4rem; }
+}
+
 /* ── slide--bubble: hero image centered under a kicker + title.
    Used on the "Nature of the bubble" slide. ── */
 .slide--bubble {
