@@ -3361,3 +3361,50 @@ kbd {
 @media (max-width: 900px) {
   .sorting-grid { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
 }
+
+/* ── fact--photo: featured image flush with the top of a fact card,
+   followed by a tight label + title below. Used on the Join the
+   Community slide so each event/program reads as a poster card. ── */
+.history-list--photos {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4vw;
+}
+.fact--photo {
+  padding: 0;
+  overflow: hidden;
+  gap: 0;
+}
+.fact__img {
+  width: 100%;
+  height: clamp(110px, 22vh, 240px);
+  object-fit: cover;
+  border-bottom: 3px solid var(--ink);
+  display: block;
+}
+.fact--photo .fact__body {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  padding: 1rem 1.15rem 1.15rem;
+}
+
+/* ── fact--title: title-only card (no body copy). Centers content
+   vertically so the cards read as a clean grid of labels. Used on
+   the Our Values and Concerns slides. ── */
+.fact--title {
+  justify-content: center;
+  min-height: clamp(110px, 14vh, 160px);
+  gap: .6rem;
+}
+.history-list--titles {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+@media (max-width: 900px) {
+  .history-list--photos,
+  .history-list--titles { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .history-list--photos,
+  .history-list--titles { grid-template-columns: 1fr; }
+}
