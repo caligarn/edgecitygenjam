@@ -3366,8 +3366,8 @@ kbd {
    followed by a tight label + title below. Used on the Join the
    Community slide so each event/program reads as a poster card. ── */
 .history-list--photos {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.4vw;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.1vw;
 }
 .fact--photo {
   padding: 0;
@@ -3376,7 +3376,7 @@ kbd {
 }
 .fact__img {
   width: 100%;
-  height: clamp(110px, 22vh, 240px);
+  height: clamp(110px, 20vh, 220px);
   object-fit: cover;
   border-bottom: 3px solid var(--ink);
   display: block;
@@ -3384,8 +3384,12 @@ kbd {
 .fact--photo .fact__body {
   display: flex;
   flex-direction: column;
-  gap: .45rem;
-  padding: 1rem 1.15rem 1.15rem;
+  gap: .35rem;
+  padding: .85rem 1rem 1rem;
+}
+.fact--photo .fact__h {
+  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  line-height: 1.1;
 }
 
 /* ── fact--title: title-only card (no body copy). Centers content
@@ -3400,8 +3404,10 @@ kbd {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2vw;
 }
+@media (max-width: 1100px) {
+  .history-list--photos { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
-  .history-list--photos,
   .history-list--titles { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
