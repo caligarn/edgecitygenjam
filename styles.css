@@ -498,6 +498,7 @@ html, body {
 .display--black { color: var(--ink); }
 
 .h-xxl {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(3rem, 9vw, 11rem);
   line-height: .95;
@@ -507,6 +508,7 @@ html, body {
 }
 
 .h-xl {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(2.2rem, 5.6vw, 6rem);
   line-height: 1;
@@ -515,6 +517,7 @@ html, body {
 }
 
 .h-l {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1.6rem, 3.2vw, 3.2rem);
   line-height: 1;
@@ -525,7 +528,7 @@ html, body {
 
 .lede {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(1.2rem, 2.2vw, 2.4rem);
   line-height: 1.25;
   margin: 0;
@@ -534,7 +537,7 @@ html, body {
 
 .body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: clamp(1.05rem, 1.6vw, 1.8rem);
   line-height: 1.35;
   margin: 0;
@@ -715,11 +718,15 @@ html, body {
 }
 
 .bio-name {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
   font-size: clamp(3rem, 10vw, 10rem);
   line-height: .9;
 }
 
 .bio-lede {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   font-size: clamp(1.1rem, 1.9vw, 2rem);
   max-width: 30ch;
 }
@@ -807,6 +814,7 @@ html, body {
   margin-bottom: -0.2em;
 }
 .quote {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(2.6rem, 7.5vw, 9rem);
   line-height: 1;
@@ -994,7 +1002,14 @@ kbd {
   padding: 0 1vw;
 }
 .worldmap__header .kicker { align-self: center; }
-.worldmap__header h2 { margin: 0; font-size: clamp(1.5rem, 2.8vw, 2.8rem); line-height: 1; text-align: right; }
+.worldmap__header h2 {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  margin: 0;
+  font-size: clamp(1.5rem, 2.8vw, 2.8rem);
+  line-height: 1;
+  text-align: right;
+}
 .worldmap__header h2 br { display: none; }
 .worldmap {
   position: relative;
@@ -1231,7 +1246,11 @@ kbd {
 }
 .fd-content { display: flex; flex-direction: column; gap: clamp(1rem, 2vh, 2rem); }
 .fd-accent { color: var(--orange); }
-.fd-title  { line-height: .9; }
+.fd-title  {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  line-height: .9;
+}
 .kicker--fd { background: var(--orange); color: var(--white); border-color: var(--ink); }
 .tag--fd    { background: var(--orange); color: var(--white); }
 
@@ -1371,6 +1390,8 @@ kbd {
 }
 .schnozzo-text { display: flex; flex-direction: column; gap: clamp(1rem, 2.2vh, 2.2rem); }
 .schnozzo-name {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
   font-size: clamp(4rem, 13vw, 16rem);
   line-height: .88;
   letter-spacing: -0.035em;
@@ -1378,6 +1399,7 @@ kbd {
   text-transform: none;
 }
 .schnozzo-sub {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   color: var(--cream);
   opacity: .85;
   font-weight: 700;
@@ -1463,6 +1485,7 @@ kbd {
   border-radius: 4px;
 }
 .inflect__name {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(2rem, 4.6vw, 4.6rem);
   line-height: .95;
@@ -1470,6 +1493,7 @@ kbd {
   margin: 0;
 }
 .inflect__why {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 800;
   font-size: clamp(1rem, 1.7vw, 1.7rem);
   line-height: 1.2;
@@ -1477,7 +1501,8 @@ kbd {
   opacity: .9;
 }
 .inflect__unlock {
-  font-weight: 600;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   font-size: clamp(.95rem, 1.15vw, 1.2rem);
   line-height: 1.35;
   margin: auto 0 0 0;
@@ -1515,8 +1540,17 @@ kbd {
 /* ---------- Facts & History ---------- */
 .slide--history { justify-content: center; gap: 1.8vh; padding: 5vh 5vw; }
 .history-hd { display: flex; flex-direction: column; gap: .5vh; }
-.history-title { line-height: 1; }
-.history-sub { max-width: 60ch; opacity: .85; }
+.history-title {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
+.history-sub {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  max-width: 60ch;
+  opacity: .85;
+}
 .history-list {
   list-style: none;
   padding: 0; margin: 0;
@@ -1552,6 +1586,7 @@ kbd {
 }
 .fact--white .fact__yr { background: var(--cream); }
 .fact__h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1.25rem, 2vw, 2rem);
   line-height: 1.05;
@@ -1559,7 +1594,8 @@ kbd {
   margin: 0;
 }
 .fact__b {
-  font-weight: 600;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   font-size: clamp(.95rem, 1.2vw, 1.2rem);
   line-height: 1.35;
   margin: 0;
@@ -1655,6 +1691,7 @@ kbd {
 .qq--ink   .qq__role { background: rgba(250,243,227,.12); }
 
 .qq__name {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1.15rem, 1.8vw, 1.8rem);
   line-height: 1.05;
@@ -1662,7 +1699,8 @@ kbd {
   margin: 0;
 }
 .qq__text {
-  font-weight: 600;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   font-size: clamp(.9rem, 1.12vw, 1.12rem);
   line-height: 1.35;
   margin: 0;
@@ -1713,7 +1751,11 @@ kbd {
 
 /* ---------- Hypotheses (12 on one slide, 3-col dense grid) ---------- */
 .slide--hypo { justify-content: center; gap: 1.4vh; padding: 4vh 4vw; }
-.hypo-title { line-height: 1; }
+.hypo-title {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
 .hypo-list {
   list-style: none;
   padding: 0;
@@ -1753,6 +1795,7 @@ kbd {
   white-space: nowrap;
 }
 .hypo-body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   font-size: clamp(.82rem, 1.08vw, 1.1rem);
   line-height: 1.28;
@@ -1774,7 +1817,14 @@ kbd {
 /* ---------- Hypotheses — category slides (4 cards, 2x2, large text) ---------- */
 .slide--hypo-cat { justify-content: center; gap: 2.5vh; padding: 5vh 5vw; }
 .hypo-cat-hd { display: flex; flex-direction: column; gap: .6vh; }
-.hypo-cat-sub { max-width: 50ch; opacity: .8; font-size: clamp(1rem, 1.35vw, 1.3rem); margin: .3vh 0 0 0; }
+.hypo-cat-sub {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  max-width: 50ch;
+  opacity: .8;
+  font-size: clamp(1rem, 1.35vw, 1.3rem);
+  margin: .3vh 0 0 0;
+}
 
 .hypo-list--split {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2111,6 +2161,7 @@ kbd {
   opacity: .8;
 }
 .role__t {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1.1rem, 2.1vw, 2rem);
   line-height: .95;
@@ -2173,8 +2224,17 @@ kbd {
   gap: 1rem;
 }
 .mm-throwback__hd .kicker { align-self: center; }
-.mm-throwback__title { margin: 0; font-size: clamp(2rem, 5vw, 5rem); line-height: 1; text-align: center; }
+.mm-throwback__title {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 1;
+  text-align: center;
+}
 .mm-throwback__sub {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   margin: 0;
   text-align: right;
   max-width: 32ch;
@@ -2251,6 +2311,8 @@ kbd {
   grid-column: 1 / 2;
 }
 .mm-poster__title {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
   grid-column: 2 / 3;
   margin: 0;
   font-size: clamp(1.2rem, 2.3vw, 2.3rem);
@@ -2341,6 +2403,7 @@ kbd {
   border-bottom: 2px dashed color-mix(in srgb, var(--mm-accent, var(--ink)) 70%, transparent);
 }
 .mm-stage-group__title {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1rem, 1.4vw, 1.4rem);
   letter-spacing: .08em;
@@ -2373,6 +2436,7 @@ kbd {
 @media (prefers-reduced-motion: reduce) { .mm-sub { transition: none; } }
 
 .mm-sub__h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   margin: 0 0 .3rem 0;
   font-weight: 900;
   font-size: clamp(.65rem, .8vw, .8rem);
@@ -2581,8 +2645,8 @@ kbd {
   background: var(--cream);
   color: var(--ink);
   padding: .55em 1.4em .55em 2em;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
   font-size: clamp(1.4rem, 2.6vw, 2.6rem);
   letter-spacing: -.01em;
   border-radius: 2px 6px 6px 2px;
@@ -3068,6 +3132,7 @@ kbd {
 }
 .jam-card--white .jam-card__tag { background: var(--cream); }
 .jam-card__h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1.25rem, 2vw, 2rem);
   line-height: 1.05;
@@ -3075,7 +3140,8 @@ kbd {
   margin: 0;
 }
 .jam-card__b {
-  font-weight: 600;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   font-size: clamp(.95rem, 1.2vw, 1.2rem);
   line-height: 1.35;
   margin: 0;
@@ -3183,6 +3249,7 @@ kbd {
 }
 .jam-card--white .jam-card__tag { background: var(--cream); }
 .jam-card__h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1.25rem, 2vw, 2rem);
   line-height: 1.05;
@@ -3190,7 +3257,8 @@ kbd {
   margin: 0;
 }
 .jam-card__b {
-  font-weight: 600;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   font-size: clamp(.95rem, 1.2vw, 1.2rem);
   line-height: 1.35;
   margin: 0;
