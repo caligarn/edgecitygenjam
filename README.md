@@ -1,6 +1,6 @@
-# Preso Base
+# afroanimation2026
 
-This repository serves as a reference and base template for building slide decks. It integrates the robust design system from [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) and the advanced text presentation technology from [pretext](https://github.com/chenglou/pretext).
+This repository is the presentation scaffold for **Afro Animation 2026**, built on the [preso-base](https://github.com/caligarn/preso-base) template. It integrates the robust design system from [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) and the advanced text presentation technology from [pretext](https://github.com/chenglou/pretext).
 
 ## Overview
 
@@ -10,7 +10,7 @@ This repository serves as a reference and base template for building slide decks
 
 ## Getting Started
 
-1. Clone this repository to start a new presentation project.
+1. Clone this repository to start building the presentation.
 2. Customize the `index.html` file at the root to build your slide deck.
 3. Utilize the CSS and JS from `src/design-system/` to style and animate your slides.
 4. Leverage `pretext` features from `src/pretext/` for advanced text layouts if needed.
@@ -18,7 +18,7 @@ This repository serves as a reference and base template for building slide decks
 ## Repository Structure
 
 ```
-preso-base/
+afroanimation2026/
 ├── index.html                  # Main presentation file
 ├── README.md                   # This documentation
 ├── assets/                     # Images, headshots, and media assets
@@ -29,5 +29,6 @@ preso-base/
 
 ## Acknowledgments
 
+- [preso-base](https://github.com/caligarn/preso-base) by Minh Do
 - [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) by Minh Do
 - [pretext](https://github.com/chenglou/pretext) by Cheng Lou

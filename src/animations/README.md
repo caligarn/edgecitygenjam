@@ -1,6 +1,6 @@
 # Presentation Animations & Effects
 
-This directory contains a curated collection of the best Three.js, WebGL, and JavaScript animation libraries to enhance your slide decks in `preso-base`. These tools provide ready-to-use particle systems, 3D backgrounds, motion graphics, and typography effects.
+This directory contains a curated collection of the best Three.js, WebGL, and JavaScript animation libraries to enhance your slide decks in `afroanimation2026`. These tools provide ready-to-use particle systems, 3D backgrounds, motion graphics, and typography effects.
 
 ## Included Libraries
 
