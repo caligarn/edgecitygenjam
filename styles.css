@@ -44,12 +44,12 @@
    Respects prefers-reduced-motion.
    ========================================================================== */
 
-/* Base: each direct child (except the robot-bg) does a slow 3D fade-up
+/* Base: each direct child does a slow 3D fade-up
    with a tilt, blur, and scale. Perspective is set on the slide so the
    transforms feel volumetric. */
 .slide { perspective: 1400px; transform-style: preserve-3d; }
 
-.slide > *:not(.robot-bg) {
+.slide > * {
   opacity: 0;
   transform: translate3d(0, 38px, -120px) scale(.94) rotateX(9deg);
   transform-origin: 50% 100%;
@@ -66,7 +66,7 @@
   filter: none !important;
   animation: none !important;
 }
-.slide.is-active > *:not(.robot-bg) {
+.slide.is-active > * {
   animation: slide-enter 1100ms cubic-bezier(.16, .84, .28, 1) both;
   animation-delay: calc(120ms + (var(--ci, 0) * 110ms));
 }
@@ -89,9 +89,9 @@
 .slide.is-active > :nth-child(10) { --ci: 9; }
 
 /* Title-type slides (display + CTA): deep zoom-punch with motion blur */
-.slide--title.is-active > *:not(.robot-bg),
-.slide--cta.is-active > *:not(.robot-bg),
-.slide--center.is-active > *:not(.robot-bg) {
+.slide--title.is-active > *,
+.slide--cta.is-active > *,
+.slide--center.is-active > * {
   animation-name: slide-zoom-in;
   animation-duration: 1250ms;
   animation-delay: calc(140ms + (var(--ci, 0) * 160ms));
@@ -103,7 +103,7 @@
 }
 
 /* Quote slide: big tilted drop with a blur settle */
-.slide--quote.is-active > *:not(.robot-bg) {
+.slide--quote.is-active > * {
   animation-name: slide-drop;
   animation-duration: 1300ms;
   animation-delay: calc(180ms + (var(--ci, 0) * 150ms));
@@ -147,8 +147,8 @@
 }
 
 /* Grid slides — cards cascade in with full 3D tilt + blur settle */
-.slide--grid-2.is-active > *:not(.robot-bg),
-.slide--grid-3.is-active > *:not(.robot-bg),
+.slide--grid-2.is-active > *,
+.slide--grid-3.is-active > *,
 .slide--inflect.is-active .inflect-list > *,
 .slide--hypo.is-active   .hypo-list   > *,
 .slide--history.is-active .history-list > *,
@@ -372,59 +372,29 @@
 .slide--worldmap.is-active .worldmap__pins .pin { animation: pin-breathe 3.6s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-  .slide > *:not(.robot-bg) { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .slide > * { opacity: 1 !important; transform: none !important; animation: none !important; }
   .slide.is-active *        { animation: none !important; }
   .accent-pink, .slide.is-active .kicker, .slide.is-active .tag, .slide.is-active .mono-chip { animation: none !important; }
   .underline { background-size: 100% .18em; transition: none; }
 }
 
 /* ==========================================================================
-   Robot ambient background — one layer per slide, see robots.js
+   Ro
    ========================================================================== */
 :root { --px: 0vw; --py: 0vh; }  /* mouse-parallax targets live on :root */
 
-.robot-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;           /* paints between slide bg and slide content */
-  pointer-events: none;
-  overflow: hidden;
-}
 
-.robot {
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  height: var(--sz);
-  width: auto;
-  max-width: 55vw;
-  /* Show the artwork as-is — transparent PNG, no silhouette filter,
-     no blur. Soft opacity so they feel ambient, not assertive. */
-  opacity: calc(0.22 * var(--depth));
-  transform:
-    translate(-50%, -50%)
-    translate(calc(var(--px) * var(--depth)), calc(var(--py) * var(--depth)))
-    rotate(var(--r0))
-    scaleX(var(--flip, 1));
-  will-change: transform;
-  user-select: none;
-  -webkit-user-drag: none;
-}
+
+
 /* Slightly lower opacity on strong color backgrounds so the art doesn't
    fight the slide palette. */
-body[data-bg="ink"]    .robot { opacity: calc(0.32 * var(--depth)); }
-body[data-bg="pink"]   .robot { opacity: calc(0.18 * var(--depth)); }
-body[data-bg="yellow"] .robot { opacity: calc(0.22 * var(--depth)); }
-body[data-bg="lime"]   .robot { opacity: calc(0.22 * var(--depth)); }
-body[data-bg="tan"]    .robot { opacity: calc(0.24 * var(--depth)); }
+body[data-bg="ink"]    
+body[data-bg="pink"]   
+body[data-bg="yellow"] 
+body[data-bg="lime"]   
+body[data-bg="tan"]    
 
 /* --- Variant: drift (figure-8 sway with slow rotation) --- */
-.robot--drift {
-  animation: robot-drift var(--dur) ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-@keyframes robot-drift {
-  0%   { transform: translate(calc(-50% + 0vw),           calc(-50% + 0vh))                   rotate(var(--r0))                     scaleX(var(--flip)); }
   25%  { transform: translate(calc(-50% + var(--dx)),     calc(-50% + var(--dy)))             rotate(calc(var(--r0) + 60deg))       scaleX(var(--flip)); }
   50%  { transform: translate(calc(-50% + var(--dx) / 2), calc(-50% + var(--dy) * -1))        rotate(calc(var(--r0) + 180deg))      scaleX(var(--flip)); }
   75%  { transform: translate(calc(-50% + var(--dx) * -1),calc(-50% + var(--dy) / 2))         rotate(calc(var(--r0) + 280deg))      scaleX(var(--flip)); }
@@ -432,69 +402,31 @@ body[data-bg="tan"]    .robot { opacity: calc(0.24 * var(--depth)); }
 }
 
 /* --- Variant: bob (vertical breathing + slight tilt) --- */
-.robot--bob {
-  animation: robot-bob var(--dur) ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-@keyframes robot-bob {
-  0%,100% { transform: translate(-50%, -50%)                       rotate(var(--r0))                scale(1)       scaleX(var(--flip)); }
   50%     { transform: translate(-50%, calc(-50% - 3vh))           rotate(calc(var(--r0) + 8deg))   scale(1.04)    scaleX(var(--flip)); }
 }
 
 /* --- Variant: orbit (circle around home) --- */
-.robot--orbit {
-  animation: robot-orbit var(--dur) linear infinite;
-  animation-delay: var(--delay);
-  transform-origin: 50% 50%;
-}
-@keyframes robot-orbit {
-  from { transform: translate(-50%, -50%) rotate(0deg)   translate(4vw, 0) rotate(0deg)   scaleX(var(--flip)); }
   to   { transform: translate(-50%, -50%) rotate(360deg) translate(4vw, 0) rotate(-360deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: pulse (scale + opacity breathing) --- */
-.robot--pulse {
-  animation: robot-pulse var(--dur) ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-@keyframes robot-pulse {
-  0%,100% { transform: translate(-50%, -50%) rotate(var(--r0)) scale(calc(0.88 * var(--sc)))  scaleX(var(--flip)); }
   50%     { transform: translate(-50%, -50%) rotate(var(--r0)) scale(calc(1.15 * var(--sc)))  scaleX(var(--flip)); }
 }
 
 /* --- Variant: spin (slow rotate around its center) --- */
-.robot--spin {
-  animation: robot-spin var(--dur) linear infinite;
-  animation-delay: var(--delay);
-}
-@keyframes robot-spin {
-  from { transform: translate(-50%, -50%) rotate(0deg)   scaleX(var(--flip)); }
   to   { transform: translate(-50%, -50%) rotate(360deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: swing (pendulum) --- */
-.robot--swing {
-  animation: robot-swing calc(var(--dur) * 0.55) ease-in-out infinite;
-  animation-delay: var(--delay);
-  transform-origin: 50% 0;
-}
-@keyframes robot-swing {
-  0%,100% { transform: translate(-50%, -50%) rotate(-18deg) scaleX(var(--flip)); }
   50%     { transform: translate(-50%, -50%) rotate( 18deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: float (gentle diagonal ghost drift) --- */
-.robot--float {
-  animation: robot-float var(--dur) ease-in-out infinite alternate;
-  animation-delay: var(--delay);
-}
-@keyframes robot-float {
-  0%   { transform: translate(calc(-50% - 3vw), calc(-50% + 2vh))  rotate(calc(var(--r0) - 6deg))  scale(0.98) scaleX(var(--flip)); }
   100% { transform: translate(calc(-50% + 3vw), calc(-50% - 2vh))  rotate(calc(var(--r0) + 6deg))  scale(1.04) scaleX(var(--flip)); }
 }
 
-/* Reduced-motion: keep robots, drop the animation. */
-.robots--reduced .robot { animation: none !important; }
+/* Reduced-motion */
+/* .robots--reduced */ 
 
 html, body {
   margin: 0;
@@ -519,7 +451,7 @@ html, body {
   transition: transform var(--transition);
   will-change: transform;
 }
-.slide { position: relative; z-index: 0; }  /* own stacking context so robot-bg (z:-1) paints between the slide bg and the slide's content */
+.slide { position: relative; z-index: 0; }  
 
 .slide {
   flex: 0 0 100vw;
@@ -2901,20 +2833,6 @@ kbd {
 }
 
 /* ---- Robot illustrations ---- */
-.chalk-robot {
-  position: absolute;
-  bottom: 0;
-  width: clamp(60px, 9vw, 120px);
-  opacity: .85;
-}
-.chalk-robot img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(1) invert(1) brightness(.85);
-}
-.chalk-robot--left  { left: clamp(1rem, 3vw, 3rem); }
-.chalk-robot--right { right: clamp(1rem, 3vw, 3rem); }
 
 /* ---- Polaroid (Our Values right side) ---- */
 .chalk-right {
