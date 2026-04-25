@@ -704,10 +704,10 @@ html, body {
   color: var(--ink);
   border-top: var(--border-w) solid var(--ink);
   border-right: var(--border-w) solid var(--ink);
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.85rem, 1.1vw, 1.1rem);
-  letter-spacing: .18em;
+  letter-spacing: .14em;
 }
 
 .bio-content {
@@ -749,10 +749,10 @@ html, body {
 }
 .bio-roles b { font-weight: 900; }
 .role-label {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.65rem, .85vw, .85rem);
-  letter-spacing: .15em;
+  letter-spacing: .12em;
   padding: .35rem .55rem;
   border: 3px solid var(--ink);
   background: var(--white);
@@ -1575,10 +1575,11 @@ kbd {
 
 .fact__yr {
   align-self: flex-start;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.8rem, 1.05vw, 1.05rem);
-  letter-spacing: .14em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
   padding: .3rem .55rem;
   border: 2px solid currentColor;
   border-radius: 4px;
@@ -1677,10 +1678,10 @@ kbd {
 
 .qq__role {
   align-self: flex-start;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.75rem, .95vw, .95rem);
-  letter-spacing: .14em;
+  letter-spacing: .1em;
   padding: .3rem .55rem;
   border: 2px solid currentColor;
   border-radius: 4px;
@@ -1782,10 +1783,10 @@ kbd {
 .hypo-list li:nth-child(4n)      { background: var(--pink); color: var(--white); }
 .hypo-list li:nth-child(4n) .hypo-num { background: var(--white); color: var(--ink); border-color: var(--white); }
 .hypo-num {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.65rem, .85vw, .85rem);
-  letter-spacing: .12em;
+  letter-spacing: .08em;
   padding: .3em .5em;
   border: 2px solid currentColor;
   background: var(--cream);
@@ -1944,10 +1945,10 @@ kbd {
   max-width: 28ch;
 }
 .discussion__q {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
   font-size: .45em;
-  letter-spacing: .14em;
+  letter-spacing: .1em;
   padding: .4em .6em;
   border: 3px solid var(--ink);
   background: var(--pink);
@@ -2102,19 +2103,21 @@ kbd {
 .pf--orange { background: var(--orange); color: var(--white); }
 .pf--white  { background: var(--white);  color: var(--ink); }
 .pf__n {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.7rem, .9vw, .9rem);
-  letter-spacing: .16em;
+  letter-spacing: .12em;
   opacity: .75;
 }
 .pf__t {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
   font-size: clamp(1.1rem, 1.8vw, 1.8rem);
   line-height: 1;
   letter-spacing: -0.015em;
 }
 .pf-arrow {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   list-style: none;
   align-self: center;
   font-weight: 900;
@@ -2123,8 +2126,10 @@ kbd {
   opacity: .45;
 }
 .pf-foot {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
   font-size: clamp(.75rem, 1vw, 1rem) !important;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
   opacity: .55;
   margin-top: 1vh;
 }
@@ -2154,10 +2159,10 @@ kbd {
 .role--orange { background: var(--orange); color: var(--white); }
 .role--white  { background: var(--white);  color: var(--ink); }
 .role__n {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.8rem, 1vw, 1rem);
-  letter-spacing: .16em;
+  letter-spacing: .12em;
   opacity: .8;
 }
 .role__t {
@@ -2200,10 +2205,10 @@ kbd {
   position: absolute;
   left: 0;
   top: .05em;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: .3em;
-  letter-spacing: .12em;
+  letter-spacing: .08em;
   color: var(--pink);
   padding: .35em .5em;
   border: 2px solid var(--ink);
@@ -2369,7 +2374,7 @@ kbd {
   border-radius: 3px;
 }
 .mm-legend__n {
-  font-family: "Space Mono", monospace;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   opacity: .55;
 }
@@ -2411,8 +2416,8 @@ kbd {
   margin: 0;
 }
 .mm-stage-group__n {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.8rem, 1vw, 1rem);
   color: var(--mm-accent);
 }
@@ -2683,11 +2688,11 @@ kbd {
 }
 .community-row-label {
   flex: 0 0 auto;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.85rem, 1.4vw, 1.4rem);
   color: var(--yellow);
-  letter-spacing: .04em;
+  letter-spacing: .03em;
   text-transform: uppercase;
   min-width: 9vw;
   max-width: 9vw;
@@ -2753,13 +2758,13 @@ kbd {
 .community-play-btn:hover { background: rgba(0,0,0,.15); }
 .community-card--video.is-playing .community-play-btn { opacity: 0; pointer-events: none; }
 .community-card-label {
-  font-family: "Space Mono", monospace;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 700;
   font-size: clamp(.7rem, 1.1vw, 1.1rem);
   color: var(--white);
   text-align: center;
   line-height: 1.2;
-  letter-spacing: .02em;
+  letter-spacing: .01em;
   padding: 0 .2em;
 }
 .slide--community.is-active .community-title-note {
@@ -3121,10 +3126,11 @@ kbd {
 .jam-card:has(.jam-card__media) .jam-card__b { padding-right: clamp(96px, 10.5vw, 138px); }
 .jam-card__tag {
   align-self: flex-start;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.8rem, 1.05vw, 1.05rem);
-  letter-spacing: .14em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
   padding: .3rem .55rem;
   border: 2px solid currentColor;
   border-radius: 4px;
@@ -3238,10 +3244,11 @@ kbd {
 .jam-card:has(.jam-card__media) .jam-card__b { padding-right: clamp(96px, 10.5vw, 138px); }
 .jam-card__tag {
   align-self: flex-start;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
   font-size: clamp(.8rem, 1.05vw, 1.05rem);
-  letter-spacing: .14em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
   padding: .3rem .55rem;
   border: 2px solid currentColor;
   border-radius: 4px;
