@@ -2144,6 +2144,94 @@ kbd {
   margin-top: 1vh;
 }
 
+/* Annotation text under a card title (used by workflow slide) */
+.pf__sub {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: clamp(.7rem, .85vw, .9rem);
+  letter-spacing: .02em;
+  line-height: 1.2;
+  opacity: .7;
+  margin-top: .15rem;
+  max-width: 22ch;
+}
+
+/* Workflow rows — denser cards so 5 fit on one line */
+.process-flow--wf { gap: .55rem; }
+.process-flow--wf .pf {
+  min-width: 130px;
+  padding: .9rem 1rem;
+  gap: .25rem;
+}
+.process-flow--wf .pf__t {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+.process-flow--wf .pf-arrow {
+  font-size: clamp(1.1rem, 1.8vw, 1.8rem);
+}
+
+/* Audio row beneath the workflow */
+.process-flow--audio {
+  list-style: none;
+  margin-top: 1.6vh;
+  gap: 1rem;
+}
+.process-flow--audio .pf {
+  min-width: 200px;
+}
+
+/* ---------- PAGE ONE ACCELERATOR ---------- */
+.p1-grid {
+  list-style: none;
+  padding: 0;
+  margin: 2.4vh 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 1180px;
+}
+.p1 {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1.1rem 1.2rem 1.2rem;
+  border: var(--border-w) solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 8px 8px 0 var(--ink);
+}
+.p1--yellow { background: var(--yellow); color: var(--ink); }
+.p1--lime   { background: var(--lime);   color: var(--ink); }
+.p1--pink   { background: var(--pink);   color: var(--white); }
+.p1--white  { background: var(--white);  color: var(--ink); }
+.p1__n {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.7rem, .85vw, .9rem);
+  letter-spacing: .14em;
+  opacity: .75;
+}
+.p1__t {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.2rem, 1.6vw, 1.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+.p1__b {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: clamp(.85rem, 1vw, 1.05rem);
+  line-height: 1.3;
+  opacity: .9;
+}
+
+@media (max-width: 1100px) {
+  .p1-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .p1-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- GENJAM — Roles grid ---------- */
 .roles-grid {
   list-style: none;
