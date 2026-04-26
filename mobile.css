@@ -730,17 +730,83 @@
   .slide--hypo,
   .slide--quotes,
   .slide--history,
-  .slide--inflect {
+  .slide--inflect,
+  .slide--left,
+  .slide--workflow,
+  .slide--p1 {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     scrollbar-width: thin;
     scrollbar-color: var(--ink) transparent;
+    /* Anchor content to the top so scroll can reach the start of the slide.
+       The default `justify-content: center` traps content above the scroll
+       origin and makes the top unreachable on overflowing mobile slides.
+       `justify-content` covers flex-column slides; `align-content` covers
+       grid slides (.slide--bio). Each container type respects whichever
+       applies to its layout mode. */
+    justify-content: flex-start;
+    align-content: flex-start;
+    /* Add a little breathing room at the bottom so the last item isn't
+       jammed against the HUD / address bar. */
+    padding-bottom: 8vh;
   }
 
-  /* Allow content-heavy left-aligned slides to scroll */
-  .slide--left {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+  /* iOS Safari: 100vh includes the address bar when collapsed, which clips
+     content. dvh tracks the actual visible viewport. */
+  @supports (height: 100dvh) {
+    .slide { height: 100dvh; }
+  }
+}
+
+/* ---------- WORKFLOW SLIDE — stack on mobile ---------- */
+@media (max-width: 768px) {
+  .process-flow--wf,
+  .process-flow--audio {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .process-flow--wf .pf,
+  .process-flow--audio .pf {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Rotate the inline arrows to point downward in a vertical stack */
+  .process-flow--wf .pf-arrow {
+    align-self: center;
+    transform: rotate(90deg);
+    margin: 0.1rem 0;
+    opacity: 0.6;
+  }
+
+  .pf__sub {
+    max-width: none;
+  }
+}
+
+/* ---------- PAGE ONE ACCELERATOR — stack cards ---------- */
+@media (max-width: 768px) {
+  .p1-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    max-width: none;
+  }
+
+  .p1 {
+    box-shadow: 5px 5px 0 var(--ink);
+    padding: 1rem 1.1rem;
+  }
+
+  .p1__t {
+    font-size: clamp(1.1rem, 4.5vw, 1.5rem);
+  }
+
+  .p1__b {
+    font-size: clamp(0.85rem, 3vw, 1rem);
   }
 }
 

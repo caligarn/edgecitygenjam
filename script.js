@@ -106,17 +106,24 @@
   }
 
   // ---------- Touch swipe ----------
-  let tStartX = 0, tStartY = 0;
+  // Require a clearly horizontal gesture so vertical scrolling inside a
+  // slide doesn't accidentally flip slides. If the touchstart landed inside
+  // a vertically-scrollable region, only trigger nav for very assertive
+  // horizontal swipes.
+  const SCROLLABLE_SEL = '.slide--mm-poster, .slide--bio, .slide--hypo, .slide--quotes, .slide--history, .slide--inflect, .slide--left, [data-scroll]';
+  let tStartX = 0, tStartY = 0, tStartedInScroller = false;
   document.addEventListener('touchstart', (e) => {
     const t = e.changedTouches[0];
     tStartX = t.clientX; tStartY = t.clientY;
+    tStartedInScroller = !!(e.target.closest && e.target.closest(SCROLLABLE_SEL));
   }, { passive: true });
   document.addEventListener('touchend', (e) => {
     const t = e.changedTouches[0];
     const dx = t.clientX - tStartX;
     const dy = t.clientY - tStartY;
-    const threshold = window.innerWidth < 768 ? 30 : 50;
-    if (Math.abs(dx) > threshold && Math.abs(dx) > Math.abs(dy)) {
+    const threshold = tStartedInScroller ? 80 : (window.innerWidth < 768 ? 50 : 60);
+    const ratio = tStartedInScroller ? 2.0 : 1.4;
+    if (Math.abs(dx) > threshold && Math.abs(dx) > ratio * Math.abs(dy)) {
       if (dx < 0) next(); else prev();
     }
   });
