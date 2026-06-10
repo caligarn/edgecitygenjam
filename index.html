@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Afro Animation 2026</title>
+<title>Edge City GenJam</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -14,25 +14,366 @@
 
 <div class="deck" id="deck">
 
-  <!-- COLD-OPEN: FLIK QR (duplicate of the redeem slide so attendees can start the moment they walk in) -->
-  <section class="slide slide--qr" data-bg="cream">
-    <div class="qr-left">
-      <span class="kicker">SCAN TO REDEEM</span>
-      <h2 class="h-xxl">
-        <span class="accent-pink">Free</span><br/>
-        Flik<br/>
-        credits.
-      </h2>
-      <p class="lede">Code: <span class="mono-chip">FLIKMACHINE10</span></p>
-      <p class="body"><a class="link" href="https://flikai.com/?redeem=FLIKMACHINE10">flikai.com/?redeem=FLIKMACHINE10</a></p>
-    </div>
-    <div class="qr-right">
-      <figure class="qr-card">
-        <img src="flik-qr.png" alt="QR code — flikai.com redeem FLIKMACHINE10" />
-        <figcaption>POINT CAMERA HERE</figcaption>
-      </figure>
-    </div>
+  <!-- ==================================================================
+       TALK 2 · THE AI CREATIVE STACK
+       A standalone talk inserted ahead of the Flik credits page.
+       Reuses the deck's existing slide vocabulary (history facts,
+       quote slide, market-map throwback, mc-fact stat cards).
+       ================================================================== -->
+
+  <!-- T2 · TALK TITLE -->
+  <section class="slide slide--center" data-bg="ink">
+    <span class="kicker kicker--dark">A TALK &middot; MACHINE CINEMA</span>
+    <h1 class="display">
+      The AI<br/>
+      <span class="accent-pink">Creative Stack.</span>
+    </h1>
+    <p class="lede">The AI tools making us more creative &mdash; and more connected.</p>
   </section>
+
+  <!-- T2 · ABOUT ME -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">WHO&rsquo;S TALKING</span>
+    <h2 class="h-xxl">Minh <span class="accent-pink">Do.</span></h2>
+    <p class="lede">Entrepreneur, filmmaker, and educator working at the intersection of <span class="underline">AI, storytelling, and culture.</span></p>
+    <ul class="big-list big-list--compact">
+      <li><span class="num">1</span><span>Co-founder &amp; <b>CEO</b> of <b>Machine Cinema</b> &mdash; a global community for AI-native filmmaking.</span></li>
+      <li><span class="num">2</span><span>Co-founder &amp; Head of AI at <b>Fantastic Day</b> &mdash; a hybrid AI studio.</span></li>
+      <li><span class="num">3</span><span>Past: Editor-in-Chief at <b>Tech in Asia</b>; co-founder of <b>Vietcetera</b>.</span></li>
+    </ul>
+  </section>
+
+  <!-- T2 · MACHINE CINEMA -->
+  <section class="slide slide--mc" data-bg="cream">
+    <span class="kicker">WHAT I BUILD</span>
+    <p class="mc-headline">Machine Cinema is an <span class="accent-pink">ecosystem</span> for <span class="underline">accelerating creativity.</span></p>
+    <ul class="mc-facts">
+      <li class="mc-fact mc-fact--white">
+        <div class="mc-fact__num">20k+</div>
+        <div class="mc-fact__label">Creatives in the community, worldwide</div>
+      </li>
+      <li class="mc-fact mc-fact--pink">
+        <div class="mc-fact__num">150</div>
+        <div class="mc-fact__label">Events in <b>30+ countries</b> in 2025</div>
+      </li>
+      <li class="mc-fact mc-fact--lime">
+        <div class="mc-fact__num">&infin;</div>
+        <div class="mc-fact__label">Hubs in nearly every major city</div>
+      </li>
+      <li class="mc-fact mc-fact--ink mc-fact--wide">
+        <div class="mc-fact__label mc-fact__label--lg">What we build</div>
+        <p class="mc-coda"><b>Software, community, and a talent marketplace</b> for people using AI to make film, TV, games, and immersive experiences.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- T2 · PART ONE — HISTORY DIVIDER -->
+  <section class="slide slide--center" data-bg="lime">
+    <span class="kicker">PART ONE</span>
+    <h1 class="display">
+      Tech<br/>
+      moves<br/>
+      <span class="accent-pink">culture.</span>
+    </h1>
+    <p class="lede">Every leap in tools has rewritten the culture around it.</p>
+  </section>
+
+  <!-- T2 · MOMENTS THAT CHANGED CULTURE -->
+  <section class="slide slide--history" data-bg="cream">
+    <header class="history-hd">
+      <span class="kicker">A LITTLE HISTORY</span>
+      <h2 class="h-xl history-title">Tools that broke the <span class="accent-pink">gates open.</span></h2>
+      <p class="body history-sub">New machines didn&rsquo;t just make new work &mdash; they made new culture, and handed it to new people.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">1877 &middot; EDISON</div>
+        <h3 class="fact__h">Recorded sound.</h3>
+        <p class="fact__b">The phonograph captured a performance for the first time &mdash; a machine that could play a moment back.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">1900s &middot; HOLLYWOOD</div>
+        <h3 class="fact__h">The camera becomes an industry.</h3>
+        <p class="fact__b">Edison&rsquo;s motion-picture gadget plus the projector turned a novelty into cinema &mdash; and a global culture.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">1970s &middot; PUNK</div>
+        <h3 class="fact__h">Cheap guitars &amp; the photocopier.</h3>
+        <p class="fact__b">Three chords and a Xeroxed zine. The tools got cheap enough that anyone could start a band &mdash; and a scene.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">1970s &middot; HIP HOP</div>
+        <h3 class="fact__h">Two turntables &amp; a sampler.</h3>
+        <p class="fact__b">DJs turned record players into instruments. New music built from old records &mdash; a whole culture from a remix.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- T2 · McLUHAN QUOTE -->
+  <section class="slide slide--quote" data-bg="ink">
+    <div class="quote-mark">&ldquo;</div>
+    <blockquote class="quote">We look at the present through a rear-view mirror. We march backwards into the future.</blockquote>
+    <p class="attribution">Marshall McLuhan &middot; The Medium is the Massage, 1967</p>
+  </section>
+
+  <!-- T2 · PART TWO — AI ARRIVES DIVIDER -->
+  <section class="slide slide--center" data-bg="pink">
+    <span class="kicker">PART TWO</span>
+    <h1 class="display">
+      Enter<br/>
+      <span class="accent-pink">AI.</span>
+    </h1>
+    <p class="lede">A new tool lands in the same old story &mdash; and the culture starts to move again.</p>
+  </section>
+
+  <!-- T2 · AI'S IMPACT ON CULTURE & CREATIVITY -->
+  <section class="slide slide--history" data-bg="cream">
+    <header class="history-hd">
+      <span class="kicker">THE NEW TOOL</span>
+      <h2 class="h-xl history-title">What&rsquo;s <span class="accent-pink">changing.</span></h2>
+      <p class="body history-sub">The same pattern, faster: cheaper tools, more makers, new culture.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">PUBLISHING</div>
+        <h3 class="fact__h">An explosion of books.</h3>
+        <p class="fact__b">Self-published and AI-assisted titles are flooding the shelves &mdash; anyone can write and ship a book in a weekend.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">CREATION</div>
+        <h3 class="fact__h">Everyone&rsquo;s a creator.</h3>
+        <p class="fact__b">Image, video, music, and code from a prompt. The skill floor drops; the ceiling on ambition rises.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">COST</div>
+        <h3 class="fact__h">Production &rarr; near zero.</h3>
+        <p class="fact__b">What took a studio and a budget now takes an afternoon and a laptop.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">SPEED</div>
+        <h3 class="fact__h">Idea to finished, in hours.</h3>
+        <p class="fact__b">The gap between a concept and a real, sharable piece has collapsed.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">FORM</div>
+        <h3 class="fact__h">New native formats.</h3>
+        <p class="fact__b">AI-native film, interactive media, infinite remix &mdash; things that simply couldn&rsquo;t exist before.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">CONNECTION</div>
+        <h3 class="fact__h">Communities form around the tools.</h3>
+        <p class="fact__b">People gather to learn, make, and share &mdash; the tool becomes a reason to find each other.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- T2 · THE MAIN OBJECTIONS -->
+  <section class="slide slide--history" data-bg="cream">
+    <header class="history-hd">
+      <span class="kicker">THE HARD QUESTIONS</span>
+      <h2 class="h-xl history-title">The main <span class="accent-pink">objections.</span></h2>
+      <p class="body history-sub">Taking the critiques seriously &mdash; because they&rsquo;re real.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--pink">
+        <div class="fact__yr">01</div>
+        <h3 class="fact__h">Environment.</h3>
+        <p class="fact__b">The energy and water cost of training and running these models at planetary scale.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">02</div>
+        <h3 class="fact__h">Stealing.</h3>
+        <p class="fact__b">Models trained on artists&rsquo; and writers&rsquo; work without consent, credit, or pay.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">03</div>
+        <h3 class="fact__h">Job loss.</h3>
+        <p class="fact__b">Automation reaching deep into creative and knowledge work &mdash; whose livelihoods?</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">04</div>
+        <h3 class="fact__h">Misinformation.</h3>
+        <p class="fact__b">Deepfakes, slop, and a crisis of trust when anything can be faked at scale.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- T2 · MARKET MAP 2025 -->
+  <section class="slide slide--mm-throwback" data-bg="cream">
+    <header class="mm-throwback__hd">
+      <span class="kicker">MARKET MAP</span>
+      <h2 class="h-xl mm-throwback__title">The stack, <span class="accent-pink">2025.</span></h2>
+      <p class="body mm-throwback__sub">The AI storytelling landscape a year ago &mdash; already crowded.</p>
+    </header>
+    <figure class="mm-throwback__frame">
+      <img src="marketmap-2025.jpg" alt="AI storytelling market map, 2025" />
+    </figure>
+  </section>
+
+  <!-- T2 · MARKET MAP 2026 -->
+  <section class="slide slide--mc" data-bg="cream">
+    <span class="kicker">MARKET MAP</span>
+    <p class="mc-headline">The stack, <span class="accent-pink">2026.</span> <span class="underline">A year of explosive growth.</span></p>
+    <ul class="mc-facts">
+      <li class="mc-fact mc-fact--pink">
+        <div class="mc-fact__num">247</div>
+        <div class="mc-fact__label">Companies mapped across the stack</div>
+      </li>
+      <li class="mc-fact mc-fact--lime">
+        <div class="mc-fact__num">4</div>
+        <div class="mc-fact__label">Stages, from development to dev tools</div>
+      </li>
+      <li class="mc-fact mc-fact--yellow">
+        <div class="mc-fact__num">24</div>
+        <div class="mc-fact__label">Categories &mdash; every craft has its tools now</div>
+      </li>
+      <li class="mc-fact mc-fact--ink mc-fact--wide">
+        <div class="mc-fact__label mc-fact__label--lg">The shape of it</div>
+        <p class="mc-coda">Production is the deepest layer by far &mdash; <b>169 of 247 companies</b> &mdash; as generation tools race to cover every shot.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- T2 · HOW THE MARKET IS SHIFTING -->
+  <section class="slide slide--history" data-bg="cream">
+    <header class="history-hd">
+      <span class="kicker">FOLLOW THE EXPLOSION</span>
+      <h2 class="h-xl history-title">How the market <span class="accent-pink">shifts.</span></h2>
+      <p class="body history-sub">What an explosion of tools does to the landscape around it.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">SHAKE-OUT</div>
+        <h3 class="fact__h">Consolidation.</h3>
+        <p class="fact__b">Winners pull ahead; the long tail of point tools folds or gets acquired.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">BUNDLING</div>
+        <h3 class="fact__h">Tools become pipelines.</h3>
+        <p class="fact__b">Single-trick apps grow into full workflows &mdash; one platform across every stage.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">AGENTS</div>
+        <h3 class="fact__h">Workflows go autonomous.</h3>
+        <p class="fact__b">The tool starts doing the busywork itself &mdash; you direct, it executes.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">MODELS</div>
+        <h3 class="fact__h">The model is a commodity.</h3>
+        <p class="fact__b">Raw generation gets cheap and interchangeable &mdash; taste and distribution win.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">VERTICALS</div>
+        <h3 class="fact__h">Specialization by craft.</h3>
+        <p class="fact__b">Tools tune themselves to film, music, games, design &mdash; deep instead of generic.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">ABUNDANCE</div>
+        <h3 class="fact__h">More of everything.</h3>
+        <p class="fact__b">More tools, more makers, more output &mdash; and the new scarcity is attention and taste.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- T2 · PART THREE — OPTIMISM DIVIDER -->
+  <section class="slide slide--center" data-bg="yellow">
+    <span class="kicker">PART THREE</span>
+    <h1 class="display">
+      Reasons for<br/>
+      <span class="accent-pink">optimism.</span>
+    </h1>
+    <p class="lede">If tools move culture, this one could move it somewhere good.</p>
+  </section>
+
+  <!-- T2 · OPTIMISTIC THEORIES -->
+  <section class="slide slide--history" data-bg="cream">
+    <header class="history-hd">
+      <span class="kicker">THE UPSIDE</span>
+      <h2 class="h-xl history-title">Optimistic <span class="accent-pink">theories.</span></h2>
+      <p class="body history-sub">The hopeful case for AI and creativity.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">ACCESS</div>
+        <h3 class="fact__h">Democratization.</h3>
+        <p class="fact__b">The means of production land in everyone&rsquo;s hands &mdash; not just studios and gatekeepers.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">ABUNDANCE</div>
+        <h3 class="fact__h">Creativity un-gated.</h3>
+        <p class="fact__b">The scarcity of technical skill collapses; ideas become the bottleneck, not craft.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">AUGMENT</div>
+        <h3 class="fact__h">Amplify, don&rsquo;t replace.</h3>
+        <p class="fact__b">Human taste plus machine speed &mdash; a creative partner, not a substitute.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">LITERACY</div>
+        <h3 class="fact__h">A new creative language.</h3>
+        <p class="fact__b">Prompting and directing AI is a literacy anyone can learn &mdash; like a camera or a keyboard.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">TOGETHER</div>
+        <h3 class="fact__h">Connection at scale.</h3>
+        <p class="fact__b">Global communities forming around making &mdash; the tools pull people together.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">WEIRDER</div>
+        <h3 class="fact__h">Stranger, truer art.</h3>
+        <p class="fact__b">Personal, impossible-before work &mdash; the medium&rsquo;s weirdness is a feature.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- T2 · NEW PHILOSOPHIES -->
+  <section class="slide slide--history" data-bg="cream">
+    <header class="history-hd">
+      <span class="kicker">WAYS OF SEEING</span>
+      <h2 class="h-xl history-title">New <span class="accent-pink">philosophies.</span></h2>
+      <p class="body history-sub">Frameworks people use to make sense of an accelerating world.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--pink">
+        <div class="fact__yr">XENOFEMINISM</div>
+        <h3 class="fact__h">If nature is unjust, change nature.</h3>
+        <p class="fact__b">Technology as a tool for liberation &mdash; refusing to leave the future to the status quo.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">THE PLANETARY</div>
+        <h3 class="fact__h">Computation as a planet-scale layer.</h3>
+        <p class="fact__b">Bratton&rsquo;s &ldquo;Stack&rdquo;: AI as planetary infrastructure we now think and create inside of.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">L/ACC</div>
+        <h3 class="fact__h">Accelerate to liberate.</h3>
+        <p class="fact__b">Left accelerationism: push the tech forward to build a post-scarcity, post-work future.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">E/ACC</div>
+        <h3 class="fact__h">Growth as a cosmic good.</h3>
+        <p class="fact__b">Effective accelerationism: more intelligence, more energy, more life &mdash; full speed ahead.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">SOLARPUNK</div>
+        <h3 class="fact__h">Optimistic &amp; ecological.</h3>
+        <p class="fact__b">A future that is abundant <em>and</em> green &mdash; technology in service of a living planet.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">POST-HUMANISM</div>
+        <h3 class="fact__h">Rethinking &ldquo;the human.&rdquo;</h3>
+        <p class="fact__b">What we are, and what we make, in a world shared with intelligent machines.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- T2 · BRIDGE INTO THE HANDS-ON -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">FROM THEORY TO PRACTICE</span>
+    <h2 class="h-xxl">Let&rsquo;s get our <span class="accent-pink">hands on it.</span></h2>
+    <p class="lede">Enough theory. The best way to understand the stack is to make something with it &mdash; so let&rsquo;s jam.</p>
+  </section>
+
 
   <!-- LOGO HERO — Machine Cinema GenJam wordmark, big and centered -->
   <section class="slide slide--logo-hero" data-bg="cream">
@@ -1306,8 +1647,7 @@
       <li><span class="num">2</span><span>Each shot is generated and linked &mdash; consistent characters, world, style.</span></li>
       <li><span class="num">3</span><span>Export a multi-shot sequence, ready to edit.</span></li>
     </ul>
-    <p class="body mono pf-foot">flikai.com &middot; <span class="mono-chip">FLIKMACHINE10</span> for free credits</p>
-    <p class="body mono pf-foot">Tools: Hypernatural &middot; Popcorn &middot; Seedance2</p>
+    <p class="body mono pf-foot">Tools: Flik &middot; Hypernatural &middot; Popcorn &middot; Seedance2</p>
   </section>
 
   <!-- 15. STORY STRUCTURE -->
@@ -1337,392 +1677,12 @@
       Today we build with<br/>
       <span class="accent-pink">Flik.</span>
     </h2>
-    <p class="lede">A new agentic creative tool. You'll get it free — scan the code on the next slide and start.</p>
+    <p class="lede">A new agentic creative tool &mdash; open it up and start.</p>
     <ul class="big-list big-list--compact">
-      <li><span class="num">1</span><span>Scan the QR.</span></li>
-      <li><span class="num">2</span><span>Redeem the code.</span></li>
+      <li><span class="num">1</span><span>Go to flikai.com.</span></li>
+      <li><span class="num">2</span><span>Sign in.</span></li>
       <li><span class="num">3</span><span>Make something weird.</span></li>
     </ul>
-  </section>
-
-  <!-- ==================================================================
-       TALK 2 · THE AI CREATIVE STACK
-       A standalone talk inserted ahead of the Flik credits page.
-       Reuses the deck's existing slide vocabulary (history facts,
-       quote slide, market-map throwback, mc-fact stat cards).
-       ================================================================== -->
-
-  <!-- T2 · TALK TITLE -->
-  <section class="slide slide--center" data-bg="ink">
-    <span class="kicker kicker--dark">A TALK &middot; MACHINE CINEMA</span>
-    <h1 class="display">
-      The AI<br/>
-      <span class="accent-pink">Creative Stack.</span>
-    </h1>
-    <p class="lede">The AI tools making us more creative &mdash; and more connected.</p>
-  </section>
-
-  <!-- T2 · ABOUT ME -->
-  <section class="slide slide--left" data-bg="cream">
-    <span class="kicker">WHO&rsquo;S TALKING</span>
-    <h2 class="h-xxl">Minh <span class="accent-pink">Do.</span></h2>
-    <p class="lede">Entrepreneur, filmmaker, and educator working at the intersection of <span class="underline">AI, storytelling, and culture.</span></p>
-    <ul class="big-list big-list--compact">
-      <li><span class="num">1</span><span>Co-founder &amp; <b>CEO</b> of <b>Machine Cinema</b> &mdash; a global community for AI-native filmmaking.</span></li>
-      <li><span class="num">2</span><span>Co-founder &amp; Head of AI at <b>Fantastic Day</b> &mdash; a hybrid AI studio.</span></li>
-      <li><span class="num">3</span><span>Past: Editor-in-Chief at <b>Tech in Asia</b>; co-founder of <b>Vietcetera</b>.</span></li>
-    </ul>
-  </section>
-
-  <!-- T2 · MACHINE CINEMA -->
-  <section class="slide slide--mc" data-bg="cream">
-    <span class="kicker">WHAT I BUILD</span>
-    <p class="mc-headline">Machine Cinema is an <span class="accent-pink">ecosystem</span> for <span class="underline">accelerating creativity.</span></p>
-    <ul class="mc-facts">
-      <li class="mc-fact mc-fact--white">
-        <div class="mc-fact__num">20k+</div>
-        <div class="mc-fact__label">Creatives in the community, worldwide</div>
-      </li>
-      <li class="mc-fact mc-fact--pink">
-        <div class="mc-fact__num">150</div>
-        <div class="mc-fact__label">Events in <b>30+ countries</b> in 2025</div>
-      </li>
-      <li class="mc-fact mc-fact--lime">
-        <div class="mc-fact__num">&infin;</div>
-        <div class="mc-fact__label">Hubs in nearly every major city</div>
-      </li>
-      <li class="mc-fact mc-fact--ink mc-fact--wide">
-        <div class="mc-fact__label mc-fact__label--lg">What we build</div>
-        <p class="mc-coda"><b>Software, community, and a talent marketplace</b> for people using AI to make film, TV, games, and immersive experiences.</p>
-      </li>
-    </ul>
-  </section>
-
-  <!-- T2 · PART ONE — HISTORY DIVIDER -->
-  <section class="slide slide--center" data-bg="lime">
-    <span class="kicker">PART ONE</span>
-    <h1 class="display">
-      Tech<br/>
-      moves<br/>
-      <span class="accent-pink">culture.</span>
-    </h1>
-    <p class="lede">Every leap in tools has rewritten the culture around it.</p>
-  </section>
-
-  <!-- T2 · MOMENTS THAT CHANGED CULTURE -->
-  <section class="slide slide--history" data-bg="cream">
-    <header class="history-hd">
-      <span class="kicker">A LITTLE HISTORY</span>
-      <h2 class="h-xl history-title">Tools that broke the <span class="accent-pink">gates open.</span></h2>
-      <p class="body history-sub">New machines didn&rsquo;t just make new work &mdash; they made new culture, and handed it to new people.</p>
-    </header>
-    <ol class="history-list">
-      <li class="fact fact--yellow">
-        <div class="fact__yr">1877 &middot; EDISON</div>
-        <h3 class="fact__h">Recorded sound.</h3>
-        <p class="fact__b">The phonograph captured a performance for the first time &mdash; a machine that could play a moment back.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">1900s &middot; HOLLYWOOD</div>
-        <h3 class="fact__h">The camera becomes an industry.</h3>
-        <p class="fact__b">Edison&rsquo;s motion-picture gadget plus the projector turned a novelty into cinema &mdash; and a global culture.</p>
-      </li>
-      <li class="fact fact--pink">
-        <div class="fact__yr">1970s &middot; PUNK</div>
-        <h3 class="fact__h">Cheap guitars &amp; the photocopier.</h3>
-        <p class="fact__b">Three chords and a Xeroxed zine. The tools got cheap enough that anyone could start a band &mdash; and a scene.</p>
-      </li>
-      <li class="fact fact--white">
-        <div class="fact__yr">1970s &middot; HIP HOP</div>
-        <h3 class="fact__h">Two turntables &amp; a sampler.</h3>
-        <p class="fact__b">DJs turned record players into instruments. New music built from old records &mdash; a whole culture from a remix.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- T2 · McLUHAN QUOTE -->
-  <section class="slide slide--quote" data-bg="ink">
-    <div class="quote-mark">&ldquo;</div>
-    <blockquote class="quote">We look at the present through a rear-view mirror. We march backwards into the future.</blockquote>
-    <p class="attribution">Marshall McLuhan &middot; The Medium is the Massage, 1967</p>
-  </section>
-
-  <!-- T2 · PART TWO — AI ARRIVES DIVIDER -->
-  <section class="slide slide--center" data-bg="pink">
-    <span class="kicker">PART TWO</span>
-    <h1 class="display">
-      Enter<br/>
-      <span class="accent-pink">AI.</span>
-    </h1>
-    <p class="lede">A new tool lands in the same old story &mdash; and the culture starts to move again.</p>
-  </section>
-
-  <!-- T2 · AI'S IMPACT ON CULTURE & CREATIVITY -->
-  <section class="slide slide--history" data-bg="cream">
-    <header class="history-hd">
-      <span class="kicker">THE NEW TOOL</span>
-      <h2 class="h-xl history-title">What&rsquo;s <span class="accent-pink">changing.</span></h2>
-      <p class="body history-sub">The same pattern, faster: cheaper tools, more makers, new culture.</p>
-    </header>
-    <ol class="history-list">
-      <li class="fact fact--yellow">
-        <div class="fact__yr">PUBLISHING</div>
-        <h3 class="fact__h">An explosion of books.</h3>
-        <p class="fact__b">Self-published and AI-assisted titles are flooding the shelves &mdash; anyone can write and ship a book in a weekend.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">CREATION</div>
-        <h3 class="fact__h">Everyone&rsquo;s a creator.</h3>
-        <p class="fact__b">Image, video, music, and code from a prompt. The skill floor drops; the ceiling on ambition rises.</p>
-      </li>
-      <li class="fact fact--pink">
-        <div class="fact__yr">COST</div>
-        <h3 class="fact__h">Production &rarr; near zero.</h3>
-        <p class="fact__b">What took a studio and a budget now takes an afternoon and a laptop.</p>
-      </li>
-      <li class="fact fact--white">
-        <div class="fact__yr">SPEED</div>
-        <h3 class="fact__h">Idea to finished, in hours.</h3>
-        <p class="fact__b">The gap between a concept and a real, sharable piece has collapsed.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">FORM</div>
-        <h3 class="fact__h">New native formats.</h3>
-        <p class="fact__b">AI-native film, interactive media, infinite remix &mdash; things that simply couldn&rsquo;t exist before.</p>
-      </li>
-      <li class="fact fact--yellow">
-        <div class="fact__yr">CONNECTION</div>
-        <h3 class="fact__h">Communities form around the tools.</h3>
-        <p class="fact__b">People gather to learn, make, and share &mdash; the tool becomes a reason to find each other.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- T2 · THE MAIN OBJECTIONS -->
-  <section class="slide slide--history" data-bg="cream">
-    <header class="history-hd">
-      <span class="kicker">THE HARD QUESTIONS</span>
-      <h2 class="h-xl history-title">The main <span class="accent-pink">objections.</span></h2>
-      <p class="body history-sub">Taking the critiques seriously &mdash; because they&rsquo;re real.</p>
-    </header>
-    <ol class="history-list">
-      <li class="fact fact--pink">
-        <div class="fact__yr">01</div>
-        <h3 class="fact__h">Environment.</h3>
-        <p class="fact__b">The energy and water cost of training and running these models at planetary scale.</p>
-      </li>
-      <li class="fact fact--yellow">
-        <div class="fact__yr">02</div>
-        <h3 class="fact__h">Stealing.</h3>
-        <p class="fact__b">Models trained on artists&rsquo; and writers&rsquo; work without consent, credit, or pay.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">03</div>
-        <h3 class="fact__h">Job loss.</h3>
-        <p class="fact__b">Automation reaching deep into creative and knowledge work &mdash; whose livelihoods?</p>
-      </li>
-      <li class="fact fact--white">
-        <div class="fact__yr">04</div>
-        <h3 class="fact__h">Misinformation.</h3>
-        <p class="fact__b">Deepfakes, slop, and a crisis of trust when anything can be faked at scale.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- T2 · MARKET MAP 2025 -->
-  <section class="slide slide--mm-throwback" data-bg="cream">
-    <header class="mm-throwback__hd">
-      <span class="kicker">MARKET MAP</span>
-      <h2 class="h-xl mm-throwback__title">The stack, <span class="accent-pink">2025.</span></h2>
-      <p class="body mm-throwback__sub">The AI storytelling landscape a year ago &mdash; already crowded.</p>
-    </header>
-    <figure class="mm-throwback__frame">
-      <img src="marketmap-2025.jpg" alt="AI storytelling market map, 2025" />
-    </figure>
-  </section>
-
-  <!-- T2 · MARKET MAP 2026 -->
-  <section class="slide slide--mc" data-bg="cream">
-    <span class="kicker">MARKET MAP</span>
-    <p class="mc-headline">The stack, <span class="accent-pink">2026.</span> <span class="underline">A year of explosive growth.</span></p>
-    <ul class="mc-facts">
-      <li class="mc-fact mc-fact--pink">
-        <div class="mc-fact__num">247</div>
-        <div class="mc-fact__label">Companies mapped across the stack</div>
-      </li>
-      <li class="mc-fact mc-fact--lime">
-        <div class="mc-fact__num">4</div>
-        <div class="mc-fact__label">Stages, from development to dev tools</div>
-      </li>
-      <li class="mc-fact mc-fact--yellow">
-        <div class="mc-fact__num">24</div>
-        <div class="mc-fact__label">Categories &mdash; every craft has its tools now</div>
-      </li>
-      <li class="mc-fact mc-fact--ink mc-fact--wide">
-        <div class="mc-fact__label mc-fact__label--lg">The shape of it</div>
-        <p class="mc-coda">Production is the deepest layer by far &mdash; <b>169 of 247 companies</b> &mdash; as generation tools race to cover every shot.</p>
-      </li>
-    </ul>
-  </section>
-
-  <!-- T2 · HOW THE MARKET IS SHIFTING -->
-  <section class="slide slide--history" data-bg="cream">
-    <header class="history-hd">
-      <span class="kicker">FOLLOW THE EXPLOSION</span>
-      <h2 class="h-xl history-title">How the market <span class="accent-pink">shifts.</span></h2>
-      <p class="body history-sub">What an explosion of tools does to the landscape around it.</p>
-    </header>
-    <ol class="history-list">
-      <li class="fact fact--yellow">
-        <div class="fact__yr">SHAKE-OUT</div>
-        <h3 class="fact__h">Consolidation.</h3>
-        <p class="fact__b">Winners pull ahead; the long tail of point tools folds or gets acquired.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">BUNDLING</div>
-        <h3 class="fact__h">Tools become pipelines.</h3>
-        <p class="fact__b">Single-trick apps grow into full workflows &mdash; one platform across every stage.</p>
-      </li>
-      <li class="fact fact--pink">
-        <div class="fact__yr">AGENTS</div>
-        <h3 class="fact__h">Workflows go autonomous.</h3>
-        <p class="fact__b">The tool starts doing the busywork itself &mdash; you direct, it executes.</p>
-      </li>
-      <li class="fact fact--white">
-        <div class="fact__yr">MODELS</div>
-        <h3 class="fact__h">The model is a commodity.</h3>
-        <p class="fact__b">Raw generation gets cheap and interchangeable &mdash; taste and distribution win.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">VERTICALS</div>
-        <h3 class="fact__h">Specialization by craft.</h3>
-        <p class="fact__b">Tools tune themselves to film, music, games, design &mdash; deep instead of generic.</p>
-      </li>
-      <li class="fact fact--yellow">
-        <div class="fact__yr">ABUNDANCE</div>
-        <h3 class="fact__h">More of everything.</h3>
-        <p class="fact__b">More tools, more makers, more output &mdash; and the new scarcity is attention and taste.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- T2 · PART THREE — OPTIMISM DIVIDER -->
-  <section class="slide slide--center" data-bg="yellow">
-    <span class="kicker">PART THREE</span>
-    <h1 class="display">
-      Reasons for<br/>
-      <span class="accent-pink">optimism.</span>
-    </h1>
-    <p class="lede">If tools move culture, this one could move it somewhere good.</p>
-  </section>
-
-  <!-- T2 · OPTIMISTIC THEORIES -->
-  <section class="slide slide--history" data-bg="cream">
-    <header class="history-hd">
-      <span class="kicker">THE UPSIDE</span>
-      <h2 class="h-xl history-title">Optimistic <span class="accent-pink">theories.</span></h2>
-      <p class="body history-sub">The hopeful case for AI and creativity.</p>
-    </header>
-    <ol class="history-list">
-      <li class="fact fact--yellow">
-        <div class="fact__yr">ACCESS</div>
-        <h3 class="fact__h">Democratization.</h3>
-        <p class="fact__b">The means of production land in everyone&rsquo;s hands &mdash; not just studios and gatekeepers.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">ABUNDANCE</div>
-        <h3 class="fact__h">Creativity un-gated.</h3>
-        <p class="fact__b">The scarcity of technical skill collapses; ideas become the bottleneck, not craft.</p>
-      </li>
-      <li class="fact fact--pink">
-        <div class="fact__yr">AUGMENT</div>
-        <h3 class="fact__h">Amplify, don&rsquo;t replace.</h3>
-        <p class="fact__b">Human taste plus machine speed &mdash; a creative partner, not a substitute.</p>
-      </li>
-      <li class="fact fact--white">
-        <div class="fact__yr">LITERACY</div>
-        <h3 class="fact__h">A new creative language.</h3>
-        <p class="fact__b">Prompting and directing AI is a literacy anyone can learn &mdash; like a camera or a keyboard.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">TOGETHER</div>
-        <h3 class="fact__h">Connection at scale.</h3>
-        <p class="fact__b">Global communities forming around making &mdash; the tools pull people together.</p>
-      </li>
-      <li class="fact fact--yellow">
-        <div class="fact__yr">WEIRDER</div>
-        <h3 class="fact__h">Stranger, truer art.</h3>
-        <p class="fact__b">Personal, impossible-before work &mdash; the medium&rsquo;s weirdness is a feature.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- T2 · NEW PHILOSOPHIES -->
-  <section class="slide slide--history" data-bg="cream">
-    <header class="history-hd">
-      <span class="kicker">WAYS OF SEEING</span>
-      <h2 class="h-xl history-title">New <span class="accent-pink">philosophies.</span></h2>
-      <p class="body history-sub">Frameworks people use to make sense of an accelerating world.</p>
-    </header>
-    <ol class="history-list">
-      <li class="fact fact--pink">
-        <div class="fact__yr">XENOFEMINISM</div>
-        <h3 class="fact__h">If nature is unjust, change nature.</h3>
-        <p class="fact__b">Technology as a tool for liberation &mdash; refusing to leave the future to the status quo.</p>
-      </li>
-      <li class="fact fact--yellow">
-        <div class="fact__yr">THE PLANETARY</div>
-        <h3 class="fact__h">Computation as a planet-scale layer.</h3>
-        <p class="fact__b">Bratton&rsquo;s &ldquo;Stack&rdquo;: AI as planetary infrastructure we now think and create inside of.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">L/ACC</div>
-        <h3 class="fact__h">Accelerate to liberate.</h3>
-        <p class="fact__b">Left accelerationism: push the tech forward to build a post-scarcity, post-work future.</p>
-      </li>
-      <li class="fact fact--white">
-        <div class="fact__yr">E/ACC</div>
-        <h3 class="fact__h">Growth as a cosmic good.</h3>
-        <p class="fact__b">Effective accelerationism: more intelligence, more energy, more life &mdash; full speed ahead.</p>
-      </li>
-      <li class="fact fact--yellow">
-        <div class="fact__yr">SOLARPUNK</div>
-        <h3 class="fact__h">Optimistic &amp; ecological.</h3>
-        <p class="fact__b">A future that is abundant <em>and</em> green &mdash; technology in service of a living planet.</p>
-      </li>
-      <li class="fact fact--lime">
-        <div class="fact__yr">POST-HUMANISM</div>
-        <h3 class="fact__h">Rethinking &ldquo;the human.&rdquo;</h3>
-        <p class="fact__b">What we are, and what we make, in a world shared with intelligent machines.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- T2 · BRIDGE INTO THE HANDS-ON -->
-  <section class="slide slide--left" data-bg="cream">
-    <span class="kicker">FROM THEORY TO PRACTICE</span>
-    <h2 class="h-xxl">Let&rsquo;s get our <span class="accent-pink">hands on it.</span></h2>
-    <p class="lede">Enough theory. The best way to understand the stack is to make something with it &mdash; grab free credits on the next slide and start.</p>
-  </section>
-
-  <!-- 13. FLIK QR CODE -->
-  <section class="slide slide--qr" data-bg="cream">
-    <div class="qr-left">
-      <span class="kicker">SCAN TO REDEEM</span>
-      <h2 class="h-xxl">
-        <span class="accent-pink">Free</span><br/>
-        Flik<br/>
-        credits.
-      </h2>
-      <p class="lede">Code: <span class="mono-chip">FLIKMACHINE10</span></p>
-      <p class="body"><a class="link" href="https://flikai.com/?redeem=FLIKMACHINE10">flikai.com/?redeem=FLIKMACHINE10</a></p>
-    </div>
-    <div class="qr-right">
-      <figure class="qr-card">
-        <img src="flik-qr.png" alt="QR code — flikai.com redeem FLIKMACHINE10" />
-        <figcaption>POINT CAMERA HERE</figcaption>
-      </figure>
-    </div>
   </section>
 
   <!-- AI TIPS -->
@@ -1849,7 +1809,6 @@
     <p class="lede">Make something weird. Finish it. Show the room.</p>
     <div class="cta-row">
       <a class="btn btn--primary" href="https://machinecinema.ai">MACHINE CINEMA &nbsp;→</a>
-      <a class="btn btn--ghost" href="https://flikai.com/?redeem=FLIKMACHINE10">REDEEM FLIK</a>
     </div>
   </section>
 
