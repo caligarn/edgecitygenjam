@@ -3939,3 +3939,38 @@ kbd {
   .pfn-svg > line,
   .pfn-svg > text { opacity: 1; transform: none; animation: none; }
 }
+
+/* ---------- Event photo strip (Machine Cinema, AI Creative Stack talk) ---------- */
+.mc-photos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .8vw;
+  margin-top: .35rem;
+}
+.mc-photos img,
+.mc-photos video {
+  width: 100%;
+  height: clamp(90px, 15vh, 160px);
+  object-fit: cover;
+  border: 2.5px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--cream);
+}
+@media (max-width: 700px) {
+  .mc-photos { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- AI advancements chart (fact-card bars rising left to right) ---------- */
+.aichart {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+}
+.aichart .fact {
+  min-height: var(--h, 30vh);
+  justify-content: flex-end;
+}
+@media (max-width: 900px) {
+  .aichart { grid-template-columns: 1fr; }
+  .aichart .fact { min-height: 0; }
+}
