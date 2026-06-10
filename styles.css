@@ -389,22 +389,52 @@
 }
 
 /* ==========================================================================
-   Ro
+   Robot ambient background — one layer per slide, see robots.js
    ========================================================================== */
 :root { --px: 0vw; --py: 0vh; }  /* mouse-parallax targets live on :root */
 
+.robot-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;           /* paints between slide bg and slide content */
+  pointer-events: none;
+  overflow: hidden;
+}
 
-
-
+.robot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  height: var(--sz);
+  width: auto;
+  max-width: 55vw;
+  /* Show the artwork as-is — transparent PNG, no silhouette filter,
+     no blur. Soft opacity so they feel ambient, not assertive. */
+  opacity: calc(0.22 * var(--depth));
+  transform:
+    translate(-50%, -50%)
+    translate(calc(var(--px) * var(--depth)), calc(var(--py) * var(--depth)))
+    rotate(var(--r0))
+    scaleX(var(--flip, 1));
+  will-change: transform;
+  user-select: none;
+  -webkit-user-drag: none;
+}
 /* Slightly lower opacity on strong color backgrounds so the art doesn't
    fight the slide palette. */
-body[data-bg="ink"]    
-body[data-bg="pink"]   
-body[data-bg="yellow"] 
-body[data-bg="lime"]   
-body[data-bg="tan"]    
+body[data-bg="ink"]    .robot { opacity: calc(0.32 * var(--depth)); }
+body[data-bg="pink"]   .robot { opacity: calc(0.18 * var(--depth)); }
+body[data-bg="yellow"] .robot { opacity: calc(0.22 * var(--depth)); }
+body[data-bg="lime"]   .robot { opacity: calc(0.22 * var(--depth)); }
+body[data-bg="tan"]    .robot { opacity: calc(0.24 * var(--depth)); }
 
 /* --- Variant: drift (figure-8 sway with slow rotation) --- */
+.robot--drift {
+  animation: robot-drift var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-drift {
+  0%   { transform: translate(calc(-50% + 0vw),           calc(-50% + 0vh))                   rotate(var(--r0))                     scaleX(var(--flip)); }
   25%  { transform: translate(calc(-50% + var(--dx)),     calc(-50% + var(--dy)))             rotate(calc(var(--r0) + 60deg))       scaleX(var(--flip)); }
   50%  { transform: translate(calc(-50% + var(--dx) / 2), calc(-50% + var(--dy) * -1))        rotate(calc(var(--r0) + 180deg))      scaleX(var(--flip)); }
   75%  { transform: translate(calc(-50% + var(--dx) * -1),calc(-50% + var(--dy) / 2))         rotate(calc(var(--r0) + 280deg))      scaleX(var(--flip)); }
@@ -412,31 +442,69 @@ body[data-bg="tan"]
 }
 
 /* --- Variant: bob (vertical breathing + slight tilt) --- */
+.robot--bob {
+  animation: robot-bob var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-bob {
+  0%,100% { transform: translate(-50%, -50%)                       rotate(var(--r0))                scale(1)       scaleX(var(--flip)); }
   50%     { transform: translate(-50%, calc(-50% - 3vh))           rotate(calc(var(--r0) + 8deg))   scale(1.04)    scaleX(var(--flip)); }
 }
 
 /* --- Variant: orbit (circle around home) --- */
+.robot--orbit {
+  animation: robot-orbit var(--dur) linear infinite;
+  animation-delay: var(--delay);
+  transform-origin: 50% 50%;
+}
+@keyframes robot-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg)   translate(4vw, 0) rotate(0deg)   scaleX(var(--flip)); }
   to   { transform: translate(-50%, -50%) rotate(360deg) translate(4vw, 0) rotate(-360deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: pulse (scale + opacity breathing) --- */
+.robot--pulse {
+  animation: robot-pulse var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-pulse {
+  0%,100% { transform: translate(-50%, -50%) rotate(var(--r0)) scale(calc(0.88 * var(--sc)))  scaleX(var(--flip)); }
   50%     { transform: translate(-50%, -50%) rotate(var(--r0)) scale(calc(1.15 * var(--sc)))  scaleX(var(--flip)); }
 }
 
 /* --- Variant: spin (slow rotate around its center) --- */
+.robot--spin {
+  animation: robot-spin var(--dur) linear infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg)   scaleX(var(--flip)); }
   to   { transform: translate(-50%, -50%) rotate(360deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: swing (pendulum) --- */
+.robot--swing {
+  animation: robot-swing calc(var(--dur) * 0.55) ease-in-out infinite;
+  animation-delay: var(--delay);
+  transform-origin: 50% 0;
+}
+@keyframes robot-swing {
+  0%,100% { transform: translate(-50%, -50%) rotate(-18deg) scaleX(var(--flip)); }
   50%     { transform: translate(-50%, -50%) rotate( 18deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: float (gentle diagonal ghost drift) --- */
+.robot--float {
+  animation: robot-float var(--dur) ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+}
+@keyframes robot-float {
+  0%   { transform: translate(calc(-50% - 3vw), calc(-50% + 2vh))  rotate(calc(var(--r0) - 6deg))  scale(0.98) scaleX(var(--flip)); }
   100% { transform: translate(calc(-50% + 3vw), calc(-50% - 2vh))  rotate(calc(var(--r0) + 6deg))  scale(1.04) scaleX(var(--flip)); }
 }
 
-/* Reduced-motion */
-/* .robots--reduced */ 
+/* Reduced-motion: keep robots, drop the animation. */
+.robots--reduced .robot { animation: none !important; }
 
 html, body {
   margin: 0;
@@ -3694,7 +3762,7 @@ kbd {
 .slide__robot--mid-r { right: 6vw; top: 50%; transform-origin: center; width: clamp(140px, 18vw, 240px); }
 
 /* Make sure slide content paints above the robot */
-.slide > *:not(.slide__robot) { position: relative; z-index: 1; }
+.slide > *:not(.slide__robot):not(.robot-bg):not(.slide__bg) { position: relative; z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   .slide.is-active .slide__robot { animation: none; }
@@ -4203,3 +4271,34 @@ kbd {
   .mosaic__tile--wide:last-child { grid-column: 1 / -1; }
   .mosaic__media, .mosaic__tile--wide .mosaic__media { height: clamp(90px, 14vh, 150px); }
 }
+
+/* ---------- Full-bleed background images ----------
+   Every divider/beat slide in the AI Creative Stack talk carries an
+   empty <div class="slide__bg slide__bg--full slide__bg--scrim"> slot.
+   Drop an <img> or <video> inside and it fills the slide edge-to-edge;
+   the scrim fades in automatically (via :has) so text stays readable.
+   The base .slide__bg (low-opacity wash) still works as before. */
+.slide__bg--full img,
+.slide__bg--full video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  filter: none;
+}
+.slide__bg--scrim::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(20,27,52,.62) 0%,
+    rgba(20,27,52,.28) 45%,
+    rgba(20,27,52,.66) 100%);
+  opacity: 0;
+}
+.slide__bg--scrim:has(img, video)::after { opacity: 1; }
+/* On cream/light slides a filled bg flips the text to cream for contrast */
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) { color: var(--cream); }
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .display,
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .h-xxl,
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .h-xl { color: var(--cream); }
