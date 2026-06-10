@@ -3974,3 +3974,60 @@ kbd {
   .aichart { grid-template-columns: 1fr; }
   .aichart .fact { min-height: 0; }
 }
+
+/* ---------- Philosophy spotlight pages (one per optimistic future) ----------
+   Two columns: big quote left, bordered picture placeholder right.
+   The frame is meant to receive a real image later — swap the <span>
+   for an <img> and the styling holds. */
+.slide--philo {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 3.5vw;
+  align-items: center;
+  padding: 7vh 6vw;
+}
+.philo-text { display: flex; flex-direction: column; gap: 1.6vh; align-items: flex-start; }
+.philo-quote {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.7rem, 3.8vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: .4rem 0 0 0;
+  max-width: 24ch;
+}
+.philo-attr {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.75rem, 1vw, 1rem);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--pink);
+}
+.philo-lede { max-width: 38ch; }
+.philo-frame {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 70vh;
+  border: var(--border-w) solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 10px 10px 0 var(--ink);
+  background: var(--white);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.philo-frame > span {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.8rem, 1.1vw, 1.1rem);
+  letter-spacing: .22em;
+  opacity: .4;
+}
+.philo-frame img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 900px) {
+  .slide--philo { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
+  .philo-frame { aspect-ratio: 16 / 10; max-height: 32vh; }
+}
