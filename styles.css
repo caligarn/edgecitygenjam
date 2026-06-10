@@ -4031,3 +4031,94 @@ kbd {
   .slide--philo { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
   .philo-frame { aspect-ratio: 16 / 10; max-height: 32vh; }
 }
+
+/* ---------- Table of contents (agenda) ---------- */
+.slide--toc { align-items: flex-start; justify-content: center; gap: 1vh; padding: 7vh 7vw; }
+.toc {
+  list-style: none;
+  margin: 2vh 0 0 0;
+  padding: 0;
+  width: 100%;
+  counter-reset: toc;
+}
+.toc__row {
+  display: flex;
+  align-items: baseline;
+  gap: 2vw;
+  padding: 1.3vh 0;
+  border-bottom: 2px solid rgba(250,243,227,.22);
+}
+.toc__row:first-child { border-top: 2px solid rgba(250,243,227,.22); }
+.toc__num {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: var(--pink);
+  font-size: clamp(1rem, 1.6vw, 1.6rem);
+  flex: 0 0 auto;
+}
+.toc__title {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-size: clamp(1.8rem, 5vw, 5rem);
+}
+.slide--toc.is-active .toc__row {
+  animation: slide-in-left 900ms cubic-bezier(.18,.85,.28,1) both;
+  animation-delay: calc(160ms + var(--li, 0) * 110ms);
+}
+.slide--toc.is-active .toc__row:nth-child(1) { --li: 0; }
+.slide--toc.is-active .toc__row:nth-child(2) { --li: 1; }
+.slide--toc.is-active .toc__row:nth-child(3) { --li: 2; }
+.slide--toc.is-active .toc__row:nth-child(4) { --li: 3; }
+.slide--toc.is-active .toc__row:nth-child(5) { --li: 4; }
+
+/* ---------- Pink number chip variant (objections / CTA lists) ---------- */
+.big-list .num--pink { background: var(--pink); color: var(--white); }
+.slide[data-bg="ink"] .big-list li { color: var(--cream); }
+.obj-list { margin-top: 3vh; }
+
+/* ---------- Tight story-lines variant (rationale) ---------- */
+.story-lines--tight li { font-size: clamp(1.4rem, 3.2vw, 3.2rem); }
+
+/* ---------- Split layout (my theories) ---------- */
+.slide--split { align-items: center; }
+.split-lead { display: flex; flex-direction: column; gap: 1.6vh; }
+.split-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.4vh; }
+.split-list li {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.45vw, 1.45rem);
+  line-height: 1.35;
+  padding: 1.4vh 1.5vw 1.4vh 0;
+  border-bottom: 3px solid var(--ink);
+}
+.split-list li:first-child { border-top: 3px solid var(--ink); }
+.split-list li b { font-weight: 900; }
+.split-list__tag {
+  display: block;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.7rem, .9vw, .9rem);
+  letter-spacing: .16em;
+  color: var(--pink);
+  margin-bottom: .35rem;
+}
+@media (max-width: 900px) {
+  .slide--split { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
+}
+
+/* ---------- Chip row (philosophy preview index) ---------- */
+.chip-row { list-style: none; margin: 3vh 0 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
+.chip {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.1rem, 2.2vw, 2.2rem);
+  letter-spacing: -0.01em;
+  padding: .5rem 1.1rem;
+  background: var(--white);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 5px 5px 0 var(--ink);
+}
