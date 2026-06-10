@@ -1,6 +1,6 @@
-# afroanimation2026
+# Edge City GenJam
 
-This repository is the presentation scaffold for **Afro Animation 2026**, built on the [preso-base](https://github.com/caligarn/preso-base) template. It integrates the robust design system from [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) and the advanced text presentation technology from [pretext](https://github.com/chenglou/pretext).
+This repository is the presentation scaffold for **Edge City GenJam**, built on the [preso-base](https://github.com/caligarn/preso-base) template. It integrates the robust design system from [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) and the advanced text presentation technology from [pretext](https://github.com/chenglou/pretext).
 
 ## Overview
 
@@ -18,7 +18,7 @@ This repository is the presentation scaffold for **Afro Animation 2026**, built 
 ## Repository Structure
 
 ```
-afroanimation2026/
+edgecitygenjam/
 ├── index.html                  # Main presentation file
 ├── README.md                   # This documentation
 ├── assets/                     # Images, headshots, and media assets
