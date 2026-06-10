@@ -4122,3 +4122,84 @@ kbd {
   border-radius: 999px;
   box-shadow: 5px 5px 0 var(--ink);
 }
+
+/* ---------- Media-market mosaic: image-led tiles, headline-only ----------
+   Five tiles: three squares up top, two wide below. Each tile is mostly
+   media area — drop an <img> or <video> into .mosaic__media and it fills
+   the frame (the placeholder <span> can stay or go). */
+.slide--mosaic { justify-content: center; gap: 2vh; padding: 6vh 5vw; }
+.mosaic-hd { display: flex; flex-direction: column; gap: .6vh; }
+.mosaic {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+.mosaic__tile {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 7px 7px 0 var(--ink);
+  overflow: hidden;
+  background: var(--white);
+}
+.mosaic__tile--wide { grid-column: span 3; }
+.mosaic__media {
+  margin: 0;
+  height: clamp(110px, 24vh, 260px);
+  background:
+    radial-gradient(rgba(20,27,52,.12) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  background-color: var(--cream);
+  display: grid;
+  place-items: center;
+  border-bottom: 3px solid var(--ink);
+}
+.mosaic__tile--wide .mosaic__media { height: clamp(100px, 20vh, 220px); }
+.mosaic__media > span {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.7rem, .95vw, .95rem);
+  letter-spacing: .22em;
+  opacity: .4;
+}
+.mosaic__media img,
+.mosaic__media video { width: 100%; height: 100%; object-fit: cover; }
+.mosaic__h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.05rem, 1.6vw, 1.65rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+  padding: .75rem 1rem .9rem;
+}
+.mosaic__tile--yellow .mosaic__h { background: var(--yellow); color: var(--ink); }
+.mosaic__tile--lime   .mosaic__h { background: var(--lime);   color: var(--ink); }
+.mosaic__tile--white  .mosaic__h { background: var(--white);  color: var(--ink); }
+.mosaic__tile--pink   .mosaic__h { background: var(--pink);   color: var(--white); }
+.mosaic__h { border-top: 0; }
+
+/* Tiles cascade in like the deck's other card grids */
+.slide--mosaic.is-active .mosaic > * {
+  animation: card-in 1000ms cubic-bezier(.18,.85,.28,1) both;
+  animation-delay: calc(180ms + (var(--qi, 0) * 95ms));
+  transform-origin: 50% 100%;
+}
+.slide--mosaic.is-active .mosaic > :nth-child(1) { --qi: 0; }
+.slide--mosaic.is-active .mosaic > :nth-child(2) { --qi: 1; }
+.slide--mosaic.is-active .mosaic > :nth-child(3) { --qi: 2; }
+.slide--mosaic.is-active .mosaic > :nth-child(4) { --qi: 3; }
+.slide--mosaic.is-active .mosaic > :nth-child(5) { --qi: 4; }
+
+@media (max-width: 900px) {
+  .mosaic { grid-template-columns: 1fr 1fr; }
+  .mosaic__tile, .mosaic__tile--wide { grid-column: span 1; }
+  .mosaic__tile--wide:last-child { grid-column: 1 / -1; }
+  .mosaic__media, .mosaic__tile--wide .mosaic__media { height: clamp(90px, 14vh, 150px); }
+}
