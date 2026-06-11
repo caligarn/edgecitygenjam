@@ -1,20 +1,17 @@
 /* ==========================================================================
    EDITOR — edit any photo or text in the deck, in place.
 
-   PHOTOS
-   • Hover any picture (or empty placeholder frame): a small "✏️ edit"
-     chip surfaces in its corner. Click it to choose a new file.
-     Drag-and-drop from your desktop also works at any time.
+   PHOTOS  · Drag an image (or video) from your desktop onto any picture
+             or empty placeholder frame to replace it.
+   TEXT    · Click any headline, paragraph, or list item to edit it in
+             place (desktop). Esc or click away to save.
 
-   TEXT
-   • Click any headline, paragraph, or list item to edit it in place
-     (desktop/mouse only). Esc or click away to save.
-
-   WHERE EDITS GO
-   • On the deployed site (Vercel + Blob configured): edits upload to
-     /api/media and are permanent for every visitor. The first edit asks
-     once for the passphrase (DECK_EDIT_KEY on the Vercel project).
-   • Otherwise edits are saved in this browser's localStorage.
+   WHERE EDITS ARE SAVED
+   • If the site's /api/media endpoint is live (Vercel + Blob configured),
+     edits upload there and are permanent for every visitor on every
+     device. The first edit asks once for the passphrase (DECK_EDIT_KEY).
+   • Otherwise edits are saved in this browser via IndexedDB — they
+     reliably survive refresh (large quota; images and videos both).
 
    Every editable spot has a permanent key, so reordering or adding
    slides never disconnects an edit.
@@ -23,23 +20,71 @@
 (() => {
   "use strict";
 
-  const MEDIA_STORE = "deckMediaOverrides_v2";
+  const OLD_MEDIA_STORE = "deckMediaOverrides_v2"; // legacy localStorage (migrated)
   const TEXT_STORE = "deckTextOverrides_v1";
   const EDIT_KEY_KEY = "deckEditKey";
   const API = "/api/media";
   const TEXT_BLOB_KEY = "_text";
-  const MAX_DIM = 2200;
-  const INLINE_LIMIT = 1.5e6;
+  const MAX_DIM = 3000;
+  const INLINE_LIMIT = 10e6;   // store images up to ~10MB as-is; downscale larger
   const POINTER_FINE = window.matchMedia("(pointer: fine)").matches;
 
   const loadJSON = (k) => { try { return JSON.parse(localStorage.getItem(k) || "{}"); } catch { return {}; } };
   const saveJSON = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch { return false; } };
 
-  let localMedia = loadJSON(MEDIA_STORE);
   let localText = loadJSON(TEXT_STORE);
   let serverMedia = {};
   let serverText = {};
   let serverAvailable = false;
+  const localMediaIds = new Set();  // ids with a browser-local override
+
+  /* ---------- IndexedDB (durable local media store) ---------- */
+  const DB_NAME = "deckEditor";
+  const MEDIA_OS = "media";
+  let dbp = null;
+  function db() {
+    return dbp || (dbp = new Promise((resolve, reject) => {
+      const req = indexedDB.open(DB_NAME, 1);
+      req.onupgradeneeded = () => {
+        const d = req.result;
+        if (!d.objectStoreNames.contains(MEDIA_OS)) d.createObjectStore(MEDIA_OS);
+      };
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    }));
+  }
+  async function idbGetAll() {
+    try {
+      const d = await db();
+      return await new Promise((resolve, reject) => {
+        const out = {};
+        const req = d.transaction(MEDIA_OS, "readonly").objectStore(MEDIA_OS).openCursor();
+        req.onsuccess = () => { const c = req.result; if (c) { out[c.key] = c.value; c.continue(); } else resolve(out); };
+        req.onerror = () => reject(req.error);
+      });
+    } catch { return {}; }
+  }
+  async function idbPut(key, value) {
+    try {
+      const d = await db();
+      await new Promise((resolve, reject) => {
+        const tx = d.transaction(MEDIA_OS, "readwrite");
+        tx.objectStore(MEDIA_OS).put(value, key);
+        tx.oncomplete = resolve; tx.onerror = () => reject(tx.error); tx.onabort = () => reject(tx.error);
+      });
+      return true;
+    } catch { return false; }
+  }
+  async function idbDel(key) {
+    try {
+      const d = await db();
+      await new Promise((resolve) => {
+        const tx = d.transaction(MEDIA_OS, "readwrite");
+        tx.objectStore(MEDIA_OS).delete(key);
+        tx.oncomplete = resolve; tx.onerror = resolve; tx.onabort = resolve;
+      });
+    } catch { /* ignore */ }
+  }
 
   /* ---------- stable slide slugs (from the HTML comments) ---------- */
   const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 48).replace(/-+$/, "");
@@ -76,13 +121,13 @@
 
   /* ---------- text targets ---------- */
   const TEXT_SELECTOR = "h1, h2, h3, h4, p, li, blockquote, figcaption, .kicker, .fact__yr";
-  const textOriginals = new Map(); // key -> original innerHTML
+  const textOriginals = new Map();
   function collectText() {
     document.querySelectorAll(".slide").forEach((slide, si) => {
       const slug = slideSlug(slide, si);
       let ti = 0;
       slide.querySelectorAll(TEXT_SELECTOR).forEach((el) => {
-        if (el.closest(".media-toolbar, .hud, .slide__robot") || el.querySelector("img, video")) { return; }
+        if (el.closest(".hud, .slide__robot") || el.querySelector("img, video")) return;
         const key = `${slug}-t${ti++}`;
         el.dataset.textKey = key;
         textOriginals.set(key, el.innerHTML);
@@ -132,7 +177,7 @@
         try {
           const tr = await fetch(serverMedia[TEXT_BLOB_KEY], { cache: "no-store" });
           if (tr.ok) serverText = await tr.json();
-        } catch { /* text blob unreadable — ignore */ }
+        } catch { /* text blob unreadable */ }
         delete serverMedia[TEXT_BLOB_KEY];
       }
     } catch { /* static hosting — local mode */ }
@@ -217,7 +262,7 @@
 
   if (POINTER_FINE) {
     document.addEventListener("click", (e) => {
-      if (e.target.closest("#media-chipbar, #media-toast")) return;
+      if (e.target.closest("#media-toast")) return;
       if (editingEl && !editingEl.contains(e.target)) finishTextEdit();
       const tEl = e.target.closest("[data-text-key]");
       if (!tEl || e.target.closest("a, button, [data-media-id]")) return;
@@ -227,7 +272,6 @@
     }, true);
   }
 
-  // While editing text, keep keystrokes away from deck navigation
   window.addEventListener("keydown", (e) => {
     const ae = document.activeElement;
     if (ae && ae.isContentEditable) {
@@ -264,127 +308,35 @@
   async function placeFile(t, file) {
     const isVideo = file.type.startsWith("video/");
     if (!isVideo && !file.type.startsWith("image/")) { toast("Pick an image or video file"); return; }
-    applyMedia(t, URL.createObjectURL(file), file.name, isVideo);
+
+    applyMedia(t, URL.createObjectURL(file), file.name, isVideo); // instant preview
+
+    // permanent shared layer (the site)
     if (serverAvailable) {
       toast("Uploading to the site…");
       const up = await serverPost(t.id, file, file.type || "application/octet-stream");
       if (up.ok) {
         serverMedia[t.id] = up.url;
         applyMedia(t, up.url, file.name, isVideo);
-        delete localMedia[t.id];
-        saveJSON(MEDIA_STORE, localMedia);
+        await idbDel(t.id); localMediaIds.delete(t.id);
         toast(`${file.name} saved to the site — permanent for all visitors. ✓`);
-        refreshChip();
         return;
       }
-      toast(`Site upload failed (${up.reason}) — kept in this browser only.`);
+      toast(`Site upload failed (${up.reason}) — saved in this browser instead.`);
     }
-    if (isVideo) { toast(`${file.name} placed for this session (videos need site storage to persist).`); return; }
+
+    // durable browser layer (IndexedDB) — survives refresh
+    if (isVideo) {
+      const ok = await idbPut(t.id, { blob: file, name: file.name, video: true, ts: Date.now() });
+      if (ok) localMediaIds.add(t.id);
+      toast(ok ? `${file.name} saved in this browser — stays after refresh.` : `${file.name} placed for this session only.`);
+      return;
+    }
     const data = await processImage(file);
-    localMedia[t.id] = { data, name: file.name, ts: Date.now() };
-    const ok = saveJSON(MEDIA_STORE, localMedia);
+    const ok = await idbPut(t.id, { data, name: file.name, ts: Date.now() });
+    if (ok) localMediaIds.add(t.id);
     applyMedia(t, data, file.name, false);
-    toast(ok ? `${file.name} placed — saved in this browser.` : `${file.name} placed for this session (storage full).`);
-    refreshChip();
-  }
-
-  async function resetMedia(t) {
-    delete localMedia[t.id];
-    saveJSON(MEDIA_STORE, localMedia);
-    if (serverMedia[t.id] && serverAvailable) {
-      const ek = await ensureEditKey();
-      if (ek) {
-        try {
-          await fetch(`${API}?key=${encodeURIComponent(t.id)}`, { method: "DELETE", headers: { "x-edit-key": ek } });
-          delete serverMedia[t.id];
-        } catch {}
-      }
-    }
-    if (t.kind === "slot") {
-      const media = t.el.querySelector("img, video");
-      if (media) media.remove();
-      const label = t.el.querySelector(":scope > span");
-      if (label) label.style.display = "";
-    } else if (t.original != null) {
-      t.el.src = t.original;
-    }
-    t.el.classList.remove("media-overridden");
-    toast("Restored the original.");
-    refreshChip();
-  }
-
-  /* ---------- file picker ---------- */
-  const picker = document.createElement("input");
-  picker.type = "file";
-  picker.accept = "image/*,video/*";
-  picker.style.display = "none";
-  let pickerTarget = null;
-  picker.addEventListener("change", () => {
-    if (picker.files && picker.files[0] && pickerTarget) placeFile(pickerTarget, picker.files[0]);
-    picker.value = "";
-  });
-  const openPicker = (t) => { pickerTarget = t; picker.click(); };
-
-  /* ---------- hover chip on media ---------- */
-  const chipbar = document.createElement("div");
-  chipbar.id = "media-chipbar";
-  chipbar.hidden = true;
-  let chipTarget = null;
-  let hideTimer = null;
-
-  function refreshChip() {
-    if (!chipTarget) return;
-    const t = chipTarget;
-    chipbar.innerHTML = "";
-    const rp = document.createElement("button");
-    rp.type = "button";
-    rp.textContent = "✏️ edit";
-    rp.onclick = (e) => { e.stopPropagation(); openPicker(t); };
-    chipbar.appendChild(rp);
-    if (localMedia[t.id] || serverMedia[t.id]) {
-      const rs = document.createElement("button");
-      rs.type = "button";
-      rs.textContent = "✕";
-      rs.title = "Restore the original";
-      rs.onclick = (e) => { e.stopPropagation(); resetMedia(t); };
-      chipbar.appendChild(rs);
-    }
-    if (localMedia[t.id]) {
-      const dl = document.createElement("a");
-      dl.textContent = "⬇";
-      dl.title = "Download this image (to commit it to the repo)";
-      dl.href = localMedia[t.id].data;
-      dl.download = localMedia[t.id].name || `${t.id}.jpg`;
-      dl.onclick = (e) => e.stopPropagation();
-      chipbar.appendChild(dl);
-    }
-  }
-
-  function showChip(t) {
-    chipTarget = t;
-    refreshChip();
-    const r = t.el.getBoundingClientRect();
-    chipbar.style.left = Math.max(6, Math.min(window.innerWidth - 120, r.right - 96)) + "px";
-    chipbar.style.top = Math.max(6, r.top + 8) + "px";
-    chipbar.hidden = false;
-  }
-  function scheduleHide() {
-    clearTimeout(hideTimer);
-    hideTimer = setTimeout(() => { chipbar.hidden = true; chipTarget = null; }, 350);
-  }
-  if (POINTER_FINE) {
-    document.addEventListener("mouseover", (e) => {
-      const zone = e.target.closest && e.target.closest("[data-media-id]");
-      if (zone) {
-        clearTimeout(hideTimer);
-        const t = byId(zone.dataset.mediaId);
-        if (t) showChip(t);
-      } else if (e.target.closest && e.target.closest("#media-chipbar")) {
-        clearTimeout(hideTimer);
-      } else if (!chipbar.hidden) {
-        scheduleHide();
-      }
-    });
+    toast(ok ? `${file.name} saved in this browser — stays after refresh.` : `${file.name} placed for this session only.`);
   }
 
   /* ---------- drag & drop ---------- */
@@ -431,18 +383,34 @@
   /* ---------- init ---------- */
   const looksLikeVideo = (url) => /\.(mp4|webm|mov)(\?|$)/i.test(url);
 
+  async function migrateLegacy() {
+    const old = loadJSON(OLD_MEDIA_STORE);
+    const ids = Object.keys(old);
+    if (!ids.length) return;
+    for (const id of ids) {
+      const rec = old[id];
+      if (rec && rec.data) await idbPut(id, { data: rec.data, name: rec.name, ts: rec.ts || Date.now() });
+    }
+    localStorage.removeItem(OLD_MEDIA_STORE);
+  }
+
   async function init() {
     collectMedia();
     collectText();
-    document.body.appendChild(picker);
-    document.body.appendChild(chipbar);
 
-    Object.entries(localMedia).forEach(([id, ov]) => {
+    // durable local layer (IndexedDB), migrating any legacy localStorage first
+    await migrateLegacy();
+    const idbAll = await idbGetAll();
+    Object.entries(idbAll).forEach(([id, rec]) => {
       const t = byId(id);
-      if (t && ov && ov.data) applyMedia(t, ov.data, ov.name, false);
+      if (!t || !rec) return;
+      localMediaIds.add(id);
+      if (rec.video && rec.blob) applyMedia(t, URL.createObjectURL(rec.blob), rec.name, true);
+      else if (rec.data) applyMedia(t, rec.data, rec.name, false);
     });
     Object.entries(localText).forEach(([k, html]) => applyText(k, html));
 
+    // permanent shared layer (wins over local)
     await fetchServer();
     Object.entries(serverMedia).forEach(([id, url]) => {
       const t = byId(id);
