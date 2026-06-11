@@ -4664,3 +4664,27 @@ kbd {
   font-weight: 900; font-size: .85em;
 }
 .dt-tracks__n--pink { background: var(--pink); color: var(--white); }
+
+/* ---------- Stronger drag-drop affordance ---------- */
+body.media-dragging [data-media-id] {
+  outline: 3px dashed var(--pink);
+  outline-offset: -3px;
+}
+body.media-dragging .media-drop-hover {
+  outline: 5px solid var(--pink) !important;
+  outline-offset: -5px;
+  box-shadow: 0 0 0 6px rgba(255, 59, 92, .25) inset;
+}
+body.media-dragging::after {
+  content: "Drop a photo onto any picture or frame";
+  position: fixed;
+  left: 50%; bottom: 22px; transform: translateX(-50%);
+  z-index: 80;
+  font-family: "Space Mono", monospace; font-weight: 700; font-size: .8rem;
+  letter-spacing: .04em;
+  padding: .6rem 1rem;
+  background: var(--ink); color: var(--cream);
+  border-radius: 999px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  pointer-events: none;
+}
