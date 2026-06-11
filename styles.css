@@ -389,22 +389,52 @@
 }
 
 /* ==========================================================================
-   Ro
+   Robot ambient background — one layer per slide, see robots.js
    ========================================================================== */
 :root { --px: 0vw; --py: 0vh; }  /* mouse-parallax targets live on :root */
 
+.robot-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;           /* paints between slide bg and slide content */
+  pointer-events: none;
+  overflow: hidden;
+}
 
-
-
+.robot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  height: var(--sz);
+  width: auto;
+  max-width: 55vw;
+  /* Show the artwork as-is — transparent PNG, no silhouette filter,
+     no blur. Soft opacity so they feel ambient, not assertive. */
+  opacity: calc(0.22 * var(--depth));
+  transform:
+    translate(-50%, -50%)
+    translate(calc(var(--px) * var(--depth)), calc(var(--py) * var(--depth)))
+    rotate(var(--r0))
+    scaleX(var(--flip, 1));
+  will-change: transform;
+  user-select: none;
+  -webkit-user-drag: none;
+}
 /* Slightly lower opacity on strong color backgrounds so the art doesn't
    fight the slide palette. */
-body[data-bg="ink"]    
-body[data-bg="pink"]   
-body[data-bg="yellow"] 
-body[data-bg="lime"]   
-body[data-bg="tan"]    
+body[data-bg="ink"]    .robot { opacity: calc(0.32 * var(--depth)); }
+body[data-bg="pink"]   .robot { opacity: calc(0.18 * var(--depth)); }
+body[data-bg="yellow"] .robot { opacity: calc(0.22 * var(--depth)); }
+body[data-bg="lime"]   .robot { opacity: calc(0.22 * var(--depth)); }
+body[data-bg="tan"]    .robot { opacity: calc(0.24 * var(--depth)); }
 
 /* --- Variant: drift (figure-8 sway with slow rotation) --- */
+.robot--drift {
+  animation: robot-drift var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-drift {
+  0%   { transform: translate(calc(-50% + 0vw),           calc(-50% + 0vh))                   rotate(var(--r0))                     scaleX(var(--flip)); }
   25%  { transform: translate(calc(-50% + var(--dx)),     calc(-50% + var(--dy)))             rotate(calc(var(--r0) + 60deg))       scaleX(var(--flip)); }
   50%  { transform: translate(calc(-50% + var(--dx) / 2), calc(-50% + var(--dy) * -1))        rotate(calc(var(--r0) + 180deg))      scaleX(var(--flip)); }
   75%  { transform: translate(calc(-50% + var(--dx) * -1),calc(-50% + var(--dy) / 2))         rotate(calc(var(--r0) + 280deg))      scaleX(var(--flip)); }
@@ -412,31 +442,69 @@ body[data-bg="tan"]
 }
 
 /* --- Variant: bob (vertical breathing + slight tilt) --- */
+.robot--bob {
+  animation: robot-bob var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-bob {
+  0%,100% { transform: translate(-50%, -50%)                       rotate(var(--r0))                scale(1)       scaleX(var(--flip)); }
   50%     { transform: translate(-50%, calc(-50% - 3vh))           rotate(calc(var(--r0) + 8deg))   scale(1.04)    scaleX(var(--flip)); }
 }
 
 /* --- Variant: orbit (circle around home) --- */
+.robot--orbit {
+  animation: robot-orbit var(--dur) linear infinite;
+  animation-delay: var(--delay);
+  transform-origin: 50% 50%;
+}
+@keyframes robot-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg)   translate(4vw, 0) rotate(0deg)   scaleX(var(--flip)); }
   to   { transform: translate(-50%, -50%) rotate(360deg) translate(4vw, 0) rotate(-360deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: pulse (scale + opacity breathing) --- */
+.robot--pulse {
+  animation: robot-pulse var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-pulse {
+  0%,100% { transform: translate(-50%, -50%) rotate(var(--r0)) scale(calc(0.88 * var(--sc)))  scaleX(var(--flip)); }
   50%     { transform: translate(-50%, -50%) rotate(var(--r0)) scale(calc(1.15 * var(--sc)))  scaleX(var(--flip)); }
 }
 
 /* --- Variant: spin (slow rotate around its center) --- */
+.robot--spin {
+  animation: robot-spin var(--dur) linear infinite;
+  animation-delay: var(--delay);
+}
+@keyframes robot-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg)   scaleX(var(--flip)); }
   to   { transform: translate(-50%, -50%) rotate(360deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: swing (pendulum) --- */
+.robot--swing {
+  animation: robot-swing calc(var(--dur) * 0.55) ease-in-out infinite;
+  animation-delay: var(--delay);
+  transform-origin: 50% 0;
+}
+@keyframes robot-swing {
+  0%,100% { transform: translate(-50%, -50%) rotate(-18deg) scaleX(var(--flip)); }
   50%     { transform: translate(-50%, -50%) rotate( 18deg) scaleX(var(--flip)); }
 }
 
 /* --- Variant: float (gentle diagonal ghost drift) --- */
+.robot--float {
+  animation: robot-float var(--dur) ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+}
+@keyframes robot-float {
+  0%   { transform: translate(calc(-50% - 3vw), calc(-50% + 2vh))  rotate(calc(var(--r0) - 6deg))  scale(0.98) scaleX(var(--flip)); }
   100% { transform: translate(calc(-50% + 3vw), calc(-50% - 2vh))  rotate(calc(var(--r0) + 6deg))  scale(1.04) scaleX(var(--flip)); }
 }
 
-/* Reduced-motion */
-/* .robots--reduced */ 
+/* Reduced-motion: keep robots, drop the animation. */
+.robots--reduced .robot { animation: none !important; }
 
 html, body {
   margin: 0;
@@ -3694,7 +3762,7 @@ kbd {
 .slide__robot--mid-r { right: 6vw; top: 50%; transform-origin: center; width: clamp(140px, 18vw, 240px); }
 
 /* Make sure slide content paints above the robot */
-.slide > *:not(.slide__robot) { position: relative; z-index: 1; }
+.slide > *:not(.slide__robot):not(.robot-bg):not(.slide__bg) { position: relative; z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   .slide.is-active .slide__robot { animation: none; }
@@ -3974,3 +4042,354 @@ kbd {
   .aichart { grid-template-columns: 1fr; }
   .aichart .fact { min-height: 0; }
 }
+
+/* ---------- Philosophy spotlight pages (one per optimistic future) ----------
+   Two columns: big quote left, bordered picture placeholder right.
+   The frame is meant to receive a real image later — swap the <span>
+   for an <img> and the styling holds. */
+.slide--philo {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 3.5vw;
+  align-items: center;
+  padding: 7vh 6vw;
+}
+.philo-text { display: flex; flex-direction: column; gap: 1.6vh; align-items: flex-start; }
+.philo-quote {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.7rem, 3.8vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: .4rem 0 0 0;
+  max-width: 24ch;
+}
+.philo-attr {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.75rem, 1vw, 1rem);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--pink);
+}
+.philo-lede { max-width: 38ch; }
+.philo-frame {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 70vh;
+  border: var(--border-w) solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 10px 10px 0 var(--ink);
+  background: var(--white);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.philo-frame > span {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.8rem, 1.1vw, 1.1rem);
+  letter-spacing: .22em;
+  opacity: .4;
+}
+.philo-frame img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 900px) {
+  .slide--philo { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
+  .philo-frame { aspect-ratio: 16 / 10; max-height: 32vh; }
+}
+
+/* ---------- Table of contents (agenda) ---------- */
+.slide--toc { align-items: flex-start; justify-content: center; gap: 1vh; padding: 7vh 7vw; }
+.toc {
+  list-style: none;
+  margin: 2vh 0 0 0;
+  padding: 0;
+  width: 100%;
+  counter-reset: toc;
+}
+.toc__row {
+  display: flex;
+  align-items: baseline;
+  gap: 2vw;
+  padding: 1.3vh 0;
+  border-bottom: 2px solid rgba(250,243,227,.22);
+}
+.toc__row:first-child { border-top: 2px solid rgba(250,243,227,.22); }
+.toc__num {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: var(--pink);
+  font-size: clamp(1rem, 1.6vw, 1.6rem);
+  flex: 0 0 auto;
+}
+.toc__title {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-size: clamp(1.8rem, 5vw, 5rem);
+}
+.slide--toc.is-active .toc__row {
+  animation: slide-in-left 900ms cubic-bezier(.18,.85,.28,1) both;
+  animation-delay: calc(160ms + var(--li, 0) * 110ms);
+}
+.slide--toc.is-active .toc__row:nth-child(1) { --li: 0; }
+.slide--toc.is-active .toc__row:nth-child(2) { --li: 1; }
+.slide--toc.is-active .toc__row:nth-child(3) { --li: 2; }
+.slide--toc.is-active .toc__row:nth-child(4) { --li: 3; }
+.slide--toc.is-active .toc__row:nth-child(5) { --li: 4; }
+
+/* ---------- Pink number chip variant (objections / CTA lists) ---------- */
+.big-list .num--pink { background: var(--pink); color: var(--white); }
+.slide[data-bg="ink"] .big-list li { color: var(--cream); }
+.obj-list { margin-top: 3vh; }
+
+/* ---------- Tight story-lines variant (rationale) ---------- */
+.story-lines--tight li { font-size: clamp(1.4rem, 3.2vw, 3.2rem); }
+
+/* ---------- Split layout (my theories) ---------- */
+.slide--split { align-items: center; }
+.split-lead { display: flex; flex-direction: column; gap: 1.6vh; }
+.split-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1.4vh; }
+.split-list li {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.45vw, 1.45rem);
+  line-height: 1.35;
+  padding: 1.4vh 1.5vw 1.4vh 0;
+  border-bottom: 3px solid var(--ink);
+}
+.split-list li:first-child { border-top: 3px solid var(--ink); }
+.split-list li b { font-weight: 900; }
+.split-list__tag {
+  display: block;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.7rem, .9vw, .9rem);
+  letter-spacing: .16em;
+  color: var(--pink);
+  margin-bottom: .35rem;
+}
+@media (max-width: 900px) {
+  .slide--split { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
+}
+
+/* ---------- Chip row (philosophy preview index) ---------- */
+.chip-row { list-style: none; margin: 3vh 0 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
+.chip {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.1rem, 2.2vw, 2.2rem);
+  letter-spacing: -0.01em;
+  padding: .5rem 1.1rem;
+  background: var(--white);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+/* ---------- Media-market mosaic: image-led tiles, headline-only ----------
+   Five tiles: three squares up top, two wide below. Each tile is mostly
+   media area — drop an <img> or <video> into .mosaic__media and it fills
+   the frame (the placeholder <span> can stay or go). */
+.slide--mosaic { justify-content: center; gap: 2vh; padding: 6vh 5vw; }
+.mosaic-hd { display: flex; flex-direction: column; gap: .6vh; }
+.mosaic {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+.mosaic__tile {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 7px 7px 0 var(--ink);
+  overflow: hidden;
+  background: var(--white);
+}
+.mosaic__tile--wide { grid-column: span 3; }
+.mosaic__media {
+  margin: 0;
+  height: clamp(110px, 24vh, 260px);
+  background:
+    radial-gradient(rgba(20,27,52,.12) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  background-color: var(--cream);
+  display: grid;
+  place-items: center;
+  border-bottom: 3px solid var(--ink);
+}
+.mosaic__tile--wide .mosaic__media { height: clamp(100px, 20vh, 220px); }
+.mosaic__media > span {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.7rem, .95vw, .95rem);
+  letter-spacing: .22em;
+  opacity: .4;
+}
+.mosaic__media img,
+.mosaic__media video { width: 100%; height: 100%; object-fit: cover; }
+.mosaic__h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.05rem, 1.6vw, 1.65rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+  padding: .75rem 1rem .9rem;
+}
+.mosaic__tile--yellow .mosaic__h { background: var(--yellow); color: var(--ink); }
+.mosaic__tile--lime   .mosaic__h { background: var(--lime);   color: var(--ink); }
+.mosaic__tile--white  .mosaic__h { background: var(--white);  color: var(--ink); }
+.mosaic__tile--pink   .mosaic__h { background: var(--pink);   color: var(--white); }
+.mosaic__h { border-top: 0; }
+
+/* Tiles cascade in like the deck's other card grids */
+.slide--mosaic.is-active .mosaic > * {
+  animation: card-in 1000ms cubic-bezier(.18,.85,.28,1) both;
+  animation-delay: calc(180ms + (var(--qi, 0) * 95ms));
+  transform-origin: 50% 100%;
+}
+.slide--mosaic.is-active .mosaic > :nth-child(1) { --qi: 0; }
+.slide--mosaic.is-active .mosaic > :nth-child(2) { --qi: 1; }
+.slide--mosaic.is-active .mosaic > :nth-child(3) { --qi: 2; }
+.slide--mosaic.is-active .mosaic > :nth-child(4) { --qi: 3; }
+.slide--mosaic.is-active .mosaic > :nth-child(5) { --qi: 4; }
+
+@media (max-width: 900px) {
+  .mosaic { grid-template-columns: 1fr 1fr; }
+  .mosaic__tile, .mosaic__tile--wide { grid-column: span 1; }
+  .mosaic__tile--wide:last-child { grid-column: 1 / -1; }
+  .mosaic__media, .mosaic__tile--wide .mosaic__media { height: clamp(90px, 14vh, 150px); }
+}
+
+/* ---------- Full-bleed background images ----------
+   Every divider/beat slide in the AI Creative Stack talk carries an
+   empty <div class="slide__bg slide__bg--full slide__bg--scrim"> slot.
+   Drop an <img> or <video> inside and it fills the slide edge-to-edge;
+   the scrim fades in automatically (via :has) so text stays readable.
+   The base .slide__bg (low-opacity wash) still works as before. */
+.slide__bg--full img,
+.slide__bg--full video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  filter: none;
+}
+.slide__bg--scrim::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(20,27,52,.62) 0%,
+    rgba(20,27,52,.28) 45%,
+    rgba(20,27,52,.66) 100%);
+  opacity: 0;
+}
+.slide__bg--scrim:has(img, video)::after { opacity: 1; }
+/* On cream/light slides a filled bg flips the text to cream for contrast */
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) { color: var(--cream); }
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .display,
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .h-xxl,
+.slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .h-xl { color: var(--cream); }
+
+/* ---------- 2x2 mosaic variant (history objects — larger photo tiles) ---------- */
+.mosaic--quad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mosaic--quad .mosaic__tile { grid-column: span 1; }
+.mosaic--quad .mosaic__media { height: clamp(130px, 25vh, 280px); }
+@media (max-width: 900px) {
+  .mosaic--quad { grid-template-columns: 1fr 1fr; }
+  .mosaic--quad .mosaic__media { height: clamp(90px, 14vh, 150px); }
+}
+
+/* ---------- Image editor (editor.js): drag-and-drop replacement ---------- */
+/* While dragging a file over the window, every drop target glows */
+.media-dragging [data-media-id] {
+  outline: 3px dashed var(--pink);
+  outline-offset: 3px;
+  transition: outline-color 150ms ease;
+}
+.media-dragging [data-media-id].media-drop-hover {
+  outline: 4px solid var(--pink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 8px rgba(255, 59, 92, .18);
+}
+/* Edit mode: subtle outline on everything replaceable */
+.media-edit-mode [data-media-id] { outline: 2px dashed rgba(255, 59, 92, .55); outline-offset: 2px; }
+
+#media-edit-badge {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  z-index: 60;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  padding: .45rem .7rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+  opacity: .35;
+  transition: opacity 200ms ease;
+}
+#media-edit-badge:hover, #media-edit-badge.is-on { opacity: 1; }
+#media-edit-badge.is-on { background: var(--pink); color: var(--white); }
+
+.media-toolbar {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 30;
+  display: flex;
+  gap: 6px;
+}
+.media-toolbar a, .media-toolbar button {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .68rem;
+  padding: .3rem .5rem;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: var(--yellow);
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.media-toolbar button { background: var(--white); }
+
+#media-toast {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  z-index: 70;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .78rem;
+  max-width: 80vw;
+  padding: .55rem .9rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--cream);
+  box-shadow: 3px 3px 0 rgba(0,0,0,.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+#media-toast.show { opacity: 1; transform: translate(-50%, 0); }
