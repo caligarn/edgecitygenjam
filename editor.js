@@ -120,23 +120,43 @@
   const byId = (id) => targets.find((t) => t.id === id);
 
   /* ---------- text targets ---------- */
-  const TEXT_SELECTOR = "h1, h2, h3, h4, p, li, blockquote, figcaption, .kicker, .fact__yr, .hypo-body";
+  // Tags that should never become contenteditable (links/buttons stay
+  // clickable, media/SVG/form controls are handled elsewhere or not text).
+  const TEXT_SKIP_TAGS = new Set([
+    "A", "BUTTON", "SCRIPT", "STYLE", "SVG", "IMG", "VIDEO",
+    "INPUT", "TEXTAREA", "SELECT", "CANVAS", "BR", "HR",
+  ]);
+  const hasDirectText = (el) => {
+    for (const n of el.childNodes) if (n.nodeType === 3 && n.textContent.trim()) return true;
+    return false;
+  };
   const textOriginals = new Map();
+  // Greedy walk: key the innermost element that directly holds text, so
+  // every piece of copy in the deck is editable — headings, paragraphs,
+  // list items, stat numbers, tags, chips, captions, card labels, etc.
+  // Elements with mixed content (text + inline emphasis like .accent-pink)
+  // are keyed at the block level; pure layout containers are skipped and
+  // we descend into their children.
   function collectText() {
     document.querySelectorAll(".slide").forEach((slide, si) => {
       const slug = slideSlug(slide, si);
       let ti = 0;
-      slide.querySelectorAll(TEXT_SELECTOR).forEach((el) => {
-        // Prefer the dedicated .hypo-body text span over its <li> wrapper
-        // (the wrapper may hold a thumbnail image, which would otherwise
-        // make the whole row skip text editing).
-        if (el.tagName === "LI" && el.querySelector(".hypo-body")) return;
-        if (el.closest(".hud, .slide__robot")) return;
-        if (el.querySelector("img, video")) return;
-        const key = `${slug}-t${ti++}`;
-        el.dataset.textKey = key;
-        textOriginals.set(key, el.innerHTML);
-      });
+      const walk = (el) => {
+        for (const child of el.children) {
+          if (TEXT_SKIP_TAGS.has(child.tagName)) continue;
+          if (child.dataset.mediaId) continue;            // a media target, not text
+          if (child.closest(".slide__robot, .robot-bg, .hud, .help, .media-toolbar")) continue;
+          if (hasDirectText(child)) {
+            const key = `${slug}-t${ti++}`;
+            child.dataset.textKey = key;
+            textOriginals.set(key, child.innerHTML);
+            // stop here — edit this whole element, don't double-key its children
+          } else {
+            walk(child);                                  // pure container — go deeper
+          }
+        }
+      };
+      walk(slide);
     });
   }
 
