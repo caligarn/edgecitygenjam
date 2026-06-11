@@ -21,14 +21,6 @@
        quote slide, market-map throwback, mc-fact stat cards).
        ================================================================== -->
 
-  <!-- T2 · BRIDGE INTO THE HANDS-ON -->
-  <section class="slide slide--left" data-bg="cream">
-    <span class="kicker">FROM THEORY TO PRACTICE</span>
-    <h2 class="h-xxl">Let&rsquo;s get our <span class="accent-pink">hands on it.</span></h2>
-    <p class="lede">Enough theory. The best way to understand the stack is to make something with it &mdash; so let&rsquo;s jam.</p>
-  </section>
-
-
   <!-- LOGO HERO — Machine Cinema GenJam wordmark, big and centered -->
   <section class="slide slide--logo-hero" data-bg="cream">
     <figure class="logo-hero">
@@ -224,109 +216,6 @@
     </ol>
   </section>
 
-  <!-- 4. WORLD MAP -->
-  <section class="slide slide--worldmap" data-bg="cream">
-    <div class="worldmap__header">
-      <span class="kicker">ON THE GROUND — EVERYWHERE</span>
-      <h2 class="h-xl">We've shown up in<br/><span class="accent-pink">35+ cities.</span></h2>
-    </div>
-    <div class="worldmap" aria-label="World map of Machine Cinema events">
-      <svg class="worldmap__svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <defs>
-          <pattern id="dots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-            <circle cx="7" cy="7" r="1.1" fill="#141B34" opacity="0.14"/>
-          </pattern>
-          <pattern id="landDots" x="0" y="0" width="7" height="7" patternUnits="userSpaceOnUse">
-            <circle cx="3.5" cy="3.5" r="1.3" fill="#141B34" opacity="0.58"/>
-          </pattern>
-        </defs>
-        <rect x="0" y="0" width="1000" height="500" fill="url(#dots)"/>
-        <!-- Simplified continent silhouettes, equirectangular, viewBox 1000x500 -->
-        <g fill="url(#landDots)">
-          <!-- North America (Canada + US) -->
-          <path d="M120,105 L175,88 L235,84 L290,96 L312,118 L304,142 L296,168 L306,190 L298,215 L278,232 L245,240 L210,237 L180,225 L152,206 L136,182 L126,158 L122,132 Z"/>
-          <!-- Greenland -->
-          <path d="M340,60 L395,58 L412,88 L402,120 L372,130 L348,115 L338,86 Z"/>
-          <!-- Central America -->
-          <path d="M248,240 L278,256 L294,280 L282,298 L256,300 L234,284 L224,262 Z"/>
-          <!-- South America -->
-          <path d="M278,298 L318,294 L340,314 L352,348 L348,395 L332,432 L308,452 L282,446 L268,416 L260,372 L258,332 L268,308 Z"/>
-          <!-- Europe -->
-          <path d="M478,118 L520,108 L560,112 L580,128 L574,150 L550,164 L518,168 L488,162 L472,142 Z"/>
-          <!-- Scandinavia -->
-          <path d="M534,72 L570,70 L582,95 L576,115 L558,122 L540,112 L530,92 Z"/>
-          <!-- UK + Ireland -->
-          <path d="M468,118 L490,112 L494,138 L482,152 L465,144 Z"/>
-          <!-- Africa -->
-          <path d="M488,168 L550,168 L592,188 L604,220 L596,262 L576,306 L548,340 L518,352 L494,344 L478,316 L470,282 L468,240 L472,200 Z"/>
-          <!-- Middle East -->
-          <path d="M560,162 L612,168 L624,196 L618,216 L588,218 L566,208 L558,186 Z"/>
-          <!-- Asia (main landmass) -->
-          <path d="M590,92 L680,82 L760,88 L820,106 L842,134 L836,158 L812,176 L778,184 L742,194 L712,200 L686,202 L662,196 L636,182 L614,162 L598,138 L590,114 Z"/>
-          <!-- India -->
-          <path d="M688,198 L726,202 L738,224 L728,244 L706,254 L688,242 L680,222 Z"/>
-          <!-- Southeast Asia (mainland) -->
-          <path d="M770,200 L812,206 L824,232 L808,256 L782,262 L766,244 L762,220 Z"/>
-          <!-- Indonesia / Philippines dots -->
-          <path d="M790,270 L850,272 L872,284 L856,296 L810,298 L790,284 Z"/>
-          <path d="M830,240 L856,242 L862,254 L848,260 L832,254 Z"/>
-          <!-- Japan -->
-          <path d="M880,136 L908,140 L912,164 L896,180 L878,170 L874,150 Z"/>
-          <!-- Australia -->
-          <path d="M808,332 L872,330 L896,352 L894,380 L868,394 L820,394 L800,376 L800,350 Z"/>
-          <!-- New Zealand -->
-          <path d="M938,380 L962,384 L968,402 L948,410 L934,398 Z"/>
-        </g>
-      </svg>
-      <ul class="worldmap__pins">
-        <!-- x = (lng+180)/360*100, y = (90-lat)/180*100
-             data-lp controls label position: t=above, b=below, l=left, r=right (default) -->
-        <!-- North America -->
-        <li style="--x:16.0%;--y:22.6%" data-lp="t"><span class="pin"></span><b>VANCOUVER</b></li>
-        <li style="--x:16.0%;--y:24.2%" data-lp="l"><span class="pin"></span><b>SEATTLE</b></li>
-        <li style="--x:15.8%;--y:29.0%" data-lp="l"><span class="pin"></span><b>SAN FRANCISCO</b></li>
-        <li style="--x:17.0%;--y:32.4%" data-lp="b"><span class="pin"></span><b>LOS ANGELES</b></li>
-        <li style="--x:20.8%;--y:27.9%" data-lp="b"><span class="pin"></span><b>DENVER</b></li>
-        <li style="--x:22.8%;--y:33.6%" data-lp="b"><span class="pin"></span><b>AUSTIN</b></li>
-        <li style="--x:24.6%;--y:26.8%" data-lp="l"><span class="pin"></span><b>CHICAGO</b></li>
-        <li style="--x:27.8%;--y:24.0%" data-lp="t"><span class="pin"></span><b>TORONTO</b></li>
-        <li style="--x:30.4%;--y:25.8%" data-lp="r"><span class="pin"></span><b>BOSTON</b></li>
-        <li style="--x:29.8%;--y:29.2%" data-lp="r"><span class="pin"></span><b>NEW YORK</b></li>
-        <li style="--x:25.8%;--y:31.8%" data-lp="l"><span class="pin"></span><b>ATLANTA</b></li>
-        <li style="--x:29.0%;--y:36.4%" data-lp="r"><span class="pin"></span><b>MIAMI</b></li>
-        <li style="--x:22.4%;--y:39.4%" data-lp="b"><span class="pin"></span><b>MEXICO CITY</b></li>
-        <!-- South America -->
-        <li style="--x:37.0%;--y:62.0%" data-lp="r"><span class="pin"></span><b>SÃO PAULO</b></li>
-        <li style="--x:33.8%;--y:69.2%" data-lp="l"><span class="pin"></span><b>BUENOS AIRES</b></li>
-        <!-- Europe — staggered carefully so labels never stack -->
-        <li style="--x:46.5%;--y:20.8%" data-lp="l"><span class="pin"></span><b>DUBLIN</b></li>
-        <li style="--x:49.0%;--y:22.4%" data-lp="b"><span class="pin"></span><b>LONDON</b></li>
-        <li style="--x:51.8%;--y:19.0%" data-lp="t"><span class="pin"></span><b>AMSTERDAM</b></li>
-        <li style="--x:54.8%;--y:20.4%" data-lp="r"><span class="pin"></span><b>BERLIN</b></li>
-        <li style="--x:57.5%;--y:15.4%" data-lp="t"><span class="pin"></span><b>STOCKHOLM</b></li>
-        <li style="--x:50.0%;--y:25.6%" data-lp="r"><span class="pin"></span><b>PARIS</b></li>
-        <li style="--x:47.0%;--y:28.4%" data-lp="l"><span class="pin"></span><b>MADRID</b></li>
-        <li style="--x:54.2%;--y:28.0%" data-lp="b"><span class="pin"></span><b>ROME</b></li>
-        <li style="--x:59.4%;--y:26.6%" data-lp="r"><span class="pin"></span><b>ISTANBUL</b></li>
-        <!-- Africa -->
-        <li style="--x:51.0%;--y:46.4%" data-lp="r"><span class="pin"></span><b>LAGOS</b></li>
-        <!-- Middle East + Asia -->
-        <li style="--x:65.4%;--y:36.2%" data-lp="t"><span class="pin"></span><b>DUBAI</b></li>
-        <li style="--x:70.2%;--y:39.4%" data-lp="b"><span class="pin"></span><b>MUMBAI</b></li>
-        <li style="--x:82.3%;--y:27.8%" data-lp="l"><span class="pin"></span><b>BEIJING</b></li>
-        <li style="--x:83.7%;--y:32.8%" data-lp="r"><span class="pin"></span><b>SHANGHAI</b></li>
-        <li style="--x:85.3%;--y:29.1%" data-lp="t"><span class="pin"></span><b>SEOUL</b></li>
-        <li style="--x:88.8%;--y:30.4%" data-lp="r"><span class="pin"></span><b>TOKYO</b></li>
-        <li style="--x:78.0%;--y:42.4%" data-lp="l"><span class="pin"></span><b>BANGKOK</b></li>
-        <li style="--x:79.6%;--y:44.2%" data-lp="r"><span class="pin"></span><b>HO CHI MINH</b></li>
-        <li style="--x:78.8%;--y:49.4%" data-lp="l"><span class="pin"></span><b>SINGAPORE</b></li>
-        <!-- Oceania -->
-        <li style="--x:90.5%;--y:69.0%" data-lp="b"><span class="pin"></span><b>SYDNEY</b></li>
-        <li style="--x:94.5%;--y:70.5%" data-lp="l"><span class="pin"></span><b>AUCKLAND</b></li>
-      </ul>
-    </div>
-  </section>
-
   <!-- OUR VALUES -->
   <section class="slide slide--history" data-bg="cream">
     <div class="slide__robot slide__robot--bl" aria-hidden="true">
@@ -360,10 +249,10 @@
     <ol class="history-list history-list--titles">
       <li class="fact fact--pink fact--title"><div class="fact__yr">01</div><h3 class="fact__h">Ethics</h3></li>
       <li class="fact fact--yellow fact--title"><div class="fact__yr">02</div><h3 class="fact__h">Sustainability</h3></li>
-      <li class="fact fact--white fact--title"><div class="fact__yr">03</div><h3 class="fact__h">Copyright</h3></li>
+      <li class="fact fact--white fact--title"><div class="fact__yr">03</div><h3 class="fact__h">Copyright &amp; Stealing</h3></li>
       <li class="fact fact--lime fact--title"><div class="fact__yr">04</div><h3 class="fact__h">Jobs</h3></li>
       <li class="fact fact--yellow fact--title"><div class="fact__yr">05</div><h3 class="fact__h">Slop</h3></li>
-      <li class="fact fact--pink fact--title"><div class="fact__yr">06</div><h3 class="fact__h">Training Data</h3></li>
+      <li class="fact fact--pink fact--title"><div class="fact__yr">06</div><h3 class="fact__h">Misinformation</h3></li>
     </ol>
   </section>
 
@@ -988,56 +877,6 @@
     </div>
   </section>
 
-  <!-- MY FAVORITE WORKFLOW TODAY -->
-  <section class="slide slide--left slide--workflow" data-bg="cream">
-    <span class="kicker">THE METHOD &middot; TOOLKIT</span>
-    <h2 class="h-xxl">My favorite <span class="accent-pink">workflow today.</span></h2>
-    <div class="slide__robot slide__robot--tr" aria-hidden="true">
-      <img src="A_stylized_robot_with_a_camera_for_a_head_stands_vYGBsiXC.png" alt="" loading="lazy"/>
-    </div>
-    <ol class="process-flow process-flow--wf">
-      <li class="pf pf--yellow">
-        <span class="pf__n">01 &middot; IMG</span>
-        <span class="pf__t">Midjourney</span>
-      </li>
-      <li class="pf-arrow">&rarr;</li>
-      <li class="pf pf--lime">
-        <span class="pf__n">02 &middot; IMG EDIT</span>
-        <span class="pf__t">Nanobanana</span>
-        <span class="pf__sub">or ChatGPT Image2 &middot; Photoshop + Firefly</span>
-      </li>
-      <li class="pf-arrow">&rarr;</li>
-      <li class="pf pf--white">
-        <span class="pf__n">03 &middot; TEST</span>
-        <span class="pf__t">Grok Video</span>
-        <span class="pf__sub">video test run</span>
-      </li>
-      <li class="pf-arrow">&rarr;</li>
-      <li class="pf pf--orange">
-        <span class="pf__n">04 &middot; FINAL</span>
-        <span class="pf__t">Seedance2</span>
-        <span class="pf__sub">or Happy Horse &middot; final video</span>
-      </li>
-      <li class="pf-arrow">&rarr;</li>
-      <li class="pf pf--pink">
-        <span class="pf__n">05 &middot; UPSCALE</span>
-        <span class="pf__t">Topaz</span>
-        <span class="pf__sub">if needed</span>
-      </li>
-    </ol>
-    <ul class="process-flow process-flow--audio">
-      <li class="pf pf--lime">
-        <span class="pf__n">VOICE &amp; SFX</span>
-        <span class="pf__t">Elevenlabs</span>
-      </li>
-      <li class="pf pf--yellow">
-        <span class="pf__n">MUSIC</span>
-        <span class="pf__t">Suno</span>
-        <span class="pf__sub">or Sunauto.ai</span>
-      </li>
-    </ul>
-  </section>
-
   <!-- 14. ROLES -->
   <section class="slide slide--left" data-bg="cream">
     <span class="kicker">TEAM UP</span>
@@ -1149,22 +988,60 @@
     </ol>
   </section>
 
-  <!-- 16. HANDS-ON WITH FLIK -->
-  <section class="slide slide--left" data-bg="cream">
-    <div class="slide__robot slide__robot--br" aria-hidden="true">
-      <img src="In_a_stylized_illustration_a_white_line-art_1FjQxUfv.png" alt="" loading="lazy"/>
+  <!-- DREAM TOWN — theme + tracks -->
+  <section class="slide slide--left" data-bg="ink">
+    <div data-media-key="dream-town-theme-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
     </div>
-    <span class="kicker">HANDS-ON / TODAY</span>
-    <h2 class="h-xxl">
-      Today we build with<br/>
-      <span class="accent-pink">Flik.</span>
-    </h2>
-    <p class="lede">A new agentic creative tool &mdash; open it up and start.</p>
+    <span class="kicker kicker--dark">TODAY&rsquo;S THEME</span>
+    <h2 class="h-xxl">Dream <span class="accent-pink">Town.</span></h2>
+    <p class="lede">Three tracks to choose from &mdash; or invent your own.</p>
     <ul class="big-list big-list--compact">
-      <li><span class="num">1</span><span>Go to flikai.com.</span></li>
-      <li><span class="num">2</span><span>Sign in.</span></li>
-      <li><span class="num">3</span><span>Make something weird.</span></li>
+      <li><span class="num">1</span><span><b>Vibe Code Residency</b> &mdash; Making AI Commercials for Your Business</span></li>
+      <li><span class="num">2</span><span><b>Touch Grass Residency</b> &mdash; Making Solarpunk Videos that Inspire a Green Future</span></li>
+      <li><span class="num">3</span><span><b>Futurative Residency</b> &mdash; Making Meditation Videos</span></li>
+      <li><span class="num num--pink">+</span><span><b>OR&hellip; Whatever you want!</b></span></li>
     </ul>
+  </section>
+
+  <!-- DREAM TOWN · TRACK 1 — VIBE CODE -->
+  <section class="slide slide--left" data-bg="pink">
+    <div data-media-key="dream-town-track-vibe-code-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker">RESIDENCY &middot; TRACK 1</span>
+    <h2 class="h-xxl">Vibe Code <span class="accent-pink">Residency.</span></h2>
+    <p class="lede">Making <b>AI commercials</b> for your business &mdash; pitch your product, brand, or idea and bring it to life on screen.</p>
+  </section>
+
+  <!-- DREAM TOWN · TRACK 2 — TOUCH GRASS -->
+  <section class="slide slide--left" data-bg="lime">
+    <div data-media-key="dream-town-track-touch-grass-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker">RESIDENCY &middot; TRACK 2</span>
+    <h2 class="h-xxl">Touch Grass <span class="accent-pink">Residency.</span></h2>
+    <p class="lede">Making <b>solarpunk videos</b> that inspire a green future &mdash; optimistic, ecological, alive.</p>
+  </section>
+
+  <!-- DREAM TOWN · TRACK 3 — FUTURATIVE -->
+  <section class="slide slide--left" data-bg="tan">
+    <div data-media-key="dream-town-track-futurative-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker">RESIDENCY &middot; TRACK 3</span>
+    <h2 class="h-xxl">Futurative <span class="accent-pink">Residency.</span></h2>
+    <p class="lede">Making <b>meditation videos</b> &mdash; calm, dreamlike, a moment of stillness in the future you imagine.</p>
+  </section>
+
+  <!-- DREAM TOWN · TRACK 4 — MAKE YOUR OWN -->
+  <section class="slide slide--left" data-bg="yellow">
+    <div data-media-key="dream-town-track-your-own-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker">YOUR TRACK</span>
+    <h2 class="h-xxl">Make your own <span class="accent-pink">Dream Town.</span></h2>
+    <p class="lede">None of the tracks fit? Invent your own. The only rule is the theme: <b>Dream Town</b>.</p>
   </section>
 
   <!-- AI TIPS -->
