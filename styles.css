@@ -4311,3 +4311,85 @@ kbd {
   .mosaic--quad { grid-template-columns: 1fr 1fr; }
   .mosaic--quad .mosaic__media { height: clamp(90px, 14vh, 150px); }
 }
+
+/* ---------- Image editor (editor.js): drag-and-drop replacement ---------- */
+/* While dragging a file over the window, every drop target glows */
+.media-dragging [data-media-id] {
+  outline: 3px dashed var(--pink);
+  outline-offset: 3px;
+  transition: outline-color 150ms ease;
+}
+.media-dragging [data-media-id].media-drop-hover {
+  outline: 4px solid var(--pink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 8px rgba(255, 59, 92, .18);
+}
+/* Edit mode: subtle outline on everything replaceable */
+.media-edit-mode [data-media-id] { outline: 2px dashed rgba(255, 59, 92, .55); outline-offset: 2px; }
+
+#media-edit-badge {
+  position: fixed;
+  left: 14px;
+  bottom: 14px;
+  z-index: 60;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  padding: .45rem .7rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+  opacity: .35;
+  transition: opacity 200ms ease;
+}
+#media-edit-badge:hover, #media-edit-badge.is-on { opacity: 1; }
+#media-edit-badge.is-on { background: var(--pink); color: var(--white); }
+
+.media-toolbar {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 30;
+  display: flex;
+  gap: 6px;
+}
+.media-toolbar a, .media-toolbar button {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .68rem;
+  padding: .3rem .5rem;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: var(--yellow);
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.media-toolbar button { background: var(--white); }
+
+#media-toast {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  z-index: 70;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .78rem;
+  max-width: 80vw;
+  padding: .55rem .9rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--cream);
+  box-shadow: 3px 3px 0 rgba(0,0,0,.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+#media-toast.show { opacity: 1; transform: translate(-50%, 0); }
