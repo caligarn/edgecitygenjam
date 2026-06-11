@@ -4550,29 +4550,8 @@ kbd {
 .slide--spotify.is-active .sp-list > :nth-child(2) { --qi: 1; }
 .slide--spotify.is-active .sp-list > :nth-child(3) { --qi: 2; }
 
-/* ---------- Editor v3: hover chip + inline text editing ---------- */
-#media-chipbar {
-  position: fixed;
-  z-index: 65;
-  display: flex;
-  gap: 5px;
-}
-#media-chipbar button, #media-chipbar a {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-size: .72rem;
-  padding: .32rem .55rem;
-  border: 2px solid var(--ink);
-  border-radius: 7px;
-  background: var(--yellow);
-  color: var(--ink);
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 2px 2px 0 var(--ink);
-}
-#media-chipbar button:hover, #media-chipbar a:hover { background: var(--pink); color: var(--white); }
+/* ---------- Editor: inline text editing (no hover chip) ---------- */
 @media (pointer: fine) {
-  [data-media-id]:hover { outline: 2px dashed rgba(255, 59, 92, .45); outline-offset: 2px; }
   [data-text-key]:hover { outline: 1.5px dashed rgba(255, 59, 92, .35); outline-offset: 3px; cursor: text; }
 }
 .text-editing {
