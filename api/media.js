@@ -20,6 +20,7 @@ const PREFIX = 'deck-media/';
 const EXT = {
   'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp',
   'image/gif': 'gif', 'image/svg+xml': 'svg', 'video/mp4': 'mp4',
+  'application/json': 'json',
   'video/webm': 'webm', 'video/quicktime': 'mov',
 };
 
