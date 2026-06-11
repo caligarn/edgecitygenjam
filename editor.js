@@ -364,8 +364,47 @@
     toast(ok ? `${file.name} saved in this browser — stays after refresh.` : `${file.name} placed for this session only.`);
   }
 
+  /* ---------- click a photo / frame to replace it (reliable fallback) ---------- */
+  const picker = document.createElement("input");
+  picker.type = "file";
+  picker.accept = "image/*,video/*";
+  picker.style.display = "none";
+  document.documentElement.appendChild(picker);
+  let pickerTarget = null;
+  picker.addEventListener("change", () => {
+    const f = picker.files && picker.files[0];
+    if (f && pickerTarget) placeFile(pickerTarget, f);
+    picker.value = "";
+    pickerTarget = null;
+  });
+  function openPicker(t) { pickerTarget = t; picker.click(); }
+
+  // Capture-phase so it runs before slide navigation / text editing. Clicking
+  // any image, video, or empty frame opens a file picker to replace it.
+  document.addEventListener("click", (e) => {
+    if (editingEl) return;                       // mid text-edit — leave it alone
+    const zone = e.target.closest && e.target.closest("[data-media-id]");
+    if (!zone) return;
+    const t = byId(zone.dataset.mediaId);
+    if (!t) return;
+    e.preventDefault();
+    e.stopPropagation();
+    openPicker(t);
+  }, true);
+
   /* ---------- drag & drop ---------- */
   let dragDepth = 0;
+  // Robustly resolve the drop zone: drop's e.target can be unreliable, so
+  // fall back to whatever element is actually under the cursor.
+  function dropZoneFrom(e) {
+    let el = e.target && e.target.nodeType === 1 ? e.target : null;
+    let zone = el && el.closest ? el.closest("[data-media-id]") : null;
+    if (!zone) {
+      const p = document.elementFromPoint(e.clientX, e.clientY);
+      zone = p && p.closest ? p.closest("[data-media-id]") : null;
+    }
+    return zone;
+  }
   window.addEventListener("dragenter", (e) => {
     if (!e.dataTransfer || ![...e.dataTransfer.types].includes("Files")) return;
     dragDepth++;
@@ -374,21 +413,24 @@
   window.addEventListener("dragleave", () => {
     if (--dragDepth <= 0) { dragDepth = 0; document.body.classList.remove("media-dragging"); }
   });
+  // preventDefault on both document and window dragover so the browser
+  // actually allows the drop (some engines need it closer to the target).
+  document.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    document.querySelectorAll(".media-drop-hover").forEach((el) => el.classList.remove("media-drop-hover"));
+    const zone = dropZoneFrom(e);
+    if (zone) zone.classList.add("media-drop-hover");
+  });
   window.addEventListener("dragover", (e) => e.preventDefault());
   window.addEventListener("drop", (e) => {
     e.preventDefault();
     dragDepth = 0;
     document.body.classList.remove("media-dragging");
-    const zone = e.target.closest("[data-media-id]");
+    const zone = dropZoneFrom(e);
     const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
     if (!zone || !file) return;
     const t = byId(zone.dataset.mediaId);
     if (t) placeFile(t, file);
-  });
-  document.addEventListener("dragover", (e) => {
-    document.querySelectorAll(".media-drop-hover").forEach((el) => el.classList.remove("media-drop-hover"));
-    const zone = e.target.closest && e.target.closest("[data-media-id]");
-    if (zone) zone.classList.add("media-drop-hover");
   });
 
   /* ---------- toast ---------- */
