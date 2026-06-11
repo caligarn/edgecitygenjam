@@ -93,15 +93,19 @@
     }
   });
 
-  // ---------- Click to advance (but not on links/buttons) ----------
-  // On touch devices, don't use click-to-advance (swipe handles it)
+  // ---------- Click to advance (edge zones only) ----------
+  // On touch devices, don't use click-to-advance (swipe handles it).
+  // Only the outer edges navigate (left 18% → prev, right 18% → next);
+  // the center is inert so inline editing (text/photos) never flips slides.
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   if (!isTouchDevice) {
+    const EDGE = 0.18;
     document.addEventListener('click', (e) => {
       if (e.target.closest('a, button, .help, kbd')) return;
-      // left half → prev, right half → next
-      if (e.clientX < window.innerWidth * 0.25) prev();
-      else next();
+      if (document.activeElement && document.activeElement.isContentEditable) return;
+      if (e.clientX < window.innerWidth * EDGE) prev();
+      else if (e.clientX > window.innerWidth * (1 - EDGE)) next();
+      // center clicks: do nothing
     });
   }
 
