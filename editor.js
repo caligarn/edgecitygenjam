@@ -120,14 +120,19 @@
   const byId = (id) => targets.find((t) => t.id === id);
 
   /* ---------- text targets ---------- */
-  const TEXT_SELECTOR = "h1, h2, h3, h4, p, li, blockquote, figcaption, .kicker, .fact__yr";
+  const TEXT_SELECTOR = "h1, h2, h3, h4, p, li, blockquote, figcaption, .kicker, .fact__yr, .hypo-body";
   const textOriginals = new Map();
   function collectText() {
     document.querySelectorAll(".slide").forEach((slide, si) => {
       const slug = slideSlug(slide, si);
       let ti = 0;
       slide.querySelectorAll(TEXT_SELECTOR).forEach((el) => {
-        if (el.closest(".hud, .slide__robot") || el.querySelector("img, video")) return;
+        // Prefer the dedicated .hypo-body text span over its <li> wrapper
+        // (the wrapper may hold a thumbnail image, which would otherwise
+        // make the whole row skip text editing).
+        if (el.tagName === "LI" && el.querySelector(".hypo-body")) return;
+        if (el.closest(".hud, .slide__robot")) return;
+        if (el.querySelector("img, video")) return;
         const key = `${slug}-t${ti++}`;
         el.dataset.textKey = key;
         textOriginals.set(key, el.innerHTML);
