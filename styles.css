@@ -4329,24 +4329,23 @@ kbd {
 
 #media-edit-badge {
   position: fixed;
-  left: 14px;
-  bottom: 14px;
+  right: 16px;
+  bottom: 16px;
   z-index: 60;
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  font-size: .72rem;
+  font-size: .85rem;
   letter-spacing: .08em;
-  padding: .45rem .7rem;
-  border: 2px solid var(--ink);
-  border-radius: 8px;
-  background: var(--cream);
+  padding: .65rem 1rem;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  background: var(--yellow);
   color: var(--ink);
-  box-shadow: 3px 3px 0 var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
   cursor: pointer;
-  opacity: .35;
-  transition: opacity 200ms ease;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
-#media-edit-badge:hover, #media-edit-badge.is-on { opacity: 1; }
+#media-edit-badge:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
 #media-edit-badge.is-on { background: var(--pink); color: var(--white); }
 
 .media-toolbar {
@@ -4356,7 +4355,10 @@ kbd {
   z-index: 30;
   display: flex;
   gap: 6px;
+  flex-wrap: wrap;
 }
+/* clicking a picture in edit mode replaces it — show that */
+.media-edit-mode [data-media-id] { cursor: copy; }
 .media-toolbar a, .media-toolbar button {
   font-family: "Space Mono", monospace;
   font-weight: 700;

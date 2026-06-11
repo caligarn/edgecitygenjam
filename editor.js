@@ -1,20 +1,19 @@
 /* ==========================================================================
-   EDITOR — drag-and-drop image replacement for every picture in the deck.
+   EDITOR — replace any picture in the deck, no tools required.
 
-   How it works (no build step, no server):
-   • Drag an image file from your desktop anywhere over the deck — every
-     replaceable picture and empty placeholder frame lights up.
-   • Drop onto one: it swaps in instantly and is saved to localStorage,
-     so it survives reloads in this browser.
-   • Press "E" (or click the IMAGES badge, bottom-left) to toggle edit
-     mode: replaced pictures get a toolbar to download the file (so you
-     can commit it to the repo) or reset to the original.
-   • Overrides are browser-local. To make a change permanent for everyone,
-     download the image, add it to the repo, and point the <img> at it.
+   • Click the "✏️ EDIT PHOTOS" button (bottom-right) or press E.
+   • In edit mode every picture and empty placeholder frame gets a
+     "⇪ replace" chip — click the chip (or the picture itself) and pick
+     a file. Drag-and-drop from your desktop works too, even outside
+     edit mode.
+   • Replacements are saved in this browser (localStorage) and survive
+     reloads. They are NOT in the repo: use "⬇ save file" on a replaced
+     picture to download it, then commit it (or hand it to Claude).
+   • "✕ reset" restores the original picture.
 
-   Drop targets: every <img>/<video> in a slide, plus the empty media
-   frames (.mosaic__media, .philo-frame, .slide__bg full-bleed slots).
-   Ambient robot art (.slide__robot, .robot-bg) is left alone.
+   Drop/click targets: every <img>/<video> in a slide, plus the empty
+   media frames (.mosaic__media, .philo-frame, .slide__bg full-bleed
+   slots). Ambient robot art is left alone.
    ========================================================================== */
 
 (() => {
@@ -35,12 +34,11 @@
   };
   let overrides = load();
 
-  /* ---------- collect drop targets, give each a stable id ---------- */
+  /* ---------- collect targets, give each a stable id ---------- */
   const targets = [];  // { id, el, kind: "img" | "video" | "slot", original }
   function collect() {
     document.querySelectorAll(".slide").forEach((slide, si) => {
       let mi = 0;
-      // replaceable media elements
       slide.querySelectorAll("img, video").forEach((el) => {
         if (el.closest(".slide__robot") || el.closest(".robot-bg")) return;
         const id = `s${si}-m${mi++}`;
@@ -48,7 +46,6 @@
         targets.push({ id, el, kind: el.tagName === "VIDEO" ? "video" : "img",
                        original: el.tagName === "VIDEO" ? el.src : el.getAttribute("src") });
       });
-      // empty placeholder frames (no img/video inside yet)
       slide.querySelectorAll(".mosaic__media, .philo-frame, .slide__bg").forEach((el) => {
         if (el.querySelector("img, video")) return;
         const id = `s${si}-m${mi++}`;
@@ -60,14 +57,14 @@
 
   const byId = (id) => targets.find((t) => t.id === id);
 
-  /* ---------- apply an override to the DOM ---------- */
+  /* ---------- apply / reset ---------- */
   function apply(t, src, name) {
     if (t.kind === "video") {
       t.el.src = src;
       t.el.play && t.el.play().catch(() => {});
     } else if (t.kind === "img") {
       t.el.src = src;
-    } else { // empty slot: create the img, hide placeholder label
+    } else {
       let img = t.el.querySelector("img");
       if (!img) {
         img = document.createElement("img");
@@ -110,7 +107,6 @@
   async function processImage(file) {
     const raw = await fileToDataURL(file);
     if (file.size <= INLINE_LIMIT) return raw;
-    // downscale large images so localStorage can hold them
     const img = new Image();
     await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = raw; });
     const scale = Math.min(1, MAX_DIM / Math.max(img.width, img.height));
@@ -121,24 +117,51 @@
     return c.toDataURL("image/jpeg", 0.85);
   }
 
-  async function handleDrop(t, file) {
+  async function placeFile(t, file) {
     if (file.type.startsWith("video/")) {
-      // videos are session-only (too large for localStorage)
       apply(t, URL.createObjectURL(file), file.name);
       toast(`${file.name} placed (videos aren’t saved across reloads — add the file to the repo to keep it)`);
       return;
     }
-    if (!file.type.startsWith("image/")) { toast("Drop an image or video file"); return; }
+    if (!file.type.startsWith("image/")) { toast("Pick an image or video file"); return; }
     const data = await processImage(file);
     apply(t, data, file.name);
     overrides[t.id] = { data, name: file.name, ts: Date.now() };
     const persisted = save(overrides);
     toast(persisted
-      ? `${file.name} placed — saved in this browser. Press E to download/commit it.`
-      : `${file.name} placed for this session (storage full — download via E mode to keep it)`);
+      ? `${file.name} placed — saved in this browser. Use “⬇ save file” to download & commit it.`
+      : `${file.name} placed for this session (storage full — use “⬇ save file” to keep it)`);
   }
 
-  /* ---------- drag & drop wiring ---------- */
+  /* ---------- click-to-replace (file picker) ---------- */
+  const picker = document.createElement("input");
+  picker.type = "file";
+  picker.accept = "image/*,video/*";
+  picker.style.display = "none";
+  let pickerTarget = null;
+  picker.addEventListener("change", () => {
+    if (picker.files && picker.files[0] && pickerTarget) placeFile(pickerTarget, picker.files[0]);
+    picker.value = "";
+  });
+
+  function openPicker(t) {
+    pickerTarget = t;
+    picker.click();
+  }
+
+  // In edit mode, clicking a picture replaces it (and never flips the slide).
+  document.addEventListener("click", (e) => {
+    if (!editMode) return;
+    if (e.target.closest(".media-toolbar")) return;  // toolbar buttons handle themselves
+    const zone = e.target.closest("[data-media-id]");
+    if (!zone) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const t = byId(zone.dataset.mediaId);
+    if (t) openPicker(t);
+  }, true); // capture: runs before the deck's click-to-advance
+
+  /* ---------- drag & drop ---------- */
   let dragDepth = 0;
   window.addEventListener("dragenter", (e) => {
     if (!e.dataTransfer || ![...e.dataTransfer.types].includes("Files")) return;
@@ -157,22 +180,29 @@
     const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
     if (!zone || !file) return;
     const t = byId(zone.dataset.mediaId);
-    if (t) handleDrop(t, file);
+    if (t) placeFile(t, file);
   });
-  // highlight the zone under the cursor while dragging
   document.addEventListener("dragover", (e) => {
     document.querySelectorAll(".media-drop-hover").forEach((el) => el.classList.remove("media-drop-hover"));
     const zone = e.target.closest && e.target.closest("[data-media-id]");
     if (zone) zone.classList.add("media-drop-hover");
   });
 
-  /* ---------- edit mode: badge, toolbars, download ---------- */
+  /* ---------- edit mode UI ---------- */
   let editMode = false;
 
   function toolbar(t) {
     const bar = document.createElement("div");
     bar.className = "media-toolbar";
     bar.dataset.for = t.id;
+
+    const rp = document.createElement("button");
+    rp.type = "button";
+    rp.textContent = "⇪ replace";
+    rp.title = "Choose a new image for this spot";
+    rp.onclick = (e) => { e.stopPropagation(); openPicker(t); };
+    bar.appendChild(rp);
+
     const ov = overrides[t.id];
     if (ov) {
       const dl = document.createElement("a");
@@ -180,8 +210,11 @@
       dl.href = ov.data;
       dl.download = ov.name || `${t.id}.jpg`;
       dl.title = "Download this image so you can add it to the repo";
+      dl.onclick = (e) => e.stopPropagation();
       bar.appendChild(dl);
+
       const rs = document.createElement("button");
+      rs.type = "button";
       rs.textContent = "✕ reset";
       rs.title = "Restore the original image";
       rs.onclick = (e) => { e.stopPropagation(); reset(t); };
@@ -194,7 +227,6 @@
     document.querySelectorAll(".media-toolbar").forEach((el) => el.remove());
     if (!editMode) return;
     targets.forEach((t) => {
-      if (!overrides[t.id]) return;
       const host = t.kind === "slot" ? t.el : t.el.parentElement;
       if (!host) return;
       if (getComputedStyle(host).position === "static") host.style.position = "relative";
@@ -206,15 +238,16 @@
     editMode = on;
     document.body.classList.toggle("media-edit-mode", on);
     badge.classList.toggle("is-on", on);
-    badge.textContent = on ? "🖼 EDITING — drop images on any picture (E to exit)" : "🖼 IMAGES";
+    badge.textContent = on ? "✓ DONE EDITING" : "✏️ EDIT PHOTOS";
     refreshToolbars();
+    if (on) toast("Click any picture (or its ⇪ replace chip) to swap it. Drag & drop works too. Press E or ✓ DONE to exit.");
   }
 
   const badge = document.createElement("button");
   badge.id = "media-edit-badge";
   badge.type = "button";
-  badge.textContent = "🖼 IMAGES";
-  badge.title = "Toggle image edit mode (E) — drag & drop photos onto any picture";
+  badge.textContent = "✏️ EDIT PHOTOS";
+  badge.title = "Replace any picture in the deck (E)";
   badge.onclick = () => setEditMode(!editMode);
 
   window.addEventListener("keydown", (e) => {
@@ -235,14 +268,14 @@
     toastEl.textContent = msg;
     toastEl.classList.add("show");
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toastEl.classList.remove("show"), 3500);
+    toastTimer = setTimeout(() => toastEl.classList.remove("show"), 4200);
   }
 
   /* ---------- init ---------- */
   function init() {
     collect();
     document.body.appendChild(badge);
-    // restore saved overrides
+    document.body.appendChild(picker);
     Object.entries(overrides).forEach(([id, ov]) => {
       const t = byId(id);
       if (t && ov && ov.data) apply(t, ov.data, ov.name);
