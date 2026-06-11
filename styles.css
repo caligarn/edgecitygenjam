@@ -4302,3 +4302,12 @@ kbd {
 .slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .display,
 .slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .h-xxl,
 .slide:has(.slide__bg--scrim img, .slide__bg--scrim video) .h-xl { color: var(--cream); }
+
+/* ---------- 2x2 mosaic variant (history objects — larger photo tiles) ---------- */
+.mosaic--quad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mosaic--quad .mosaic__tile { grid-column: span 1; }
+.mosaic--quad .mosaic__media { height: clamp(130px, 25vh, 280px); }
+@media (max-width: 900px) {
+  .mosaic--quad { grid-template-columns: 1fr 1fr; }
+  .mosaic--quad .mosaic__media { height: clamp(90px, 14vh, 150px); }
+}
