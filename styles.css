@@ -4643,3 +4643,21 @@ kbd {
 @media (max-width: 800px) {
   .poster-row { grid-template-columns: repeat(2, 1fr); gap: 3vw; }
 }
+
+/* ---------- One-shot confetti burst (anim.js) ---------- */
+.burst-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+/* exempt it from the base child entrance + content stacking */
+.slide > .burst-canvas {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  filter: none !important;
+}
+.slide > *:not(.slide__robot):not(.robot-bg):not(.slide__bg):not(.fx-canvas):not(.burst-canvas) { position: relative; z-index: 1; }
