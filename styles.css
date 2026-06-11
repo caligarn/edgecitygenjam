@@ -3762,7 +3762,7 @@ kbd {
 .slide__robot--mid-r { right: 6vw; top: 50%; transform-origin: center; width: clamp(140px, 18vw, 240px); }
 
 /* Make sure slide content paints above the robot */
-.slide > *:not(.slide__robot):not(.robot-bg):not(.slide__bg) { position: relative; z-index: 1; }
+.slide > *:not(.slide__robot):not(.robot-bg):not(.slide__bg):not(.fx-canvas) { position: relative; z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   .slide.is-active .slide__robot { animation: none; }
@@ -4416,3 +4416,180 @@ kbd {
   transition: opacity 250ms ease, transform 250ms ease;
 }
 #media-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- Accent legibility: pink accents on pink slides go white ---------- */
+.slide[data-bg="pink"] .accent-pink { color: var(--white); }
+
+/* ---------- "What's changing" — zigzag statement lines on ink ---------- */
+.slide--impact { justify-content: center; gap: 1.2vh; padding: 7vh 7vw; }
+.impact-lines {
+  list-style: none;
+  margin: 2.5vh 0 0 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.impact-lines li {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.7rem, 4.3vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--cream);
+  max-width: 26ch;
+}
+.impact-lines li:nth-child(even) { align-self: flex-end; text-align: right; }
+.impact-lines .il-pink, .impact-lines li.il-pink { color: var(--pink); }
+.impact-lines .il-yellow, .impact-lines li.il-yellow { color: var(--yellow); }
+.impact-lines .il-lime, .impact-lines li.il-lime { color: var(--lime); }
+.slide--impact.is-active .impact-lines > * {
+  animation: slide-in-left 850ms cubic-bezier(.18,.85,.28,1) both;
+  animation-delay: calc(200ms + var(--li, 0) * 130ms);
+}
+.slide--impact.is-active .impact-lines > :nth-child(even) { animation-name: slide-in-right; }
+.slide--impact.is-active .impact-lines > :nth-child(1) { --li: 0; }
+.slide--impact.is-active .impact-lines > :nth-child(2) { --li: 1; }
+.slide--impact.is-active .impact-lines > :nth-child(3) { --li: 2; }
+.slide--impact.is-active .impact-lines > :nth-child(4) { --li: 3; }
+.slide--impact.is-active .impact-lines > :nth-child(5) { --li: 4; }
+.slide--impact.is-active .impact-lines > :nth-child(6) { --li: 5; }
+
+/* ---------- Mosaic footer quote (McLuhan on the media-market page) ---------- */
+.mosaic-foot {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(.8rem, 1.15vw, 1.15rem);
+  text-align: center;
+  opacity: .7;
+  margin: 1.6vh 0 0 0;
+}
+
+/* ---------- Spotify case-study slide (brand: black + #1DB954) ---------- */
+.slide--spotify {
+  background: #191414;
+  color: #fff;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.6vh;
+  padding: 7vh 7vw;
+}
+.sp-green { color: #1DB954; }
+.sp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.7rem, .95vw, .95rem);
+  letter-spacing: .2em;
+  padding: .45rem 1rem;
+  border-radius: 999px;
+  background: #1DB954;
+  color: #191414;
+}
+.sp-dot { width: .65em; height: .65em; border-radius: 50%; background: #191414; }
+.sp-title { color: #fff; }
+.sp-list {
+  list-style: none;
+  margin: 1.5vh 0 0 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6vh;
+}
+.sp-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+  background: #1f1a1a;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 1.1rem 1.4rem;
+}
+.sp-num {
+  flex: 0 0 auto;
+  width: 2.4em; height: 2.4em;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #1DB954;
+  color: #191414;
+  font-weight: 900;
+  font-size: clamp(.95rem, 1.3vw, 1.3rem);
+}
+.sp-h {
+  font-weight: 900;
+  font-size: clamp(1.25rem, 2.1vw, 2.1rem);
+  line-height: 1.05;
+  margin: 0 0 .3rem 0;
+  color: #1DB954;
+}
+.sp-b {
+  font-weight: 600;
+  font-size: clamp(.95rem, 1.3vw, 1.3rem);
+  line-height: 1.4;
+  margin: 0;
+  color: rgba(255,255,255,.92);
+}
+.sp-foot {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.68rem, .9vw, .9rem);
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.45);
+  margin: 1.4vh 0 0 0;
+}
+.slide--spotify.is-active .sp-list > * {
+  animation: card-in 900ms cubic-bezier(.18,.85,.28,1) both;
+  animation-delay: calc(200ms + var(--qi, 0) * 140ms);
+}
+.slide--spotify.is-active .sp-list > :nth-child(1) { --qi: 0; }
+.slide--spotify.is-active .sp-list > :nth-child(2) { --qi: 1; }
+.slide--spotify.is-active .sp-list > :nth-child(3) { --qi: 2; }
+
+/* ---------- Editor v3: hover chip + inline text editing ---------- */
+#media-chipbar {
+  position: fixed;
+  z-index: 65;
+  display: flex;
+  gap: 5px;
+}
+#media-chipbar button, #media-chipbar a {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .72rem;
+  padding: .32rem .55rem;
+  border: 2px solid var(--ink);
+  border-radius: 7px;
+  background: var(--yellow);
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+#media-chipbar button:hover, #media-chipbar a:hover { background: var(--pink); color: var(--white); }
+@media (pointer: fine) {
+  [data-media-id]:hover { outline: 2px dashed rgba(255, 59, 92, .45); outline-offset: 2px; }
+  [data-text-key]:hover { outline: 1.5px dashed rgba(255, 59, 92, .35); outline-offset: 3px; cursor: text; }
+}
+.text-editing {
+  outline: 3px solid var(--pink) !important;
+  outline-offset: 3px;
+  border-radius: 4px;
+  cursor: text;
+  caret-color: var(--pink);
+}
+
+/* ---------- Ambient canvas confetti (visuals.js) ---------- */
+.fx-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.slide > *:not(.slide__robot):not(.robot-bg):not(.slide__bg):not(.fx-canvas) { position: relative; z-index: 1; }
