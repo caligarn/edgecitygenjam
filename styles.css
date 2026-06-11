@@ -4643,3 +4643,24 @@ kbd {
 @media (max-width: 800px) {
   .poster-row { grid-template-columns: repeat(2, 1fr); gap: 3vw; }
 }
+
+/* ---------- Dream Town theme track list (compact, fits beside the photo) ---------- */
+.dt-tracks { list-style: none; margin: 1.5vh 0 0 0; padding: 0; display: flex; flex-direction: column; gap: 1.1vh; }
+.dt-tracks li {
+  display: flex; align-items: flex-start; gap: .8rem;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(.95rem, 1.25vw, 1.25rem);
+  line-height: 1.3;
+}
+.dt-tracks li b { font-weight: 900; }
+.dt-tracks__n {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 1.7em; height: 1.7em;
+  background: var(--yellow); color: var(--ink);
+  border: 2px solid var(--ink); border-radius: 5px;
+  box-shadow: 3px 3px 0 var(--ink);
+  font-weight: 900; font-size: .85em;
+}
+.dt-tracks__n--pink { background: var(--pink); color: var(--white); }
