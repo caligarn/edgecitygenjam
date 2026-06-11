@@ -32,3 +32,28 @@ edgecitygenjam/
 - [preso-base](https://github.com/caligarn/preso-base) by Minh Do
 - [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) by Minh Do
 - [pretext](https://github.com/chenglou/pretext) by Cheng Lou
+
+
+## Editing photos on the live site
+
+The deck has a built-in photo editor: click **✏️ EDIT PHOTOS** (bottom-right)
+or press **E**, then click any picture (or drag a file onto it) to replace it.
+
+### Making uploads permanent (Vercel)
+
+Out of the box, uploads are saved in your browser only. To make them
+permanent on the site for every visitor:
+
+1. In the Vercel dashboard: **Storage → Create → Blob**, and connect the
+   store to this project (this auto-adds the `BLOB_READ_WRITE_TOKEN` env var).
+2. **Project → Settings → Environment Variables**: add
+   `DECK_EDIT_KEY` = a passphrase of your choosing.
+3. Redeploy.
+
+After that, the first upload in the deck asks for the passphrase once, and
+every upload is stored in Vercel Blob via `api/media.js` — permanent across
+visitors, devices, and code updates. Use the **✕ reset** chip (in edit mode)
+to remove an uploaded image.
+
+Every editable spot has a permanent `data-media-key` in `index.html`, so
+reordering slides never disconnects an uploaded image.
