@@ -4094,7 +4094,14 @@ kbd {
   letter-spacing: .22em;
   opacity: .4;
 }
-.philo-frame img { width: 100%; height: 100%; object-fit: cover; }
+.philo-frame { position: relative; }
+.philo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media (max-width: 900px) {
   .slide--philo { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
   .philo-frame { aspect-ratio: 16 / 10; max-height: 32vh; }
@@ -4219,6 +4226,9 @@ kbd {
 .mosaic__tile--wide { grid-column: span 3; }
 .mosaic__media {
   margin: 0;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
   height: clamp(110px, 24vh, 260px);
   background:
     radial-gradient(rgba(20,27,52,.12) 1.5px, transparent 1.5px);
@@ -4236,8 +4246,16 @@ kbd {
   letter-spacing: .22em;
   opacity: .4;
 }
+/* Absolutely fill the frame: an uploaded photo of any size can never
+   change the tile's layout or push the headline out of view. */
 .mosaic__media img,
-.mosaic__media video { width: 100%; height: 100%; object-fit: cover; }
+.mosaic__media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .mosaic__h {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
@@ -4246,6 +4264,9 @@ kbd {
   letter-spacing: -0.015em;
   margin: 0;
   padding: .75rem 1rem .9rem;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
 }
 .mosaic__tile--yellow .mosaic__h { background: var(--yellow); color: var(--ink); }
 .mosaic__tile--lime   .mosaic__h { background: var(--lime);   color: var(--ink); }
