@@ -108,7 +108,7 @@
         targets.push({ id, el, kind: el.tagName === "VIDEO" ? "video" : "img",
                        original: el.tagName === "VIDEO" ? el.src : el.getAttribute("src") });
       });
-      slide.querySelectorAll(".mosaic__media, .philo-frame, .slide__bg").forEach((el) => {
+      slide.querySelectorAll(".mosaic__media, .philo-frame, .poster__frame, .slide__bg").forEach((el) => {
         if (el.querySelector("img, video")) return;
         const id = el.dataset.mediaKey || `s${si}-m${mi}`;
         mi++;
