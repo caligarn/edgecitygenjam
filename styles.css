@@ -4805,3 +4805,15 @@ body.media-dragging::after {
   font-size: .78em;
   opacity: .6;
 }
+
+/* ---------- Sponsor logo card (PixVerse thank-you) ---------- */
+.sponsor-logo {
+  margin: 1vh 0;
+  background: #fff;
+  border: 3px solid var(--cream);
+  border-radius: 14px;
+  box-shadow: 8px 8px 0 var(--pink);
+  padding: clamp(1.2rem, 3vw, 2.4rem) clamp(1.6rem, 4vw, 3rem);
+  max-width: min(72vw, 760px);
+}
+.sponsor-logo img { display: block; width: 100%; height: auto; }
