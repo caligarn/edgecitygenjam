@@ -14,6 +14,29 @@
 
 <div class="deck" id="deck">
 
+  <!-- MENU — jump to any section -->
+  <section class="slide slide--menu" data-bg="ink">
+    <header class="menu-hd">
+      <span class="kicker kicker--dark">JUMP TO</span>
+      <h2 class="h-xl menu-title">Edge City <span class="accent-pink">GenJam.</span></h2>
+    </header>
+    <ul class="menu-grid">
+      <li><button type="button" class="menu-btn menu-btn--yellow" data-jump="sec-welcome"><span class="menu-btn__n">01</span><span class="menu-btn__label">Welcome</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--lime" data-jump="sec-machine-cinema"><span class="menu-btn__n">02</span><span class="menu-btn__label">Machine Cinema</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--pink" data-jump="sec-community"><span class="menu-btn__n">03</span><span class="menu-btn__label">Community</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--white" data-jump="sec-why-ai"><span class="menu-btn__n">04</span><span class="menu-btn__label">Why AI</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--yellow" data-jump="sec-market-maps"><span class="menu-btn__n">05</span><span class="menu-btn__label">Market Maps</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--lime" data-jump="sec-genjam"><span class="menu-btn__n">06</span><span class="menu-btn__label">The GenJam</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--pink" data-jump="sec-ai-tools"><span class="menu-btn__n">07</span><span class="menu-btn__label">AI Tools</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--white" data-jump="sec-dream-town"><span class="menu-btn__n">08</span><span class="menu-btn__label">Dream Town</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--yellow" data-jump="sec-submit"><span class="menu-btn__n">09</span><span class="menu-btn__label">Submit & Showcase</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--lime" data-jump="sec-stack"><span class="menu-btn__n">10</span><span class="menu-btn__label">The AI Creative Stack</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--pink" data-jump="sec-demo-day"><span class="menu-btn__n">11</span><span class="menu-btn__label">Demo Day</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--white" data-jump="sec-recap"><span class="menu-btn__n">12</span><span class="menu-btn__label">Machine Cinema Recap</span></button></li>
+    </ul>
+  </section>
+
+
   <!-- BREAKING ICE — OPENER -->
   <section class="slide slide--qr" data-bg="yellow">
     <div class="qr-left">
@@ -39,7 +62,7 @@
        ================================================================== -->
 
   <!-- LOGO HERO — Machine Cinema GenJam wordmark, big and centered -->
-  <section class="slide slide--logo-hero" data-bg="cream">
+  <section id="sec-welcome" class="slide slide--logo-hero" data-bg="cream">
     <figure class="logo-hero">
       <img data-media-key="logo-hero-machine-cinema-genjam-wordmark-big-and-0" class="logo-hero__mark" src="MC GenJam Logo  (1).png" alt="Machine Cinema GenJam" loading="eager"/>
       <figcaption class="logo-hero__caption">
@@ -107,7 +130,7 @@
   </section>
 
   <!-- 3. MACHINE CINEMA -->
-  <section class="slide slide--mc" data-bg="cream">
+  <section id="sec-machine-cinema" class="slide slide--mc" data-bg="cream">
     <div class="slide__robot slide__robot--tr" data-parallax="strong" aria-hidden="true">
       <img src="A_line_drawing_depicts_a_robot_with_a_camera_for_lZzo2P7d.png" alt="" loading="lazy"/>
     </div>
@@ -165,7 +188,7 @@
   </section>
 
   <!-- JOIN THE COMMUNITY -->
-  <section class="slide slide--history" data-bg="cream">
+  <section id="sec-community" class="slide slide--history" data-bg="cream">
     <div class="slide__robot slide__robot--bl" aria-hidden="true">
       <img src="A_stylized_black_robot_with_a_camera_for_a_head_ruyiJ42G.png" alt="" loading="lazy"/>
     </div>
@@ -322,7 +345,7 @@
   </section>
 
   <!-- WHY LEARN AI? -->
-  <section class="slide slide--history" data-bg="cream">
+  <section id="sec-why-ai" class="slide slide--history" data-bg="cream">
     <div class="slide__robot slide__robot--tl" data-parallax="strong" aria-hidden="true">
       <img src="A_stylized_robot_with_a_camera_for_a_head_stands_vYGBsiXC.png" alt="" loading="lazy"/>
     </div>
@@ -376,7 +399,7 @@
   </section>
 
   <!-- Q2 2025 MARKET MAP (prior year for comparison) -->
-  <section class="slide slide--mm-throwback" data-bg="cream">
+  <section id="sec-market-maps" class="slide slide--mm-throwback" data-bg="cream">
     <div class="slide__robot slide__robot--br" aria-hidden="true">
       <img src="A_stylized_robot_with_a_camera_lens_for_a_head_q_tbJ_h9.png" alt="" loading="lazy"/>
     </div>
@@ -629,7 +652,7 @@
   </section>
 
   <!-- 11. GEN JAM INTRO -->
-  <section class="slide slide--title" data-bg="pink">
+  <section id="sec-genjam" class="slide slide--title" data-bg="pink">
     <div class="slide__robot slide__robot--br" data-parallax="strong" aria-hidden="true">
       <img src="A_stylized_black_robot_with_a_camera_for_a_head_ruyiJ42G.png" alt="" loading="lazy"/>
     </div>
@@ -881,7 +904,7 @@
   </section>
 
   <!-- AI TOOLS INTRO -->
-  <section class="slide slide--center" data-bg="ink">
+  <section id="sec-ai-tools" class="slide slide--center" data-bg="ink">
     <div class="slide__robot slide__robot--tr" aria-hidden="true">
       <img src="A_stylized_robot_with_a_camera_for_a_head_is_j_nWb94F.png" alt="" loading="lazy"/>
     </div>
@@ -1016,7 +1039,7 @@
   </section>
 
   <!-- DREAM TOWN — theme + tracks -->
-  <section class="slide slide--grid-2 slide--split" data-bg="ink">
+  <section id="sec-dream-town" class="slide slide--grid-2 slide--split" data-bg="ink">
     <div class="split-lead">
       <span class="kicker kicker--dark">TODAY&rsquo;S THEME</span>
       <h2 class="h-xxl">Dream <span class="accent-pink">Town.</span></h2>
@@ -1452,7 +1475,7 @@
   </section>
 
   <!-- SUBMIT YOUR FILM -->
-  <section class="slide slide--qr" data-bg="cream">
+  <section id="sec-submit" class="slide slide--qr" data-bg="cream">
     <div class="qr-left">
       <span class="kicker">SUBMIT YOUR FILM</span>
       <h2 class="h-xxl">
@@ -1611,7 +1634,7 @@
   </section>
 
   <!-- T2 · TALK TITLE -->
-  <section class="slide slide--center" data-bg="ink">
+  <section id="sec-stack" class="slide slide--center" data-bg="ink">
     <div data-media-key="t2-talk-title-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
       <!-- Full-bleed background: drop <img data-media-key="t2-talk-title-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
     </div>
@@ -2448,7 +2471,7 @@
   <!-- ======= DEMO DAY REVEAL (for a wider audience) ======= -->
 
   <!-- DEMO DAY REVEAL · 1 — OPENER -->
-  <section class="slide slide--center" data-bg="ink">
+  <section id="sec-demo-day" class="slide slide--center" data-bg="ink">
     <div data-media-key="demoday-opener-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
       <!-- Full-bleed background: drop an image/video here -->
     </div>
@@ -2526,7 +2549,7 @@
   <!-- ============ MACHINE CINEMA RECAP (standalone, end of deck) ============ -->
 
   <!-- RECAP · 1 — OPENER -->
-  <section class="slide slide--center" data-bg="ink">
+  <section id="sec-recap" class="slide slide--center" data-bg="ink">
     <div data-media-key="recap-opener-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
       <!-- Full-bleed background: drop an image/video here -->
     </div>
@@ -2663,6 +2686,7 @@
 </div>
 <script src="mm-zoom.js"></script>
 <script src="script.js"></script>
+<script src="nav-menu.js"></script>
 <script src="pizzazz.js"></script>
 <script src="auto-scroll.js"></script>
 <script src="visuals.js"></script>
