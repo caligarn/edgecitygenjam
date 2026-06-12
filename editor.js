@@ -105,15 +105,19 @@
         const id = el.dataset.mediaKey || `s${si}-m${mi}`;
         mi++;
         el.dataset.mediaId = id;
-        targets.push({ id, el, kind: el.tagName === "VIDEO" ? "video" : "img",
-                       original: el.tagName === "VIDEO" ? el.src : el.getAttribute("src") });
+        const t = { id, el, kind: el.tagName === "VIDEO" ? "video" : "img",
+                    original: el.tagName === "VIDEO" ? el.src : el.getAttribute("src") };
+        targets.push(t);
+        attachDropZone(el, t);
       });
       slide.querySelectorAll(".mosaic__media, .philo-frame, .poster__frame, .slide__bg").forEach((el) => {
         if (el.querySelector("img, video")) return;
         const id = el.dataset.mediaKey || `s${si}-m${mi}`;
         mi++;
         el.dataset.mediaId = id;
-        targets.push({ id, el, kind: "slot", original: null });
+        const t = { id, el, kind: "slot", original: null };
+        targets.push(t);
+        attachDropZone(el, t);
       });
     });
   }
@@ -433,45 +437,61 @@
     }
     return zone;
   }
-  // Cancel BOTH dragenter and dragover everywhere — Safari/Firefox won't
-  // fire `drop` unless these are cancelled, and cancelling at document
-  // capture covers any target under the cursor.
   const allowDrag = (e) => {
     if (!e.dataTransfer) return;
     e.preventDefault();
     e.dataTransfer.dropEffect = "copy";
   };
+
+  // Read a dropped file OR a URL dragged from another tab, and place it.
+  function handleDropPayload(t, dt) {
+    const file = dt && dt.files && dt.files[0];
+    if (file) { placeFile(t, file); return; }
+    urlFromDrag(dt).then((url) => {
+      if (url) placeFromUrl(t, url);
+      else toast("Couldn’t read that — drag an image file from your computer, or click the frame to pick one.");
+    });
+  }
+
+  // Per-element drop zone — a real listener directly on every image and
+  // frame (the reliable pattern that the philosophy frames already use):
+  // it doesn't depend on event delegation or elementFromPoint.
+  function attachDropZone(el, t) {
+    el.addEventListener("dragenter", (e) => { allowDrag(e); el.classList.add("media-drop-hover"); });
+    el.addEventListener("dragover", allowDrag);
+    el.addEventListener("dragleave", (e) => {
+      if (!el.contains(e.relatedTarget)) el.classList.remove("media-drop-hover");
+    });
+    el.addEventListener("drop", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      el.classList.remove("media-drop-hover");
+      document.body.classList.remove("media-dragging");
+      handleDropPayload(t, e.dataTransfer);
+    });
+  }
+
+  // Document layer: cancel dragenter/dragover everywhere (so the browser
+  // allows the drop and shows the affordance), and a backstop drop that
+  // only catches drops that missed every target.
   document.addEventListener("dragenter", (e) => {
+    if (!e.dataTransfer || ![...e.dataTransfer.types].includes("Files")) { allowDrag(e); return; }
     allowDrag(e);
     dragDepth++;
     document.body.classList.add("media-dragging");
   }, true);
-  document.addEventListener("dragover", (e) => {
-    allowDrag(e);
-    document.querySelectorAll(".media-drop-hover").forEach((el) => el.classList.remove("media-drop-hover"));
-    const zone = dropZoneFrom(e);
-    if (zone) zone.classList.add("media-drop-hover");
-  }, true);
+  document.addEventListener("dragover", allowDrag, true);
   document.addEventListener("dragleave", () => {
     if (--dragDepth <= 0) { dragDepth = 0; document.body.classList.remove("media-dragging"); }
   }, true);
-  document.addEventListener("drop", async (e) => {
-    e.preventDefault();
+  document.addEventListener("drop", (e) => {
+    e.preventDefault();                       // never let the browser open the file
     dragDepth = 0;
     document.body.classList.remove("media-dragging");
     document.querySelectorAll(".media-drop-hover").forEach((el) => el.classList.remove("media-drop-hover"));
-    const zone = dropZoneFrom(e);
-    if (!zone) { toast("Drop a photo onto a picture or frame to replace it."); return; }
-    const t = byId(zone.dataset.mediaId);
-    if (!t) return;
-    const dt = e.dataTransfer;
-    const file = dt && dt.files && dt.files[0];
-    if (file) { placeFile(t, file); return; }
-    // Dragged from another tab/page: resolve a URL instead of a file
-    const url = await urlFromDrag(dt);
-    if (url) placeFromUrl(t, url);
-    else toast("Couldn’t read that — try dragging an image file from your computer, or click the frame to pick one.");
-  }, true);
+    // If a target handled it, it called stopPropagation and we won't see it.
+    if (!dropZoneFrom(e)) toast("Drop a photo onto a picture or frame to replace it.");
+  });
 
   /* ---------- toast ---------- */
   let toastEl, toastTimer;
