@@ -4688,3 +4688,67 @@ body.media-dragging::after {
   box-shadow: 0 6px 24px rgba(0,0,0,.35);
   pointer-events: none;
 }
+
+/* ---------- Section menu (page 1) ---------- */
+.slide--menu { justify-content: center; gap: 2vh; padding: 6vh 6vw; }
+.menu-hd { display: flex; flex-direction: column; gap: .6vh; }
+.menu-title { color: var(--cream); }
+.menu-grid {
+  list-style: none;
+  margin: 1.5vh 0 0 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2vw;
+}
+.menu-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  padding: 1.1rem 1.2rem;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 var(--ink);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+.menu-btn--yellow { background: var(--yellow); }
+.menu-btn--lime   { background: var(--lime); }
+.menu-btn--pink   { background: var(--pink); color: var(--white); }
+.menu-btn--white  { background: var(--white); }
+.menu-btn:hover  { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 var(--ink); }
+.menu-btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+.menu-btn__n {
+  flex: 0 0 auto;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .8em;
+  opacity: .7;
+}
+.menu-btn__label { line-height: 1.05; }
+.slide--menu.is-active .menu-grid > * {
+  animation: card-in 800ms cubic-bezier(.18,.85,.28,1) both;
+  animation-delay: calc(120ms + var(--qi, 0) * 55ms);
+  transform-origin: 50% 100%;
+}
+.slide--menu.is-active .menu-grid > :nth-child(1){--qi:0}
+.slide--menu.is-active .menu-grid > :nth-child(2){--qi:1}
+.slide--menu.is-active .menu-grid > :nth-child(3){--qi:2}
+.slide--menu.is-active .menu-grid > :nth-child(4){--qi:3}
+.slide--menu.is-active .menu-grid > :nth-child(5){--qi:4}
+.slide--menu.is-active .menu-grid > :nth-child(6){--qi:5}
+.slide--menu.is-active .menu-grid > :nth-child(7){--qi:6}
+.slide--menu.is-active .menu-grid > :nth-child(8){--qi:7}
+.slide--menu.is-active .menu-grid > :nth-child(9){--qi:8}
+.slide--menu.is-active .menu-grid > :nth-child(10){--qi:9}
+.slide--menu.is-active .menu-grid > :nth-child(11){--qi:10}
+.slide--menu.is-active .menu-grid > :nth-child(12){--qi:11}
+@media (max-width: 800px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
