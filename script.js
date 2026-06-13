@@ -96,21 +96,25 @@
     }
   });
 
-  // ---------- Click to advance (edge zones only) ----------
-  // On touch devices, don't use click-to-advance (swipe handles it).
-  // Only the outer edges navigate (left 18% → prev, right 18% → next);
-  // the center is inert so inline editing (text/photos) never flips slides.
-  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  if (!isTouchDevice) {
-    const EDGE = 0.18;
-    document.addEventListener('click', (e) => {
-      if (e.target.closest('a, button, .help, kbd')) return;
-      if (document.activeElement && document.activeElement.isContentEditable) return;
-      if (e.clientX < window.innerWidth * EDGE) prev();
-      else if (e.clientX > window.innerWidth * (1 - EDGE)) next();
-      // center clicks: do nothing
+  // ---------- Clickable edge arrows (no whole-slide click-to-advance) ----------
+  // Navigation by click happens only via explicit arrows on the left/right
+  // edges, so clicking anywhere in the slide body (center) never flips it —
+  // keeps inline text/photo editing and reading safe.
+  const mkArrow = (dir) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = `nav-arrow nav-arrow--${dir === -1 ? 'prev' : 'next'}`;
+    btn.setAttribute('aria-label', dir === -1 ? 'Previous slide' : 'Next slide');
+    btn.innerHTML = dir === -1 ? '&#8249;' : '&#8250;';
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dir === -1 ? prev() : next();
     });
-  }
+    document.body.appendChild(btn);
+  };
+  mkArrow(-1);
+  mkArrow(1);
 
   // ---------- Touch swipe ----------
   // Require a clearly horizontal gesture so vertical scrolling inside a

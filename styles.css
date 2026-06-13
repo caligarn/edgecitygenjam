@@ -4821,3 +4821,41 @@ body.media-dragging::after {
   max-width: min(72vw, 760px);
 }
 .sponsor-logo img { display: block; width: 100%; height: auto; }
+
+/* ---------- Edge navigation arrows ---------- */
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 55;
+  width: clamp(38px, 4vw, 52px);
+  height: clamp(38px, 4vw, 52px);
+  display: grid;
+  place-items: center;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1;
+  color: var(--ink);
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
+  opacity: .28;
+  transition: opacity 160ms ease, transform 140ms ease;
+}
+.nav-arrow:hover { opacity: 1; }
+.nav-arrow:active { transform: translateY(-50%) scale(.92); }
+.nav-arrow--prev { left: clamp(8px, 1.5vw, 18px); }
+.nav-arrow--next { right: clamp(8px, 1.5vw, 18px); }
+/* On dark slides, flip the arrow colors for contrast */
+body[data-bg="ink"] .nav-arrow,
+body[data-bg="pink"] .nav-arrow {
+  color: var(--cream); background: var(--ink-soft);
+  border-color: var(--cream); box-shadow: 3px 3px 0 var(--cream);
+}
+@media (max-width: 768px) {
+  /* On touch, swipe is primary; keep arrows but smaller & faint */
+  .nav-arrow { opacity: .4; box-shadow: 2px 2px 0 var(--ink); }
+}
