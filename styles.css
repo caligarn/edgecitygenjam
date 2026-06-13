@@ -542,7 +542,6 @@ html, body {
   gap: 3vh;
   overflow: hidden;
   transform: translateX(100vw);
-  backface-visibility: hidden;
 }
 /* Only enable the slide transition after the first paint, so slides don't
    visibly fly in from their default offset on load. */

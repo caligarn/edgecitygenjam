@@ -811,3 +811,40 @@
 }
 
 /* ---------- PRINT: inherit from existing, no changes needed ---------- */
+
+/* ==========================================================================
+   MOBILE SHARPNESS — flatten 3D + drop lingering transform/filter layers.
+   On phones, the per-slide `perspective` + `transform-style: preserve-3d`
+   (plus filters left by the entrance animations) make GPUs rasterize the
+   whole slide as a downscaled 3D texture → blurry text. Render flat instead.
+   The slide's own translateX (used for navigation) is left intact.
+   ========================================================================== */
+@media (max-width: 900px) {
+  .slide {
+    perspective: none !important;
+    transform-style: flat !important;
+  }
+  /* no entrance transforms/filters/animations on content → crisp, native-res */
+  .slide > *:not(.slide__robot):not(.robot-bg):not(.slide__bg):not(.fx-canvas):not(.burst-canvas),
+  .slide.is-active > *:not(.slide__robot):not(.robot-bg):not(.slide__bg):not(.fx-canvas):not(.burst-canvas) {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+  }
+  /* also clear filters/animations on nested animated list items & cards */
+  .slide.is-active .history-list > *,
+  .slide.is-active .mosaic > *,
+  .slide.is-active .quote-grid > *,
+  .slide.is-active .big-list > *,
+  .slide.is-active .mc-facts > *,
+  .slide.is-active .menu-grid > *,
+  .slide.is-active .impact-lines > *,
+  .slide.is-active .toc__row,
+  .slide.is-active .sp-list > * {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+  }
+}
