@@ -23,7 +23,6 @@
   };
 
   const render = () => {
-    deck.style.transform = `translate3d(${-index * 100}vw, 0, 0)`;
     bar.style.height = `${((index + 1) / total) * 100}%`;
     curEl.textContent = index + 1;
 
@@ -31,6 +30,10 @@
     document.body.setAttribute('data-bg', bg);
 
     slides.forEach((s, i) => {
+      // Each slide is positioned individually (viewport-sized) rather than in
+      // one giant flex row, so no oversized GPU layer is created — keeps text
+      // crisp on mobile.
+      s.style.transform = `translateX(${(i - index) * 100}vw)`;
       s.classList.toggle('is-active', i === index);
       // Always reset scroll position on scrollable slides — whether we're
       // leaving them or entering them — so each visit starts at the top.
@@ -172,6 +175,8 @@
   // ---------- Init ----------
   index = fromHash();
   render();
+  // Enable transitions only after the first positioning paint.
+  requestAnimationFrame(() => requestAnimationFrame(() => deck.classList.add('is-animated')));
 })();
 
 // ---------- Community slide: video play button ----------

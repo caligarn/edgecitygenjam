@@ -525,14 +525,14 @@ html, body {
 .deck {
   position: fixed;
   inset: 0;
-  display: flex;
-  transition: transform var(--transition);
-  will-change: transform;
+  overflow: hidden;
 }
-.slide { position: relative; z-index: 0; }  
+.slide { z-index: 0; }
 
 .slide {
-  flex: 0 0 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   padding: 6vh 7vw;
@@ -540,9 +540,13 @@ html, body {
   flex-direction: column;
   justify-content: center;
   gap: 3vh;
-  position: relative;
   overflow: hidden;
+  transform: translateX(100vw);
+  backface-visibility: hidden;
 }
+/* Only enable the slide transition after the first paint, so slides don't
+   visibly fly in from their default offset on load. */
+.deck.is-animated .slide { transition: transform var(--transition); }
 
 .slide[data-bg="cream"]  { background: var(--cream); color: var(--ink); }
 .slide[data-bg="ink"]    { background: var(--ink);   color: var(--cream); }
