@@ -5074,3 +5074,45 @@ body[data-bg="pink"] .nav-arrow {
 .slide--questions-q.is-active .qgrid > :nth-child(7){--i:6} .slide--questions-q.is-active .qgrid > :nth-child(8){--i:7}
 .slide--questions-q.is-active .qgrid > :nth-child(9){--i:8} .slide--questions-q.is-active .qgrid > :nth-child(10){--i:9}
 @media (max-width: 700px){ .qgrid { grid-template-columns: 1fr; } }
+
+/* ---------- Prompting advice (3 cards) ---------- */
+.slide--prompting { justify-content: center; gap: 2.5vh; padding: 6vh 6vw; }
+.prompt-hd { display: flex; flex-direction: column; gap: .5vh; }
+.prompt-cards {
+  list-style: none; margin: 1vh 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6vw;
+}
+.prompt-card {
+  border: 3px solid var(--cream); border-radius: 14px;
+  background: var(--ink-soft); color: var(--cream);
+  padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: .8rem;
+  box-shadow: 6px 6px 0 rgba(0,0,0,.35);
+}
+.prompt-card__tag {
+  align-self: flex-start; font-family: "Space Mono", monospace; font-weight: 700;
+  font-size: .8rem; letter-spacing: .14em; padding: .35rem .7rem; border-radius: 6px;
+  color: var(--ink);
+}
+.prompt-card--text .prompt-card__tag { background: var(--yellow); }
+.prompt-card--img  .prompt-card__tag { background: var(--lime); }
+.prompt-card--vid  .prompt-card__tag { background: var(--pink); color: var(--white); }
+.prompt-card__d { font-weight: 700; font-size: clamp(.95rem, 1.25vw, 1.2rem); line-height: 1.35; margin: 0; }
+.prompt-card__d b { color: var(--yellow); }
+.prompt-card__ex {
+  margin: auto 0 0; font-family: "Space Mono", monospace; font-weight: 700; font-style: italic;
+  font-size: clamp(.82rem, 1.05vw, 1.02rem); line-height: 1.4; color: var(--cream);
+  background: rgba(250,243,227,.08); border-left: 3px solid var(--pink);
+  border-radius: 0 8px 8px 0; padding: .7rem .9rem;
+}
+.prompt-card__ex span {
+  display: block; font-style: normal; font-size: .68rem; letter-spacing: .16em;
+  color: var(--pink); margin-bottom: .3rem;
+}
+.slide--prompting.is-active .prompt-cards > * { animation: card-in 800ms cubic-bezier(.18,.85,.28,1) both; animation-delay: calc(150ms + var(--i,0)*110ms); transform-origin: 50% 100%; }
+.slide--prompting.is-active .prompt-cards > :nth-child(1){--i:0}
+.slide--prompting.is-active .prompt-cards > :nth-child(2){--i:1}
+.slide--prompting.is-active .prompt-cards > :nth-child(3){--i:2}
+@media (max-width: 900px){ .prompt-cards { grid-template-columns: 1fr; gap: 2vh; } }
+
+/* Aesthetics sub-line */
+.mosaic-sub { max-width: 70ch; opacity: .85; margin: .3vh 0 0; }
