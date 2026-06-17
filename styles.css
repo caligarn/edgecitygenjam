@@ -1455,6 +1455,27 @@ kbd {
   text-transform: uppercase;
 }
 
+/* Passcode chip on the create.machinecinema.ai slide */
+.passcode {
+  display: inline-flex;
+  align-items: center;
+  gap: .6em;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: clamp(.85rem, 1.1vw, 1.05rem);
+  margin: .4vh 0 0;
+}
+.passcode__code {
+  background: var(--ink);
+  color: var(--cream);
+  padding: .35em .7em;
+  border-radius: .4em;
+  letter-spacing: .26em;
+  font-size: clamp(1.1rem, 1.9vw, 1.7rem);
+}
+
 @media (max-width: 900px) {
   .slide--fd,
   .slide--qr { grid-template-columns: 1fr; }
