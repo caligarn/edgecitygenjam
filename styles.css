@@ -4841,6 +4841,13 @@ body.media-dragging::after {
   max-width: min(72vw, 760px);
 }
 .sponsor-logo img { display: block; width: 100%; height: auto; }
+/* Compact sponsor lockup that sits inside the qr-left text column */
+.sponsor-logo--inline {
+  max-width: min(60%, 360px);
+  margin: .6vh 0 1vh;
+  padding: clamp(.8rem, 1.6vw, 1.3rem) clamp(1rem, 2vw, 1.6rem);
+  box-shadow: 6px 6px 0 var(--pink);
+}
 
 /* ---------- Edge navigation arrows ---------- */
 .nav-arrow {
