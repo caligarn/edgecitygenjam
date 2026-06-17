@@ -4903,3 +4903,74 @@ body[data-bg="pink"] .nav-arrow {
   .founders { gap: 4vw; }
   .founder__photo { max-height: 28vh; }
 }
+
+/* ---------- Full-screen image slide ---------- */
+.slide--fullimg { align-items: center; justify-content: center; padding: 2.5vh 2.5vw; }
+.fullimg {
+  max-width: 100%;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 8px 8px 0 var(--ink);
+  background: var(--white);
+}
+
+/* ---------- Storytelling cheat sheet ---------- */
+.slide--cheat { justify-content: flex-start; gap: 1.5vh; padding: 4vh 5vw; overflow-y: auto; }
+.cheat-hd { display: flex; flex-direction: column; gap: .5vh; flex: 0 0 auto; }
+.cheat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6vw;
+  width: 100%;
+  align-items: start;
+}
+.cheat-col {
+  background: var(--ink-soft);
+  border: 2px solid rgba(250,243,227,.18);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+}
+.cheat-h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1rem, 1.5vw, 1.45rem);
+  color: var(--accent, var(--cream));
+  margin: 0 0 .5rem;
+  letter-spacing: -0.01em;
+}
+.cheat-h + .cheat-h, .cheat-list + .cheat-h, .cheat-note + .cheat-h { margin-top: 1rem; }
+.cheat-engine {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.8rem, 1.05vw, 1.05rem);
+  color: var(--pink);
+  margin: 0 0 .6rem;
+}
+.cheat-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; }
+.cheat-list li {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: clamp(.78rem, .98vw, .98rem);
+  line-height: 1.3;
+  color: rgba(250,243,227,.9);
+}
+.cheat-list li b { color: var(--cream); font-weight: 900; }
+.cheat-list--num { list-style: decimal; padding-left: 1.2rem; }
+.cheat-list--num li { padding-left: .2rem; }
+.cheat-list--quote li { font-style: italic; color: var(--yellow); }
+.cheat-note {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(.78rem, .98vw, .98rem);
+  line-height: 1.3;
+  color: rgba(250,243,227,.75);
+  margin: .6rem 0 0;
+}
+@media (max-width: 900px) {
+  .cheat-grid { grid-template-columns: 1fr; gap: 3vw; }
+  .slide--cheat { justify-content: flex-start; }
+}
