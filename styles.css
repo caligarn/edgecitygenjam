@@ -5009,16 +5009,16 @@ body[data-bg="pink"] .nav-arrow {
   width: 1.9em; height: 1.9em; display: grid; place-items: center;
   border: 2px solid currentColor; border-radius: 50%;
 }
-.engine__t { font-weight: 900; font-size: clamp(1.3rem, 2.1vw, 2rem); margin: 0; letter-spacing: -0.02em; }
-.engine__d { font-weight: 700; font-size: clamp(.9rem, 1.2vw, 1.15rem); margin: 0; line-height: 1.25; }
+.engine__t { font-weight: 900; font-size: clamp(1.8rem, 2.9vw, 2.9rem); margin: 0; letter-spacing: -0.03em; }
+.engine__d { font-weight: 800; font-size: clamp(1.1rem, 1.6vw, 1.55rem); margin: 0; line-height: 1.25; }
 .engine-test {
   background: var(--ink-soft); border: 2px solid rgba(250,243,227,.2);
   border-radius: 12px; padding: 1.2rem 1.4rem; color: var(--cream);
 }
-.engine-test__q { font-weight: 800; font-size: clamp(1rem, 1.5vw, 1.4rem); margin: 0 0 .6rem; }
+.engine-test__q { font-weight: 800; font-size: clamp(1.25rem, 1.9vw, 1.8rem); margin: 0 0 .6rem; }
 .engine-test__q b { color: var(--pink); }
 .engine-test__ex { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; }
-.engine-test__ex li { font-style: italic; font-weight: 700; color: var(--yellow); font-size: clamp(.82rem, 1.05vw, 1.05rem); }
+.engine-test__ex li { font-style: italic; font-weight: 700; color: var(--yellow); font-size: clamp(1rem, 1.3vw, 1.3rem); }
 .slide--engine.is-active .engine > * { animation: card-in 850ms cubic-bezier(.18,.85,.28,1) both; animation-delay: calc(160ms + var(--i,0)*120ms); transform-origin: 50% 100%; }
 .slide--engine.is-active .engine > :nth-child(1){--i:0} .slide--engine.is-active .engine > :nth-child(2){--i:1}
 .slide--engine.is-active .engine > :nth-child(3){--i:2} .slide--engine.is-active .engine > :nth-child(4){--i:3}
@@ -5040,8 +5040,8 @@ body[data-bg="pink"] .nav-arrow {
 }
 .principle--y { background: var(--yellow); } .principle--l { background: var(--lime); }
 .principle--p { background: var(--pink); color: var(--white); } .principle--w { background: var(--white); }
-.principle__t { font-weight: 900; font-size: clamp(1.2rem, 1.55vw, 1.65rem); line-height: 1.05; margin: 0; letter-spacing: -0.02em; }
-.principle__d { font-weight: 800; font-size: clamp(.95rem, 1.15vw, 1.15rem); line-height: 1.25; margin: 0; opacity: .92; }
+.principle__t { font-weight: 900; font-size: clamp(1.5rem, 2vw, 2.15rem); line-height: 1.02; margin: 0; letter-spacing: -0.025em; }
+.principle__d { font-weight: 800; font-size: clamp(1.15rem, 1.4vw, 1.4rem); line-height: 1.22; margin: 0; opacity: .92; }
 .slide--principles.is-active .principles > * { animation: card-in 700ms cubic-bezier(.18,.85,.28,1) both; animation-delay: calc(120ms + var(--i,0)*55ms); transform-origin: 50% 100%; }
 .slide--principles.is-active .principles > :nth-child(1){--i:0} .slide--principles.is-active .principles > :nth-child(2){--i:1}
 .slide--principles.is-active .principles > :nth-child(3){--i:2} .slide--principles.is-active .principles > :nth-child(4){--i:3}
@@ -5062,11 +5062,11 @@ body[data-bg="pink"] .nav-arrow {
 .qrow { display: flex; align-items: center; gap: 1rem; padding: .7rem 0; border-bottom: 2px solid rgba(20,27,52,.18); }
 .qrow__n {
   flex: 0 0 auto; font-family: "Inter", sans-serif; font-weight: 900;
-  font-size: clamp(1.3rem, 1.9vw, 2rem); color: var(--ink);
+  font-size: clamp(1.6rem, 2.4vw, 2.5rem); color: var(--ink);
   background: var(--yellow); border: 2px solid var(--ink); border-radius: 8px;
   box-shadow: 3px 3px 0 var(--ink); padding: .15em .45em; min-width: 2.1em; text-align: center;
 }
-.qrow__t { font-weight: 900; font-size: clamp(1.35rem, 2vw, 2.1rem); line-height: 1.05; color: var(--ink); letter-spacing: -0.02em; }
+.qrow__t { font-weight: 900; font-size: clamp(1.7rem, 2.6vw, 2.7rem); line-height: 1.02; color: var(--ink); letter-spacing: -0.03em; }
 .slide--questions-q.is-active .qgrid > * { animation: slide-in-left 700ms cubic-bezier(.18,.85,.28,1) both; animation-delay: calc(120ms + var(--i,0)*60ms); }
 .slide--questions-q.is-active .qgrid > :nth-child(1){--i:0} .slide--questions-q.is-active .qgrid > :nth-child(2){--i:1}
 .slide--questions-q.is-active .qgrid > :nth-child(3){--i:2} .slide--questions-q.is-active .qgrid > :nth-child(4){--i:3}
@@ -5118,3 +5118,5 @@ body[data-bg="pink"] .nav-arrow {
 .mosaic-sub { max-width: 70ch; opacity: .85; margin: .3vh 0 0; }
 
 .slide--principles, .slide--questions-q { overflow-y: auto; }
+
+.slide--engine { overflow-y: auto; }
