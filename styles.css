@@ -5040,8 +5040,8 @@ body[data-bg="pink"] .nav-arrow {
 }
 .principle--y { background: var(--yellow); } .principle--l { background: var(--lime); }
 .principle--p { background: var(--pink); color: var(--white); } .principle--w { background: var(--white); }
-.principle__t { font-weight: 900; font-size: clamp(.95rem, 1.15vw, 1.18rem); line-height: 1.1; margin: 0; letter-spacing: -0.015em; }
-.principle__d { font-weight: 700; font-size: clamp(.78rem, .92vw, .92rem); line-height: 1.25; margin: 0; opacity: .9; }
+.principle__t { font-weight: 900; font-size: clamp(1.2rem, 1.55vw, 1.65rem); line-height: 1.05; margin: 0; letter-spacing: -0.02em; }
+.principle__d { font-weight: 800; font-size: clamp(.95rem, 1.15vw, 1.15rem); line-height: 1.25; margin: 0; opacity: .92; }
 .slide--principles.is-active .principles > * { animation: card-in 700ms cubic-bezier(.18,.85,.28,1) both; animation-delay: calc(120ms + var(--i,0)*55ms); transform-origin: 50% 100%; }
 .slide--principles.is-active .principles > :nth-child(1){--i:0} .slide--principles.is-active .principles > :nth-child(2){--i:1}
 .slide--principles.is-active .principles > :nth-child(3){--i:2} .slide--principles.is-active .principles > :nth-child(4){--i:3}
@@ -5062,11 +5062,11 @@ body[data-bg="pink"] .nav-arrow {
 .qrow { display: flex; align-items: center; gap: 1rem; padding: .7rem 0; border-bottom: 2px solid rgba(20,27,52,.18); }
 .qrow__n {
   flex: 0 0 auto; font-family: "Inter", sans-serif; font-weight: 900;
-  font-size: clamp(1rem, 1.5vw, 1.5rem); color: var(--ink);
+  font-size: clamp(1.3rem, 1.9vw, 2rem); color: var(--ink);
   background: var(--yellow); border: 2px solid var(--ink); border-radius: 8px;
   box-shadow: 3px 3px 0 var(--ink); padding: .15em .45em; min-width: 2.1em; text-align: center;
 }
-.qrow__t { font-weight: 800; font-size: clamp(1rem, 1.5vw, 1.5rem); line-height: 1.1; color: var(--ink); letter-spacing: -0.01em; }
+.qrow__t { font-weight: 900; font-size: clamp(1.35rem, 2vw, 2.1rem); line-height: 1.05; color: var(--ink); letter-spacing: -0.02em; }
 .slide--questions-q.is-active .qgrid > * { animation: slide-in-left 700ms cubic-bezier(.18,.85,.28,1) both; animation-delay: calc(120ms + var(--i,0)*60ms); }
 .slide--questions-q.is-active .qgrid > :nth-child(1){--i:0} .slide--questions-q.is-active .qgrid > :nth-child(2){--i:1}
 .slide--questions-q.is-active .qgrid > :nth-child(3){--i:2} .slide--questions-q.is-active .qgrid > :nth-child(4){--i:3}
@@ -5090,17 +5090,17 @@ body[data-bg="pink"] .nav-arrow {
 }
 .prompt-card__tag {
   align-self: flex-start; font-family: "Space Mono", monospace; font-weight: 700;
-  font-size: .8rem; letter-spacing: .14em; padding: .35rem .7rem; border-radius: 6px;
+  font-size: .95rem; letter-spacing: .14em; padding: .4rem .85rem; border-radius: 7px;
   color: var(--ink);
 }
 .prompt-card--text .prompt-card__tag { background: var(--yellow); }
 .prompt-card--img  .prompt-card__tag { background: var(--lime); }
 .prompt-card--vid  .prompt-card__tag { background: var(--pink); color: var(--white); }
-.prompt-card__d { font-weight: 700; font-size: clamp(.95rem, 1.25vw, 1.2rem); line-height: 1.35; margin: 0; }
+.prompt-card__d { font-weight: 800; font-size: clamp(1.25rem, 1.8vw, 1.85rem); line-height: 1.25; margin: 0; }
 .prompt-card__d b { color: var(--yellow); }
 .prompt-card__ex {
   margin: auto 0 0; font-family: "Space Mono", monospace; font-weight: 700; font-style: italic;
-  font-size: clamp(.82rem, 1.05vw, 1.02rem); line-height: 1.4; color: var(--cream);
+  font-size: clamp(1rem, 1.35vw, 1.3rem); line-height: 1.4; color: var(--cream);
   background: rgba(250,243,227,.08); border-left: 3px solid var(--pink);
   border-radius: 0 8px 8px 0; padding: .7rem .9rem;
 }
@@ -5116,3 +5116,5 @@ body[data-bg="pink"] .nav-arrow {
 
 /* Aesthetics sub-line */
 .mosaic-sub { max-width: 70ch; opacity: .85; margin: .3vh 0 0; }
+
+.slide--principles, .slide--questions-q { overflow-y: auto; }
