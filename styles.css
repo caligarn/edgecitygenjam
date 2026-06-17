@@ -5162,3 +5162,14 @@ body[data-bg="pink"] .nav-arrow {
 /* offering card colors distinct from the stat row */
 .mc-fact--sky    { background: var(--mm-sky);    color: var(--ink); }
 .mc-fact--purple { background: var(--mm-purple); color: var(--ink); }
+
+/* offering card: emoji badge tucked into the bottom corner */
+.mc-fact--offer { position: relative; }
+.mc-fact__corner {
+  position: absolute;
+  right: .7rem;
+  bottom: .6rem;
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+  line-height: 1;
+}
+.mc-fact--offer .mc-coda { padding-right: 2.4rem; }
