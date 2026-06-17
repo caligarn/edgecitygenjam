@@ -5173,3 +5173,17 @@ body[data-bg="pink"] .nav-arrow {
   line-height: 1;
 }
 .mc-fact--offer .mc-coda { padding-right: 2.4rem; }
+
+/* ---------- Persistent brand logo (top-left) ---------- */
+.deck-logo {
+  position: fixed;
+  top: .85rem;
+  left: 1.1rem;
+  z-index: 45;
+  height: clamp(20px, 3vh, 32px);
+  width: auto;
+  pointer-events: none;
+  user-select: none;
+}
+/* black wordmark -> flip to light on dark slides */
+body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
