@@ -577,6 +577,8 @@ html, body {
   text-transform: uppercase;
 }
 .display--black { color: var(--ink); }
+/* Slightly smaller display for text-heavier center slides */
+.display--sm { font-size: clamp(3.4rem, 11vw, 13rem); }
 
 .h-xxl {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
