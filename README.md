@@ -1,6 +1,6 @@
-# Edge City GenJam
+# Bentonville Film Festival GenJam
 
-This repository is the presentation scaffold for **Edge City GenJam**, built on the [preso-base](https://github.com/caligarn/preso-base) template. It integrates the robust design system from [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) and the advanced text presentation technology from [pretext](https://github.com/chenglou/pretext).
+This repository is the presentation scaffold for **Bentonville Film Festival GenJam**, built on the [preso-base](https://github.com/caligarn/preso-base) template. It integrates the robust design system from [ucberkeley-preso](https://github.com/caligarn/ucberkeley-preso) and the advanced text presentation technology from [pretext](https://github.com/chenglou/pretext).
 
 ## Overview
 
