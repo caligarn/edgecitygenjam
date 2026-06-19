@@ -5245,3 +5245,38 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 }
 .gj-big + .gj-big { margin-top: 1vh; }
 @media (max-width: 768px){ .gj-big { font-size: clamp(1.5rem, 6.5vw, 2.4rem); max-width: none; } }
+
+/* ---------- Partners slide — name chips ---------- */
+.slide--partners { justify-content: center; gap: 2vh; }
+.partner-grid {
+  list-style: none;
+  margin: 1vh 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(.6rem, 1.1vw, 1rem);
+  max-width: 70ch;
+}
+.partner-chip {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1rem, 1.7vw, 1.6rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  background: var(--white);
+  border: 2.5px solid var(--ink);
+  border-radius: 999px;
+  padding: .5em .9em;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.partner-chip__sub { font-weight: 700; opacity: .7; }
+.partner-chip:nth-child(5n+1) { background: var(--yellow); }
+.partner-chip:nth-child(5n+2) { background: var(--lime); }
+.partner-chip:nth-child(5n+3) { background: var(--pink); color: var(--white); }
+.partner-chip:nth-child(5n+4) { background: var(--white); }
+.partner-chip:nth-child(5n+5) { background: var(--tan); }
+.partner-more { font-weight: 800; margin-top: 1.5vh; }
+@media (max-width: 768px){
+  .partner-chip { font-size: clamp(.9rem, 4.2vw, 1.2rem); box-shadow: 3px 3px 0 var(--ink); }
+}
