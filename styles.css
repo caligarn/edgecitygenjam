@@ -579,6 +579,19 @@ html, body {
 .display--black { color: var(--ink); }
 /* Slightly smaller display for text-heavier center slides */
 .display--sm { font-size: clamp(3.4rem, 11vw, 13rem); }
+/* Icebreaker "No explainers." callout */
+.ice-note {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  background: var(--ink);
+  color: var(--cream);
+  padding: .45em .9em;
+  border-radius: .45em;
+  margin: 1.2vh 0 0;
+}
 
 .h-xxl {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
