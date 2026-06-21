@@ -5280,3 +5280,76 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 @media (max-width: 768px){
   .partner-chip { font-size: clamp(.9rem, 4.2vw, 1.2rem); box-shadow: 3px 3px 0 var(--ink); }
 }
+
+/* ---------- Two GenJams, side by side ---------- */
+.slide--two-jams { gap: 2.5vh; }
+.twojams-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  width: 100%;
+  max-width: 900px;
+  margin: 1vh auto 0;
+}
+.twojam {
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  text-align: left;
+  background: var(--white);
+}
+.twojam--a { background: var(--yellow); }
+.twojam--b { background: var(--pink); color: var(--white); }
+.twojam__hrs {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: .9;
+  letter-spacing: -0.03em;
+}
+.twojam__t {
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2vw, 1.9rem);
+  margin-top: .4rem;
+}
+.twojam__b {
+  font-weight: 600;
+  font-size: clamp(.95rem, 1.4vw, 1.25rem);
+  line-height: 1.25;
+  margin: .8rem 0 0;
+  opacity: .92;
+}
+@media (max-width: 768px){
+  .twojams-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Two-track schedule ---------- */
+.schedule-tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+  width: 100%;
+  max-width: 1000px;
+  margin: 1vh auto 0;
+  align-items: start;
+}
+.slide--schedule-2 .schedule-list { max-width: none; margin-top: 1vh; gap: .7vh; }
+.schedule-track__hd {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: clamp(.9rem, 1.3vw, 1.2rem);
+  padding: .4em .8em;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  display: inline-block;
+}
+.schedule-track__hd--a { background: var(--yellow); }
+.schedule-track__hd--b { background: var(--pink); color: var(--white); }
+.slide--schedule-2 .schedule-item { padding: .65rem 1rem; box-shadow: 4px 4px 0 var(--ink); }
+.slide--schedule-2 .schedule-label { font-size: clamp(.95rem, 1.4vw, 1.35rem); }
+@media (max-width: 768px){
+  .schedule-tracks { grid-template-columns: 1fr; gap: 2vh; }
+}
