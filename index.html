@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bentonville Film Festival GenJam</title>
+<title>PS/NEXT Summit 26 GenJam</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   <section class="slide slide--menu" data-bg="ink">
     <header class="menu-hd">
       <span class="kicker kicker--dark">JUMP TO</span>
-      <h2 class="h-xl menu-title">Bentonville Film Festival <span class="accent-pink">GenJam.</span></h2>
+      <h2 class="h-xl menu-title">PS/NEXT Summit 26 <span class="accent-pink">GenJam.</span></h2>
     </header>
     <ul class="menu-grid">
       <li><button type="button" class="menu-btn menu-btn--yellow" data-jump="sec-welcome"><span class="menu-btn__n">01</span><span class="menu-btn__label">Welcome</span></button></li>
@@ -769,8 +769,26 @@
     <p class="gj-big">GenJamming is a <span class="accent-pink">muscle.</span> AI is a tool to practice storytelling over and over &mdash; see your stories, test them, and try again.</p>
   </section>
 
-  <!-- SCHEDULE / RUN OF SHOW -->
-  <section class="slide slide--schedule" data-bg="cream">
+  <!-- TWO GENJAMS, SIDE BY SIDE -->
+  <section class="slide slide--center slide--two-jams" data-bg="lime">
+    <span class="kicker">PICK YOUR TRACK</span>
+    <h2 class="h-xxl">Two GenJams, <span class="accent-pink">side by side.</span></h2>
+    <div class="twojams-grid">
+      <div class="twojam twojam--a">
+        <div class="twojam__hrs">4 HRS</div>
+        <div class="twojam__t">Short jam</div>
+        <p class="twojam__b">A fast, focused sprint &mdash; make a short in a single sitting.</p>
+      </div>
+      <div class="twojam twojam--b">
+        <div class="twojam__hrs">8 HRS</div>
+        <div class="twojam__t">Full-day jam</div>
+        <p class="twojam__b">A longer track &mdash; more time to iterate, refine, and go deeper.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE / RUN OF SHOW (two tracks) -->
+  <section class="slide slide--schedule slide--schedule-2" data-bg="cream">
     <div class="slide__robot slide__robot--tr" aria-hidden="true">
       <img src="A_stylized_illustration_depicts_a_robot_in_X_iUz7az.png" alt="" loading="lazy"/>
     </div>
@@ -778,17 +796,31 @@
       <span class="kicker">RUN OF SHOW</span>
       <h2 class="h-xxl">The <span class="accent-pink">schedule.</span></h2>
     </header>
-    <ol class="schedule-list">
-      <li class="schedule-item"><span class="schedule-num">01</span><span class="schedule-label">Intro</span></li>
-      <li class="schedule-item"><span class="schedule-num">02</span><span class="schedule-label">Demo</span></li>
-      <li class="schedule-item"><span class="schedule-num">03</span><span class="schedule-label">Q&amp;A</span></li>
-      <li class="schedule-item"><span class="schedule-num">04</span><span class="schedule-label">Form Groups of 3&ndash;4</span></li>
-      <li class="schedule-item schedule-item--accent"><span class="schedule-num">05</span><span class="schedule-label">Ideate &amp; Generate</span></li>
-      <li class="schedule-item"><span class="schedule-num">06</span><span class="schedule-label">Submit Films</span></li>
-      <li class="schedule-item"><span class="schedule-num">07</span><span class="schedule-label">Watch Films</span></li>
-      <li class="schedule-item schedule-item--accent"><span class="schedule-num">08</span><span class="schedule-label">Vote!</span></li>
-      <li class="schedule-item"><span class="schedule-num">09</span><span class="schedule-label">Goodbye</span></li>
-    </ol>
+    <div class="schedule-tracks">
+      <div class="schedule-track">
+        <div class="schedule-track__hd schedule-track__hd--a">4-HOUR JAM</div>
+        <ol class="schedule-list">
+          <li class="schedule-item"><span class="schedule-num">01</span><span class="schedule-label">Intro &amp; Demo</span></li>
+          <li class="schedule-item"><span class="schedule-num">02</span><span class="schedule-label">Q&amp;A</span></li>
+          <li class="schedule-item"><span class="schedule-num">03</span><span class="schedule-label">Form Groups of 3&ndash;4</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">04</span><span class="schedule-label">Ideate &amp; Generate</span></li>
+          <li class="schedule-item"><span class="schedule-num">05</span><span class="schedule-label">Submit Films</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">06</span><span class="schedule-label">Watch &amp; Vote</span></li>
+        </ol>
+      </div>
+      <div class="schedule-track">
+        <div class="schedule-track__hd schedule-track__hd--b">8-HOUR JAM</div>
+        <ol class="schedule-list">
+          <li class="schedule-item"><span class="schedule-num">01</span><span class="schedule-label">Intro &amp; Demo</span></li>
+          <li class="schedule-item"><span class="schedule-num">02</span><span class="schedule-label">Q&amp;A</span></li>
+          <li class="schedule-item"><span class="schedule-num">03</span><span class="schedule-label">Form Groups of 3&ndash;4</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">04</span><span class="schedule-label">Ideate &amp; Generate</span></li>
+          <li class="schedule-item"><span class="schedule-num">05</span><span class="schedule-label">Refine &amp; Iterate</span></li>
+          <li class="schedule-item"><span class="schedule-num">06</span><span class="schedule-label">Submit Films</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">07</span><span class="schedule-label">Watch &amp; Vote</span></li>
+        </ol>
+      </div>
+    </div>
   </section>
 
   <!-- 13. THE PROCESS -->
@@ -2853,7 +2885,7 @@
     <ol class="history-list">
       <li class="fact fact--white">
         <div class="fact__yr">HOSTS</div>
-        <h3 class="fact__h">The Bentonville Film Festival team.</h3>
+        <h3 class="fact__h">The PS/NEXT Summit 26 team.</h3>
         <p class="fact__b">For the home, the energy, and the vision that made this possible.</p>
       </li>
       <li class="fact fact--yellow">
