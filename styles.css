@@ -5364,3 +5364,40 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 @media (max-width: 768px){
   .schedule-tracks { grid-template-columns: 1fr; gap: 2vh; }
 }
+
+/* ---------- AI Creative Stack: dual LinkedIn contacts ---------- */
+.slide--connect2 { gap: 2.5vh; }
+.connect2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: 1vh;
+}
+.connect2-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2vh;
+}
+.connect2-qr {
+  width: clamp(180px, 22vw, 300px);
+  height: auto;
+  display: block;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 8px 8px 0 var(--ink);
+  padding: clamp(.6rem, 1.2vw, 1rem);
+}
+.connect2-cap { display: flex; flex-direction: column; align-items: center; gap: .4rem; }
+.connect2-name {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.3rem, 2.2vw, 2.1rem);
+  letter-spacing: -0.01em;
+}
+.connect2-cap .link { font-size: clamp(.85rem, 1.1vw, 1.1rem); }
+@media (max-width: 768px){
+  .connect2-grid { grid-template-columns: 1fr; gap: 3vh; }
+}
