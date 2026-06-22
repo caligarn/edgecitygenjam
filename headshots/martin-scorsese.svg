@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="Martin Scorsese">
+  <rect width="320" height="320" fill="#141B34"/>
+  <path d="M0 0 L120 0 L0 120 Z" fill="#FF5A8A" opacity="0.92"/>
+  <path d="M320 320 L200 320 L320 200 Z" fill="#C7F24A" opacity="0.92"/>
+  <g fill="#FAF3E3" font-family="Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-weight="900" text-anchor="middle">
+    <text x="160" y="196" font-size="150" letter-spacing="-6">MS</text>
+  </g>
+  <g fill="#FAF3E3" opacity="0.55">
+    <rect x="118" y="232" width="84" height="14" rx="2"/>
+    <rect x="122" y="235" width="9" height="8" fill="#141B34"/>
+    <rect x="137" y="235" width="9" height="8" fill="#141B34"/>
+    <rect x="152" y="235" width="9" height="8" fill="#141B34"/>
+    <rect x="167" y="235" width="9" height="8" fill="#141B34"/>
+    <rect x="182" y="235" width="9" height="8" fill="#141B34"/>
+  </g>
+</svg>
