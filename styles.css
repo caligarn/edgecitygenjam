@@ -5445,3 +5445,39 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
   opacity: .82;
 }
 .qq--ink .qq__note { color: var(--cream); }
+
+/* ---------- Hub QR badge on the T2 Machine Cinema slide ---------- */
+.mc-hub-qr {
+  /* override the broad `.slide > *` position:relative utility (high specificity) */
+  position: absolute !important;
+  top: clamp(60px, 8vh, 88px);
+  right: clamp(1rem, 3vw, 2.6rem);
+  z-index: 5;
+  margin: 0;
+  width: clamp(118px, 12.5vw, 178px);
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  box-shadow: 7px 7px 0 var(--pink);
+  padding: clamp(.5rem, .8vw, .75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .45rem;
+}
+.mc-hub-qr img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.mc-hub-qr figcaption {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.58rem, .78vw, .8rem);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-align: center;
+}
