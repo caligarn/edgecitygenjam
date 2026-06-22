@@ -5454,7 +5454,7 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
   right: clamp(1rem, 3vw, 2.6rem);
   z-index: 5;
   margin: 0;
-  width: clamp(118px, 12.5vw, 178px);
+  width: clamp(160px, 17vw, 250px);
   background: var(--white);
   border: 3px solid var(--ink);
   border-radius: 10px;
