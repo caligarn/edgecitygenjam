@@ -5404,12 +5404,32 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 
 /* ---------- accents / convergence / quote note ---------- */
 .accent-lime { color: var(--lime); animation: pink-heartbeat 6.5s ease-in-out infinite; display: inline-block; }
+/* Title and subtitle sized identically, scaled to fit the slide together. */
+.slide--convergence .h-xxl,
+.conv-sub {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5.4vw, 5.2rem);
+  line-height: .98;
+  letter-spacing: -0.03em;
+}
 .conv-sub {
   margin-top: 1.4vh;
-  font-weight: 900;
-  font-size: clamp(1.25rem, 2.4vw, 2.2rem);
-  letter-spacing: -0.01em;
   color: var(--lime);
+}
+
+/* Subtitle arrives clearly after the title, with a left-to-right wipe
+   (distinct from the title's zoom-punch). */
+.slide--center.is-active > .conv-sub {
+  animation-name: conv-sub-wipe;
+  animation-duration: 1000ms;
+  animation-delay: 1250ms;
+  animation-timing-function: cubic-bezier(.2, .8, .2, 1);
+}
+@keyframes conv-sub-wipe {
+  0%   { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateY(16px); filter: blur(2px); }
+  55%  { opacity: 1;                                                            filter: blur(0); }
+  100% { opacity: 1; clip-path: inset(0 0 0 0);    transform: translateY(0);    filter: blur(0); }
 }
 .qq__note {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
