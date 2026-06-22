@@ -4200,8 +4200,8 @@ kbd {
 /* ---------- Tight story-lines variant (rationale) ---------- */
 .story-lines--tight li { font-size: clamp(1.4rem, 3.2vw, 3.2rem); }
 /* page 103: 11 theories — shrink to fit one screen, quicker cascade */
-.slide--theories .story-lines { gap: .7vh; margin-top: 1.5vh; }
-.slide--theories .story-lines li { font-size: clamp(1rem, 1.95vw, 1.85rem); }
+.slide--theories .story-lines { gap: .75vh; margin-top: 1.2vh; }
+.slide--theories .story-lines li { font-size: clamp(1.2rem, 2.5vw, 2.45rem); }
 .slide--theories.is-active .story-lines > * {
   animation-delay: calc(200ms + (var(--si, 0) * 95ms));
 }
