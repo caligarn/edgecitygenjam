@@ -4222,43 +4222,6 @@ kbd {
   .slide--split { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
 }
 
-/* page 103 variant: small heading across the top, big category tags below
-   in a two-column grid (overrides the default 2-column split layout so the
-   left column isn't left empty). */
-.slide--split-bigtag {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  gap: 3vh;
-  padding: 6vh 7vw;
-}
-.slide--split-bigtag .split-lead { gap: .8vh; }
-.slide--split-bigtag .split-lead .h-xxl {
-  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
-  line-height: 1.05;
-  margin: 0;
-}
-.slide--split-bigtag .split-lead .lede { font-size: clamp(.95rem, 1.2vw, 1.25rem); }
-.slide--split-bigtag .split-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.4vh 4vw;
-}
-.slide--split-bigtag .split-list li {
-  padding: 1vh 0 1.4vh 0;
-  font-size: clamp(.92rem, 1.15vw, 1.2rem);
-  line-height: 1.3;
-}
-.slide--split-bigtag .split-list__tag {
-  font-size: clamp(1.5rem, 2.6vw, 2.6rem);
-  letter-spacing: .03em;
-  margin-bottom: .4rem;
-}
-@media (max-width: 768px) {
-  .slide--split-bigtag .split-list { grid-template-columns: 1fr; }
-}
-
 /* ---------- Chip row (philosophy preview index) ---------- */
 .chip-row { list-style: none; margin: 3vh 0 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
 .chip {
