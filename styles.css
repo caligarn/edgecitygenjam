@@ -4222,6 +4222,27 @@ kbd {
   .slide--split { grid-template-columns: 1fr; gap: 2.5vh; align-items: start; }
 }
 
+/* page 103 variant: small heading pinned to the top, big category tags */
+.slide--split-bigtag { align-items: start; }
+.slide--split-bigtag .split-lead { gap: 1vh; }
+.slide--split-bigtag .split-lead .h-xxl {
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+  line-height: 1.05;
+}
+.slide--split-bigtag .split-lead .lede { font-size: clamp(.95rem, 1.2vw, 1.25rem); }
+.slide--split-bigtag .split-list__tag {
+  font-size: clamp(1.3rem, 2.3vw, 2.3rem);
+  letter-spacing: .04em;
+  margin-bottom: .25rem;
+}
+/* compress the list so all five items fit without clipping */
+.slide--split-bigtag .split-list { gap: .6vh; }
+.slide--split-bigtag .split-list li {
+  padding: .9vh 1.5vw .9vh 0;
+  font-size: clamp(.92rem, 1.2vw, 1.2rem);
+  line-height: 1.25;
+}
+
 /* ---------- Chip row (philosophy preview index) ---------- */
 .chip-row { list-style: none; margin: 3vh 0 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
 .chip {
