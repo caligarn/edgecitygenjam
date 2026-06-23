@@ -5481,3 +5481,38 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
   color: var(--ink);
   text-align: center;
 }
+
+/* ---------- Hub QR sticker on the intro bio portraits ---------- */
+.bio-hub-qr {
+  position: absolute;
+  right: clamp(.55rem, 1.1vw, 1rem);
+  bottom: clamp(.55rem, 1.1vw, 1rem);
+  z-index: 3;
+  width: clamp(112px, 11vw, 168px);
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 var(--pink);
+  padding: clamp(.4rem, .7vw, .6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .35rem;
+}
+.bio-hub-qr img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.bio-hub-qr span {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.55rem, .72vw, .72rem);
+  line-height: 1;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-align: center;
+}
