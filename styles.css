@@ -5516,3 +5516,66 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
   color: var(--ink);
   text-align: center;
 }
+
+/* ---------- GenJam = AI tools + Storytelling ---------- */
+.slide--craft .craft-sub { margin-top: .4vh; }
+.craft-pair {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: clamp(.8rem, 2vw, 1.8rem);
+  margin-top: 3vh;
+  width: 100%;
+  max-width: 1100px;
+}
+.craft-card {
+  flex: 1 1 0;
+  text-align: left;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  padding: clamp(1.1rem, 2.2vw, 2rem);
+  box-shadow: 8px 8px 0 var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.craft-card--lime { background: var(--lime); color: var(--ink); }
+.craft-card--pink { background: var(--pink); color: var(--white); box-shadow: 8px 8px 0 var(--lime); }
+.craft-card__tag {
+  align-self: flex-start;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.7rem, .95vw, .95rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .28rem .55rem;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+}
+.craft-card__h {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.craft-card__b {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: clamp(.95rem, 1.25vw, 1.3rem);
+  line-height: 1.32;
+  margin: 0;
+}
+.craft-plus {
+  align-self: center;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 4rem);
+  color: var(--cream);
+  flex: 0 0 auto;
+}
+@media (max-width: 820px){
+  .craft-pair { flex-direction: column; }
+  .craft-plus { transform: rotate(0); }
+}
