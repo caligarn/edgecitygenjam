@@ -5756,3 +5756,13 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
   text-decoration-color: var(--pink);
   text-decoration-thickness: 3px;
 }
+
+/* ---------- Director's Cup opening ceremony ---------- */
+.mc-facts--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.dc-stats { margin-top: 2.5vh; max-width: 1000px; }
+.dc-flag { font-size: 1.3em; line-height: 1; }
+.dc-nations { margin-top: 2vh; }
+.dc-lock, .dc-cash, .dc-refer { margin-top: 2vh; }
+.dc-credits { margin-top: 1.5vh; }
+.dc-credits .mc-fact__label { font-size: clamp(.7rem, .9vw, .9rem); letter-spacing: .06em; }
+@media (max-width: 900px){ .mc-facts--4 { grid-template-columns: repeat(2, minmax(0,1fr)); } }
