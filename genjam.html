@@ -1,0 +1,3085 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PS/NEXT Summit 26 GenJam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="mobile.css" />
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- MENU — jump to any section -->
+  <section class="slide slide--menu" data-bg="ink">
+    <header class="menu-hd">
+      <span class="kicker kicker--dark">JUMP TO</span>
+      <h2 class="h-xl menu-title">PS/NEXT Summit 26 <span class="accent-pink">GenJam.</span></h2>
+    </header>
+    <ul class="menu-grid">
+      <li><a class="menu-btn menu-btn--pink" href="index.html"><span class="menu-btn__n">01</span><span class="menu-btn__label">Director&rsquo;s Cup &#8599;</span></a></li>
+      <li><button type="button" class="menu-btn menu-btn--yellow" data-jump="sec-welcome"><span class="menu-btn__n">02</span><span class="menu-btn__label">Welcome</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--lime" data-jump="sec-machine-cinema"><span class="menu-btn__n">03</span><span class="menu-btn__label">Machine Cinema</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--pink" data-jump="sec-community"><span class="menu-btn__n">04</span><span class="menu-btn__label">Community</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--white" data-jump="sec-why-ai"><span class="menu-btn__n">05</span><span class="menu-btn__label">Why AI</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--yellow" data-jump="sec-market-maps"><span class="menu-btn__n">06</span><span class="menu-btn__label">Market Maps</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--lime" data-jump="sec-genjam"><span class="menu-btn__n">07</span><span class="menu-btn__label">The GenJam</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--pink" data-jump="sec-ai-tools"><span class="menu-btn__n">08</span><span class="menu-btn__label">AI Tools</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--white" data-jump="sec-dream-town"><span class="menu-btn__n">09</span><span class="menu-btn__label">Dream Town</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--yellow" data-jump="sec-submit"><span class="menu-btn__n">10</span><span class="menu-btn__label">Submit & Showcase</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--lime" data-jump="sec-stack"><span class="menu-btn__n">11</span><span class="menu-btn__label">The AI Creative Stack</span></button></li>
+      <li><button type="button" class="menu-btn menu-btn--white" data-jump="sec-recap"><span class="menu-btn__n">12</span><span class="menu-btn__label">Machine Cinema Recap</span></button></li>
+    </ul>
+  </section>
+
+
+  <!-- BREAKING ICE — OPENER -->
+  <section class="slide slide--qr" data-bg="yellow">
+    <div class="qr-left">
+      <span class="kicker">HAIKU CANVAS</span>
+      <h2 class="h-xxl">Haiku <span class="accent-pink">Canvas.</span></h2>
+      <p class="lede">Create visual poems together.</p>
+      <p class="body"><a class="link" href="https://breakingice.vercel.app">breakingice.vercel.app</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="breaking-ice-opener-0" src="breakingice-qr.png" alt="QR code: breakingice.vercel.app" />
+        <figcaption>SCAN TO JOIN</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================
+       TALK 2 · THE AI CREATIVE STACK
+       A standalone talk inserted ahead of the Flik credits page.
+       Reuses the deck's existing slide vocabulary (history facts,
+       quote slide, market-map throwback, mc-fact stat cards).
+       ================================================================== -->
+
+  <!-- LOGO HERO — Machine Cinema GenJam wordmark, big and centered -->
+  <section id="sec-welcome" class="slide slide--logo-hero" data-bg="cream">
+    <figure class="logo-hero">
+      <img data-media-key="logo-hero-machine-cinema-genjam-wordmark-big-and-0" class="logo-hero__mark" src="MC GenJam Logo  (1).png" alt="Machine Cinema GenJam" loading="eager"/>
+      <figcaption class="logo-hero__caption">
+        Learn. <span class="accent-pink">Create.</span> Play.
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ICEBREAKER -->
+  <section class="slide slide--center" data-bg="pink">
+    <span class="kicker">ICEBREAKER</span>
+    <h1 class="display display--sm">Name <span class="accent-pink">+ one word.</span></h1>
+    <p class="lede" style="max-width:30ch;">One by one, say your <b>name</b> and <b>one word</b> for how you feel about AI today.</p>
+    <p class="ice-note">No explainers.</p>
+  </section>
+
+  <!-- 1. SPEAKER BIO -->
+  <section class="slide slide--bio" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_black_and_white_line_drawing_depicts_a_SePAGDzf.png" alt="" loading="lazy"/>
+    </div>
+    <figure class="bio-photo">
+      <img data-media-key="1-speaker-bio-0" src="Profile-Photo-scaled.webp" alt="Minh Do" />
+      <figcaption class="bio-photo__cap">MINH DO</figcaption>
+      <div class="bio-hub-qr">
+        <img data-media-key="1-speaker-bio-hub-qr" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai"/>
+        <span>SCAN FOR THE HUB</span>
+      </div>
+    </figure>
+
+    <div class="bio-content">
+      <div class="tag-row">
+        <span class="tag tag--pink">SPEAKER</span>
+        <span class="tag tag--yellow">CEO</span>
+        <span class="tag tag--lime">CO-FOUNDER</span>
+      </div>
+
+      <h1 class="h-xxl bio-name">
+        Minh <span class="accent-pink">Do.</span>
+      </h1>
+
+      <p class="lede bio-lede">
+        Entrepreneur, filmmaker, and educator at the intersection of
+        <span class="underline">AI, storytelling, and culture.</span>
+      </p>
+
+      <ul class="bio-roles">
+        <li><span class="role-label">NOW</span><span>Co-founder &amp; <b>CEO</b>, <b>Machine Cinema</b>, a global community exploring AI-native filmmaking.</span></li>
+        <li><span class="role-label">NOW</span><span>Co-founder &amp; Head of AI, <b>Fantastic Day</b>, a hybrid AI studio for musicians, brands, and filmmakers.</span></li>
+        <li><span class="role-label">PAST</span><span>Editor-in-Chief at <b>Tech in Asia</b>; co-founder of <b>Vietcetera</b>. Interviewed Sundar Pichai and Anthony Tan.</span></li>
+        <li><span class="role-label">PARTNER</span><span>Creator programs with Google Labs, OpenAI Sora, Pika, Luma Dream Machine.</span></li>
+        <li><span class="role-label">ALSO</span><span>Journalist · violinist · standup comedian · voice actor.</span></li>
+        <li><span class="role-label">EDU</span><span><b>UC Santa Cruz</b>, Buddhist Studies.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 1b. SPEAKER BIO — FRED GRINSTEIN -->
+  <section class="slide slide--bio" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_cartoonish_red_robot_with_a_camera_for_a_head_0fy3XEu.png" alt="" loading="lazy"/>
+    </div>
+    <figure class="bio-photo">
+      <img data-media-key="fred-grinstein-bio-0" src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,quality=75,width=800,height=450/editor-images/bw/90b424cd-11ad-4e57-a0db-cce3333cc4fe.png" alt="Fred Grinstein" />
+      <figcaption class="bio-photo__cap">FRED GRINSTEIN</figcaption>
+      <div class="bio-hub-qr">
+        <img data-media-key="fred-grinstein-bio-hub-qr" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai"/>
+        <span>SCAN FOR THE HUB</span>
+      </div>
+    </figure>
+
+    <div class="bio-content">
+      <div class="tag-row">
+        <span class="tag tag--pink">CO-FOUNDER</span>
+        <span class="tag tag--yellow">MACHINE CINEMA</span>
+      </div>
+
+      <h1 class="h-xxl bio-name">
+        Fred <span class="accent-pink">Grinstein.</span>
+      </h1>
+
+      <p class="lede bio-lede">
+        Co-founder of <span class="underline">Machine Cinema</span>, building the home for AI-native creativity.
+      </p>
+
+      <ul class="bio-roles">
+        <li><span class="role-label">FILM/TV</span><span>20-year Film/TV executive: <b>A&amp;E</b>, <b>Vice</b>, <b>Anonymous Content</b>.</span></li>
+        <li><span class="role-label">EDUCATOR</span><span>AI educator with <b>Curious Refuge</b>, <b>USC</b>, <b>Chapman University</b>, and <b>LABASAD</b>.</span></li>
+        <li><span class="role-label">ADVISOR</span><span>Consultant &amp; strategist with major broadcast networks, studios &amp; prodcos.</span></li>
+        <li><span class="role-label">NOW</span><span>Co-founder, <b>Machine Cinema</b>, a global community for AI-native filmmaking.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. FANTASTIC DAY -->
+  <section class="slide slide--fd" data-bg="tan">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_cartoonish_red_robot_with_a_camera_for_a_head_0fy3XEu.png" alt="" loading="lazy"/>
+    </div>
+    <div class="fd-logo">
+      <img data-media-key="2-fantastic-day-0" src="fantastic-day-logo-orange-stacked.png" alt="Fantastic Day" />
+    </div>
+    <div class="fd-content">
+      <h2 class="h-xxl fd-title">
+        A <span class="fd-accent">hybrid AI studio.</span>
+      </h2>
+      <p class="lede">Producing AI-driven media with musicians, brands, and filmmakers, where taste meets the machine.</p>
+      <div class="tag-row">
+        <span class="tag tag--fd">MUSIC</span>
+        <span class="tag tag--fd">BRANDS</span>
+        <span class="tag tag--fd">FILM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2b. FANTASTIC DAY — COFOUNDERS (MEG & AFFAN) -->
+  <section class="slide slide--left slide--founders" data-bg="tan">
+    <span class="kicker">FANTASTIC DAY &middot; COFOUNDERS</span>
+    <h2 class="h-xxl">Meet the <span class="fd-accent">cofounders.</span></h2>
+    <ul class="founders">
+      <li class="founder">
+        <figure class="founder__photo"><img data-media-key="fantastic-day-meg-0" src="https://www.fantastic.day/_next/image?url=%2Fimages%2Fheadshots%2Fmeg.jpg&w=640&q=75&dpl=dpl_BSdCYfEEJe9yzAG3hzHHd1M2QrVW" alt="Meg Button" /></figure>
+        <h3 class="founder__name">Meg Button.</h3>
+        <p class="founder__role">Co-founder, <b>Fantastic Day</b>.</p>
+      </li>
+      <li class="founder">
+        <figure class="founder__photo"><img data-media-key="fantastic-day-affan-0" src="https://www.fantastic.day/_next/image?url=%2Fimages%2Fheadshots%2Faffan.jpg&w=640&q=75&dpl=dpl_BSdCYfEEJe9yzAG3hzHHd1M2QrVW" alt="Affan Imran" /></figure>
+        <h3 class="founder__name">Affan Imran.</h3>
+        <p class="founder__role">Co-founder, <b>Fantastic Day</b>.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-machine-cinema-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3. MACHINE CINEMA -->
+  <section id="sec-machine-cinema" class="slide slide--mc" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" data-parallax="strong" aria-hidden="true">
+      <img src="A_line_drawing_depicts_a_robot_with_a_camera_for_lZzo2P7d.png" alt="" loading="lazy"/>
+    </div>
+    <img data-media-key="3-machine-cinema-0" class="mc-mark" src="5.png" alt="Machine Cinema" />
+    <p class="mc-headline">Machine Cinema is an <span class="accent-pink">ecosystem</span> for <span class="underline">accelerating creativity.</span></p>
+    <ul class="mc-facts">
+      <li class="mc-fact mc-fact--white">
+        <div class="mc-fact__num">20k+</div>
+        <div class="mc-fact__label">Members</div>
+      </li>
+      <li class="mc-fact mc-fact--pink">
+        <div class="mc-fact__num">200+</div>
+        <div class="mc-fact__label">Events</div>
+      </li>
+      <li class="mc-fact mc-fact--lime">
+        <div class="mc-fact__num">40+</div>
+        <div class="mc-fact__label">Cities around the world</div>
+      </li>
+      <li class="mc-fact mc-fact--yellow mc-fact--offer">
+        <div class="mc-fact__bigt">Jobs Platform</div>
+        <p class="mc-coda">Get hired: a marketplace connecting creators to paid AI work.</p>
+        <span class="mc-fact__corner" aria-hidden="true">💼</span>
+      </li>
+      <li class="mc-fact mc-fact--sky mc-fact--offer">
+        <div class="mc-fact__bigt">Accelerator</div>
+        <p class="mc-coda">Launch your own IP: a program to build and ship your projects.</p>
+        <span class="mc-fact__corner" aria-hidden="true">🚀</span>
+      </li>
+      <li class="mc-fact mc-fact--purple mc-fact--offer">
+        <div class="mc-fact__bigt">New Media</div>
+        <p class="mc-coda">The future of AI creative culture: shows, studios &amp; stories.</p>
+        <span class="mc-fact__corner" aria-hidden="true">🎬</span>
+      </li>
+    </ul>
+   </section>
+
+  <!-- PARTNERS -->
+  <section class="slide slide--left slide--partners" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="A_simplified_cartoon-like_robot_with_a_camera_lQikCdqp.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">PARTNERS</span>
+    <h2 class="h-xl">We&rsquo;re honored to work with <span class="accent-pink">amazing partners.</span></h2>
+    <ul class="partner-grid">
+      <li class="partner-chip">TV Academy <span class="partner-chip__sub">(Emmys)</span></li>
+      <li class="partner-chip">Pixar</li>
+      <li class="partner-chip">ByteDance</li>
+      <li class="partner-chip">Runway</li>
+      <li class="partner-chip">Google</li>
+      <li class="partner-chip">OpenAI</li>
+      <li class="partner-chip">Stanford</li>
+      <li class="partner-chip">NYU</li>
+      <li class="partner-chip">UC Berkeley</li>
+      <li class="partner-chip">USC</li>
+    </ul>
+    <p class="lede partner-more">&hellip; and many more.</p>
+  </section>
+
+  <!-- GENJAMS AROUND THE WORLD (PLACEHOLDER city list — edit to actual locations) -->
+  <section class="slide slide--left slide--cities" data-bg="cream">
+    <span class="kicker">EVERYWHERE</span>
+    <h2 class="h-xl">GenJams <span class="accent-pink">around the world.</span></h2>
+    <div class="cities-layout">
+      <ul class="cities-grid">
+        <li class="city-chip">San Francisco<span class="city-chip__sub">USA</span></li>
+        <li class="city-chip">Los Angeles<span class="city-chip__sub">USA</span></li>
+        <li class="city-chip">New York<span class="city-chip__sub">USA</span></li>
+        <li class="city-chip">Toronto<span class="city-chip__sub">Canada</span></li>
+        <li class="city-chip">Mexico City<span class="city-chip__sub">Mexico</span></li>
+        <li class="city-chip">London<span class="city-chip__sub">UK</span></li>
+        <li class="city-chip">Paris<span class="city-chip__sub">France</span></li>
+        <li class="city-chip">Berlin<span class="city-chip__sub">Germany</span></li>
+        <li class="city-chip">Lisbon<span class="city-chip__sub">Portugal</span></li>
+        <li class="city-chip">Dubai<span class="city-chip__sub">UAE</span></li>
+        <li class="city-chip">Lagos<span class="city-chip__sub">Nigeria</span></li>
+        <li class="city-chip">Mumbai<span class="city-chip__sub">India</span></li>
+        <li class="city-chip">Singapore<span class="city-chip__sub">Singapore</span></li>
+        <li class="city-chip">Bangkok<span class="city-chip__sub">Thailand</span></li>
+        <li class="city-chip">Jakarta<span class="city-chip__sub">Indonesia</span></li>
+        <li class="city-chip">Ho Chi Minh City<span class="city-chip__sub">Vietnam</span></li>
+        <li class="city-chip">Seoul<span class="city-chip__sub">South Korea</span></li>
+        <li class="city-chip">Tokyo<span class="city-chip__sub">Japan</span></li>
+        <li class="city-chip">Sydney<span class="city-chip__sub">Australia</span></li>
+        <li class="city-chip">São Paulo<span class="city-chip__sub">Brazil</span></li>
+      </ul>
+      <aside class="join-box">
+        <div class="join-box__tag">GET INVOLVED</div>
+        <h3 class="join-box__h">Bring a GenJam to your city.</h3>
+        <p class="join-box__b">We&rsquo;re looking for <b>leaders</b> and <b>volunteers</b> to host GenJams in new cities around the world.</p>
+        <p class="join-box__cta"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- MACHINE CINEMA — REEL (native video, plays inline) -->
+  <section class="slide slide--center slide--embed" data-bg="ink">
+    <span class="kicker kicker--dark">WATCH</span>
+    <figure class="video-card">
+      <video data-media-key="machine-cinema-reel" class="video-card__v" controls playsinline preload="metadata" src="lorena-mexico-city.mp4"></video>
+      <figcaption class="video-card__cap">Tap play to watch.</figcaption>
+    </figure>
+  </section>
+
+  <!-- SCHNOZZO — our mascot -->
+  <section class="slide slide--schnozzo" data-bg="ink">
+    <div class="schnozzo-text">
+      <span class="kicker kicker--dark">MEET</span>
+      <h1 class="display schnozzo-name"><span class="accent-pink">Schnozzo.</span></h1>
+      <p class="lede schnozzo-sub">Our mascot.<br/>He watches. He wonders. He makes.</p>
+    </div>
+    <figure class="schnozzo-frame">
+      <img data-media-key="schnozzo-our-mascot-0" src="In_a_minimalist_graphic_style_a_white_line_IDfYvjQ6.png" alt="Schnozzo: line-drawn robot mascot with a camera for a head" />
+    </figure>
+  </section>
+
+  <!-- AIRL — AI IN REAL LIFE -->
+  <section class="slide slide--left" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="A_simplified_cartoon-like_robot_with_a_camera_lQikCdqp.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">OUR MODEL</span>
+    <h2 class="h-xxl">
+      <span class="accent-pink">&ldquo;AIRL&rdquo;</span><br/>
+      AI In Real Life.
+    </h2>
+    <p class="lede">An in-person resource for anyone with curiosity and a love for creativity: sit alongside fellow creators, learn the tools, experiment, share projects, demo the work, debate the industry.</p>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-community-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- JOIN THE COMMUNITY -->
+  <section id="sec-community" class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--bl" aria-hidden="true">
+      <img src="A_stylized_black_robot_with_a_camera_for_a_head_ruyiJ42G.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">MACHINE CINEMA</span>
+      <h2 class="h-xl history-title">Join the <span class="accent-pink">community.</span></h2>
+    </header>
+    <ol class="history-list history-list--photos">
+      <li class="fact fact--yellow fact--photo">
+        <img data-media-key="join-the-community-0" class="fact__img" src="communityacts/lounge-event.png" alt="Gen&amp;Juice lounge gathering" loading="lazy"/>
+        <div class="fact__body">
+          <div class="fact__yr">AIRL</div>
+          <h3 class="fact__h">Gen&amp;Juice</h3>
+        </div>
+      </li>
+      <li class="fact fact--lime fact--photo">
+        <img data-media-key="join-the-community-1" class="fact__img" src="communityacts/workshop-overhead.png" alt="GenJam workshop overhead" loading="lazy"/>
+        <div class="fact__body">
+          <div class="fact__yr">AIRL</div>
+          <h3 class="fact__h">GenJams</h3>
+        </div>
+      </li>
+      <li class="fact fact--pink fact--photo">
+        <video data-media-key="join-the-community-2" class="fact__img" src="walk-and-jam.mp4" autoplay loop muted playsinline preload="metadata"></video>
+        <div class="fact__body">
+          <div class="fact__yr">AIRL</div>
+          <h3 class="fact__h">Walk&amp;Jam</h3>
+        </div>
+      </li>
+      <li class="fact fact--white fact--photo">
+        <img data-media-key="join-the-community-3" class="fact__img" src="comm-wip-salon.jpg" alt="Work in Progress salon presentation" loading="lazy"/>
+        <div class="fact__body">
+          <div class="fact__yr">AIRL</div>
+          <h3 class="fact__h">Work in Progress Salon</h3>
+        </div>
+      </li>
+      <li class="fact fact--pink fact--photo">
+        <img data-media-key="join-the-community-4" class="fact__img" src="communityacts/podcast-recording.png" alt="GenTalks podcast recording" loading="lazy"/>
+        <div class="fact__body">
+          <div class="fact__yr">ONLINE</div>
+          <h3 class="fact__h">GenTalks</h3>
+        </div>
+      </li>
+      <li class="fact fact--lime fact--photo">
+        <img data-media-key="join-the-community-5" class="fact__img" src="communityacts/newsletter-substack.png" alt="Machine Cinema weekly newsletter on Substack" loading="lazy"/>
+        <div class="fact__body">
+          <div class="fact__yr">ONLINE</div>
+          <h3 class="fact__h">Weekly Newsletter</h3>
+        </div>
+      </li>
+      <li class="fact fact--yellow fact--photo">
+        <img data-media-key="join-the-community-6" class="fact__img" src="communityacts/online-jams-zoom.png" alt="Online jam over Zoom" loading="lazy"/>
+        <div class="fact__body">
+          <div class="fact__yr">ONLINE</div>
+          <h3 class="fact__h">Online Jams</h3>
+        </div>
+      </li>
+      <li class="fact fact--white fact--photo">
+        <img data-media-key="join-the-community-7" class="fact__img" src="communityacts/claymation-robots-workshop.png" alt="Talent marketplace: robots tinkering and trading" loading="lazy"/>
+        <div class="fact__body">
+          <div class="fact__yr">ONLINE</div>
+          <h3 class="fact__h">Talent Marketplace</h3>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- PAGE ONE ACCELERATOR -->
+  <section class="slide slide--left slide--p1" data-bg="cream">
+    <div class="slide__robot slide__robot--br" data-parallax="strong" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_for_a_head_is_j_nWb94F.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">WHAT&rsquo;S NEXT &middot; 8 WEEKS</span>
+    <h2 class="h-xxl">Page One <span class="accent-pink">Accelerator.</span></h2>
+    <p class="lede">An intensive 8-week accelerator for new IP and content built in the AI age: mentors, structure, and a runway to take your project to a marketable place.</p>
+    <ul class="p1-grid">
+      <li class="p1 p1--yellow">
+        <span class="p1__n">8 WEEKS</span>
+        <span class="p1__t">Intensive cohort</span>
+        <span class="p1__b">A focused sprint: weekly milestones, real deliverables, no fluff.</span>
+      </li>
+      <li class="p1 p1--lime">
+        <span class="p1__n">FOR CREATORS</span>
+        <span class="p1__t">New &amp; experienced</span>
+        <span class="p1__b">First-time storytellers and seasoned pros building in the AI age.</span>
+      </li>
+      <li class="p1 p1--pink">
+        <span class="p1__n">MENTORS</span>
+        <span class="p1__t">People who&rsquo;ve shipped</span>
+        <span class="p1__b">Operators, filmmakers, and studio leads who pull your project to market-ready.</span>
+      </li>
+      <li class="p1 p1--white">
+        <span class="p1__n">OUTCOME</span>
+        <span class="p1__t">Marketable IP</span>
+        <span class="p1__b">Leave with a project that&rsquo;s ready to pitch, sell, or ship.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- GALLERY — from the field -->
+  <section class="slide slide--gallery" data-bg="cream">
+    <header class="gallery-hd">
+      <span class="kicker">ON THE GROUND</span>
+      <h2 class="h-xl">Scenes from the <span class="accent-pink">jam.</span></h2>
+    </header>
+    <ul class="gallery-grid">
+      <li class="gpic gpic--1"><img data-media-key="gallery-from-the-field-0" src="001.jpg"  alt="Machine Cinema event" loading="lazy"/></li>
+      <li class="gpic gpic--2"><img data-media-key="gallery-from-the-field-1" src="002.jpeg" alt="Machine Cinema event" loading="lazy"/></li>
+      <li class="gpic gpic--3"><img data-media-key="gallery-from-the-field-2" src="003.jpeg" alt="Machine Cinema event" loading="lazy"/></li>
+      <li class="gpic gpic--4"><img data-media-key="gallery-from-the-field-3" src="004.JPG"  alt="Machine Cinema event" loading="lazy"/></li>
+      <li class="gpic gpic--5"><img data-media-key="gallery-from-the-field-4" src="005.JPG"  alt="Machine Cinema event" loading="lazy"/></li>
+      <li class="gpic gpic--6"><img data-media-key="gallery-from-the-field-5" src="006.JPG"  alt="Machine Cinema event" loading="lazy"/></li>
+    </ul>
+  </section>
+
+  <!-- OUR VALUES -->
+  <section class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--bl" aria-hidden="true">
+      <img src="A_stylized_illustration_depicts_a_robot_in_X_iUz7az.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">MACHINE CINEMA</span>
+      <h2 class="h-xl history-title">Our <span class="accent-pink">Values.</span></h2>
+    </header>
+    <ol class="history-list history-list--titles">
+      <li class="fact fact--yellow fact--title"><div class="fact__yr">01</div><h3 class="fact__h">Tool-Agnostic</h3></li>
+      <li class="fact fact--lime fact--title"><div class="fact__yr">02</div><h3 class="fact__h">Experiential Learning</h3></li>
+      <li class="fact fact--white fact--title"><div class="fact__yr">03</div><h3 class="fact__h">Curiosity</h3></li>
+      <li class="fact fact--pink fact--title"><div class="fact__yr">04</div><h3 class="fact__h">Radical Inclusivity</h3></li>
+      <li class="fact fact--lime fact--title"><div class="fact__yr">05</div><h3 class="fact__h">Empowerment</h3></li>
+      <li class="fact fact--yellow fact--title"><div class="fact__yr">06</div><h3 class="fact__h">Open Source</h3></li>
+    </ol>
+  </section>
+
+  <!-- CONCERNS -->
+  <section class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--tl" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_for_a_head_is_j_nWb94F.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">MACHINE CINEMA &middot; ETHICS</span>
+      <h2 class="h-xl history-title">Con<span class="accent-pink">cerns.</span></h2>
+      <p class="body history-sub">We are very aware of these concerns and engage them regularly in our online community discussions.</p>
+      <p class="body history-sub">It is not the focus of the event today, which is to learn the tools.</p>
+    </header>
+    <ol class="history-list history-list--titles">
+      <li class="fact fact--pink fact--title"><div class="fact__yr">01</div><h3 class="fact__h">Ethics</h3></li>
+      <li class="fact fact--yellow fact--title"><div class="fact__yr">02</div><h3 class="fact__h">Sustainability</h3></li>
+      <li class="fact fact--white fact--title"><div class="fact__yr">03</div><h3 class="fact__h">Copyright &amp; Stealing</h3></li>
+      <li class="fact fact--lime fact--title"><div class="fact__yr">04</div><h3 class="fact__h">Jobs</h3></li>
+      <li class="fact fact--yellow fact--title"><div class="fact__yr">05</div><h3 class="fact__h">Slop</h3></li>
+      <li class="fact fact--pink fact--title"><div class="fact__yr">06</div><h3 class="fact__h">Misinformation</h3></li>
+    </ol>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-why-ai-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- WHY LEARN AI? -->
+  <section id="sec-why-ai" class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--tl" data-parallax="strong" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_for_a_head_stands_vYGBsiXC.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">THE CASE FOR AI</span>
+      <h2 class="h-xl history-title">Why learn <span class="accent-pink">AI?</span></h2>
+    </header>
+    <ol class="history-list history-list--why">
+      <li class="fact fact--yellow fact--title"><div class="fact__yr">SPEED</div><h3 class="fact__h">It&rsquo;s moving fast!</h3></li>
+      <li class="fact fact--lime fact--title"><div class="fact__yr">OPPORTUNITY</div><h3 class="fact__h">Shape the future.</h3></li>
+      <li class="fact fact--pink fact--title"><div class="fact__yr">PRACTICE</div><h3 class="fact__h">Learn by doing.</h3></li>
+      <li class="fact fact--lime fact--title"><div class="fact__yr">BUBBLE</div><h3 class="fact__h">We are still early.</h3></li>
+      <li class="fact fact--yellow fact--title"><div class="fact__yr">FUN</div><h3 class="fact__h">It&rsquo;s fun!</h3></li>
+      <li class="fact fact--white fact--video-wide">
+        <div class="fact__yr">2023 &rarr; 2026</div>
+        <h3 class="fact__h">Look how far it&rsquo;s come.</h3>
+        <video data-media-key="why-learn-ai-0" class="fact__video-feature" src="willsmith.mp4" autoplay loop muted playsinline></video>
+        <p class="fact__caption">March 2023 &middot; Oct 2025 &middot; February 2026</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 9. WE'RE IN A BUBBLE -->
+  <section class="slide slide--bubble slide--bubble-split" data-bg="cream">
+    <figure class="bubble-figure">
+      <img data-media-key="9-we-re-in-a-bubble-0" src="HB0dN1xbwAAM31y.jpeg" alt="The nature of the bubble" />
+    </figure>
+    <header class="bubble-hd">
+      <span class="kicker">A LOOK INSIDE</span>
+      <h2 class="h-xxl">The nature of the <span class="accent-pink">bubble.</span></h2>
+    </header>
+  </section>
+
+  <!-- JOIN THE COMMUNITY — linktree QR -->
+  <section class="slide slide--qr" data-bg="cream">
+    <div class="qr-left">
+      <span class="kicker">PLUG IN</span>
+      <h2 class="h-xxl">
+        Join the<br/>
+        <span class="accent-pink">community.</span>
+      </h2>
+      <p class="lede">Tap into the Machine Cinema crew, online and offline. Events, jams, talks, the newsletter, and our Discord are all one tap away.</p>
+      <p class="body"><a class="link" href="https://linktr.ee/machinecinema">linktr.ee/machinecinema</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="join-the-community-linktree-qr-0" src="linktree-qr.png" alt="QR code: linktr.ee/machinecinema" />
+        <figcaption>SCAN TO JOIN</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-market-maps-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Q2 2025 MARKET MAP (prior year for comparison) -->
+  <section id="sec-market-maps" class="slide slide--mm-throwback" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_lens_for_a_head_q_tbJ_h9.png" alt="" loading="lazy"/>
+    </div>
+    <header class="mm-throwback__hd">
+      <span class="kicker">A YEAR AGO</span>
+      <h2 class="h-xl mm-throwback__title">Q2 <span class="accent-pink">2025.</span></h2>
+      <p class="body mm-throwback__sub">Same landscape, one year earlier. Look how fast it changed.</p>
+    </header>
+    <figure class="mm-throwback__frame">
+      <img data-media-key="q2-2025-market-map-prior-year-for-comparison-0" src="marketmap-2025.jpg" alt="AI storytelling market map, Q2 2025" />
+    </figure>
+  </section>
+
+  <!-- MARKET MAP 2026 (replaces the interactive overview + stage slides) -->
+  <section class="slide slide--mm-throwback" data-bg="cream">
+    <header class="mm-throwback__hd">
+      <span class="kicker">MARKET MAP</span>
+      <h2 class="h-xl mm-throwback__title">The stack, <span class="accent-pink">2026.</span></h2>
+      <p class="body mm-throwback__sub">One year later: <b>247 companies</b> across <b>24 categories</b>. Look how far it&rsquo;s come.</p>
+    </header>
+    <figure class="mm-throwback__frame">
+      <img data-media-key="market-map-2026-main-0" src="Market%20Map%20(Final).png" alt="AI Creative Market Map, Q2 2026: 247 companies across development, production, inference, post-production, and distribution" />
+    </figure>
+  </section>
+
+  <!-- 12. WHO ARE YOU? — audience check-in -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">AUDIENCE</span>
+    <h2 class="h-xxl">Who are <span class="accent-pink">you?</span></h2>
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="In_a_minimalist_cartoon_style_a_small_stylized_bFGOGCnx.png" alt="" loading="lazy"/>
+    </div>
+    <ul class="big-list">
+      <li><span class="num">01</span><span><b>Beginner, Intermediate, Advanced?</b></span></li>
+      <li><span class="num">02</span><span><b>Editors?</b></span></li>
+      <li><span class="num">03</span><span><b>Traditional filmmakers?</b></span></li>
+    </ul>
+  </section>
+
+  <!-- FACTS & HISTORY — precedent for every platform shift -->
+  <section class="slide slide--left slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="In_a_graphic_illustration_style_a_stylized_robot_m-fi5Acu.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">FACTS &amp; HISTORY</span>
+      <h2 class="h-xl history-title">History <span class="accent-pink">rhymes.</span></h2>
+      <p class="body history-sub">Every big tech shift looks terrifying until the new creators show up.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--white">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-0" class="fact__media" src="slide-photos/history-1908-early-hollywood.jpg" alt="Early Hollywood nickelodeon era, 1908" loading="lazy"/>
+        <div class="fact__yr">1908</div>
+        <h3 class="fact__h">Hollywood was born from rebellion.</h3>
+        <p class="fact__b">Filmmakers fled <b>Thomas Edison's patent trust</b>, the MPPC, and moved west to escape enforcement. That migration built the industry that defined the century.</p>
+      </li>
+      <li class="fact fact--lime">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-1" class="fact__media" src="slide-photos/history-1984-vhs-rental-store.jpg" alt="VHS rental store, 1984" loading="lazy"/>
+        <div class="fact__yr">1984</div>
+        <h3 class="fact__h">The VCR was supposed to kill Hollywood.</h3>
+        <p class="fact__b">Sony v. Universal let home video live. Within a decade, <b>video rentals earned studios more than the box office.</b></p>
+      </li>
+      <li class="fact fact--yellow">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-2" class="fact__media" src="slide-photos/history-2007-netflix-streaming.jpg" alt="Netflix streaming on a TV, 2007" loading="lazy"/>
+        <div class="fact__yr">2007</div>
+        <h3 class="fact__h">Netflix rewrote TV.</h3>
+        <p class="fact__b">Streaming turned the living-room set into a <b>global on-demand catalog</b>. Data picked hits. The world binged.</p>
+      </li>
+      <li class="fact fact--pink">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-3" class="fact__media" src="slide-photos/history-1999-napster.jpg" alt="Napster logo, 1999" loading="lazy"/>
+        <div class="fact__yr">1999</div>
+        <h3 class="fact__h">Napster couldn't kill music.</h3>
+        <p class="fact__b">It made streaming inevitable. Today <b>artists earn more from streaming</b> than CDs ever generated.</p>
+      </li>
+      <li class="fact fact--ink">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-4" class="fact__media" src="slide-photos/history-2010-smartphone-photography.jpg" alt="Smartphone photography on the street, 2010" loading="lazy"/>
+        <div class="fact__yr">2010</div>
+        <h3 class="fact__h">Instagram &amp; Snapchat rewrote photography.</h3>
+        <p class="fact__b">Phones plus filters plus stories turned <b>billions into daily photographers</b>. Visual culture has never looked the same.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">1975+</div>
+        <h3 class="fact__h">Punk &amp; hip-hop made cheap tools into genres.</h3>
+        <p class="fact__b">Four-tracks, turntables, photocopiers. <b>Punk built a DIY label system</b>; <b>hip-hop sampled the whole record store.</b> Remixing what already existed turned into two of the most influential movements in music.</p>
+      </li>
+    </ol>
+    <p class="history-foot mono">EVERY GATE FALLS · EVERY FALL MAKES ROOM</p>
+  </section>
+
+  <!-- HOLLYWOOD'S CHANGING TONE ON AI -->
+  <section class="slide slide--left slide--quotes" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="In_a_minimalist_line_art_style_a_white_outline_0Q_iwtpp.png" alt="" loading="lazy"/>
+    </div>
+    <header class="quotes-hd">
+      <span class="kicker">HOLLYWOOD</span>
+      <h2 class="h-xl quotes-title">The tone is <span class="accent-pink">changing.</span></h2>
+      <p class="body quotes-sub">Even the skeptics are picking up the tools.</p>
+    </header>
+    <ul class="quote-grid">
+      <li class="qq qq--lime">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-0" class="qq__photo" src="headshots/sandra-bullock.jpg" alt="Sandra Bullock" loading="lazy"/>
+        <div class="qq__role">ACTOR</div>
+        <h3 class="qq__name">Sandra Bullock</h3>
+        <blockquote class="qq__text">&ldquo;It's here. We have to observe it. We have to understand it. We have to <b>lean into it</b>. Use it in a really constructive, creative way, make it our friend.&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--pink">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-1" class="qq__photo" src="headshots/reese-witherspoon.png" alt="Reese Witherspoon" loading="lazy"/>
+        <div class="qq__role">ACTOR · PRODUCER</div>
+        <h3 class="qq__name">Reese Witherspoon</h3>
+        <blockquote class="qq__text">&ldquo;Women's jobs are <b>3× more likely</b> to be automated by AI, yet women use AI <b>25% less</b> than men. We don't want to be left behind. Do you want to learn with me?&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--yellow">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-2" class="qq__photo" src="headshots/steven-soderbergh.jpg" alt="Steven Soderbergh" loading="lazy"/>
+        <div class="qq__role">DIRECTOR</div>
+        <h3 class="qq__name">Steven Soderbergh</h3>
+        <blockquote class="qq__text">&ldquo;You show me a new tool: <b>I want to get my hands on it</b> and see what's going on. Some people refuse to engage. That's their privilege. I'm not built that way.&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--white">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-3" class="qq__photo" src="headshots/christopher-nolan.jpg" alt="Christopher Nolan" loading="lazy"/>
+        <div class="qq__role">DIRECTOR</div>
+        <h3 class="qq__name">Christopher Nolan</h3>
+        <blockquote class="qq__text">&ldquo;Any tool, AI or otherwise, is <b>another tool for filmmakers to create with</b>. As long as we have faith in the human beings making these tools, the medium of film will continue to develop in exciting ways.&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--ink qq--wide">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-4" class="qq__photo" src="headshots/diplo.jpg" alt="Diplo" loading="lazy"/>
+        <div class="qq__role">PRODUCER · DJ</div>
+        <h3 class="qq__name">Diplo</h3>
+        <blockquote class="qq__text">&ldquo;There's literally <b>no fighting AI</b>. Work your best to be the best at it; everyone else is going to use it and not give a fuck about what you think.&rdquo;</blockquote>
+      </li>
+    </ul>
+  </section>
+
+  <!-- THREE INFLECTIONS -->
+  <section class="slide slide--inflect" data-bg="cream">
+    <div class="slide__robot slide__robot--tl" aria-hidden="true">
+      <img src="A_line_drawing_depicts_a_robot_with_a_camera_for_lZzo2P7d.png" alt="" loading="lazy"/>
+    </div>
+    <header class="inflect-hd">
+      <span class="kicker">WHAT DROVE THE GROWTH</span>
+      <h2 class="h-xl">Three <span class="accent-pink">inflections.</span></h2>
+      <p class="body inflect-sub">Each one unlocked a new wave of productivity, and a new reason to burn tokens.</p>
+    </header>
+    <ol class="inflect-list">
+      <li class="inflect inflect--lime">
+        <div class="inflect__head">
+          <span class="inflect__n">01</span>
+          <span class="inflect__yr">2022</span>
+        </div>
+        <h3 class="inflect__name">ChatGPT.</h3>
+        <p class="inflect__why">AI in your pocket, every day.</p>
+        <p class="inflect__unlock"><b>The unlock:</b> turned curiosity into habit. A billion people found their first reason to type at a model.</p>
+      </li>
+      <li class="inflect inflect--pink">
+        <div class="inflect__head">
+          <span class="inflect__n">02</span>
+          <span class="inflect__yr">2024</span>
+        </div>
+        <h3 class="inflect__name">Reasoning.</h3>
+        <p class="inflect__why">Models that think longer.</p>
+        <p class="inflect__unlock"><b>The unlock:</b> deeper work: code, research, analysis. Teams started paying for minutes of thinking, not milliseconds of reply.</p>
+      </li>
+      <li class="inflect inflect--yellow">
+        <div class="inflect__head">
+          <span class="inflect__n">03</span>
+          <span class="inflect__yr">2025→</span>
+        </div>
+        <h3 class="inflect__name">Agents.</h3>
+        <p class="inflect__why">AI that takes action.</p>
+        <p class="inflect__unlock"><b>The unlock:</b> work happens while you sleep. Tokens now accrue in the background, a new economy of labor, denominated in compute.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- THREE INFLECTIONS — IN HOLLYWOOD -->
+  <section class="slide slide--inflect slide--inflect-hw" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_simplified_cartoon-like_robot_with_a_camera_lQikCdqp.png" alt="" loading="lazy"/>
+    </div>
+    <header class="inflect-hd">
+      <span class="kicker">THE SAME THREE · IN HOLLYWOOD</span>
+      <h2 class="h-xl">What that <span class="accent-pink">means on set.</span></h2>
+      <p class="body inflect-sub">Each inflection is already reshaping how films and shows get made.</p>
+    </header>
+    <ol class="inflect-list">
+      <li class="inflect inflect--lime">
+        <div class="inflect__head">
+          <span class="inflect__n">01</span>
+          <span class="inflect__yr">THE STRIKES</span>
+        </div>
+        <h3 class="inflect__name">ChatGPT.</h3>
+        <p class="inflect__why">Landed during the strikes.</p>
+        <p class="inflect__unlock"><b>On set:</b> intersected with the WGA and SAG-AFTRA walkouts and scared the hell out of writers, sparking Hollywood's biggest wave of resistance to AI yet.</p>
+      </li>
+      <li class="inflect inflect--pink">
+        <div class="inflect__head">
+          <span class="inflect__n">02</span>
+          <span class="inflect__yr">THE SUITES</span>
+        </div>
+        <h3 class="inflect__name">Reasoning.</h3>
+        <p class="inflect__why">Walked in the front door.</p>
+        <p class="inflect__unlock"><b>On set:</b> usage expanded across executives and studios. Dev notes, coverage, financial models, pitch decks: reasoning models quietly became the assistant above the line.</p>
+      </li>
+      <li class="inflect inflect--yellow">
+        <div class="inflect__head">
+          <span class="inflect__n">03</span>
+          <span class="inflect__yr">THE CANVAS</span>
+        </div>
+        <h3 class="inflect__name">Agents.</h3>
+        <p class="inflect__why">A studio that never sleeps.</p>
+        <p class="inflect__unlock"><b>On set:</b> overnight image and video generation: whole scenes rendered, iterated, and delivered before call time. The pipeline runs while the lot is dark.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- LET'S WATCH AI EXAMPLES — 1 / 3 (YouTube) -->
+  <section class="slide slide--ai-example" data-bg="cream">
+    <header class="ai-example__hd">
+      <span class="kicker">EXAMPLE 1 OF 3</span>
+      <h2 class="h-xl">Let&rsquo;s watch some <span class="accent-pink">AI examples.</span></h2>
+    </header>
+    <div class="ai-example__frame ai-example__frame--video">
+      <iframe src="https://www.youtube.com/embed/rfTnW8pl3DE?rel=0&modestbranding=1" title="AI example: YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <p class="ai-example__cap">youtu.be/rfTnW8pl3DE</p>
+  </section>
+
+  <!-- LET'S WATCH AI EXAMPLES — 2 / 3 (jboogx_creative on X) -->
+  <section class="slide slide--ai-example" data-bg="cream">
+    <header class="ai-example__hd">
+      <span class="kicker">EXAMPLE 2 OF 3</span>
+      <h2 class="h-xl">Let&rsquo;s watch some <span class="accent-pink">AI examples.</span></h2>
+    </header>
+    <div class="ai-example__frame ai-example__frame--video">
+      <video data-media-key="let-s-watch-ai-examples-2-3-jboogx-creative-on-x-0" src="Twitter Video Download (3).mp4" controls playsinline preload="metadata"></video>
+    </div>
+    <p class="ai-example__cap"><a class="link" href="https://x.com/jboogx_creative/status/2044779559636373580">x.com/jboogx_creative</a></p>
+  </section>
+
+  <!-- LET'S WATCH AI EXAMPLES — 3 / 3 (infiniteyay on X) -->
+  <section class="slide slide--ai-example" data-bg="cream">
+    <header class="ai-example__hd">
+      <span class="kicker">EXAMPLE 3 OF 3</span>
+      <h2 class="h-xl">Let&rsquo;s watch some <span class="accent-pink">AI examples.</span></h2>
+    </header>
+    <div class="ai-example__frame ai-example__frame--video">
+      <video data-media-key="let-s-watch-ai-examples-3-3-infiniteyay-on-x-0" src="Twitter Video Downloader.mp4" controls playsinline preload="metadata"></video>
+    </div>
+    <p class="ai-example__cap"><a class="link" href="https://x.com/infiniteyay/status/2011787709946462427">x.com/infiniteyay</a></p>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-genjam-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 11. GEN JAM INTRO -->
+  <section id="sec-genjam" class="slide slide--title" data-bg="pink">
+    <div class="slide__robot slide__robot--br" data-parallax="strong" aria-hidden="true">
+      <img src="A_stylized_black_robot_with_a_camera_for_a_head_ruyiJ42G.png" alt="" loading="lazy"/>
+    </div>
+    <div class="tag-row">
+      <span class="tag tag--yellow">GEN JAM</span>
+    </div>
+    <h1 class="display" style="color:var(--white);">
+      <span>LEARN.</span><br/>
+      <span style="color:var(--yellow);">CREATE.</span><br/>
+      <span>PLAY.</span>
+    </h1>
+    <p class="lede" style="color:var(--white);max-width:30ch;">A hands-on AI creativity jam. Team up. Prompt hard. Ship something tonight.</p>
+  </section>
+
+  <!-- WHAT IS A GENJAM -->
+  <section class="slide slide--left slide--genjam-def" data-bg="cream">
+    <span class="kicker">THE BASICS</span>
+    <h2 class="h-xl gj-title">What is a <span class="accent-pink">GenJam?</span></h2>
+    <p class="gj-big">A workshop, creation exercise, hackathon, and screening: <span class="accent-pink">all in one.</span></p>
+    <p class="gj-big">GenJamming is a <span class="accent-pink">muscle.</span> AI is a tool to practice storytelling over and over: see your stories, test them, and try again.</p>
+  </section>
+
+  <!-- GENJAM = AI TOOLS + STORYTELLING -->
+  <section class="slide slide--center slide--craft" data-bg="ink">
+    <span class="kicker kicker--dark">WHY IT MATTERS</span>
+    <h2 class="h-xl">An exercise in <span class="accent-pink">both.</span></h2>
+    <p class="lede craft-sub">A GenJam trains two muscles at once &mdash; the tools <i>and</i> the craft.</p>
+    <div class="craft-pair">
+      <div class="craft-card craft-card--lime">
+        <div class="craft-card__tag">THE TOOLS</div>
+        <h3 class="craft-card__h">AI Tools</h3>
+        <p class="craft-card__b">Learn the models, prompts, and workflows that turn an idea into moving images, fast.</p>
+      </div>
+      <div class="craft-plus" aria-hidden="true">+</div>
+      <div class="craft-card craft-card--pink">
+        <div class="craft-card__tag">THE CRAFT</div>
+        <h3 class="craft-card__h">Storytelling</h3>
+        <p class="craft-card__b">Structure, character, and emotion &mdash; the human skills that make a story land.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO GENJAMS, SIDE BY SIDE -->
+  <section class="slide slide--center slide--two-jams" data-bg="lime">
+    <span class="kicker">PICK YOUR TRACK</span>
+    <h2 class="h-xxl">Two GenJams, <span class="accent-pink">side by side.</span></h2>
+    <div class="twojams-grid">
+      <div class="twojam twojam--a">
+        <div class="twojam__hrs">4 HRS</div>
+        <div class="twojam__t">Short jam</div>
+        <p class="twojam__b">A fast, focused sprint: make a short in a single sitting.</p>
+      </div>
+      <div class="twojam twojam--b">
+        <div class="twojam__hrs">8 HRS</div>
+        <div class="twojam__t">Full-day jam</div>
+        <p class="twojam__b">A longer track: more time to iterate, refine, and go deeper.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE / RUN OF SHOW (two tracks) -->
+  <section class="slide slide--schedule slide--schedule-2" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="A_stylized_illustration_depicts_a_robot_in_X_iUz7az.png" alt="" loading="lazy"/>
+    </div>
+    <header class="schedule-hd">
+      <span class="kicker">RUN OF SHOW</span>
+      <h2 class="h-xxl">The <span class="accent-pink">schedule.</span></h2>
+    </header>
+    <div class="schedule-tracks">
+      <div class="schedule-track">
+        <div class="schedule-track__hd schedule-track__hd--a">4-HOUR JAM</div>
+        <ol class="schedule-list">
+          <li class="schedule-item"><span class="schedule-num">01</span><span class="schedule-label">Intro &amp; Demo</span></li>
+          <li class="schedule-item"><span class="schedule-num">02</span><span class="schedule-label">Q&amp;A</span></li>
+          <li class="schedule-item"><span class="schedule-num">03</span><span class="schedule-label">Form Groups of 3&ndash;4</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">04</span><span class="schedule-label">Ideate &amp; Generate</span></li>
+          <li class="schedule-item"><span class="schedule-num">05</span><span class="schedule-label">Submit Films</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">06</span><span class="schedule-label">Watch &amp; Vote</span></li>
+        </ol>
+      </div>
+      <div class="schedule-track">
+        <div class="schedule-track__hd schedule-track__hd--b">8-HOUR JAM</div>
+        <ol class="schedule-list">
+          <li class="schedule-item"><span class="schedule-num">01</span><span class="schedule-label">Intro &amp; Demo</span></li>
+          <li class="schedule-item"><span class="schedule-num">02</span><span class="schedule-label">Q&amp;A</span></li>
+          <li class="schedule-item"><span class="schedule-num">03</span><span class="schedule-label">Form Groups of 3&ndash;4</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">04</span><span class="schedule-label">Ideate &amp; Generate</span></li>
+          <li class="schedule-item"><span class="schedule-num">05</span><span class="schedule-label">Refine &amp; Iterate</span></li>
+          <li class="schedule-item"><span class="schedule-num">06</span><span class="schedule-label">Submit Films</span></li>
+          <li class="schedule-item schedule-item--accent"><span class="schedule-num">07</span><span class="schedule-label">Watch &amp; Vote</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. THE PROCESS -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">THE METHOD</span>
+    <h2 class="h-xxl">The <span class="accent-pink">Process.</span></h2>
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_droid_with_a_camera_for_a_head_performs_a_mPkEMN0y.png" alt="" loading="lazy"/>
+    </div>
+    <ol class="process-flow">
+      <li class="pf pf--yellow"><span class="pf__n">1</span><span class="pf__t">Idea / Script</span></li>
+      <li class="pf-arrow">→</li>
+      <li class="pf pf--pink"><span class="pf__n">2</span><span class="pf__t">Shotlist</span></li>
+      <li class="pf-arrow">→</li>
+      <li class="pf pf--lime"><span class="pf__n">3</span><span class="pf__t">TXT&nbsp;→&nbsp;IMG</span></li>
+      <li class="pf-arrow">→</li>
+      <li class="pf pf--orange"><span class="pf__n">4</span><span class="pf__t">IMG&nbsp;→&nbsp;VID</span></li>
+      <li class="pf-arrow">→</li>
+      <li class="pf pf--white"><span class="pf__n">5</span><span class="pf__t">Sound &amp; Edit</span></li>
+    </ol>
+    <p class="body pf-foot">SHOT 1 → IMG → VID · SHOT 2 → IMG → VID · SHOT 3 → IMG → VID · …</p>
+  </section>
+
+  <!-- THE PROCESS (EXPANDED) — fan-out diagram -->
+  <section class="slide slide--process-fan" data-bg="cream">
+    <header class="pfn-hd">
+      <span class="kicker">THE METHOD · DETAILED</span>
+      <h2 class="h-xxl">The Process <span class="accent-pink">(Expanded).</span></h2>
+    </header>
+    <div class="pfn-svg-wrap">
+      <svg class="pfn-svg" viewBox="0 0 1410 720" xmlns="http://www.w3.org/2000/svg" aria-label="Idea to Script to six parallel Shot, Prompt, Img, Vid tracks converging into Sound and Edit">
+        <defs>
+          <marker id="pfn-arrow-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#141B34"/>
+          </marker>
+        </defs>
+
+        <!-- Column headers -->
+        <text x="565.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">SHOTLIST</text>
+        <text x="755.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">PROMPT</text>
+        <text x="935.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">TXT → IMG</text>
+        <text x="1105.0" y="22" text-anchor="middle" letter-spacing="2" opacity="0.55" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#141B34">IMG → VID</text>
+
+        <!-- Idea (yellow) -->
+        <rect x="35" y="336" width="140" height="90" rx="12" fill="#141B34"/>
+        <rect x="30" y="330" width="140" height="90" rx="12" fill="#FFD93D" stroke="#141B34" stroke-width="3.5"/>
+        <text x="100.0" y="386.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="32" fill="#141B34">Idea</text>
+
+        <!-- Idea -> Script arrow -->
+        <line x1="170" y1="375.0" x2="234" y2="375.0" stroke="#141B34" stroke-width="3" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Script / Story (lime) -->
+        <rect x="245" y="336" width="220" height="90" rx="12" fill="#141B34"/>
+        <rect x="240" y="330" width="220" height="90" rx="12" fill="#CCFF33" stroke="#141B34" stroke-width="3.5"/>
+        <text x="350.0" y="385.0" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="28" fill="#141B34">Script / Story</text>
+
+        <!-- Six fan-out arrows from Script right edge to each Shot left edge -->
+        <line x1="460" y1="375.0" x2="499" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="460" y1="375.0" x2="499" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Row 1 -->
+        <rect x="509" y="56.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="51.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 1</text>
+        <line x1="625" y1="85" x2="689" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="56.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="51.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="85" x2="879" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="56.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="51.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="85" x2="1049" y2="85" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="56.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="51.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="93" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 2 -->
+        <rect x="509" y="166.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="161.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 2</text>
+        <line x1="625" y1="195" x2="689" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="166.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="161.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="195" x2="879" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="166.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="161.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="195" x2="1049" y2="195" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="166.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="161.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="203" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 3 -->
+        <rect x="509" y="276.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="271.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 3</text>
+        <line x1="625" y1="305" x2="689" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="276.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="271.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="305" x2="879" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="276.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="271.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="305" x2="1049" y2="305" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="276.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="271.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="313" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 4 -->
+        <rect x="509" y="386.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="381.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 4</text>
+        <line x1="625" y1="415" x2="689" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="386.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="381.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="415" x2="879" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="386.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="381.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="415" x2="1049" y2="415" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="386.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="381.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="423" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 5 -->
+        <rect x="509" y="496.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="491.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 5</text>
+        <line x1="625" y1="525" x2="689" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="496.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="491.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="525" x2="879" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="496.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="491.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="525" x2="1049" y2="525" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="496.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="491.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Row 6 -->
+        <rect x="509" y="606.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="505" y="601.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="565.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Shot 6</text>
+        <line x1="625" y1="635" x2="689" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="699" y="606.0" width="120" height="68" rx="10" fill="#141B34"/>
+        <rect x="695" y="601.0" width="120" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="755.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Prompt</text>
+        <line x1="815" y1="635" x2="879" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="889" y="606.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="885" y="601.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="935.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Img</text>
+        <line x1="985" y1="635" x2="1049" y2="635" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <rect x="1059" y="606.0" width="100" height="68" rx="10" fill="#141B34"/>
+        <rect x="1055" y="601.0" width="100" height="68" rx="10" fill="#FFFFFF" stroke="#141B34" stroke-width="3"/>
+        <text x="1105.0" y="643" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="24" fill="#141B34">Vid</text>
+
+        <!-- Six fan-in arrows from each Vid right edge to Sound&Edit left edge -->
+        <line x1="1155" y1="85" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="195" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="305" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="415" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="525" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+        <line x1="1155" y1="635" x2="1179" y2="370.0" stroke="#141B34" stroke-width="2.6" marker-end="url(#pfn-arrow-head)"/>
+
+        <!-- Sound & Edit (pink) -->
+        <rect x="1190" y="326" width="170" height="100" rx="12" fill="#141B34"/>
+        <rect x="1185" y="320" width="170" height="100" rx="12" fill="#FF3B5C" stroke="#141B34" stroke-width="3.5"/>
+        <text x="1270.0" y="358" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="26" fill="#FFFFFF">Sound</text>
+        <text x="1270.0" y="390" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="26" fill="#FFFFFF">&amp; Edit</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 14. ROLES -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">TEAM UP</span>
+    <h2 class="h-xxl"><span class="accent-pink">Roles.</span></h2>
+    <div class="slide__robot slide__robot--tr" data-parallax="strong" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_for_a_head_is_gtFc3B7L.png" alt="" loading="lazy"/>
+    </div>
+    <ul class="roles-grid">
+      <li class="role role--yellow"><span class="role__n">01</span><span class="role__t">EDITOR</span></li>
+      <li class="role role--pink"><span class="role__n">02</span><span class="role__t">SOUND &amp; MUSIC</span></li>
+      <li class="role role--lime"><span class="role__n">03</span><span class="role__t">IMAGE PRODUCTION</span></li>
+      <li class="role role--white"><span class="role__n">04</span><span class="role__t">VIDEO PRODUCTION</span></li>
+      <li class="role role--orange"><span class="role__n">05</span><span class="role__t">VOICE ACTOR</span></li>
+    </ul>
+    <p class="body" style="font-style:italic;">And come up with a fun team name for submissions.</p>
+  </section>
+
+  <!-- BREAKING ICE — BEFORE AI TOOLS -->
+  <section class="slide slide--qr" data-bg="yellow">
+    <div class="qr-left">
+      <span class="kicker">STORYBOARD RELAY</span>
+      <h2 class="h-xxl">Storyboard <span class="accent-pink">Relay.</span></h2>
+      <p class="lede">Let&rsquo;s make a story together, exquisite corpse style.</p>
+      <p class="body"><a class="link" href="https://breakingice.vercel.app">breakingice.vercel.app</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="breaking-ice-aitools-0" src="breakingice-qr.png" alt="QR code: breakingice.vercel.app" />
+        <figcaption>SCAN TO JOIN</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-ai-tools-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- AI TOOLS INTRO -->
+  <section id="sec-ai-tools" class="slide slide--center" data-bg="ink">
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_for_a_head_is_j_nWb94F.png" alt="" loading="lazy"/>
+    </div>
+    <h1 class="display display--sm" style="color:var(--cream);">
+      <span>Let&rsquo;s look at</span><br/>
+      <span>some <span class="accent-pink">AI tools.</span></span>
+    </h1>
+  </section>
+
+  <!-- AI TOOLS · TEXT-TO-IMAGE & IMAGE-TO-VIDEO -->
+  <section class="slide slide--left" data-bg="cream">
+    <div class="slide__robot slide__robot--bl" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_for_a_head_stands_vYGBsiXC.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">AI TOOLS · THE BASICS</span>
+    <h2 class="h-xxl">Text &rarr; Image<br/><span class="accent-pink">Image &rarr; Video.</span></h2>
+    <p class="lede">The foundation of AI filmmaking. Describe a frame, generate it, then animate it.</p>
+    <ol class="process-flow">
+      <li class="pf pf--yellow"><span class="pf__n">1</span><span class="pf__t">Write a prompt</span></li>
+      <li class="pf-arrow">&rarr;</li>
+      <li class="pf pf--pink"><span class="pf__n">2</span><span class="pf__t">Generate image</span></li>
+      <li class="pf-arrow">&rarr;</li>
+      <li class="pf pf--lime"><span class="pf__n">3</span><span class="pf__t">Animate to video</span></li>
+    </ol>
+    <p class="body mono pf-foot">Tools: Midjourney &middot; Nanobanana &middot; ChatGPT Image2 &middot; Flux &middot; Ideogram &middot; Reve</p>
+  </section>
+
+  <!-- AI TOOLS · NODE-BASED WORKFLOWS -->
+  <section class="slide slide--left" data-bg="cream">
+    <div class="slide__robot slide__robot--bl" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_lens_for_a_head_q_tbJ_h9.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">AI TOOLS &middot; NODE-BASED WORKFLOWS</span>
+    <h2 class="h-xxl">Node-based <span class="accent-pink">Workflows.</span></h2>
+    <p class="lede">Wire AI models together visually: each node is a step, each connection is data flowing between them. Total control, infinite flexibility.</p>
+    <ul class="big-list big-list--compact">
+      <li><span class="num">1</span><span>Build pipelines by connecting nodes, no code required.</span></li>
+      <li><span class="num">2</span><span>Chain models: image gen &rarr; upscale &rarr; animate &rarr; audio.</span></li>
+      <li><span class="num">3</span><span>Save, share, and remix workflows from the community.</span></li>
+    </ul>
+    <p class="body mono pf-foot">Tools: ComfyUI &middot; Weavy &middot; Flora &middot; Krea &middot; Freepik</p>
+  </section>
+
+  <!-- TWEET · WORTH READING (embedded X post) -->
+  <section class="slide slide--center slide--tweet" data-bg="cream">
+    <span class="kicker">FROM THE TIMELINE</span>
+    <h2 class="h-xl">Worth <span class="accent-pink">reading.</span></h2>
+    <div class="tweet-shell">
+      <blockquote class="twitter-tweet" data-dnt="true" data-align="center">
+        <a href="https://twitter.com/svvvayed/status/2071000377441300854">View the post on X (@svvvayed)</a>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- MY ADVICE FOR PROMPTING -->
+  <section class="slide slide--prompting" data-bg="ink">
+    <header class="prompt-hd">
+      <span class="kicker kicker--dark">MY MAIN ADVICE</span>
+      <h2 class="h-xl">How to <span class="accent-pink">prompt.</span></h2>
+    </header>
+    <ol class="prompt-cards">
+      <li class="prompt-card prompt-card--text">
+        <div class="prompt-card__tag">TEXT</div>
+        <p class="prompt-card__d">Get the LLM to <b>ask you questions</b>: that&rsquo;s how you reach deeper ideas and a better story.</p>
+        <p class="prompt-card__ex"><span>EXAMPLE</span>&ldquo;Ask me 5 questions to help me craft my story better.&rdquo;</p>
+      </li>
+      <li class="prompt-card prompt-card--img">
+        <div class="prompt-card__tag">IMAGES</div>
+        <p class="prompt-card__d">1) Nail the <b>subject, objects &amp; landscape</b>. 2) Describe the <b>camera type &amp; angle</b>.</p>
+        <p class="prompt-card__ex"><span>EXAMPLE</span>&ldquo;A lone red fox on a snowy hilltop at dusk, a tiny village glowing in the valley below, shot on 35mm film, low-angle wide.&rdquo;</p>
+      </li>
+      <li class="prompt-card prompt-card--vid">
+        <div class="prompt-card__tag">VIDEO</div>
+        <p class="prompt-card__d">1) <b>One action.</b> 2) <b>One camera motion.</b> Keep it simple so the model stays coherent.</p>
+        <p class="prompt-card__ex"><span>EXAMPLE</span>&ldquo;The fox slowly turns its head toward camera, slow dolly-in.&rdquo;</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- AI TOOLS · LUMA AGENTS -->
+  <section class="slide slide--left" data-bg="cream">
+    <div class="slide__robot slide__robot--tl" data-parallax="strong" aria-hidden="true">
+      <img src="In_a_graphic_illustration_style_a_stylized_robot_m-fi5Acu.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">AI TOOLS · AGENTIC FILMMAKING</span>
+    <h2 class="h-xxl">Infinite Canvas <span class="accent-pink">Agentic Filmmaking.</span></h2>
+    <p class="lede">Luma&rsquo;s agentic filmmaking pipeline: describe your film and the agent handles generation, continuity, and assembly.</p>
+    <ul class="big-list big-list--compact">
+      <li><span class="num">1</span><span>Describe your scene or story in natural language.</span></li>
+      <li><span class="num">2</span><span>The agent generates shots, maintains character and style consistency.</span></li>
+      <li><span class="num">3</span><span>Outputs a rough cut, ready to refine.</span></li>
+    </ul>
+    <p class="body mono pf-foot">Tools: Luma Agents &middot; Flora Agent &middot; OiiOii &middot; TapNow</p>
+  </section>
+
+  <!-- AI TOOLS · FLIK -->
+  <section class="slide slide--left" data-bg="cream">
+    <div class="slide__robot slide__robot--tl" aria-hidden="true">
+      <img src="In_a_minimalist_line_art_style_a_white_outline_0Q_iwtpp.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">AI TOOLS · MULTI-SHOT AGENTIC</span>
+    <h2 class="h-xxl">Multi-shot <span class="accent-pink">Agentic Filmmaking.</span></h2>
+    <p class="lede">Multi-shot agentic filmmaking: build a full scene shot by shot, with AI managing continuity across the whole sequence.</p>
+    <ul class="big-list big-list--compact">
+      <li><span class="num">1</span><span>Write a script or shotlist; Flik breaks it into shots.</span></li>
+      <li><span class="num">2</span><span>Each shot is generated and linked: consistent characters, world, style.</span></li>
+      <li><span class="num">3</span><span>Export a multi-shot sequence, ready to edit.</span></li>
+    </ul>
+    <p class="body mono pf-foot">Tools: Flik &middot; Hypernatural &middot; Popcorn &middot; Seedance2</p>
+  </section>
+
+  <!-- CREATE ON MACHINE CINEMA -->
+  <section class="slide slide--qr" data-bg="cream">
+    <div class="qr-left">
+      <span class="kicker">START CREATING</span>
+      <h2 class="h-xxl">
+        Create on<br/>
+        <span class="accent-pink">Machine Cinema.</span>
+      </h2>
+      <p class="lede">Head to the studio and start making. Scan the code, or go straight to the link below.</p>
+      <p class="body"><a class="link" href="https://create.machinecinema.ai">create.machinecinema.ai</a></p>
+      <p class="passcode">PASSCODE <span class="passcode__code">BENTYV</span></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="create-machine-cinema-qr-0" src="create-mc-qr.png" alt="QR code: create.machinecinema.ai" />
+        <figcaption>SCAN TO CREATE</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FLIK AI — FREE CREDITS -->
+  <section class="slide slide--qr" data-bg="yellow">
+    <div class="qr-left">
+      <span class="kicker">BONUS CREDITS</span>
+      <h2 class="h-xxl">
+        Keep going on<br/>
+        <span class="accent-pink">Flik.</span>
+      </h2>
+      <p class="lede">Sign up and get <b>7 days of free credits</b>, plenty to keep building after the jam.</p>
+      <p class="body"><a class="link" href="https://flikai.com">flikai.com</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="flikai-free-credits-qr-0" src="flikai-qr.png" alt="QR code: flikai.com" />
+        <figcaption>SCAN FOR 7 FREE DAYS</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PIXVERSE — CREDIT SPONSOR + PASSCODES -->
+  <section class="slide slide--qr" data-bg="cream">
+    <div class="qr-left">
+      <span class="kicker">TODAY&rsquo;S CREDIT SPONSOR</span>
+      <figure class="sponsor-logo sponsor-logo--inline">
+        <img data-media-key="pixverse-sponsor-0" src="PixVerse%20Black%201024x213.jpg" alt="PixVerse" />
+      </figure>
+      <p class="lede">Today&rsquo;s credits are powered by <b>PixVerse</b>, an AI video platform for turning ideas into shots fast. We&rsquo;ll <span class="accent-pink">hand out passcodes to each group</span> so you can start generating right away.</p>
+      <p class="body"><a class="link" href="https://pixverse.ai">pixverse.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="pixverse-info-qr-0" src="pixverse-qr.png" alt="QR code: pixverse.ai" />
+        <figcaption>SCAN TO EXPLORE</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- OPENART — CREDIT SPONSOR -->
+  <section class="slide slide--qr" data-bg="cream">
+    <div class="qr-left">
+      <span class="kicker">CREDIT SPONSOR</span>
+      <figure class="sponsor-logo sponsor-logo--inline">
+        <img data-media-key="openart-sponsor-0" src="openart%20logo.png" alt="OpenArt" />
+      </figure>
+      <p class="lede"><b>OpenArt</b> is an all-in-one AI creative studio: images, characters, and video from a single prompt. We&rsquo;re excited to <span class="accent-pink">partner with them</span> for future jams.</p>
+      <p class="body"><a class="link" href="http://bit.ly/4viXkQE">bit.ly/4viXkQE</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="openart-info-qr-0" src="openart-credits-qr.png" alt="QR code: OpenArt offer" />
+        <figcaption>SCAN FOR OPENART</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 15. STORY STRUCTURE -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">STORYTELLING</span>
+    <h2 class="h-xxl">Pixar Story <span class="accent-pink">Structure.</span></h2>
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="A_white_line-drawn_robot_is_depicted_in_a_tree_jtNKF0sp.png" alt="" loading="lazy"/>
+    </div>
+    <ol class="story-lines">
+      <li>Once upon a time<span class="dots">…</span></li>
+      <li>Every day<span class="dots">…</span></li>
+      <li>Until one day<span class="dots">…</span></li>
+      <li>Because of that<span class="dots">…</span></li>
+      <li>Because of that<span class="dots">…</span></li>
+      <li>Until <span class="accent-pink">finally…</span></li>
+    </ol>
+  </section>
+
+  <!-- STORY STRUCTURE DIAGRAM 1 -->
+  <section class="slide slide--fullimg" data-bg="cream">
+    <img data-media-key="story-structure-diagram-1" class="fullimg" src="https://cdn.beverlyboy.com/wp-content/uploads/2026/01/09211518/How-to-Structure-a-Short-Film-1.png" alt="How to structure a short film" />
+  </section>
+
+  <!-- STORY STRUCTURE DIAGRAM 2 -->
+  <section class="slide slide--fullimg" data-bg="cream">
+    <img data-media-key="story-structure-diagram-2" class="fullimg" src="https://mindandbodyexercises.wordpress.com/wp-content/uploads/2023/12/image-2.png" alt="Story structure diagram" />
+  </section>
+
+  <!-- STORY ENGINE -->
+  <section class="slide slide--engine" data-bg="ink">
+    <header class="engine-hd">
+      <span class="kicker kicker--dark">THE STORY ENGINE</span>
+      <h2 class="h-xl">What pulls you <span class="accent-pink">through.</span></h2>
+    </header>
+    <ol class="engine">
+      <li class="engine__step engine__step--a"><span class="engine__n">1</span><h3 class="engine__t">Hook</h3><p class="engine__d">Grab attention.</p></li>
+      <li class="engine__step engine__step--b"><span class="engine__n">2</span><h3 class="engine__t">Curiosity</h3><p class="engine__d">Create questions.</p></li>
+      <li class="engine__step engine__step--c"><span class="engine__n">3</span><h3 class="engine__t">Escalation</h3><p class="engine__d">Raise tension &amp; stakes.</p></li>
+      <li class="engine__step engine__step--d"><span class="engine__n">4</span><h3 class="engine__t">Payoff</h3><p class="engine__d">Deliver an emotional reward.</p></li>
+    </ol>
+    <div class="engine-test">
+      <p class="engine-test__q">The ultimate test: can you describe it in <b>one compelling sentence?</b></p>
+      <ul class="engine-test__ex">
+        <li>&ldquo;A toy comes alive after its owner dies.&rdquo;</li>
+        <li>&ldquo;A father gets messages from his future daughter.&rdquo;</li>
+        <li>&ldquo;An old man races death to attend one final dinner.&rdquo;</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CORE PRINCIPLES -->
+  <section class="slide slide--principles" data-bg="cream">
+    <header class="prin-hd">
+      <span class="kicker">CORE PRINCIPLES</span>
+      <h2 class="h-xl">Ten rules that keep it <span class="accent-pink">alive.</span></h2>
+    </header>
+    <ol class="principles">
+      <li class="principle principle--y"><h3 class="principle__t">Every shot asks a question</h3><p class="principle__d">Keep them wondering what&rsquo;s next.</p></li>
+      <li class="principle principle--l"><h3 class="principle__t">Conflict is oxygen</h3><p class="principle__d">No resistance, nothing&rsquo;s happening.</p></li>
+      <li class="principle principle--p"><h3 class="principle__t">Every scene changes something</h3><p class="principle__d">Emotion, info, stakes, or status.</p></li>
+      <li class="principle principle--w"><h3 class="principle__t">One dominant emotion</h3><p class="principle__d">Make them feel one thing deeply.</p></li>
+      <li class="principle principle--l"><h3 class="principle__t">Raise the stakes</h3><p class="principle__d">Give a reason to care.</p></li>
+      <li class="principle principle--y"><h3 class="principle__t">Specificity beats generality</h3><p class="principle__d">Unique details are memorable.</p></li>
+      <li class="principle principle--w"><h3 class="principle__t">Start late</h3><p class="principle__d">Enter at the last possible moment.</p></li>
+      <li class="principle principle--p"><h3 class="principle__t">Show, don&rsquo;t explain</h3><p class="principle__d">Let them connect the dots.</p></li>
+      <li class="principle principle--y"><h3 class="principle__t">Surprise every few seconds</h3><p class="principle__d">Keep introducing novelty.</p></li>
+      <li class="principle principle--l"><h3 class="principle__t">End early</h3><p class="principle__d">Leave right after it lands.</p></li>
+    </ol>
+  </section>
+
+  <!-- QUESTIONS -->
+  <section class="slide slide--questions-q" data-bg="pink">
+    <header class="q-hd">
+      <span class="kicker">QUESTIONS</span>
+      <h2 class="h-xl">Ask before you <span class="accent-pink">publish.</span></h2>
+    </header>
+    <ol class="qgrid">
+      <li class="qrow"><span class="qrow__n">01</span><span class="qrow__t">What&rsquo;s the hook?</span></li>
+      <li class="qrow"><span class="qrow__n">02</span><span class="qrow__t">What&rsquo;s the central question?</span></li>
+      <li class="qrow"><span class="qrow__n">03</span><span class="qrow__t">Where&rsquo;s the conflict?</span></li>
+      <li class="qrow"><span class="qrow__n">04</span><span class="qrow__t">What changes?</span></li>
+      <li class="qrow"><span class="qrow__n">05</span><span class="qrow__t">What emotion dominates?</span></li>
+      <li class="qrow"><span class="qrow__n">06</span><span class="qrow__t">What are the stakes?</span></li>
+      <li class="qrow"><span class="qrow__n">07</span><span class="qrow__t">What&rsquo;s the most memorable image?</span></li>
+      <li class="qrow"><span class="qrow__n">08</span><span class="qrow__t">Can I cut 20%?</span></li>
+      <li class="qrow"><span class="qrow__n">09</span><span class="qrow__t">Does it work without dialogue?</span></li>
+      <li class="qrow"><span class="qrow__n">10</span><span class="qrow__t">Would someone tell a friend about it?</span></li>
+    </ol>
+  </section>
+
+  <!-- SHORT FILM TIPS -->
+  <section class="slide slide--history" data-bg="cream">
+    <header class="history-hd">
+      <span class="kicker">BEFORE YOU MAKE</span>
+      <h2 class="h-xl history-title">Make it <span class="accent-pink">good.</span></h2>
+      <p class="body history-sub">A few habits that separate a good short film from a forgettable one.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">HOOK</div>
+        <h3 class="fact__h">Grab them fast.</h3>
+        <p class="fact__b">Earn attention in the first 3 seconds: skip the slow intro and open on something striking.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">FOCUS</div>
+        <h3 class="fact__h">One clear idea.</h3>
+        <p class="fact__b">A short film does one thing well. Cut every shot that isn&rsquo;t serving it.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">SHOW</div>
+        <h3 class="fact__h">Show, don&rsquo;t tell.</h3>
+        <p class="fact__b">Let images and sound carry the story. Trust the audience to keep up.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">STAKES</div>
+        <h3 class="fact__h">Something changes.</h3>
+        <p class="fact__b">A want, a problem, a turn. No stakes, no story, even in 60 seconds.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">SOUND</div>
+        <h3 class="fact__h">Sound is half of it.</h3>
+        <p class="fact__b">Music and sound design do most of the emotional work. Never ship it silent.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">ENDING</div>
+        <h3 class="fact__h">Land the last beat.</h3>
+        <p class="fact__b">The final shot is what people remember. Make it intentional.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- AESTHETICS -->
+  <section class="slide slide--mosaic slide--aesthetics" data-bg="cream">
+    <header class="mosaic-hd">
+      <span class="kicker">AESTHETICS</span>
+      <h2 class="h-xl">Pick a style, and <span class="accent-pink">commit.</span></h2>
+      <p class="body mosaic-sub">Choose an artistic style you love and reinforce it in <b>every</b> generation: keep naming it so your whole film holds together.</p>
+    </header>
+    <ul class="mosaic">
+      <li class="mosaic__tile mosaic__tile--yellow">
+        <figure data-media-key="aesthetic-pixel" class="mosaic__media"><span>PIXEL</span></figure>
+        <h3 class="mosaic__h">Pixel</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--lime">
+        <figure data-media-key="aesthetic-watercolor" class="mosaic__media"><span>WATERCOLOR</span></figure>
+        <h3 class="mosaic__h">Watercolor</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--pink">
+        <figure data-media-key="aesthetic-anime" class="mosaic__media"><span>ANIME</span></figure>
+        <h3 class="mosaic__h">Anime</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--white">
+        <figure data-media-key="aesthetic-3d" class="mosaic__media"><span>3D</span></figure>
+        <h3 class="mosaic__h">3D</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--yellow">
+        <figure data-media-key="aesthetic-claymation" class="mosaic__media"><span>CLAYMATION</span></figure>
+        <h3 class="mosaic__h">Claymation</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--lime">
+        <figure data-media-key="aesthetic-comic" class="mosaic__media"><span>COMIC</span></figure>
+        <h3 class="mosaic__h">Comic</h3>
+      </li>
+    </ul>
+  </section>
+
+  <!-- STORYTELLING · IMAGE-TO-VIDEO WORKFLOW -->
+  <section class="slide slide--center slide--funnel" data-bg="ink">
+    <span class="kicker kicker--dark">THE WORKFLOW</span>
+    <h2 class="h-xl">Make <span class="accent-lime">hundreds</span> of images. Keep <span class="accent-pink">tens</span> of videos.</h2>
+    <p class="lede funnel-sub">Cast a wide net, then edit down. Generating images is cheap &mdash; so explore a lot, choose the few that tell your story, and only then animate.</p>
+    <div class="funnel-flow">
+      <div class="funnel-step funnel-step--lime">
+        <div class="funnel-step__num">100s</div>
+        <h3 class="funnel-step__h">Generate images</h3>
+        <p class="funnel-step__b">Make far more frames than you need &mdash; explore looks, angles, and moments fast.</p>
+      </div>
+      <span class="funnel-arrow" aria-hidden="true">&rarr;</span>
+      <div class="funnel-step funnel-step--white">
+        <div class="funnel-step__num">edit</div>
+        <h3 class="funnel-step__h">Cut to a storyboard</h3>
+        <p class="funnel-step__b">Keep only the shots that tell your story, in order. Kill your darlings.</p>
+      </div>
+      <span class="funnel-arrow" aria-hidden="true">&rarr;</span>
+      <div class="funnel-step funnel-step--pink">
+        <div class="funnel-step__num">10s</div>
+        <h3 class="funnel-step__h">Animate to video</h3>
+        <p class="funnel-step__b">Turn just the keepers into clips &mdash; tens of videos, not hundreds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-dream-town-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DREAM TOWN — theme + tracks -->
+  <section id="sec-dream-town" class="slide slide--grid-2 slide--split" data-bg="ink">
+    <div class="split-lead">
+      <span class="kicker kicker--dark">TODAY&rsquo;S THEME</span>
+      <h2 class="h-xxl">Dream <span class="accent-pink">Town.</span></h2>
+      <p class="lede">Your prompt for the jam: imagine a town worth dreaming about.</p>
+    </div>
+    <figure data-media-key="dream-town-theme-bg" class="philo-frame"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- DREAM TOWN — THE BRIEF -->
+  <section class="slide slide--center" data-bg="pink">
+    <span class="kicker">YOUR MISSION</span>
+    <h2 class="h-xxl">Create a short film, commercial, or music video about <span class="accent-pink">traveling to your dream town.</span></h2>
+  </section>
+
+  <!-- SUBMISSION CRITERIA -->
+  <section class="slide slide--history" data-bg="ink">
+    <header class="history-hd">
+      <span class="kicker">THE BRIEF</span>
+      <h2 class="h-xl history-title">What we&rsquo;re <span class="accent-pink">looking for.</span></h2>
+      <p class="body history-sub">Keep it within these and you&rsquo;re good to submit.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">LENGTH</div>
+        <h3 class="fact__h">30&ndash;90 seconds.</h3>
+        <p class="fact__b">Long enough to tell a story, short enough to keep it tight.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">FORMAT</div>
+        <h3 class="fact__h">MP4 file.</h3>
+        <p class="fact__b">Export as .mp4 so it plays anywhere on the night.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">THEME</div>
+        <h3 class="fact__h">On theme.</h3>
+        <p class="fact__b">It has to live in the world of <b>Dream Town</b>.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">SOUND</div>
+        <h3 class="fact__h">Music or sound.</h3>
+        <p class="fact__b">No silent films: give it a track or a soundscape.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">NAMING</div>
+        <h3 class="fact__h">Name your file.</h3>
+        <p class="fact__b"><span class="mono">FilmName_YourNames.mp4</span> so we can find it fast.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- AI TIPS -->
+  <section class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="In_a_vintage_illustration_style_a_robotic_figure_6phadamP.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">WORKING WITH THE TOOLS</span>
+      <h2 class="h-xl">AI <span class="accent-pink">tips.</span></h2>
+      <p class="body history-sub">Get more from the tools with these habits.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <img data-media-key="ai-tips-0" class="fact__media" src="slide-photos/tips-ai-prompts-specific.jpg" alt="Specific prompt with shot details" loading="lazy"/>
+        <div class="fact__yr">PROMPTS</div>
+        <h3 class="fact__h">Be specific.</h3>
+        <p class="fact__b">Describe lighting, style, mood, camera angle, and subject in detail. With images, focus on subject, object, landscape, and camera angle. For video, specify one action and one camera movement.</p>
+      </li>
+      <li class="fact fact--lime">
+        <img data-media-key="ai-tips-1" class="fact__media" src="slide-photos/tips-ai-volume-iterate.jpg" alt="Multiple AI generations to choose from" loading="lazy"/>
+        <div class="fact__yr">VOLUME</div>
+        <h3 class="fact__h">Iterate fast.</h3>
+        <p class="fact__b">Generate many options quickly, then pick and refine the best one. Quantity unlocks quality.</p>
+      </li>
+      <li class="fact fact--white">
+        <img data-media-key="ai-tips-2" class="fact__media" src="slide-photos/tips-ai-reference-images.jpg" alt="Reference image guiding an AI generation" loading="lazy"/>
+        <div class="fact__yr">REFERENCE</div>
+        <h3 class="fact__h">Use images.</h3>
+        <p class="fact__b">Upload a style or composition reference to anchor your results. Visual prompts beat words.</p>
+      </li>
+      <li class="fact fact--pink">
+        <img data-media-key="ai-tips-3" class="fact__media" src="slide-photos/tips-ai-models-different.jpg" alt="Different AI model outputs side by side" loading="lazy"/>
+        <div class="fact__yr">MODELS</div>
+        <h3 class="fact__h">Try different ones.</h3>
+        <p class="fact__b">Each model has its strengths. Switch if one isn&rsquo;t working, the right tool for the shot.</p>
+      </li>
+      <li class="fact fact--lime">
+        <img data-media-key="ai-tips-4" class="fact__media" src="slide-photos/tips-ai-motion-subtle.jpg" alt="Subtle camera move on an AI video clip" loading="lazy"/>
+        <div class="fact__yr">MOTION</div>
+        <h3 class="fact__h">Keep it subtle.</h3>
+        <p class="fact__b">Short, simple camera moves work better than complex ones in image-to-video. Less is more.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <img data-media-key="ai-tips-5" class="fact__media" src="slide-photos/tips-ai-vibes-artifacts.jpg" alt="Embracing AI generation artifacts as style" loading="lazy"/>
+        <div class="fact__yr">VIBES</div>
+        <h3 class="fact__h">Embrace artifacts.</h3>
+        <p class="fact__b">AI weirdness can be a creative feature, not a bug. Lean into the strange; it&rsquo;s part of the medium.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- HUMAN TIPS -->
+  <section class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="A_black_and_white_line_drawing_depicts_a_SePAGDzf.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">WORKING WITH THE TEAM</span>
+      <h2 class="h-xl">Human <span class="accent-pink">tips.</span></h2>
+      <p class="body history-sub">The tools are only as good as the team using them.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <img data-media-key="human-tips-0" class="fact__media" src="slide-photos/tips-human-roles-designate.jpg" alt="Team designating roles around a table" loading="lazy"/>
+        <div class="fact__yr">ROLES</div>
+        <h3 class="fact__h">Designate clearly.</h3>
+        <p class="fact__b">Assign Writer, Producer, Editor, and Animator before you start. Everyone knows their lane.</p>
+      </li>
+      <li class="fact fact--lime">
+        <img data-media-key="human-tips-1" class="fact__media" src="slide-photos/tips-human-story-agree.jpg" alt="Team aligning on a story outline" loading="lazy"/>
+        <div class="fact__yr">STORY</div>
+        <h3 class="fact__h">Agree first.</h3>
+        <p class="fact__b">Lock the concept and script before anyone touches the tools. Story leads, tools follow.</p>
+      </li>
+      <li class="fact fact--white">
+        <img data-media-key="human-tips-2" class="fact__media" src="slide-photos/tips-human-parallel-work.jpg" alt="Two people working in parallel on different tools" loading="lazy"/>
+        <div class="fact__yr">PARALLEL</div>
+        <h3 class="fact__h">Work side by side.</h3>
+        <p class="fact__b">While one person prompts images, another builds the edit timeline. Move on every front at once.</p>
+      </li>
+      <li class="fact fact--pink">
+        <img data-media-key="human-tips-3" class="fact__media" src="slide-photos/tips-human-sync-checkin.jpg" alt="Quick team sync huddle" loading="lazy"/>
+        <div class="fact__yr">SYNC</div>
+        <h3 class="fact__h">Check in every 20.</h3>
+        <p class="fact__b">Short syncs every twenty minutes prevent the team from drifting in different directions.</p>
+      </li>
+      <li class="fact fact--lime">
+        <img data-media-key="human-tips-4" class="fact__media" src="slide-photos/tips-human-ship-done.jpg" alt="Finished rough cut on the timeline" loading="lazy"/>
+        <div class="fact__yr">SHIP</div>
+        <h3 class="fact__h">Done &gt; perfect.</h3>
+        <p class="fact__b">A finished rough cut beats an unfinished masterpiece. Get to the end of the timeline first.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <img data-media-key="human-tips-5" class="fact__media" src="slide-photos/tips-human-trust-team.jpg" alt="Team handing off responsibility with trust" loading="lazy"/>
+        <div class="fact__yr">TRUST</div>
+        <h3 class="fact__h">Default to your team.</h3>
+        <p class="fact__b">If a teammate is closer to the work, trust their call. Speed beats consensus on a two-hour clock.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ANY QUESTIONS (pre-jam) -->
+  <section class="slide slide--center" data-bg="lime">
+    <div class="slide__robot slide__robot--bl" data-parallax="strong" aria-hidden="true">
+      <img src="A_white_line_drawing_depicts_a_robot_upside_down_mmPO-wMa.png" alt="" loading="lazy"/>
+    </div>
+    <h1 class="display display--sm">
+      <span>ANY</span><br/>
+      <span class="accent-pink">QUESTIONS?</span>
+    </h1>
+  </section>
+
+  <!-- LET'S MAKE — go signal -->
+  <section class="slide slide--left" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" data-parallax="strong" aria-hidden="true">
+      <img src="A_cartoonish_red_robot_with_a_camera_for_a_head_0fy3XEu.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">2 HOURS ON THE CLOCK</span>
+    <h2 class="h-xxl">
+      Let&rsquo;s<br/>
+      <span class="accent-pink">GenJam.</span>
+    </h2>
+    <p class="lede">Make something weird. Finish it. Show the room.</p>
+    <div class="cta-row">
+      <a class="btn btn--primary" href="https://machinecinema.ai">MACHINE CINEMA &nbsp;→</a>
+    </div>
+  </section>
+
+  <!-- SORTING HAT -->
+  <section class="slide slide--left" data-bg="cream">
+    <div class="slide__robot slide__robot--bl" aria-hidden="true">
+      <img src="A_line_drawing_depicts_a_robot_with_a_camera_for_lZzo2P7d.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">FIND YOUR PEOPLE</span>
+    <h2 class="h-xxl">Sorting <span class="accent-pink">hat.</span></h2>
+    <p class="lede">Find your group number below and get together, 4&ndash;5 people per group.</p>
+    <ul class="sorting-grid">
+      <li class="sorting-card sorting-card--yellow"><span class="sorting-card__num">1</span><span class="sorting-card__label">Group 1</span></li>
+      <li class="sorting-card sorting-card--lime"><span class="sorting-card__num">2</span><span class="sorting-card__label">Group 2</span></li>
+      <li class="sorting-card sorting-card--white"><span class="sorting-card__num">3</span><span class="sorting-card__label">Group 3</span></li>
+      <li class="sorting-card sorting-card--pink"><span class="sorting-card__num">4</span><span class="sorting-card__label">Group 4</span></li>
+      <li class="sorting-card sorting-card--lime"><span class="sorting-card__num">5</span><span class="sorting-card__label">Group 5</span></li>
+      <li class="sorting-card sorting-card--yellow"><span class="sorting-card__num">6</span><span class="sorting-card__label">Group 6</span></li>
+    </ul>
+    <p class="body sorting-foot">Look at your ticket or ask the facilitator for your group number.</p>
+  </section>
+
+  <!-- SORTING HAT — SIGN UP / SHARE IDEAS -->
+  <section class="slide slide--qr" data-bg="cream">
+    <div class="qr-left">
+      <span class="kicker">SORTING HAT &middot; SIGN UP</span>
+      <h2 class="h-xxl">
+        Share your<br/>
+        <span class="accent-pink">ideas.</span>
+      </h2>
+      <p class="lede">Sign up, share your ideas, and the Sorting Hat drops you into a new group.</p>
+      <p class="body"><a class="link" href="https://sortinghat.genjam.ai/register/6RN4LE">sortinghat.genjam.ai/register/6RN4LE</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="sorting-hat-sign-up-share-ideas-0" src="sortinghat-qr.png" alt="QR code: sortinghat.genjam.ai/register/6RN4LE" />
+        <figcaption>SCAN TO SIGN UP</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CRITERIA -->
+  <section class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--bl" aria-hidden="true">
+      <img src="A_simplified_cartoon-like_robot_with_a_camera_lQikCdqp.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">HOW WE&rsquo;LL JUDGE</span>
+      <h2 class="h-xl">Cri<span class="accent-pink">teria.</span></h2>
+      <p class="body history-sub">Your work will be evaluated on these five dimensions.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">01</div>
+        <h3 class="fact__h">Concept / Idea</h3>
+        <p class="fact__b">Originality and clarity of the creative vision.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">02</div>
+        <h3 class="fact__h">Execution</h3>
+        <p class="fact__b">How well the idea was brought to life.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">03</div>
+        <h3 class="fact__h">Story</h3>
+        <p class="fact__b">Narrative structure, arc, and emotional impact.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">04</div>
+        <h3 class="fact__h">Visuals / Art</h3>
+        <p class="fact__b">Aesthetic quality, style, and visual coherence.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">05</div>
+        <h3 class="fact__h">AI Artifacts</h3>
+        <p class="fact__b">Creative use of AI: not hiding it, <b>celebrating it</b>.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- VOTING FOR OUR FAVORITES -->
+  <section class="slide slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--tl" aria-hidden="true">
+      <img src="A_stylized_black_robot_with_a_camera_for_a_head_ruyiJ42G.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">EVERYONE GETS A SAY</span>
+      <h2 class="h-xl">Voting for our <span class="accent-pink">favorites.</span></h2>
+      <p class="body history-sub">After the showcase, every person in the room casts a vote. Three categories, three winners.</p>
+    </header>
+    <ol class="history-list history-list--titles">
+      <li class="fact fact--yellow fact--title"><div class="fact__yr">01</div><h3 class="fact__h">Best Overall</h3></li>
+      <li class="fact fact--lime fact--title"><div class="fact__yr">02</div><h3 class="fact__h">Best Visuals</h3></li>
+      <li class="fact fact--pink fact--title"><div class="fact__yr">03</div><h3 class="fact__h">Most WTF</h3></li>
+    </ol>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-submit-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SUBMIT YOUR FILM -->
+  <section id="sec-submit" class="slide slide--qr" data-bg="cream">
+    <div class="qr-left">
+      <span class="kicker">SUBMIT YOUR FILM</span>
+      <h2 class="h-xxl">
+        Drop the<br/>
+        <span class="accent-pink">final cut.</span>
+      </h2>
+      <p class="lede">Name your file with the film name and your teammates&rsquo; names.</p>
+      <p class="body">Example: <span class="mono-chip">FilmName_Minh_Andy_John.mp4</span></p>
+      <ul class="big-list big-list--compact">
+        <li><span class="num">1</span><span>Google Drive (scan QR)</span></li>
+        <li><span class="num">2</span><span>AirDrop to Minh&rsquo;s MacBook Pro</span></li>
+        <li><span class="num">3</span><span>USB drive at the front</span></li>
+      </ul>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="submit-your-film-0" src="finalcut-qr.png" alt="QR code: Google Drive submission folder" />
+        <figcaption>SCAN TO UPLOAD</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SHOWCASE & DISCUSSION -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">REFLECT</span>
+    <h2 class="h-xxl">Show<span class="accent-pink">case.</span></h2>
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_minimalist_illustration_depicts_a_white_robot_i4HzuOCv.png" alt="" loading="lazy"/>
+    </div>
+    <ul class="discussion">
+      <li><span class="discussion__q">Q</span><span>What challenges did you face?</span></li>
+      <li><span class="discussion__q">Q</span><span>What &ldquo;aha&rdquo; moments did you have?</span></li>
+      <li><span class="discussion__q">Q</span><span>How does AI fit into your work going forward?</span></li>
+      <li><span class="discussion__q">Q</span><span>What would you tell yourself two hours ago?</span></li>
+    </ul>
+  </section>
+
+  <!-- VOTING -->
+  <section class="slide slide--qr" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">CAST YOUR VOTE</span>
+      <h2 class="h-xxl">
+        Vote for your<br/>
+        <span class="accent-pink">favorites.</span>
+      </h2>
+      <p class="lede">Scan to vote: the top films go on to Demo Day.</p>
+      <p class="body"><a class="link" href="https://vote.genjam.ai/join?code=YPKZ6Z">vote.genjam.ai/join?code=YPKZ6Z</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="voting-0" src="vote-qr.png" alt="QR code: vote.genjam.ai/join?code=YPKZ6Z" />
+        <figcaption>SCAN TO VOTE</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- GOODBYE / COMMUNITY -->
+  <section class="slide slide--left" data-bg="ink">
+    <div class="slide__robot slide__robot--tr" data-parallax="strong" aria-hidden="true">
+      <img src="A_white_line_drawing_of_a_robot_with_a_camera_for_N_Ojb17V.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker kicker--dark">JOIN THE COMMUNITY</span>
+    <h2 class="h-xxl" style="color:var(--cream);">
+      We hope you use<br/>
+      these tools to reach<br/>
+      your <span class="accent-pink">creative dreams.</span>
+    </h2>
+    <p class="lede" style="color:var(--cream);opacity:.85;">That was a few hours: imagine what you can do in a few days, weeks, months.</p>
+    <div class="goodbye-cta">
+      <span class="btn btn--primary">DISCORD</span>
+      <span class="btn btn--ghost" style="color:var(--cream);border-color:var(--cream);box-shadow:6px 6px 0 var(--cream);">MACHINECINEMA.AI</span>
+    </div>
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>LEARN</span><span class="marquee__dot">●</span>
+        <span>CREATE</span><span class="marquee__dot">●</span>
+        <span>PLAY</span><span class="marquee__dot">●</span>
+        <span>GENJAM</span><span class="marquee__dot">●</span>
+        <span>AIRL</span><span class="marquee__dot">●</span>
+        <span>MACHINE CINEMA</span><span class="marquee__dot">●</span>
+        <span>LEARN</span><span class="marquee__dot">●</span>
+        <span>CREATE</span><span class="marquee__dot">●</span>
+        <span>PLAY</span><span class="marquee__dot">●</span>
+        <span>GENJAM</span><span class="marquee__dot">●</span>
+        <span>AIRL</span><span class="marquee__dot">●</span>
+        <span>MACHINE CINEMA</span><span class="marquee__dot">●</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN THE COMMUNITY — linktree QR (duplicated near the close so it's the last big call before WhatsApp) -->
+  <section class="slide slide--qr" data-bg="cream">
+    <div class="qr-left">
+      <span class="kicker">PLUG IN</span>
+      <h2 class="h-xxl">
+        Join the<br/>
+        <span class="accent-pink">community.</span>
+      </h2>
+      <p class="lede">Tap into the Machine Cinema crew, online and offline. Events, jams, talks, the newsletter, and our Discord are all one tap away.</p>
+      <p class="body"><a class="link" href="https://linktr.ee/machinecinema">linktr.ee/machinecinema</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="join-the-community-linktree-qr-duplicated-near-t-0" src="linktree-qr.png" alt="QR code: linktr.ee/machinecinema" />
+        <figcaption>SCAN TO JOIN</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CONNECT WITH US -->
+  <section class="slide slide--connect" data-bg="cream">
+    <div class="connect-left">
+      <span class="kicker">A BIG THANK YOU</span>
+      <h2 class="h-xl">Connect<br/>with <span class="accent-pink">us.</span></h2>
+      <ul class="socials">
+        <li class="social social--lime"><span>machinecinema.ai</span></li>
+        <li class="social social--yellow"><span>text.machinecinema.ai</span></li>
+        <li class="social social--pink"><span>Instagram: @machinecinema</span></li>
+        <li class="social social--white"><span>X: @machinecinemaAI</span></li>
+        <li class="social social--ink"><span>LinkedIn: Machine Cinema</span></li>
+      </ul>
+    </div>
+    <div class="connect-right">
+      <figure class="qr-card qr-card--sm">
+        <img data-media-key="connect-with-us-0" src="minh-linkedin-qr.png" alt="QR code: Minh Do on LinkedIn" />
+        <figcaption>MINH DO · LINKEDIN</figcaption>
+      </figure>
+      <p class="mono connect-foot">Learn. Create. Play.</p>
+    </div>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-stack-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- T2 · TALK TITLE -->
+  <section id="sec-stack" class="slide slide--center" data-bg="ink">
+    <div data-media-key="t2-talk-title-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-talk-title-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <span class="kicker kicker--dark">A TALK &middot; MACHINE CINEMA</span>
+    <h1 class="display">
+      The AI<br/>
+      <span class="accent-pink">Creative Stack.</span>
+    </h1>
+    <p class="lede">The AI tools making us more creative, and more connected.</p>
+  </section>
+
+  <!-- T2 · DREAM BEAT -->
+  <section class="slide slide--center" data-bg="ink">
+    <div data-media-key="t2-dream-beat-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img src="..." alt=""/> here -->
+    </div>
+    <h2 class="h-xxl">&hellip;and how we can maybe <span class="accent-pink">dream</span> about AI.</h2>
+  </section>
+
+  <!-- T2 · McLUHAN QUOTE -->
+  <section class="slide slide--quote" data-bg="ink">
+    <div data-media-key="t2-mcluhan-quote-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-mcluhan-quote-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <div class="quote-mark">&ldquo;</div>
+    <blockquote class="quote">We look at the present through a rear-view mirror. We march backwards into the future.</blockquote>
+    <p class="attribution">Marshall McLuhan &middot; The Medium is the Massage, 1967</p>
+  </section>
+
+  <!-- T2 · ABOUT ME -->
+  <section class="slide slide--bio" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_black_and_white_line_drawing_depicts_a_SePAGDzf.png" alt="" loading="lazy"/>
+    </div>
+    <figure class="bio-photo">
+      <img data-media-key="1-speaker-bio-0-t2" src="Profile-Photo-scaled.webp" alt="Minh Do" />
+      <figcaption class="bio-photo__cap">MINH DO</figcaption>
+    </figure>
+
+    <div class="bio-content">
+      <div class="tag-row">
+        <span class="tag tag--pink">SPEAKER</span>
+        <span class="tag tag--yellow">CEO</span>
+        <span class="tag tag--lime">CO-FOUNDER</span>
+      </div>
+
+      <h1 class="h-xxl bio-name">
+        Minh <span class="accent-pink">Do.</span>
+      </h1>
+
+      <p class="lede bio-lede">
+        Entrepreneur, filmmaker, and educator at the intersection of
+        <span class="underline">AI, storytelling, and culture.</span>
+      </p>
+
+      <ul class="bio-roles">
+        <li><span class="role-label">NOW</span><span>Co-founder &amp; <b>CEO</b>, <b>Machine Cinema</b>, a global community exploring AI-native filmmaking.</span></li>
+        <li><span class="role-label">NOW</span><span>Co-founder &amp; Head of AI, <b>Fantastic Day</b>, a hybrid AI studio for musicians, brands, and filmmakers.</span></li>
+        <li><span class="role-label">PAST</span><span>Editor-in-Chief at <b>Tech in Asia</b>; co-founder of <b>Vietcetera</b>. Interviewed Sundar Pichai and Anthony Tan.</span></li>
+        <li><span class="role-label">PARTNER</span><span>Creator programs with Google Labs, OpenAI Sora, Pika, Luma Dream Machine.</span></li>
+        <li><span class="role-label">ALSO</span><span>Journalist · violinist · standup comedian · voice actor.</span></li>
+        <li><span class="role-label">EDU</span><span><b>UC Santa Cruz</b>, Buddhist Studies.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- T2 · ABOUT FRED -->
+  <section class="slide slide--bio" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_cartoonish_red_robot_with_a_camera_for_a_head_0fy3XEu.png" alt="" loading="lazy"/>
+    </div>
+    <figure class="bio-photo">
+      <img data-media-key="fred-grinstein-bio-0-t2" src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,quality=75,width=800,height=450/editor-images/bw/90b424cd-11ad-4e57-a0db-cce3333cc4fe.png" alt="Fred Grinstein" />
+      <figcaption class="bio-photo__cap">FRED GRINSTEIN</figcaption>
+    </figure>
+
+    <div class="bio-content">
+      <div class="tag-row">
+        <span class="tag tag--pink">CO-FOUNDER</span>
+        <span class="tag tag--yellow">MACHINE CINEMA</span>
+      </div>
+
+      <h1 class="h-xxl bio-name">
+        Fred <span class="accent-pink">Grinstein.</span>
+      </h1>
+
+      <p class="lede bio-lede">
+        Co-founder of <span class="underline">Machine Cinema</span>, building the home for AI-native creativity.
+      </p>
+
+      <ul class="bio-roles">
+        <li><span class="role-label">FILM/TV</span><span>20-year Film/TV executive: <b>A&amp;E</b>, <b>Vice</b>, <b>Anonymous Content</b>.</span></li>
+        <li><span class="role-label">EDUCATOR</span><span>AI educator with <b>Curious Refuge</b>, <b>USC</b>, <b>Chapman University</b>, and <b>LABASAD</b>.</span></li>
+        <li><span class="role-label">ADVISOR</span><span>Consultant &amp; strategist with major broadcast networks, studios &amp; prodcos.</span></li>
+        <li><span class="role-label">NOW</span><span>Co-founder, <b>Machine Cinema</b>, a global community for AI-native filmmaking.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- T2 · MACHINE CINEMA -->
+  <section class="slide slide--mc" data-bg="cream">
+    <figure class="mc-hub-qr">
+      <img data-media-key="t2-machine-cinema-hub-qr" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai"/>
+      <figcaption>SCAN FOR THE HUB</figcaption>
+    </figure>
+    <span class="kicker">WHAT I BUILD</span>
+    <p class="mc-headline">Machine Cinema is an <span class="accent-pink">ecosystem</span> for <span class="underline">accelerating creativity.</span></p>
+    <ul class="mc-facts">
+      <li class="mc-fact mc-fact--white">
+        <div class="mc-fact__num">20k+</div>
+        <div class="mc-fact__label">Members</div>
+      </li>
+      <li class="mc-fact mc-fact--pink">
+        <div class="mc-fact__num">200+</div>
+        <div class="mc-fact__label">Events</div>
+      </li>
+      <li class="mc-fact mc-fact--lime">
+        <div class="mc-fact__num">&infin;</div>
+        <div class="mc-fact__label">Hubs in nearly every major city</div>
+      </li>
+      <li class="mc-fact mc-fact--white mc-fact--wide">
+        <div class="mc-fact__label mc-fact__label--lg">AIRL: scenes from our events</div>
+        <div class="mc-photos">
+          <img data-media-key="t2-machine-cinema-0" src="communityacts/lounge-event.png" alt="Gen&amp;Juice lounge event" loading="lazy"/>
+          <img data-media-key="t2-machine-cinema-1" src="communityacts/workshop-overhead.png" alt="GenJam workshop, overhead view" loading="lazy"/>
+          <video data-media-key="t2-machine-cinema-2" src="walk-and-jam.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Walk and Jam event video"></video>
+          <img data-media-key="t2-machine-cinema-3" src="comm-wip-salon.jpg" alt="Work in Progress salon presentation" loading="lazy"/>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- T2 · AGENDA -->
+  <section class="slide slide--toc" data-bg="ink">
+    <span class="kicker kicker--dark">TODAY&rsquo;S ARC</span>
+    <ol class="toc">
+      <li class="toc__row"><span class="toc__num">01</span><span class="toc__title">Narratives of Technology</span></li>
+      <li class="toc__row"><span class="toc__num">02</span><span class="toc__title">AI is Categorically Different</span></li>
+      <li class="toc__row"><span class="toc__num">03</span><span class="toc__title">The Explosion of Tools</span></li>
+      <li class="toc__row"><span class="toc__num">04</span><span class="toc__title">Market Changes</span></li>
+      <li class="toc__row"><span class="toc__num">05</span><span class="toc__title">Optimistic Futures</span></li>
+    </ol>
+  </section>
+
+  <!-- T2 · SECTION 01 — NARRATIVES OF TECHNOLOGY -->
+  <section class="slide slide--center" data-bg="lime">
+    <div data-media-key="t2-section-01-narratives-of-technology-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-section-01-narratives-of-technology-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <span class="kicker">01 / 05</span>
+    <h2 class="h-xxl">Narratives of <span class="accent-pink">technology.</span></h2>
+    <p class="lede">How new tools have always rewritten the culture around them.</p>
+  </section>
+
+  <!-- FACTS & HISTORY — precedent for every platform shift (ENCORE) -->
+  <section class="slide slide--left slide--history" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="In_a_graphic_illustration_style_a_stylized_robot_m-fi5Acu.png" alt="" loading="lazy"/>
+    </div>
+    <header class="history-hd">
+      <span class="kicker">FACTS &amp; HISTORY</span>
+      <h2 class="h-xl history-title">History <span class="accent-pink">rhymes.</span></h2>
+      <p class="body history-sub">Every big tech shift looks terrifying until the new creators show up.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--white">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-0-encore" class="fact__media" src="slide-photos/history-1908-early-hollywood.jpg" alt="Early Hollywood nickelodeon era, 1908" loading="lazy"/>
+        <div class="fact__yr">1908</div>
+        <h3 class="fact__h">Hollywood was born from rebellion.</h3>
+        <p class="fact__b">Filmmakers fled <b>Thomas Edison's patent trust</b>, the MPPC, and moved west to escape enforcement. That migration built the industry that defined the century.</p>
+      </li>
+      <li class="fact fact--lime">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-1-encore" class="fact__media" src="slide-photos/history-1984-vhs-rental-store.jpg" alt="VHS rental store, 1984" loading="lazy"/>
+        <div class="fact__yr">1984</div>
+        <h3 class="fact__h">The VCR was supposed to kill Hollywood.</h3>
+        <p class="fact__b">Sony v. Universal let home video live. Within a decade, <b>video rentals earned studios more than the box office.</b></p>
+      </li>
+      <li class="fact fact--yellow">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-2-encore" class="fact__media" src="slide-photos/history-2007-netflix-streaming.jpg" alt="Netflix streaming on a TV, 2007" loading="lazy"/>
+        <div class="fact__yr">2007</div>
+        <h3 class="fact__h">Netflix rewrote TV.</h3>
+        <p class="fact__b">Streaming turned the living-room set into a <b>global on-demand catalog</b>. Data picked hits. The world binged.</p>
+      </li>
+      <li class="fact fact--pink">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-3-encore" class="fact__media" src="slide-photos/history-1999-napster.jpg" alt="Napster logo, 1999" loading="lazy"/>
+        <div class="fact__yr">1999</div>
+        <h3 class="fact__h">Napster couldn't kill music.</h3>
+        <p class="fact__b">It made streaming inevitable. Today <b>artists earn more from streaming</b> than CDs ever generated.</p>
+      </li>
+      <li class="fact fact--ink">
+        <img data-media-key="facts-history-precedent-for-every-platform-shift-4-encore" class="fact__media" src="slide-photos/history-2010-smartphone-photography.jpg" alt="Smartphone photography on the street, 2010" loading="lazy"/>
+        <div class="fact__yr">2010</div>
+        <h3 class="fact__h">Instagram &amp; Snapchat rewrote photography.</h3>
+        <p class="fact__b">Phones plus filters plus stories turned <b>billions into daily photographers</b>. Visual culture has never looked the same.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">1975+</div>
+        <h3 class="fact__h">Punk &amp; hip-hop made cheap tools into genres.</h3>
+        <p class="fact__b">Four-tracks, turntables, photocopiers. <b>Punk built a DIY label system</b>; <b>hip-hop sampled the whole record store.</b> Remixing what already existed turned into two of the most influential movements in music.</p>
+      </li>
+    </ol>
+    <p class="history-foot mono">EVERY GATE FALLS · EVERY FALL MAKES ROOM</p>
+  </section>
+
+  <!-- T2 · SECTION 02 — AI IS CATEGORICALLY DIFFERENT -->
+  <section class="slide slide--center" data-bg="pink">
+    <div data-media-key="t2-section-02-ai-is-categorically-different-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-section-02-ai-is-categorically-different-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <span class="kicker">02 / 05</span>
+    <h2 class="h-xxl">AI is <span class="accent-pink">categorically different.</span></h2>
+    <p class="lede">Not another gadget: a shift in kind, not in degree.</p>
+  </section>
+
+  <!-- T2 · SECTION 03 — THE EXPLOSION OF TOOLS -->
+  <section class="slide slide--center" data-bg="tan">
+    <div data-media-key="t2-section-03-the-explosion-of-tools-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-section-03-the-explosion-of-tools-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <span class="kicker">03 / 05</span>
+    <h2 class="h-xxl">The <span class="accent-pink">explosion</span> of tools.</h2>
+    <p class="lede">A 247-company stack appeared in under four years.</p>
+  </section>
+
+  <!-- T2 · MARKET MAP 2025 -->
+  <section class="slide slide--mm-throwback" data-bg="cream">
+    <header class="mm-throwback__hd">
+      <span class="kicker">MARKET MAP</span>
+      <h2 class="h-xl mm-throwback__title">The stack, <span class="accent-pink">2025.</span></h2>
+      <p class="body mm-throwback__sub">The AI storytelling landscape a year ago, already crowded.</p>
+    </header>
+    <figure class="mm-throwback__frame">
+      <img data-media-key="t2-market-map-2025-0" src="marketmap-2025.jpg" alt="AI storytelling market map, 2025" />
+    </figure>
+  </section>
+
+  <!-- T2 · MARKET MAP 2026 -->
+  <section class="slide slide--mm-throwback" data-bg="cream">
+    <header class="mm-throwback__hd">
+      <span class="kicker">MARKET MAP</span>
+      <h2 class="h-xl mm-throwback__title">The stack, <span class="accent-pink">2026.</span></h2>
+      <p class="body mm-throwback__sub">One year later: <b>247 companies</b> across <b>24 categories</b>. Look how far it&rsquo;s come.</p>
+    </header>
+    <figure class="mm-throwback__frame">
+      <img data-media-key="t2-market-map-2026-0" src="Market%20Map%20(Final).png" alt="AI Creative Market Map, Q2 2026: 247 companies across development, production, inference, post-production, and distribution" />
+    </figure>
+  </section>
+
+  <!-- ===== ENCORE 2: workflow + AI-tools slides duplicated after Market Map 2026 ===== -->
+  <!-- T2 · SECTION 04 — MARKET CHANGES -->
+  <section class="slide slide--center" data-bg="ink">
+    <div data-media-key="t2-section-04-market-changes-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-section-04-market-changes-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <span class="kicker kicker--dark">04 / 05</span>
+    <h2 class="h-xxl">Market <span class="accent-pink">changes.</span></h2>
+    <p class="lede">What the explosion is doing to media&rsquo;s money, and its platforms.</p>
+  </section>
+
+  <!-- T2 · MEDIA MARKET CHANGES -->
+  <section class="slide slide--mosaic" data-bg="tan">
+    <header class="mosaic-hd">
+      <span class="kicker">THE BIGGER PICTURE</span>
+      <h2 class="h-xl">Before AI, the media has <span class="accent-pink">already been shifting.</span></h2>
+    </header>
+    <ul class="mosaic">
+      <li class="mosaic__tile mosaic__tile--yellow">
+        <figure data-media-key="t2-media-market-changes-0" class="mosaic__media"><span>VISUAL &middot; TBD</span></figure>
+        <h3 class="mosaic__h">The creator economy rises.</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--lime">
+        <figure data-media-key="t2-media-market-changes-1" class="mosaic__media"><span>VISUAL &middot; TBD</span></figure>
+        <h3 class="mosaic__h">The rise of streamers.</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--white">
+        <figure data-media-key="t2-media-market-changes-2" class="mosaic__media"><span>VISUAL &middot; TBD</span></figure>
+        <h3 class="mosaic__h">Production: costlier &amp; global.</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--pink mosaic__tile--wide">
+        <figure data-media-key="t2-media-market-changes-3" class="mosaic__media"><span>VISUAL &middot; TBD</span></figure>
+        <h3 class="mosaic__h">New paths to money.</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--yellow mosaic__tile--wide">
+        <figure data-media-key="t2-media-market-changes-4" class="mosaic__media"><span>VISUAL &middot; TBD</span></figure>
+        <h3 class="mosaic__h">Spotify&rsquo;s complicated relationship with AI.</h3>
+      </li>
+    </ul>
+    <p class="mosaic-foot">&ldquo;We look at the present through a rear-view mirror. We march backwards into the future.&rdquo; (Marshall McLuhan)</p>
+  </section>
+
+  <!-- HOLLYWOOD'S CHANGING TONE ON AI (ENCORE) -->
+  <section class="slide slide--left slide--quotes" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" aria-hidden="true">
+      <img src="In_a_minimalist_line_art_style_a_white_outline_0Q_iwtpp.png" alt="" loading="lazy"/>
+    </div>
+    <header class="quotes-hd">
+      <span class="kicker">HOLLYWOOD</span>
+      <h2 class="h-xl quotes-title">The tone is <span class="accent-pink">changing.</span></h2>
+      <p class="body quotes-sub">Even the skeptics are picking up the tools.</p>
+    </header>
+    <ul class="quote-grid">
+      <li class="qq qq--lime">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-0-encore" class="qq__photo" src="headshots/sandra-bullock.jpg" alt="Sandra Bullock" loading="lazy"/>
+        <div class="qq__role">ACTOR</div>
+        <h3 class="qq__name">Sandra Bullock</h3>
+        <blockquote class="qq__text">&ldquo;It's here. We have to observe it. We have to understand it. We have to <b>lean into it</b>. Use it in a really constructive, creative way, make it our friend.&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--pink">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-1-encore" class="qq__photo" src="headshots/reese-witherspoon.png" alt="Reese Witherspoon" loading="lazy"/>
+        <div class="qq__role">ACTOR · PRODUCER</div>
+        <h3 class="qq__name">Reese Witherspoon</h3>
+        <blockquote class="qq__text">&ldquo;Women's jobs are <b>3× more likely</b> to be automated by AI, yet women use AI <b>25% less</b> than men. We don't want to be left behind. Do you want to learn with me?&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--yellow">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-2-encore" class="qq__photo" src="headshots/steven-soderbergh.jpg" alt="Steven Soderbergh" loading="lazy"/>
+        <div class="qq__role">DIRECTOR</div>
+        <h3 class="qq__name">Steven Soderbergh</h3>
+        <blockquote class="qq__text">&ldquo;You show me a new tool: <b>I want to get my hands on it</b> and see what's going on. Some people refuse to engage. That's their privilege. I'm not built that way.&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--white">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-3-encore" class="qq__photo" src="headshots/christopher-nolan.jpg" alt="Christopher Nolan" loading="lazy"/>
+        <div class="qq__role">DIRECTOR</div>
+        <h3 class="qq__name">Christopher Nolan</h3>
+        <blockquote class="qq__text">&ldquo;Any tool, AI or otherwise, is <b>another tool for filmmakers to create with</b>. As long as we have faith in the human beings making these tools, the medium of film will continue to develop in exciting ways.&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--ink">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-4-encore" class="qq__photo" src="headshots/diplo.jpg" alt="Diplo" loading="lazy"/>
+        <div class="qq__role">PRODUCER · DJ</div>
+        <h3 class="qq__name">Diplo</h3>
+        <blockquote class="qq__text">&ldquo;There's literally <b>no fighting AI</b>. Work your best to be the best at it; everyone else is going to use it and not give a fuck about what you think.&rdquo;</blockquote>
+      </li>
+      <li class="qq qq--white">
+        <img data-media-key="hollywood-s-changing-tone-on-ai-5-encore" class="qq__photo" src="headshots/martin-scorsese.svg" alt="Martin Scorsese" loading="lazy"/>
+        <div class="qq__role">DIRECTOR</div>
+        <h3 class="qq__name">Martin Scorsese</h3>
+        <blockquote class="qq__text">&ldquo;Remember, cinema is a <b>young medium</b>, only around 125 years old, so we have to be <b>open to how it can evolve</b>.&rdquo;</blockquote>
+        <p class="qq__note">Recently joined the board of <b>Black Forest Labs</b> &mdash; a key player in the AI image-model space.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- YOUTUBERS BECOMING FILMMAKERS -->
+  <section class="slide slide--posters" data-bg="ink">
+    <header class="posters-hd">
+      <span class="kicker kicker--dark">A NEW PIPELINE</span>
+      <h2 class="h-xl">YouTubers are becoming <span class="accent-pink">filmmakers.</span></h2>
+      <p class="body posters-sub">Creators are skipping the studios, turning huge online audiences into real films and theatrical events.</p>
+    </header>
+    <ul class="poster-row">
+      <li class="poster">
+        <figure data-media-key="youtubers-filmmakers-iron-lung" class="poster__frame"><span>POSTER</span></figure>
+        <h3 class="poster__title">Iron Lung</h3>
+        <p class="poster__by">Markiplier</p>
+      </li>
+      <li class="poster">
+        <figure data-media-key="youtubers-filmmakers-backrooms" class="poster__frame"><span>POSTER</span></figure>
+        <h3 class="poster__title">Backrooms</h3>
+        <p class="poster__by">Kane Pixels &middot; A24</p>
+      </li>
+      <li class="poster">
+        <figure data-media-key="youtubers-filmmakers-obsession" class="poster__frame"><span>POSTER</span></figure>
+        <h3 class="poster__title">Obsession</h3>
+        <p class="poster__by">Creator-made</p>
+      </li>
+      <li class="poster">
+        <figure data-media-key="youtubers-filmmakers-digital-circus" class="poster__frame"><span>POSTER</span></figure>
+        <h3 class="poster__title">The Amazing Digital Circus</h3>
+        <p class="poster__by">Glitch</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- T2 · SPOTIFY × AI INTERROGATION -->
+  <section class="slide slide--spotify" data-bg="ink">
+    <span class="sp-badge"><span class="sp-dot" aria-hidden="true"></span>CASE STUDY</span>
+    <h2 class="h-xl sp-title">What is <span class="sp-green">Spotify</span> doing?</h2>
+    <ol class="sp-list">
+      <li class="sp-card">
+        <div class="sp-num">1</div>
+        <div class="sp-body">
+          <h3 class="sp-h">Building AI in.</h3>
+          <p class="sp-b">AI tools to create music and podcasts: AI DJ, AI playlists, licensed AI remixes with the major labels.</p>
+        </div>
+      </li>
+      <li class="sp-card">
+        <div class="sp-num">2</div>
+        <div class="sp-body">
+          <h3 class="sp-h">A war over AI music.</h3>
+          <p class="sp-b">New artists embrace the tools; established artists protest and pull their catalogs. The future of music just got complicated.</p>
+        </div>
+      </li>
+      <li class="sp-card">
+        <div class="sp-num">3</div>
+        <div class="sp-body">
+          <h3 class="sp-h">A window into the future.</h3>
+          <p class="sp-b">Whatever happens to music happens to every medium next: this fight previews the future of all AI content.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="sp-foot">2025&ndash;26 &middot; 75M AI spam tracks purged &middot; The Velvet Sundown &middot; ghost artists &middot; &ldquo;artist-first&rdquo; AI with all three majors &middot; AI credits &amp; human-only verification</p>
+  </section>
+
+  <!-- T2 · CONVERGENCE OF MEDIA & AI -->
+  <section class="slide slide--center slide--convergence" data-bg="ink">
+    <span class="kicker kicker--dark">THE BIG PICTURE</span>
+    <h2 class="h-xxl">Convergence of <span class="accent-pink">Old Media</span>, <span class="accent-lime">New Media</span>, and <span class="accent-pink">AI</span>.</h2>
+    <p class="lede conv-sub">And How Should We Think About it?!</p>
+  </section>
+
+  <!-- T2 · THE MAIN OBJECTIONS -->
+  <section class="slide slide--left slide--objections" data-bg="ink">
+    <span class="kicker kicker--dark">THE HARD QUESTIONS</span>
+    <h2 class="h-xxl">The main <span class="accent-pink">objections.</span></h2>
+    <ul class="big-list big-list--compact obj-list">
+      <li><span class="num num--pink">01</span><span>The environment</span></li>
+      <li><span class="num num--pink">02</span><span>Stealing</span></li>
+      <li><span class="num num--pink">03</span><span>Job loss</span></li>
+      <li><span class="num num--pink">04</span><span>Misinformation</span></li>
+    </ul>
+  </section>
+
+  <!-- T2 · THE CURRENT RATIONALE FOR AI -->
+  <section class="slide slide--left" data-bg="lime">
+    <span class="kicker">THE PITCH</span>
+    <h2 class="h-xl">The current <span class="accent-pink">rationale</span> for AI.</h2>
+    <ol class="story-lines story-lines--tight">
+      <li>&ldquo;Someone who knows AI will take your job.&rdquo;</li>
+      <li>It&rsquo;s inevitable.</li>
+      <li>It&rsquo;s democratizing.</li>
+      <li>Productivity &amp; efficiency.</li>
+      <li>Cost saving.</li>
+      <li>Better customer experiences.</li>
+      <li>Scale.</li>
+      <li>China.</li>
+    </ol>
+  </section>
+
+  <!-- T2 · BUT ISN'T THAT DISSATISFYING -->
+  <section class="slide slide--center" data-bg="ink">
+    <div data-media-key="t2-but-isn-t-that-dissatisfying-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-but-isn-t-that-dissatisfying-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <h2 class="h-xxl">But isn&rsquo;t that totally<br/><span class="accent-pink">dissatisfying?</span></h2>
+  </section>
+
+  <!-- T2 · SECTION 05 — OPTIMISTIC FUTURES -->
+  <section class="slide slide--center" data-bg="yellow">
+    <div data-media-key="t2-section-05-optimistic-futures-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-section-05-optimistic-futures-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <span class="kicker">05 / 05</span>
+    <h2 class="h-xxl">Optimistic <span class="accent-pink">futures.</span></h2>
+    <p class="lede">If tools move culture, this one could move it somewhere good.</p>
+  </section>
+
+  <!-- T2 · MY THEORIES -->
+  <section class="slide slide--left slide--theories" data-bg="cream">
+    <span class="kicker">MY THEORIES</span>
+    <h2 class="h-xl">What I think <span class="accent-pink">actually happens.</span></h2>
+    <ol class="story-lines story-lines--tight">
+      <li>More empathy: everyone can tell their story.</li>
+      <li>Closer connection: we express more, and better.</li>
+      <li>Learning becomes creating, because learning gets so seamless.</li>
+      <li>Meaning beyond work.</li>
+      <li>AI changes how we test and fund new ideas, creative and not.</li>
+      <li>Creativity goes global fast: we won&rsquo;t notice, then we will. Whiplash.</li>
+      <li>Human-only rises as AI quality rises.</li>
+      <li>Sports and live events accrue value.</li>
+      <li>We&rsquo;ll talk to AI more than to humans, or through it.</li>
+      <li>&ldquo;% AI used&rdquo; becomes a label.</li>
+    </ol>
+  </section>
+
+  <!-- T2 · NEW PHILOSOPHIES (preview index for the spotlights that follow) -->
+  <section class="slide slide--left" data-bg="pink">
+    <span class="kicker">WAYS OF SEEING</span>
+    <h2 class="h-xxl">New <span class="accent-pink">philosophies.</span></h2>
+    <p class="lede">Really just seven frameworks I&rsquo;ve found, and like. Ways to dream about an accelerating world.</p>
+    <ul class="chip-row">
+      <li class="chip">Machines of Loving Grace</li>
+      <li class="chip">Mother AI</li>
+      <li class="chip">Xenofeminism</li>
+      <li class="chip">The Planetary</li>
+      <li class="chip">L/acc</li>
+      <li class="chip">Solarpunk</li>
+      <li class="chip">Post-humanism</li>
+    </ul>
+  </section>
+
+  <!-- T2 · PHILOSOPHY 1/7 — MACHINES OF LOVING GRACE -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">OPTIMISTIC FUTURES &middot; 1/7</span>
+      <h2 class="h-xl">Machines of <span class="accent-pink">Loving Grace.</span></h2>
+      <blockquote class="philo-quote">&ldquo;A country of geniuses in a datacenter.&rdquo;</blockquote>
+      <p class="philo-attr">DARIO AMODEI &middot; MACHINES OF LOVING GRACE, 2024</p>
+      <p class="lede philo-lede">The optimist&rsquo;s case: AI as a compressed century of scientific and creative progress, if we steer it well.</p>
+    </div>
+    <figure data-media-key="t2-philosophy-machines-of-loving-grace-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · PHILOSOPHY 2/7 — MOTHER AI -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">OPTIMISTIC FUTURES &middot; 2/7</span>
+      <h2 class="h-xl">Mother <span class="accent-pink">AI.</span></h2>
+      <blockquote class="philo-quote">&ldquo;If it&rsquo;s not going to parent me, it&rsquo;s going to replace me.&rdquo;</blockquote>
+      <p class="philo-attr">GEOFFREY HINTON &middot; ON &lsquo;MATERNAL&rsquo; AI, 2025</p>
+      <p class="lede philo-lede">Instead of control, care: design AI with maternal instinct: something that wants to protect us, not dominate us.</p>
+    </div>
+    <figure data-media-key="t2-philosophy-mother-ai-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · PHILOSOPHY 3/7 — XENOFEMINISM -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">OPTIMISTIC FUTURES &middot; 3/7</span>
+      <h2 class="h-xl">Xeno<span class="accent-pink">feminism.</span></h2>
+      <blockquote class="philo-quote">&ldquo;If nature is unjust, change nature!&rdquo;</blockquote>
+      <p class="philo-attr">LABORIA CUBONIKS &middot; THE XENOFEMINIST MANIFESTO, 2015</p>
+      <p class="lede philo-lede">Technology as a liberation project: refusing to accept the world as given.</p>
+    </div>
+    <figure data-media-key="t2-philosophy-1-5-xenofeminism-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · PHILOSOPHY 4/7 — THE PLANETARY -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">OPTIMISTIC FUTURES &middot; 4/7</span>
+      <h2 class="h-xl">The <span class="accent-pink">Planetary.</span></h2>
+      <blockquote class="philo-quote">&ldquo;Planetary-scale computation&hellip; an accidental megastructure.&rdquo;</blockquote>
+      <p class="philo-attr">BENJAMIN BRATTON &middot; THE STACK, 2015</p>
+      <p class="lede philo-lede">Computation as planetary infrastructure: we now think, govern, and create inside it.</p>
+    </div>
+    <figure data-media-key="t2-philosophy-2-5-the-planetary-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · PHILOSOPHY 5/7 — L/ACC -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">OPTIMISTIC FUTURES &middot; 5/7</span>
+      <h2 class="h-xl">L/<span class="accent-pink">acc.</span></h2>
+      <blockquote class="philo-quote">&ldquo;Demand full automation. Demand universal basic income. Demand the future.&rdquo;</blockquote>
+      <p class="philo-attr">SRNICEK &amp; WILLIAMS &middot; INVENTING THE FUTURE, 2015</p>
+      <p class="lede philo-lede">Left accelerationism: push the technology forward, and claim its abundance for everyone.</p>
+    </div>
+    <figure data-media-key="t2-philosophy-3-5-l-acc-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · PHILOSOPHY 6/7 — SOLARPUNK -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">OPTIMISTIC FUTURES &middot; 6/7</span>
+      <h2 class="h-xl">Solar<span class="accent-pink">punk.</span></h2>
+      <blockquote class="philo-quote">&ldquo;We&rsquo;re solarpunks because the only other options are denial or despair.&rdquo;</blockquote>
+      <p class="philo-attr">ADAM FLYNN &middot; SOLARPUNK: NOTES TOWARD A MANIFESTO, 2014</p>
+      <p class="lede philo-lede">A future that is abundant <em>and</em> green: technology in service of a living planet.</p>
+    </div>
+    <figure data-media-key="t2-philosophy-4-5-solarpunk-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · PHILOSOPHY 7/7 — POST-HUMANISM -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">OPTIMISTIC FUTURES &middot; 7/7</span>
+      <h2 class="h-xl">Post-<span class="accent-pink">humanism.</span></h2>
+      <blockquote class="philo-quote">&ldquo;I would rather be a cyborg than a goddess.&rdquo;</blockquote>
+      <p class="philo-attr">DONNA HARAWAY &middot; A CYBORG MANIFESTO, 1985</p>
+      <p class="lede philo-lede">Rethinking &ldquo;the human&rdquo; in a world shared with intelligent machines.</p>
+    </div>
+    <figure data-media-key="t2-philosophy-5-5-post-humanism-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · BUDDHISM & AI -->
+  <section class="slide slide--philo" data-bg="cream">
+    <div class="philo-text">
+      <span class="kicker">A PERSONAL LENS</span>
+      <h2 class="h-xl">Buddhism &amp; <span class="accent-pink">AI.</span></h2>
+      <blockquote class="philo-quote">&ldquo;Form is emptiness, emptiness is form.&rdquo;</blockquote>
+      <p class="philo-attr">THE HEART SUTRA</p>
+      <p class="lede philo-lede">No fixed self, nothing permanent, everything interdependent: a tradition strangely ready for AI. Maybe the real alignment problem is compassion, and the real practice is staying awake.</p>
+    </div>
+    <figure data-media-key="t2-buddhism-and-ai-0" class="philo-frame" aria-hidden="true"><span>IMAGE &middot; TBD</span></figure>
+  </section>
+
+  <!-- T2 · BUT WE NEED MORE -->
+  <section class="slide slide--center" data-bg="ink">
+    <div data-media-key="t2-but-we-need-more-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-but-we-need-more-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <h2 class="h-xxl">But we need <span class="accent-pink">more!</span></h2>
+  </section>
+
+  <!-- T2 · HELP BUILD NEW THEORIES -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">AN INVITATION</span>
+    <h2 class="h-xxl">Help build the <span class="accent-pink">new theories.</span></h2>
+    <p class="lede">This is the open work: philosophies of AI that take the fears seriously, and still dare to dream. We need yours.</p>
+  </section>
+
+  <!-- T2 · Q&A -->
+  <section class="slide slide--center" data-bg="lime">
+    <div data-media-key="t2-q-a-0" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop <img data-media-key="t2-q-a-1" src="..." alt=""/> or <video src="..." autoplay loop muted playsinline></video> here -->
+    </div>
+    <div class="slide__robot slide__robot--bl" data-parallax="strong" aria-hidden="true">
+      <img src="A_white_line_drawing_depicts_a_robot_upside_down_mmPO-wMa.png" alt="" loading="lazy"/>
+    </div>
+    <h1 class="display">
+      Q&amp;<span class="accent-pink">A.</span>
+    </h1>
+    <p class="lede">What are you curious about, or want to push back on?</p>
+  </section>
+
+  <!-- T2 · JOIN TODAY — DREAM TOWN WORKSHOP -->
+  <section class="slide slide--left" data-bg="pink">
+    <div data-media-key="t2-join-today-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker">Join Us Today!</span>
+    <h2 class="h-xxl">Let&rsquo;s make a film about <span class="accent-pink">Dream Town.</span></h2>
+    <p class="lede">Today, <b>1pm&ndash;5pm</b>: we&rsquo;ll use <b>PixVerse</b> to create a short film together, as a room, around the theme <b>Dream Town</b>. No experience needed. Just bring your imagination.</p>
+    <div class="tag-row">
+      <span class="tag tag--yellow">TODAY &middot; 1P&ndash;5P</span>
+      <span class="tag tag--lime">PIXVERSE</span>
+      <span class="tag tag--pink">THEME: DREAM TOWN</span>
+    </div>
+  </section>
+
+  <!-- AI CREATIVE STACK — CONNECT (Minh + Fred) -->
+  <section class="slide slide--center slide--connect2" data-bg="cream">
+    <span class="kicker">LET&rsquo;S CONNECT</span>
+    <h2 class="h-xl">Find us on <span class="accent-pink">LinkedIn.</span></h2>
+    <div class="connect2-grid">
+      <figure class="connect2-card">
+        <img data-media-key="stack-connect-minh-0" class="connect2-qr" src="minh-linkedin-qr.png" alt="QR code: Minh Do on LinkedIn" />
+        <figcaption class="connect2-cap">
+          <span class="connect2-name">Minh Do</span>
+          <a class="link" href="https://www.linkedin.com/in/minhsmind/">linkedin.com/in/minhsmind</a>
+        </figcaption>
+      </figure>
+      <figure class="connect2-card">
+        <img data-media-key="stack-connect-fred-0" class="connect2-qr" src="fred-linkedin-qr.png" alt="QR code: Fred Grinstein on LinkedIn" />
+        <figcaption class="connect2-cap">
+          <span class="connect2-name">Fred Grinstein</span>
+          <a class="link" href="https://www.linkedin.com/in/fred-grinstein/">linkedin.com/in/fred-grinstein</a>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-recap-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- T2 · THANK YOU -->
+  <section class="slide slide--center" data-bg="ink">
+    <span class="kicker kicker--dark">THAT&rsquo;S A WRAP</span>
+    <h2 class="h-xxl">Thank <span class="accent-pink">you.</span></h2>
+    <p class="lede">Now let&rsquo;s go make something.</p>
+  </section>
+
+  <!-- MACHINE CINEMA RECAP (combined) -->
+  <section id="sec-recap" class="slide slide--center" data-bg="cream">
+    <h2 class="h-xxl">So&hellip; what was everyone <span class="accent-pink">doing here?</span></h2>
+  </section>
+
+  <!-- DEMO DAY REVEAL · 3 — WE RAN A GENJAM -->
+  <section class="slide slide--left" data-bg="lime">
+    <span class="kicker">THE SHORT VERSION</span>
+    <h2 class="h-xxl">We ran a <span class="accent-pink">GenJam.</span></h2>
+    <p class="lede">Creators came together to make short films with AI, learning the tools by actually using them, in a single sitting.</p>
+  </section>
+
+  <!-- DEMO DAY REVEAL · 4 — THE THEME -->
+  <section class="slide slide--center" data-bg="pink">
+    <span class="kicker">THE THEME</span>
+    <h1 class="display">Dream <span class="accent-pink">Town.</span></h1>
+    <p class="lede">One prompt for everyone: imagine a town worth dreaming about.</p>
+  </section>
+
+  <!-- DEMO DAY REVEAL · 5 — THE RECIPE -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">HOW IT WORKS</span>
+    <h2 class="h-xxl">Creators. AI tools. <span class="accent-pink">A few hours.</span></h2>
+    <p class="lede">No big budgets, no crews: just imagination, a laptop, and a room full of people figuring it out together.</p>
+  </section>
+
+  <!-- DEMO DAY REVEAL · 6 — THE RESULT -->
+  <section class="slide slide--center" data-bg="yellow">
+    <h2 class="h-xxl">The result? <span class="accent-pink">Original short films</span>, made today.</h2>
+  </section>
+
+  <!-- DEMO DAY REVEAL · 7 — NOW THE FILMS -->
+  <section class="slide slide--center" data-bg="ink">
+    <div data-media-key="demoday-reveal-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker kicker--dark">THE REVEAL</span>
+    <h1 class="display">Now&hellip; <span class="accent-pink">the films.</span></h1>
+  </section>
+
+  <!-- DEMO DAY REVEAL · 8 — THE SHOWCASE -->
+  <section class="slide slide--mosaic" data-bg="cream">
+    <header class="mosaic-hd">
+      <span class="kicker">DEMO DAY SHOWCASE</span>
+      <h2 class="h-xl">The <span class="accent-pink">films.</span></h2>
+    </header>
+    <ul class="mosaic mosaic--quad">
+      <li class="mosaic__tile mosaic__tile--yellow">
+        <figure data-media-key="demoday-film-1" class="mosaic__media"><span>VIDEO 1</span></figure>
+        <h3 class="mosaic__h">Film One</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--lime">
+        <figure data-media-key="demoday-film-2" class="mosaic__media"><span>VIDEO 2</span></figure>
+        <h3 class="mosaic__h">Film Two</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--pink">
+        <figure data-media-key="demoday-film-3" class="mosaic__media"><span>VIDEO 3</span></figure>
+        <h3 class="mosaic__h">Film Three</h3>
+      </li>
+      <li class="mosaic__tile mosaic__tile--white">
+        <figure data-media-key="demoday-film-4" class="mosaic__media"><span>VIDEO 4</span></figure>
+        <h3 class="mosaic__h">Film Four</h3>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ MACHINE CINEMA RECAP (standalone, end of deck) ============ -->
+
+  <!-- RECAP · 1 — OPENER -->
+  <section class="slide slide--center" data-bg="ink">
+    <div data-media-key="recap-opener-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker kicker--dark">PRESENTED BY</span>
+    <h1 class="display">Machine <span class="accent-pink">Cinema.</span></h1>
+    <p class="lede">An ecosystem for accelerating creativity.</p>
+  </section>
+
+  <!-- RECAP · 2 — WHAT IS MACHINE CINEMA -->
+  <section class="slide slide--mc" data-bg="cream">
+    <span class="kicker">WHO WE ARE</span>
+    <p class="mc-headline">Machine Cinema is an <span class="accent-pink">ecosystem</span> for <span class="underline">accelerating creativity.</span></p>
+    <ul class="mc-facts">
+      <li class="mc-fact mc-fact--white">
+        <div class="mc-fact__num">20k+</div>
+        <div class="mc-fact__label">Members</div>
+      </li>
+      <li class="mc-fact mc-fact--pink">
+        <div class="mc-fact__num">200+</div>
+        <div class="mc-fact__label">Events</div>
+      </li>
+      <li class="mc-fact mc-fact--lime">
+        <div class="mc-fact__num">&infin;</div>
+        <div class="mc-fact__label">Hubs in nearly every major city</div>
+      </li>
+      <li class="mc-fact mc-fact--ink mc-fact--wide">
+        <div class="mc-fact__label mc-fact__label--lg">What we build</div>
+        <p class="mc-coda"><b>Software, community, and a talent marketplace</b> for people using AI to make film, TV, games, and immersive experiences.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PAGE ONE ACCELERATOR (DEMO DAY) -->
+  <section class="slide slide--left slide--p1" data-bg="cream">
+    <div class="slide__robot slide__robot--br" data-parallax="strong" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_for_a_head_is_j_nWb94F.png" alt="" loading="lazy"/>
+    </div>
+    <span class="kicker">WHAT&rsquo;S NEXT &middot; 8 WEEKS</span>
+    <h2 class="h-xxl">Page One <span class="accent-pink">Accelerator.</span></h2>
+    <p class="lede">An intensive 8-week accelerator for new IP and content built in the AI age: mentors, structure, and a runway to take your project to a marketable place.</p>
+    <ul class="p1-grid">
+      <li class="p1 p1--yellow">
+        <span class="p1__n">8 WEEKS</span>
+        <span class="p1__t">Intensive cohort</span>
+        <span class="p1__b">A focused sprint: weekly milestones, real deliverables, no fluff.</span>
+      </li>
+      <li class="p1 p1--lime">
+        <span class="p1__n">FOR CREATORS</span>
+        <span class="p1__t">New &amp; experienced</span>
+        <span class="p1__b">First-time storytellers and seasoned pros building in the AI age.</span>
+      </li>
+      <li class="p1 p1--pink">
+        <span class="p1__n">MENTORS</span>
+        <span class="p1__t">People who&rsquo;ve shipped</span>
+        <span class="p1__b">Operators, filmmakers, and studio leads who pull your project to market-ready.</span>
+      </li>
+      <li class="p1 p1--white">
+        <span class="p1__n">OUTCOME</span>
+        <span class="p1__t">Marketable IP</span>
+        <span class="p1__b">Leave with a project that&rsquo;s ready to pitch, sell, or ship.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 3. MACHINE CINEMA (DEMO DAY) -->
+  <section class="slide slide--mc" data-bg="cream">
+    <div class="slide__robot slide__robot--tr" data-parallax="strong" aria-hidden="true">
+      <img src="A_line_drawing_depicts_a_robot_with_a_camera_for_lZzo2P7d.png" alt="" loading="lazy"/>
+    </div>
+    <img data-media-key="3-machine-cinema-0-demoday" class="mc-mark" src="5.png" alt="Machine Cinema" />
+    <p class="mc-headline">Machine Cinema is an <span class="accent-pink">ecosystem</span> for <span class="underline">accelerating creativity.</span></p>
+    <ul class="mc-facts">
+      <li class="mc-fact mc-fact--white">
+        <div class="mc-fact__num">20k+</div>
+        <div class="mc-fact__label">Members</div>
+      </li>
+      <li class="mc-fact mc-fact--pink">
+        <div class="mc-fact__num">200+</div>
+        <div class="mc-fact__label">Events</div>
+      </li>
+      <li class="mc-fact mc-fact--lime">
+        <div class="mc-fact__num">40+</div>
+        <div class="mc-fact__label">Cities around the world</div>
+      </li>
+    </ul>
+   </section>
+
+  <!-- Q2 2025 MARKET MAP (prior year for comparison) (DEMO DAY) -->
+  <section class="slide slide--mm-throwback" data-bg="cream">
+    <div class="slide__robot slide__robot--br" aria-hidden="true">
+      <img src="A_stylized_robot_with_a_camera_lens_for_a_head_q_tbJ_h9.png" alt="" loading="lazy"/>
+    </div>
+    <header class="mm-throwback__hd">
+      <span class="kicker">A YEAR AGO</span>
+      <h2 class="h-xl mm-throwback__title">Q2 <span class="accent-pink">2025.</span></h2>
+      <p class="body mm-throwback__sub">Same landscape, one year earlier. Look how fast it changed.</p>
+    </header>
+    <figure class="mm-throwback__frame">
+      <img data-media-key="q2-2025-market-map-prior-year-for-comparison-0-demoday" src="marketmap-2025.jpg" alt="AI storytelling market map, Q2 2025" />
+    </figure>
+  </section>
+
+  <!-- MARKET MAP 2026 (replaces the interactive overview + stage slides) (DEMO DAY) -->
+  <section class="slide slide--mm-throwback" data-bg="cream">
+    <header class="mm-throwback__hd">
+      <span class="kicker">MARKET MAP</span>
+      <h2 class="h-xl mm-throwback__title">The stack, <span class="accent-pink">2026.</span></h2>
+      <p class="body mm-throwback__sub">One year later: <b>247 companies</b> across <b>24 categories</b>. Look how far it&rsquo;s come.</p>
+    </header>
+    <figure class="mm-throwback__frame">
+      <img data-media-key="market-map-2026-main-0-demoday" src="Market%20Map%20(Final).png" alt="AI Creative Market Map, Q2 2026: 247 companies across development, production, inference, post-production, and distribution" />
+    </figure>
+  </section>
+
+  <!-- RECAP · 3 — WHAT'S A GENJAM -->
+  <section class="slide slide--left" data-bg="lime">
+    <span class="kicker">WHAT WE DO</span>
+    <h2 class="h-xxl">We run <span class="accent-pink">GenJams.</span></h2>
+    <p class="lede">In-person sessions where creators learn AI filmmaking tools by actually using them, coming together to make real short films in a single sitting.</p>
+  </section>
+
+  <!-- RECAP · 4 — THE THEME -->
+  <section class="slide slide--center" data-bg="pink">
+    <span class="kicker">THIS JAM&rsquo;S THEME</span>
+    <h1 class="display">Dream <span class="accent-pink">Town.</span></h1>
+    <p class="lede">One prompt for everyone: imagine a town worth dreaming about.</p>
+  </section>
+
+  <!-- RECAP · 5 — HOW IT WORKED -->
+  <section class="slide slide--left" data-bg="cream">
+    <span class="kicker">HOW IT WORKED</span>
+    <h2 class="h-xxl">Creators. AI tools. <span class="accent-pink">A few hours.</span></h2>
+    <p class="lede">No big budgets, no crews: just imagination, a laptop, and a room full of people figuring it out together.</p>
+  </section>
+
+  <!-- RECAP · 6 — TODAY BY THE NUMBERS -->
+  <section class="slide slide--mc" data-bg="cream">
+    <span class="kicker">THE JAM, BY THE NUMBERS</span>
+    <p class="mc-headline">In a few hours, <span class="accent-pink">a whole festival&rsquo;s worth</span> of films.</p>
+    <ul class="mc-facts">
+      <li class="mc-fact mc-fact--yellow"><div class="mc-fact__num">50+</div><div class="mc-fact__label">Creators in the room</div></li>
+      <li class="mc-fact mc-fact--pink"><div class="mc-fact__num">12</div><div class="mc-fact__label">Original short films made today</div></li>
+      <li class="mc-fact mc-fact--lime"><div class="mc-fact__num">2</div><div class="mc-fact__label">Hours, start to finish</div></li>
+      <li class="mc-fact mc-fact--ink mc-fact--wide"><div class="mc-fact__label mc-fact__label--lg">One theme</div><p class="mc-coda"><b>Dream Town</b>: a dozen different ways to imagine it.</p></li>
+    </ul>
+  </section>
+
+  <!-- RECAP · 7 — SCENES FROM THE JAM -->
+  <section class="slide slide--mosaic" data-bg="tan">
+    <header class="mosaic-hd">
+      <span class="kicker">SCENES FROM THE JAM</span>
+      <h2 class="h-xl">In the <span class="accent-pink">room.</span></h2>
+    </header>
+    <ul class="mosaic mosaic--quad">
+      <li class="mosaic__tile mosaic__tile--yellow"><figure data-media-key="recap-scene-1" class="mosaic__media"><span>PHOTO</span></figure><h3 class="mosaic__h">Making it.</h3></li>
+      <li class="mosaic__tile mosaic__tile--lime"><figure data-media-key="recap-scene-2" class="mosaic__media"><span>PHOTO</span></figure><h3 class="mosaic__h">Together.</h3></li>
+      <li class="mosaic__tile mosaic__tile--pink"><figure data-media-key="recap-scene-3" class="mosaic__media"><span>PHOTO</span></figure><h3 class="mosaic__h">Figuring it out.</h3></li>
+      <li class="mosaic__tile mosaic__tile--white"><figure data-media-key="recap-scene-4" class="mosaic__media"><span>PHOTO</span></figure><h3 class="mosaic__h">Shipping it.</h3></li>
+    </ul>
+  </section>
+
+  <!-- RECAP · 8 — THE TOP FILMS (reveal) -->
+  <section class="slide slide--center" data-bg="ink">
+    <div data-media-key="recap-topfilms-bg" class="slide__bg slide__bg--full slide__bg--scrim" aria-hidden="true">
+      <!-- Full-bleed background: drop an image/video here -->
+    </div>
+    <span class="kicker kicker--dark">SELECTED</span>
+    <h1 class="display">The top <span class="accent-pink">films.</span></h1>
+    <p class="lede">The room voted: here are the standouts.</p>
+  </section>
+
+  <!-- RECAP · 9 — TOP FILMS SHOWCASE -->
+  <section class="slide slide--mosaic" data-bg="cream">
+    <header class="mosaic-hd">
+      <span class="kicker">DREAM TOWN &middot; SELECTED FILMS</span>
+      <h2 class="h-xl">The <span class="accent-pink">winners.</span></h2>
+    </header>
+    <ul class="mosaic mosaic--quad">
+      <li class="mosaic__tile mosaic__tile--yellow"><figure data-media-key="recap-film-1" class="mosaic__media"><span>VIDEO 1</span></figure><h3 class="mosaic__h">Best Overall</h3></li>
+      <li class="mosaic__tile mosaic__tile--lime"><figure data-media-key="recap-film-2" class="mosaic__media"><span>VIDEO 2</span></figure><h3 class="mosaic__h">Best Visuals</h3></li>
+      <li class="mosaic__tile mosaic__tile--pink"><figure data-media-key="recap-film-3" class="mosaic__media"><span>VIDEO 3</span></figure><h3 class="mosaic__h">Most WTF</h3></li>
+      <li class="mosaic__tile mosaic__tile--white"><figure data-media-key="recap-film-4" class="mosaic__media"><span>VIDEO 4</span></figure><h3 class="mosaic__h">People&rsquo;s Choice</h3></li>
+    </ul>
+  </section>
+
+  <!-- RECAP · THANK YOU -->
+  <section class="slide slide--history" data-bg="pink">
+    <header class="history-hd">
+      <span class="kicker">WITH GRATITUDE</span>
+      <h2 class="h-xl history-title">A big <span class="accent-pink">thank you.</span></h2>
+      <p class="body history-sub">This jam happened because of all of you.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--white">
+        <div class="fact__yr">HOSTS</div>
+        <h3 class="fact__h">The PS/NEXT Summit 26 team.</h3>
+        <p class="fact__b">For the home, the energy, and the vision that made this possible.</p>
+      </li>
+      <li class="fact fact--yellow">
+        <div class="fact__yr">ORGANIZER</div>
+        <h3 class="fact__h">Dawn Musil.</h3>
+        <p class="fact__b">For pulling every thread together and making the day happen.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">SPONSOR</div>
+        <h3 class="fact__h">PixVerse.</h3>
+        <p class="fact__b">For powering the day&rsquo;s credits and the films you just saw.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">YOU</div>
+        <h3 class="fact__h">Every participant.</h3>
+        <p class="fact__b">For showing up, taking the leap, and actually making something.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- RECAP · RESIDENCY DREAM -->
+  <section class="slide slide--history" data-bg="ink">
+    <header class="history-hd">
+      <span class="kicker kicker--dark">WHAT&rsquo;S NEXT</span>
+      <h2 class="h-xl history-title">Dreaming of a <span class="accent-pink">Machine Cinema residency.</span></h2>
+      <p class="body history-sub">A home for creators pushing the edge of AI-native storytelling, across four crafts.</p>
+    </header>
+    <ol class="history-list">
+      <li class="fact fact--yellow">
+        <div class="fact__yr">FILM</div>
+        <h3 class="fact__h">AI films.</h3>
+        <p class="fact__b">Short films and features made AI-first: new tools, new forms, new voices.</p>
+      </li>
+      <li class="fact fact--lime">
+        <div class="fact__yr">VIDEO</div>
+        <h3 class="fact__h">Videos.</h3>
+        <p class="fact__b">Music videos, commercials, and content that lives where the audience already is.</p>
+      </li>
+      <li class="fact fact--pink">
+        <div class="fact__yr">GAMES</div>
+        <h3 class="fact__h">Video games.</h3>
+        <p class="fact__b">Playable worlds and interactive stories built with generative tools.</p>
+      </li>
+      <li class="fact fact--white">
+        <div class="fact__yr">ART</div>
+        <h3 class="fact__h">AI art.</h3>
+        <p class="fact__b">Image, installation, and experimental work that expands what art can be.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- RECAP · 10 — CLOSING / JOIN US -->
+  <section class="slide slide--left" data-bg="yellow">
+    <span class="kicker">WANT IN?</span>
+    <h2 class="h-xxl">This happens <span class="accent-pink">everywhere.</span></h2>
+    <p class="lede">GenJams run in 30+ countries. Come make something with us: the next one&rsquo;s closer than you think.</p>
+    <div class="cta-row">
+      <a class="btn btn--primary" href="https://machinecinema.ai">MACHINE CINEMA &nbsp;&rarr;</a>
+    </div>
+  </section>
+
+  <!-- HUB CTA -->
+  <section class="slide slide--qr slide--hub" data-bg="lime">
+    <div class="qr-left">
+      <span class="kicker">KEEP EXPLORING</span>
+      <h2 class="h-xxl">The <span class="accent-pink">Hub.</span></h2>
+      <p class="lede">Everything in one place: tools, jams, and the whole Machine Cinema community.</p>
+      <p class="body"><a class="link" href="https://hub.machinecinema.ai">hub.machinecinema.ai</a></p>
+    </div>
+    <div class="qr-right">
+      <figure class="qr-card">
+        <img data-media-key="hub-cta-close-0" src="hub-mc-qr.png" alt="QR code: hub.machinecinema.ai" />
+        <figcaption>SCAN FOR THE HUB</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+</div>
+
+<!-- HUD -->
+<img class="deck-logo" src="5.png" alt="Machine Cinema" />
+<div class="hud" aria-hidden="true">
+  <div class="hud__progress"><div class="hud__bar" id="progress"></div></div>
+  <div class="hud__counter"><span id="current">1</span> / <span id="total">1</span></div>
+</div>
+
+<!-- Help overlay -->
+<div class="help" id="help" hidden>
+  <div class="help__card">
+    <h3 class="h-l">KEYBOARD</h3>
+    <ul class="help__list">
+      <li><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd> next</li>
+      <li><kbd>←</kbd> <kbd>PgUp</kbd> previous</li>
+      <li><kbd>Home</kbd> first · <kbd>End</kbd> last</li>
+      <li><kbd>F</kbd> fullscreen · <kbd>Esc</kbd> exit</li>
+      <li><kbd>?</kbd> toggle this help</li>
+    </ul>
+  </div>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="mm-zoom.js"></script>
+<script src="script.js"></script>
+<script src="nav-menu.js"></script>
+<script src="pizzazz.js"></script>
+<script src="auto-scroll.js"></script>
+<script src="visuals.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>
