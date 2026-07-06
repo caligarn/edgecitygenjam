@@ -5870,3 +5870,110 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
   0%, 100% { transform: translate(0, 0); }
   50%      { transform: translate(-2px, -2px) scale(1.03); }
 }
+
+/* ---------- Director's Cup match schedule cards ---------- */
+.dcm-list {
+  list-style: none;
+  margin: 2vh 0 0 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(.55rem, 1.2vh, 1rem);
+}
+.dcm {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: clamp(.7rem, 1.6vw, 1.6rem);
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 var(--ink);
+  padding: clamp(.55rem, 1.1vw, .95rem) clamp(.8rem, 1.6vw, 1.4rem);
+}
+.dcm__no {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.1rem, 1.7vw, 1.7rem);
+  color: var(--pink);
+  letter-spacing: -0.02em;
+}
+.dcm__date {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.72rem, .95vw, .95rem);
+  letter-spacing: .08em;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  border-radius: 5px;
+  padding: .22rem .5rem;
+  white-space: nowrap;
+}
+.dcm__pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.5rem, 1.2vw, 1.1rem);
+  min-width: 0;
+}
+.dcm__team {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(.9rem, 1.25vw, 1.3rem);
+  letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: .4rem;
+  white-space: nowrap;
+  flex: 1 1 0;
+  justify-content: flex-end;
+}
+.dcm__team--right { justify-content: flex-start; }
+.dcm__team em {
+  font-style: normal;
+  font-weight: 700;
+  font-size: .78em;
+  opacity: .55;
+}
+.dcm__flag { font-size: 1.25em; line-height: 1; }
+.dcm__vs {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: clamp(.7rem, .9vw, .9rem);
+  color: var(--white);
+  background: var(--pink);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: .24rem .55rem;
+  flex: 0 0 auto;
+}
+.dcm__times {
+  display: flex;
+  gap: .45rem;
+}
+.dcm__times span {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(.6rem, .78vw, .78rem);
+  letter-spacing: .03em;
+  border: 2px solid var(--ink);
+  border-radius: 5px;
+  padding: .18rem .4rem;
+  background: var(--cream);
+  white-space: nowrap;
+}
+
+/* Face-off entry: match rows alternate in from opposite touchlines */
+.slide--dcm.is-active .dcm-list .dcm { animation: vs-in-left 750ms cubic-bezier(.16,.9,.26,1) both; }
+.slide--dcm.is-active .dcm-list .dcm:nth-child(even) { animation-name: vs-in-right; }
+.slide--dcm.is-active .dcm-list .dcm:nth-child(1) { animation-delay: .30s; }
+.slide--dcm.is-active .dcm-list .dcm:nth-child(2) { animation-delay: .48s; }
+.slide--dcm.is-active .dcm-list .dcm:nth-child(3) { animation-delay: .66s; }
+.slide--dcm.is-active .dcm-list .dcm:nth-child(4) { animation-delay: .84s; }
+
+@media (max-width: 900px){
+  .dcm { grid-template-columns: auto 1fr; }
+  .dcm__pair { grid-column: 1 / -1; flex-wrap: wrap; }
+  .dcm__times { grid-column: 1 / -1; flex-wrap: wrap; }
+}
