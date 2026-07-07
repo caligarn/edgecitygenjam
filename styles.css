@@ -6022,3 +6022,14 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 }
 .oa-logo--sm img { width: clamp(150px, 15vw, 230px); }
 .oa-logo--sm { margin-top: 1.6vh; padding: clamp(.6rem, 1vw, .9rem) clamp(1rem, 1.8vw, 1.6rem); }
+
+/* Parade of nations: big chips (scoped to the DC slide only) */
+.dc-nations { gap: clamp(.8rem, 1.4vw, 1.3rem); }
+.dc-nations .city-chip {
+  font-size: clamp(1.35rem, 2.1vw, 2.2rem);
+  padding: .55rem 1.25rem;
+  border-width: 3px;
+  box-shadow: 5px 5px 0 var(--ink);
+  gap: .65rem;
+}
+.dc-nations .dc-flag { font-size: 1.35em; }
