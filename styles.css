@@ -5864,7 +5864,10 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 
 /* Starting-line pulse on the full-deck button: set… set… go */
 .slide.is-active .deck-btn {
-  animation: btn-ready 1.7s ease-in-out 1.6s infinite;
+  /* entrance first (matches the center-slide zoom), then the ready-set-go pulse */
+  animation:
+    slide-zoom-in 1250ms cubic-bezier(.16, .84, .28, 1) 460ms both,
+    btn-ready 1.7s ease-in-out 2.4s infinite;
 }
 @keyframes btn-ready {
   0%, 100% { transform: translate(0, 0); }
@@ -5883,32 +5886,36 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 }
 .dcm {
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto;
   align-items: center;
-  gap: clamp(.7rem, 1.6vw, 1.6rem);
+  column-gap: clamp(.7rem, 1.6vw, 1.6rem);
+  row-gap: .4rem;
   background: var(--white);
   border: 3px solid var(--ink);
   border-radius: 12px;
   box-shadow: 6px 6px 0 var(--ink);
-  padding: clamp(.55rem, 1.1vw, .95rem) clamp(.8rem, 1.6vw, 1.4rem);
+  padding: clamp(.75rem, 1.5vw, 1.25rem) clamp(.9rem, 1.8vw, 1.6rem);
 }
 .dcm__no {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
-  font-size: clamp(1.1rem, 1.7vw, 1.7rem);
+  font-size: clamp(1.3rem, 2vw, 2rem);
   color: var(--pink);
   letter-spacing: -0.02em;
+  grid-row: 1 / span 2;
 }
 .dcm__date {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 800;
-  font-size: clamp(.72rem, .95vw, .95rem);
+  font-size: clamp(.85rem, 1.1vw, 1.15rem);
   letter-spacing: .08em;
   background: var(--yellow);
   border: 2px solid var(--ink);
   border-radius: 5px;
   padding: .22rem .5rem;
   white-space: nowrap;
+  grid-row: 1 / span 2;
 }
 .dcm__pair {
   display: flex;
@@ -5920,7 +5927,7 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 .dcm__team {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 900;
-  font-size: clamp(.9rem, 1.25vw, 1.3rem);
+  font-size: clamp(1.05rem, 1.55vw, 1.65rem);
   letter-spacing: -0.01em;
   display: inline-flex;
   align-items: baseline;
@@ -5932,9 +5939,14 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 .dcm__team--right { justify-content: flex-start; }
 .dcm__team em {
   font-style: normal;
-  font-weight: 700;
-  font-size: .78em;
-  opacity: .55;
+  font-weight: 800;
+  font-size: .72em;
+  opacity: .75;
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 5px;
+  padding: .1em .4em;
+  white-space: nowrap;
 }
 .dcm__flag { font-size: 1.25em; line-height: 1; }
 .dcm__vs {
@@ -5951,11 +5963,14 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 .dcm__times {
   display: flex;
   gap: .45rem;
+  grid-column: 3;
+  grid-row: 2;
+  justify-content: center;
 }
 .dcm__times span {
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  font-size: clamp(.6rem, .78vw, .78rem);
+  font-size: clamp(.72rem, .92vw, .95rem);
   letter-spacing: .03em;
   border: 2px solid var(--ink);
   border-radius: 5px;
@@ -5974,6 +5989,36 @@ body[data-bg="ink"] .deck-logo { filter: invert(1) brightness(1.6); }
 
 @media (max-width: 900px){
   .dcm { grid-template-columns: auto 1fr; }
+  .dcm__no, .dcm__date { grid-row: auto; }
   .dcm__pair { grid-column: 1 / -1; flex-wrap: wrap; }
-  .dcm__times { grid-column: 1 / -1; flex-wrap: wrap; }
+  .dcm__times { grid-column: 1 / -1; grid-row: auto; flex-wrap: wrap; }
 }
+
+/* ---------- OpenArt logo plates ---------- */
+.oa-logo {
+  margin-top: 2.2vh;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 8px 8px 0 var(--pink);
+  padding: clamp(.9rem, 1.6vw, 1.5rem) clamp(1.4rem, 2.6vw, 2.4rem);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+.oa-logo img {
+  width: clamp(220px, 26vw, 400px);
+  height: auto;
+  display: block;
+}
+.oa-logo span {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: clamp(.7rem, .9vw, .95rem);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.oa-logo--sm img { width: clamp(150px, 15vw, 230px); }
+.oa-logo--sm { margin-top: 1.6vh; padding: clamp(.6rem, 1vw, .9rem) clamp(1rem, 1.8vw, 1.6rem); }
